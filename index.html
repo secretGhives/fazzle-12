@@ -14,13 +14,17 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 
+	<!-- Temp Style REMOVE -->
+	<link rel="stylesheet" href="css/duckhunt.css">
+
 	<script src="js/libs/modernizr-2.0.6.min.js"></script>
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
 	<script src="js/libs/underscore-1.2.3.min.js"></script>
 	<script src="js/libs/backbone.js"></script>
+	<script src="js/libs/namespace-1.1.js"></script>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-	  <script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
+		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
 	<![endif]-->
 	
 	<!-- BOOTSTRAP COMPONENTS -->
@@ -38,11 +42,59 @@
 
 	<!-- CUSTOM SCRIPTS (INIT) -->
 	<script defer src="js/script.js"></script>
+
+	<!-- DUCKHUNT (Temp, REMOVE) -->
+	<script defer src="js/classes/duckhunt.js"></script>
+
+	<!-- BACKBONE TEMPLATES -->
+	<script type="text/template" id="search_template">
+		<label id="search_label">Label </label>
+		<input type="text" id="search_input" placeholder="type here.." />
+		<button id="search_button" class="btn primary">Search</button>
+	</script>
+
+	<style>
+	#console {
+	position: fixed;
+	height: 200px;
+	top: -200px;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	background: rgba(0,0,0,0.96);
+	}
+	#console_output { 
+	position: absolute;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	top: 28px;
+	padding: 3px;
+	background: rgba(0,0,0,0.3);
+	color: #39c;
+	outline: 0;
+	border: 0;
+	resize:none;
+	overflow: auto;
+	}
+	</style>
+
 </head>
 
 <body>
 
-	<h1>Hello</h1>
+	<!-- DuckHunt Placeholder -->
+	<div id="container" class="fadeOnLoad">
+		<div id="mask">
+			<div id="wave"></div>
+		</div>
+	</div>
+
+	<!-- Application colsole log -->
+	<aside id="console">
+		<div id="search_container"></div>
+		<div id="console_output"></div>
+	</aside>
 
 </body>
 </html>
