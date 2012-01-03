@@ -125,7 +125,7 @@ Namespace('com.myProject', {
 	// the use() identifier can also be relative to the identifier used in from() by starting 
 	// with a dot (would be .* in this case)
 	Namespace.from('js.classes.sample').use('com.myProject.classes.*', function() {
-		new MyClass1();
+		//new MyClass1();
 		//new MyClass2();
 		//new MyClass3('hello, i was looped through a class and back here');
 	});
