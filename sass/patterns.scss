@@ -1058,3 +1058,20 @@ input[type=submit].btn {
   }
 }
 
+// ROUNDABOUT
+// -----------
+.roundabout {
+  @extend .unselectable;
+  overflow: hidden; 
+  min-height: 20em; 
+  li {
+      height: 10em;
+      width: 20em;
+      background-color: #ccc;
+      text-align: center;
+      cursor: pointer;
+      &.roundabout-in-focus { cursor: default; }
+      img { width: 100%; max-height: 100%; }
+  }
+  span {display:block;}
+}

@@ -1,4 +1,4 @@
 .DS_Store
-lib/.sass-cache/*
+sass/.sass-cache/*
 .sass-cache/*
 .rvmrc
