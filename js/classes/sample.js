@@ -1,19 +1,19 @@
-
-Namespace('com.myProject.classes', {
-
-	MyClass1: function() {
-		com.myProject.Console.log('MyClass1');
-		return {};
-	},
-	
-	MyClass2: function(message) {
-		com.myProject.Console.log(message);
-		return {};
+////////////////////////////////////////////////////////////////////////////////
+// CLASS
+////////////////////////////////////////////////////////////////////////////////
+var myAppName = {
+	settings: {
+			isOnline: true
 	},
 
-	MyClass3: function(message) {
-		com.myProject.Alert(message);
-		return {};
+	console: {
+		log: function(message) {
+			var element = document.getElementById('console_output');
+			element.innerHTML = element.innerHTML + message + '<br />';
+		}
 	}
-
-});
+}
+//accessed as
+//console.log(myAppName.settings.isOnline); // true
+myAppName.console.log('isOnline: ' + myAppName.settings.isOnline); // true
+myAppName.console.log('myApp says Hello');

@@ -1,9 +1,9 @@
-	#container {
+	#duckhunt {
 		width: 600px;
 		height: 238px;
 		margin: 100px auto 0 auto;
 		position: relative;
-		background: url(http://taitems.github.com/UX-Lab/DuckHunt/img/overlay.png) 0 0 no-repeat;
+		background: url(../img/overlay.png) 0 0 no-repeat;
 		overflow: hidden;
 		-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.25);
 	}
@@ -21,7 +21,7 @@
 	}
 
 	#wave {
-		background: url(http://taitems.github.com/UX-Lab/DuckHunt/img/wave.png) 0 0 repeat-x;
+		background: url(../img/wave.png) 0 0 repeat-x;
 		width: 1000px;
 		height: 60px;
 		position: absolute;
@@ -36,7 +36,7 @@
 
 	.duck {
 		outline: none;
-		background: url(http://taitems.github.com/UX-Lab/DuckHunt/img/duck.png) 0 0 no-repeat;
+		background: url(../img/duck.png) 0 0 no-repeat;
 		width: 86px;
 		height: 120px;
 		position: absolute;

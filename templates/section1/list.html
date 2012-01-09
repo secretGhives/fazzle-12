@@ -1,0 +1,5 @@
+<ul>
+  <% _.each(sections, function(section){ %>
+   <li><%= section.get("name") %> - <%= section.get("score") %></li> 
+  <% }); %>
+</ul>

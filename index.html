@@ -15,69 +15,18 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<!-- Temp Style REMOVE -->
-	<link rel="stylesheet" href="css/duckhunt.css">
+  <link rel="stylesheet" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
 
-	<script src="js/libs/modernizr-2.0.6.min.js"></script>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
-	<script src="js/libs/underscore-1.2.3.min.js"></script>
-	<script src="js/libs/backbone.js"></script>
-	<script src="js/libs/namespace-1.1.js"></script>
 	<!--[if (gte IE 6)&(lte IE 8)]>
 		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
 	<![endif]-->
 	
-	<!-- BOOTSTRAP COMPONENTS -->
-	<script defer src="js/partials/bootstrap-alerts.js"></script>
-	<script defer src="js/partials/bootstrap-buttons.js"></script>
-	<script defer src="js/partials/bootstrap-dropdown.js"></script>
-	<script defer src="js/partials/bootstrap-modal.js"></script>
-	<script defer src="js/partials/bootstrap-twipsy.js"></script>
-	<script defer src="js/partials/bootstrap-popover.js"></script>
-	<script defer src="js/partials/bootstrap-roundabout.js"></script>
-	<script defer src="js/partials/bootstrap-scrollspy.js"></script>
-	<script defer src="js/partials/bootstrap-tablesorter.js"></script>
-	<script defer src="js/partials/bootstrap-tabs.js"></script>
-	<script defer src="js/partials/bootstrap-tour.js"></script>
+	<!-- REQUIRE SCRIPTS (INIT) -->
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
 
-	<!-- CUSTOM SCRIPTS (INIT) -->
-	<script defer src="js/script.js"></script>
-
-	<!-- DUCKHUNT (Temp, REMOVE) -->
-	<script defer src="js/classes/duckhunt.js"></script>
-
-	<!-- BACKBONE TEMPLATES -->
-	<script type="text/template" id="search_template">
-		<label id="search_label">Label </label>
-		<input type="text" id="search_input" placeholder="type here.." />
-		<button id="search_button" class="btn primary">Search</button>
-	</script>
-
-	<style>
-	#console {
-	position: fixed;
-	height: 200px;
-	top: -200px;
-	left: 0;
-	right: 0;
-	bottom: auto;
-	background: rgba(0,0,0,0.96);
-	}
-	#console_output { 
-	position: absolute;
-	left: 3px;
-	right: 3px;
-	bottom: 3px;
-	top: 28px;
-	padding: 3px;
-	background: rgba(0,0,0,0.3);
-	color: #39c;
-	outline: 0;
-	border: 0;
-	resize:none;
-	overflow: auto;
-	}
-	</style>
+	<!-- OTHER INIT -->
+	<script defer src="js/partials/script.js"></script>
 
 </head>
 
@@ -85,9 +34,25 @@
 
 	<!-- DuckHunt Placeholder -->
 	<div id="container" class="fadeOnLoad">
-		<div id="mask">
-			<div id="wave"></div>
-		</div>
+    <div id="logo">
+      <h1>Project Name</h1>
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#/section-1">Section 1</a></li>
+        <li><a href="#/section-2">Section 2</a></li>
+      </ul>
+    </div>
+
+    <div id="page">
+      Loading....
+    </div>
+
+    <div id="footer">
+      @YourProject
+    </div>
 	</div>
 
 	<!-- Application colsole log -->
@@ -96,5 +61,30 @@
 		<div id="console_output"></div>
 	</aside>
 
+
+
 </body>
+<!--// &#9734;  ☆ KUZYA.COM
+                             -~-%%%-,,
+                           ,%       ^2%
+                          -ZZ2       22
+                          -22%-,    .22
+ ~,2~ ,i,       qWE2      %qggp2222gggp2     .2Zg,          .- ,-
+ ,,222NEEBBggggg222%      -WWWWWqQWWWFBF     `?ZW\,,,,ggggggp2%==-"
+ ,,,ggBBBBBBBBBBBBgggg,   -222%2WB2^27Z^ ,ggggggBNBWBBBWBBBWB2s==~-
+   ,ggBBBBBWWBBBWBWWBBBBgg,  %%JE@P  qggBBBBBBWWBWBWBWWWWBWWBE2"""`
+   ``qBWWBBBBBWWBWNBWBBWBWBBm%%%%% .dWBWBBBWWWWBNWBBBBWWBWWWWE"""
+        `"WWWWBWHWBBBBEBWW"^ ,gggg,`/"WWWBWBWWBBWWNWBWBWWWWWF"^
+            ""WBgdWW"""   ggWWWWWBWBgg, `"""""""W3EBWF"\
+               ""F ~g  iqdWBBWBBNBWBWWWBr,   F -JWWW
+                   -7   "" ^^7@WWWWW/"7"-"\  ^
+                              3H@ZES
+                               3@EP`
+                                22,
+                                LL/
+
+    ┌────────────────────────────────────────────────────────┐
+    │ Date of Creation ........................... Year 2012 │
+    └────────────────────────────────────────────────────────┘
+//-->
 </html>

@@ -1,0 +1,23 @@
+	#console {
+	position: fixed;
+	height: 200px;
+	top: -200px;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	background: rgba(0,0,0,0.96);
+	}
+	#console_output { 
+	position: absolute;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	top: 28px;
+	padding: 3px;
+	background: rgba(0,0,0,0.3);
+	color: #39c;
+	outline: 0;
+	border: 0;
+	resize:none;
+	overflow: auto;
+	}

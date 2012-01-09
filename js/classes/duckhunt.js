@@ -1,23 +1,15 @@
 //////////////////////////??DUCKHUNT??//////////////////////////////
+define(['jquery'], function ($) {
+    //Plugin code goes here.
 
 var DuckHunt = (function() {
 
 		var positions = [
-				{
-				xPos: 50,
-				occupied: false},
-		{
-				xPos: 150,
-				occupied: false},
-		{
-				xPos: 250,
-				occupied: false},
-		{
-				xPos: 350,
-				occupied: false},
-		{
-				xPos: 450,
-				occupied: false}
+			{	xPos: 50, occupied: false },
+			{ xPos: 150, occupied: false },
+			{ xPos: 250, occupied: false },
+			{ xPos: 350, occupied: false },
+			{ xPos: 450, occupied: false }
 		];
 
 		function randomPos() {
@@ -82,3 +74,5 @@ var DuckHunt = (function() {
 		}
 
 })();
+
+});
