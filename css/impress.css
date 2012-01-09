@@ -40,10 +40,33 @@ html, body { overflow: hidden; }
 	overflow: auto;
 	}
 
+	#site-logo {
+	display: inline-block;
+	position: absolute;
+	top: 32px;
+	left: 32px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	}
+	#site-logo:hover span {
+		color: #39f;
+	}
+
+	#site-nav {
+	position: absolute;
+	right: 13px;
+	top: 13px;
+	z-index: 999;
+	}
+	#site-nav li { display: inline-block; }
+
 
 
 /* STEP SPECIFIC STYLES */
 .step {
+	width: 720px;
 	padding: 0;
 	line-height: normal;
 	-webkit-box-sizing: border-box;
@@ -155,35 +178,11 @@ html, body { overflow: hidden; }
 }
 
 
+
+
 /*////////////////////////////////////////////
 // LARGE OVERVIEW SECTION
 */
 #overview { z-index: -1; }
 /* on overview step everything is visible */
 #impress.step-overview .step { opacity: 1;}
-
-
-
-
-
-
-@media screen and (min-width: 1920px) {
-	body { background: #f3f3f3; }
-
-}
-
-
-@media screen and (max-width: 1024px) and (max-height: 768px) {
-	body { background: #efefef; }
-
-}
-
-@media screen and (max-width: 1024px) and (max-height: 546px) {
-	body { background: lavender; }
-
-}
-
-@media screen and (max-width: 800px) and (max-height: 600px) {
-	body { background: #eee; }
-
-}
