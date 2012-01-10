@@ -1,0 +1,9 @@
+{{#if tweets.length}}
+  <ul>
+    {{#each tweets}}
+      <li>{{this.text}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  No tweets found.
+{{/if}}

@@ -9,13 +9,13 @@ function console_slide(evt){
     if(visible==false){
         visible = true;
         $('#console').animate({
-            top: 0
+            bottom: 0
         });
     }
     else if(visible==true){
         visible = false;
         $('#console').animate({
-            top: -350
+            bottom: -350
         });
     }
     return false;

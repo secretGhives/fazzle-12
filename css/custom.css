@@ -1,18 +1,33 @@
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #666;
+}
+
 	#console {
 	position: fixed;
 	height: 200px;
-	top: -200px;
+	bottom: -200px;
 	left: 0;
 	right: 0;
-	bottom: auto;
+	top: auto;
 	background: rgba(0,0,0,0.96);
+	z-index: 9999;
 	}
 	#console_output { 
 	position: absolute;
 	left: 3px;
 	right: 3px;
 	bottom: 3px;
-	top: 28px;
+	top: 3px;
 	padding: 3px;
 	background: rgba(0,0,0,0.3);
 	color: #39c;

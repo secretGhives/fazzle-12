@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<!-- Temp Style REMOVE -->
-  <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/custom.css">
 	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
 
 	<!--[if (gte IE 6)&(lte IE 8)]>
@@ -33,26 +33,54 @@
 <body>
 
 	<div id="container" class="fadeOnLoad">
-    <div id="logo">
-      <h1>Project Name</h1>
-    </div>
+	
+		<div class="topbar" data-dropdown="dropdown">
+			<div class="topbar-inner">
+				<div class="container">
+					<h3><a href="#">Project Name</a></h3>
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#impress">Impress</a></li>
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">Examples</a>
+							<ul class="dropdown-menu">
+								<li><a href="docs/backbone-ui">Backbone UI</a></li>
+								<li><a href="docs/layoutmanager">Backbone LayoutManager</a></li>
+								<li><a href="docs/localstorage">Backbone LocalStorage</a></li>
+								<li class="divider"></li>
+								<li><a href="docs/icanhaz">ICanHaz</a></li>
+								<li><a href="docs/mustache">Mustache</a></li>
+								<li><a href="docs/handlebars">Handlebars</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="pull-left" action="">
+						<input type="text" placeholder="Search">
+					</form>
+					<ul class="nav secondary-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">Boostrap</a>
+							<ul class="dropdown-menu">
+								<li><a href="#/bootstrap">Documentation</a></li>
+								<li><a href="#/javascript">Javascript</a></li>
+								<li class="divider"></li>
+								<li><a href="#/other">Other</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /topbar-inner -->
+		</div>
 
-    <div id="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#/section-1">Section 1</a></li>
-        <li><a href="#/section-2">Section 2</a></li>
-      </ul>
-    </div>
+		<div id="page">
+			Loading....
+		</div>
 
-    <div id="page">
-      Loading....
-    </div>
-
-    <div id="footer">
-      @YourProject
-    </div>
-  </div>
+		<div id="footer">
+			@YourProject
+		</div>
+	</div>
 
 	<!-- Application colsole log -->
 	<aside id="console">
@@ -60,28 +88,42 @@
 		<div id="console_output"></div>
 	</aside>
 
+	<div id="modal-from-dom" class="modal hide fade" style="display: none; ">
+		<div class="modal-header">
+			<a href="#" class="close">×</a>
+			<h3>Modal Heading</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn primary">Primary</a>
+			<a href="#" class="btn secondary">Secondary</a>
+		</div>
+	</div>
+
 </body>
 <!--// &#9734;  ☆ KUZYA.COM
-                             -~-%%%-,,
-                           ,%       ^2%
-                          -ZZ2       22
-                          -22%-,    .22
+														 -~-%%%-,,
+													 ,%       ^2%
+													-ZZ2       22
+													-22%-,    .22
  ~,2~ ,i,       qWE2      %qggp2222gggp2     .2Zg,          .- ,-
  ,,222NEEBBggggg222%      -WWWWWqQWWWFBF     `?ZW\,,,,ggggggp2%==-"
  ,,,ggBBBBBBBBBBBBgggg,   -222%2WB2^27Z^ ,ggggggBNBWBBBWBBBWB2s==~-
-   ,ggBBBBBWWBBBWBWWBBBBgg,  %%JE@P  qggBBBBBBWWBWBWBWWWWBWWBE2"""`
-   ``qBWWBBBBBWWBWNBWBBWBWBBm%%%%% .dWBWBBBWWWWBNWBBBBWWBWWWWE"""
-        `"WWWWBWHWBBBBEBWW"^ ,gggg,`/"WWWBWBWWBBWWNWBWBWWWWWF"^
-            ""WBgdWW"""   ggWWWWWBWBgg, `"""""""W3EBWF"\
-               ""F ~g  iqdWBBWBBNBWBWWWBr,   F -JWWW
-                   -7   "" ^^7@WWWWW/"7"-"\  ^
-                              3H@ZES
-                               3@EP`
-                                22,
-                                LL/
+	 ,ggBBBBBWWBBBWBWWBBBBgg,  %%JE@P  qggBBBBBBWWBWBWBWWWWBWWBE2"""`
+	 ``qBWWBBBBBWWBWNBWBBWBWBBm%%%%% .dWBWBBBWWWWBNWBBBBWWBWWWWE"""
+				`"WWWWBWHWBBBBEBWW"^ ,gggg,`/"WWWBWBWWBBWWNWBWBWWWWWF"^
+						""WBgdWW"""   ggWWWWWBWBgg, `"""""""W3EBWF"\
+							 ""F ~g  iqdWBBWBBNBWBWWWBr,   F -JWWW
+									 -7   "" ^^7@WWWWW/"7"-"\  ^
+															3H@ZES
+															 3@EP`
+																22,
+																LL/
 
-    ┌────────────────────────────────────────────────────────┐
-    │ Date of Creation ........................... Year 2012 │
-    └────────────────────────────────────────────────────────┘
+		┌────────────────────────────────────────────────────────┐
+		│ Date of Creation ........................... Year 2012 │
+		└────────────────────────────────────────────────────────┘
 //-->
 </html>

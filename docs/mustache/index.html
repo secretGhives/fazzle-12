@@ -5,10 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Backbone example</title>
 
-  <script type="text/javascript" src="../js/libs/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/libs/underscore.min.js"></script>
-  <script type="text/javascript" src="../js/libs/backbone.js"></script>
-  <script type="text/javascript" src="../js/libs/mustache.js"></script>
+
+    <script src="/js/libs/jquery/jquery-min.js"></script>
+    <script src="/js/libs/underscore/underscore-min.js"></script>
+    <script src="/js/libs/backbone/backbone.js"></script>
+    <script src="/js/libs/mustache/mustache.js"></script>
 
   <script type="text/javascript">
     var Movie = Backbone.Model.extend({
@@ -86,7 +87,7 @@
       }
     });
 
-    var MovieAppController = Backbone.Controller.extend({
+    var MovieAppController = Backbone.Router.extend({
       initialize: function(params) {
         this.model = new MovieAppModel();
         this.view = new MovieAppView({model: this.model});
@@ -104,7 +105,7 @@
           format: 'dvd',
           })
         );
-        this.saveLocation(); // reset location so we can trigger again
+        //this.saveLocation(); // reset location so we can trigger again
       },
 
       remove: function(cid) {

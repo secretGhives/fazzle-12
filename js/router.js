@@ -4,28 +4,39 @@ define([
   'underscore',
   'backbone',
   'views/home/main',
-  'views/section1/list',
-  'views/section2/list'
-], function($, _, Backbone, mainHomeView, section1ListView, section2ListView ){
+  'views/bootstrap/main',
+  'views/javascript/main',
+  'views/other/list',
+  'views/impress/main'
+], function($, _, Backbone, mainHomeView, bootstrapView, bootstrapJavascriptView, otherView, impressView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'section-1': 'showSection1',
-      'section-2': 'showSection2',
+      'impress': 'showImpress',
+      'other': 'showOther',
+      'bootstrap': 'showBootstrap',
+      'javascript': 'showBootstrapJavascript',
 
       // Default
       '*actions': 'defaultAction'
     },
-    showSection1: function(){
+    showBootstrap: function(){
       // Call render on the module we loaded in via the dependency array
       // 'views/projects/list'
-      section1ListView.render();
+      bootstrapView.render();
     },
       // As above, call render on our loaded module
       // 'views/users/list'
-    showSection2: function(){
-      section2ListView.render();
+    showBootstrapJavascript: function(){
+      bootstrapJavascriptView.render();
     },
+    showOther: function(){
+      otherView.render();
+    },
+    showImpress: function(){
+      impressView.render();
+    },
+
     defaultAction: function(actions){
       // We have no matching route, lets display the home page
       mainHomeView.render();

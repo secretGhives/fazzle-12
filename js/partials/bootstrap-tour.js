@@ -23,9 +23,9 @@
 	  'cookieMonster': true, // true or false to control whether cookies are used
 	  'cookieName': 'JoyRide', // Name the cookie you'll use
 	  'cookieDomain': false, // Will this cookie be attached to a domain, ie. '.notableapp.com'
-	  'tipContainer': 'body', // Where will the tip be attached if not inline
+	  'tipContainer': '#page', // Where will the tip be attached if not inline
 	  'inline': false, // true or false, if true the tip will be attached after the element
-	  'tipContent': '#joyRideTipContent' // What is the ID of the <ol> you put the content in
+	  'tipContent': '#tourContent' // What is the ID of the <ol> you put the content in
 	};
 
 	//Extend those options
@@ -42,8 +42,8 @@
 	  count = skipCount = 0,
 	  prevCount = -1,
 	  timerIndicatorInstance,
-	  timerIndicatorTemplate = '<div class="joyride-timer-indicator-wrap"><span class="joyride-timer-indicator"></span></div>',
-	  tipTemplate = function(tipClass, index, buttonText, self) { return '<div class="joyride-tip-guide ' + tipClass + '" id="joyRidePopup' + index + '"><span class="joyride-nub"></span>' + $(self).html() + buttonText + '<a href="#close" class="joyride-close-tip">\'</a>' + timerIndicatorInstance + '</div>'; },
+	  timerIndicatorTemplate = '<div class="tour-timer-indicator-wrap"><span class="tour-timer-indicator"></span></div>',
+	  tipTemplate = function(tipClass, index, buttonText, self) { return '<div class="tour-tip-guide ' + tipClass + '" id="joyRidePopup' + index + '"><span class="tour-nub"></span>' + $(self).html() + buttonText + '<a href="#close" class="tour-close-tip">\'</a>' + timerIndicatorInstance + '</div>'; },
 	  tipLayout = function(tipClass, index, buttonText, self) {
 		if (index == 0 && settings.startTimerOnClick && settings.timer > 0 || settings.timer == 0) {
 		  timerIndicatorInstance = '';
@@ -51,7 +51,7 @@
 		  timerIndicatorInstance = timerIndicatorInstance;
 		}
 		if (!tipClass) tipClass = '';
-		(buttonText != '') ? buttonText = '<a href="#" class="joyride-next-tip small nice radius yellow button">' + buttonText + '</a>': buttonText = '';
+		(buttonText != '') ? buttonText = '<button class="tour-next-tip small">' + buttonText + '</button>': buttonText = '';
 		if (settings.inline) {
 		  $(tipTemplate(tipClass, index, buttonText, self)).insertAfter('#' + $(self).attr('data-id'));
 		} else {
@@ -108,16 +108,16 @@
 		
 		if (count < tipContent.length) {
 		  if (settings.tipAnimation == "pop") {
-			$('.joyride-timer-indicator').width(0);
+			$('.tour-timer-indicator').width(0);
 			if (settings.timer > 0) {
-			  currentTip.show().children('.joyride-timer-indicator-wrap').children('.joyride-timer-indicator').animate({width: '100%'}, settings.timer);
+			  currentTip.show().children('.tour-timer-indicator-wrap').children('.tour-timer-indicator').animate({width: '100%'}, settings.timer);
 			} else {
 			  currentTip.show();
 			}
 		  } else if (settings.tipAnimation == "fade") {
-			$('.joyride-timer-indicator').width(0);
+			$('.tour-timer-indicator').width(0);
 			if (settings.timer > 0) {
-			  currentTip.fadeIn(settings.tipAnimationFadeSpeed).children('.joyride-timer-indicator-wrap').children('.joyride-timer-indicator').animate({width: '100%'}, settings.timer);
+			  currentTip.fadeIn(settings.tipAnimationFadeSpeed).children('.tour-timer-indicator-wrap').children('.tour-timer-indicator').animate({width: '100%'}, settings.timer);
 			} else {
 			  currentTip.fadeIn(settings.tipAnimationFadeSpeed);
 			}
@@ -129,14 +129,14 @@
 		  
 		  if (settings.tipLocation == "bottom") {
 			currentTip.offset({top: (currentTipPosition.top + currentParentHeight + 14), left: (currentTipPosition.left - bodyOffset.left)});
-			currentTip.children('.joyride-nub').addClass('top').removeClass('bottom');
+			currentTip.children('.tour-nub').addClass('top').removeClass('bottom');
 		  } else if (settings.tipLocation == "top") {
 			if (currentTipHeight >= currentTipPosition.top) {
 			  currentTip.offset({top: (currentTipPosition.top + currentParentHeight + 10 - bodyOffset.top), left: (currentTipPosition.left - bodyOffset.left)});
-			  currentTip.children('.joyride-nub').addClass('top').removeClass('bottom');
+			  currentTip.children('.tour-nub').addClass('top').removeClass('bottom');
 			} else {
 			  currentTip.offset({top: ((currentTipPosition.top - 4) - (currentParentHeight + currentTipHeight + bodyOffset.top)), left: (currentTipPosition.left - bodyOffset.left)});
-			  currentTip.children('.joyride-nub').addClass('bottom').removeClass('top');
+			  currentTip.children('.tour-nub').addClass('bottom').removeClass('top');
 			}
 		  }
 		  
@@ -227,12 +227,12 @@
 		}
 		$(self).parent().hide();
 	  }
-	  $('.joyride-close-tip').click(function(e) {
+	  $('.tour-close-tip').click(function(e) {
 		endTip(e, interval_id, settings.cookieMonster, this);
 	  });
 	  
 	  // When the next button is clicked, show the next tip, only when cookie isn't present
-		$('.joyride-next-tip').click(function(e) {
+		$('.tour-next-tip').click(function(e) {
 		  e.preventDefault();
 		  if (count >= tipContent.length) {
 			endTip(e, interval_id, settings.cookieMonster, this);
@@ -295,14 +295,14 @@
 })(jQuery);
 
 $(window).load(function() {
-  $(this).joyride({
-	'tipLocation': 'top',
-	'scrollSpeed': 300,
-	'nextButton': true,
-	'tipAnimation': 'fade',
-	'tipAnimationFadeSpeed': 500,
-	'cookieMonster': false,
-	'inline': true,
-	'tipContent': '#joyRideTipContent'
-  });
+ //  $(this).joyride({
+	// 'tipLocation': 'top',
+	// 'scrollSpeed': 300,
+	// 'nextButton': true,
+	// 'tipAnimation': 'fade',
+	// 'tipAnimationFadeSpeed': 500,
+	// 'cookieMonster': false,
+	// 'inline': true,
+	// 'tipContent': '#tourContent'
+ //  });
 });

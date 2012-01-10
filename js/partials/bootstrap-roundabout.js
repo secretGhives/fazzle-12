@@ -1135,10 +1135,10 @@
 		}
 	};
 
-	$(function () {
-		if ($("[rel=roundabout]").length > 0){
-			$("[rel=roundabout]").roundabout();
-		}
-	})
+	// $(function () {
+	// 	if ($("[rel=roundabout]").length > 0){
+	// 		$("[rel=roundabout]").roundabout();
+	// 	}
+	// })
 
 })(jQuery);
