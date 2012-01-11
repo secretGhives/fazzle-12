@@ -4,8 +4,12 @@ define([
 	'underscore',
 	'backbone',
 	'text!templates/home/main.html',
+	'libs/jquery/easing',
+	'libs/jquery/mousewheel',
 	'classes/sample',
-	'partials/bootstrap-roundabout'
+	'order!jqueryui',
+	'order!partials/bootstrap-carausel',
+	'order!classes/carauselwrapper'
 ], function($, _, Backbone, mainHomeTemplate){
 
 	var mainHomeView = Backbone.View.extend({
@@ -29,6 +33,7 @@ define([
 			// 	'tipContent': '#tourContent'
 			// });
 
+
 			// checkbox add on logic
 			$('.add-on :checkbox').click(function () {
 				if ($(this).attr('checked')) {
@@ -38,8 +43,8 @@ define([
 				}
 			});
 
-			$("a[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
-			$("a[rel=tip]").twipsy({live: true});
+			$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
+			$("[rel=tip]").twipsy({live: true});
 			if ($("[rel=roundabout]").length > 0){
 				$("[rel=roundabout]").roundabout();
 			};
@@ -50,6 +55,34 @@ define([
 				setTimeout(function () {
 					btn.button('reset')
 				}, 3000)
+			});
+
+			$.ajax({
+				url: 'https://picasaweb.google.com/data/feed/api/all?q=fashion'
+				, dataType: 'jsonp'
+				, data: {
+					alt: 'json'
+					, 'max-results': 20
+				}
+				, success: function (data) {
+					console.log(data.feed.entry[0]);
+
+					$('#runwayWrap')
+					.coulisse({
+						index: 0
+						, cyclic:   true
+						, images: data.feed.entry
+						, imageSrcGetter: ['content', 'src']
+						, linkHrefGetter: ['link', 1, 'href']
+						, activeSize: 350
+						, inactiveSize: 200
+						, indexChanging: function (e, arg) {
+							var entry = data.feed.entry[arg.index];
+							if(!entry)alert(arg.index);
+								console.log(entry);
+						}
+					});
+				}
 			});
 			
 		}

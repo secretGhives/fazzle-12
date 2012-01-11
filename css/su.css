@@ -1,0 +1,78 @@
+.ac { text-align: center; }
+.ar { text-align: right; }
+.al { text-align: left; }
+
+#app-footer { margin-top: 42px; }
+
+#page .marge { margin-top: 69px; }
+.page-header { margin-bottom: 1px; }
+
+
+.topbar-inner, .topbar .fill {
+	background: transparent;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.25), inset 0 0 0 rgba(0, 0, 0, 0.1);
+}
+.topbar-inner .container {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	max-height: 60px;
+	padding: 10px 0;
+	background: #f3f3f3;
+}
+.topbar div > ul .menu-dropdown, 
+.topbar div > ul .dropdown-menu, 
+.nav .menu-dropdown, .nav .dropdown-menu { background-color: #f6f6f6; }
+
+.topbar h3 a:hover, .topbar .brand:hover, .topbar ul .active > a {
+	background: transparent;
+	color: #39F;
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	text-decoration: none;
+}
+.topbar h3 {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+}
+.topbar a {
+	color: #666;
+	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.69);
+}
+.topbar div > ul a:hover, .nav a:hover {
+	color: #39f;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.42);
+	text-decoration: none;
+}
+.topbar h3 a, .topbar .brand {
+	float: none;
+	margin-left: 0;
+	padding: 3px 20px 6px;
+	font-size: 30px;
+	color: #666;
+}
+.topbar h3 a em { color: violet; }
+.topbar div > ul .menu-dropdown li a:hover, 
+.topbar div > ul .dropdown-menu li a:hover, 
+.nav .menu-dropdown li a:hover, 
+.nav .dropdown-menu li a:hover {
+background: #39F;
+color: white;
+}
+a.menu::after, .dropdown-toggle::after { border-top: 4px solid #39F; }
+.topbar input {
+	background: #fff;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: 1px solid #d9d9d9;
+	border-top: 1px solid #c0c0c0;
+}
+
+/* PROFILE PAGE */
+.sidebar .media-grid { margin-left: 0; }
+.sidebar .media-grid a { margin: 1px; }
+.sidebar figure { margin: 0; padding: 0; }
+.sidebar .side-links { margin-bottom: 13px; display: block; }
+.sidebar .btn { margin: 1px 0; }
+.profile-well { margin-bottom: 0; padding: 6px; }
+.shelves.well { padding: 9px; }

@@ -1,9 +1,9 @@
-// Filename: views/javascript/main
+// Filename: views/buzz/main
 define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/javascript/main.html',
+	'text!templates/buzz/main.html',
 	'order!partials/bootstrap-alerts',
 	'order!partials/bootstrap-buttons',
 	'order!partials/bootstrap-dropdown',
@@ -13,21 +13,21 @@ define([
 	'order!partials/bootstrap-roundabout',
 	'order!partials/bootstrap-twipsy',
 	'order!partials/bootstrap-popover'
-], function($, _, Backbone, bootstrapJavascriptTemplate){
-	var bootstrapJavascriptView = Backbone.View.extend({
+], function($, _, Backbone, buzzTemplate){
+	var buzzView = Backbone.View.extend({
 		el: $("#page"),
 		initialize: function(){
 		},
 		render: function(){
 			var data = {};
-			var compiledTemplate = _.template( bootstrapJavascriptTemplate, data );
+			var compiledTemplate = _.template( buzzTemplate, data );
 
-			myAppName.console.log('views/javascript/main.js says Hi');
+			myAppName.console.log('views/buzz/main.js says Hi');
 
 			// Render template
 			this.el.html( compiledTemplate );
 	
 		}
 	});
-	return new bootstrapJavascriptView;
+	return new buzzView;
 });

@@ -4,37 +4,37 @@ define([
   'underscore',
   'backbone',
   'views/home/main',
-  'views/bootstrap/main',
-  'views/javascript/main',
-  'views/other/list',
-  'views/impress/main'
-], function($, _, Backbone, mainHomeView, bootstrapView, bootstrapJavascriptView, otherView, impressView){
+  'views/profile/main',
+  'views/buzz/main',
+  'views/closet/main',
+  'views/settings/main'
+], function($, _, Backbone, mainHomeView, profileView, buzzView, closetView, settingsView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      'impress': 'showImpress',
-      'other': 'showOther',
-      'bootstrap': 'showBootstrap',
-      'javascript': 'showBootstrapJavascript',
+      'profile': 'showProfile',
+      'buzz': 'showBuzz',
+      'closet': 'showCloset',
+      'settings': 'showSettings',
 
       // Default
       '*actions': 'defaultAction'
     },
-    showBootstrap: function(){
+    showProfile: function(){
       // Call render on the module we loaded in via the dependency array
-      // 'views/projects/list'
-      bootstrapView.render();
+      // 'views/profile/main'
+      profileView.render();
     },
       // As above, call render on our loaded module
-      // 'views/users/list'
-    showBootstrapJavascript: function(){
-      bootstrapJavascriptView.render();
+      // 'views/buzz/main'
+    showBuzz: function(){
+      buzzView.render();
     },
-    showOther: function(){
-      otherView.render();
+    showCloset: function(){
+      closetView.render();
     },
-    showImpress: function(){
-      impressView.render();
+    showSettings: function(){
+      settingsView.render();
     },
 
     defaultAction: function(actions){
