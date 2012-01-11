@@ -9,10 +9,9 @@ define([
 	'order!partials/bootstrap-dropdown',
 	'order!partials/bootstrap-modal',
 	'order!partials/bootstrap-tabs',
-	'order!partials/bootstrap-scrollspy',
-	'order!partials/bootstrap-roundabout',
 	'order!partials/bootstrap-twipsy',
-	'order!partials/bootstrap-popover'
+	'order!partials/bootstrap-popover',
+	'classes/sample'
 ], function($, _, Backbone, buzzTemplate){
 	var buzzView = Backbone.View.extend({
 		el: $("#page"),
@@ -26,6 +25,8 @@ define([
 
 			// Render template
 			this.el.html( compiledTemplate );
+
+			$("[rel=tip]").twipsy({live: true});
 	
 		}
 	});

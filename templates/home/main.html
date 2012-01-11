@@ -13,8 +13,7 @@
 				<div id="runwayWrap" class="CoulisseDemo"></div>
 
 				<div class="ac">
-					<button class="btn">Like</button>
-					<button class="btn">Dislike</button>
+					<button class="btn like large" data-toggle="toggle"><span class="icon-btn">N</span>Like</button>
 				</div>
 
 			</div>
@@ -22,8 +21,8 @@
 
 		<div class="row">
 			<div class="span4 sidebar">
-				<h3 id="tour-tabs">Options</h3>
-				<button class="btn span4" data-toggle="toggle">Create new look</button>
+				<h3 id="tour-tabs">Quick menu</h3>
+				<button id="btn-create-new-look" class="btn span4" data-toggle="toggle">Create new look</button>
 				<button class="btn span4" data-toggle="toggle">Share a look</button>
 				<button class="btn span4" data-toggle="toggle">Upload new items</button>
 				<button class="btn span4 primary" rel="pop" data-content="Use 'Find Friends' to start your fashion circle." data-original-title="Connect with your homies." data-placement="right" data-toggle="toggle" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true">Find friends</button>
@@ -33,7 +32,9 @@
 
 				<div class="alert-message block-message notice fade in" data-alert="alert" >
 					<a class="close" href="#">&times;</a>
-					<p><span class="label success">Noob alert</span> <strong>Oh snap! First time here?</strong> Would you like to run a site tour nice to familirize yourself with the interface options.</p>
+					<p><span class="label success">Noob alert</span> <strong>Oh snap! First time here?</strong> Would you like to run a site tour to familirize yourself with the interface options?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 					<div class="alert-actions">
 						<a class="btn small" href="#">Yeah!</a> <a class="btn small" href="#">Next time..</a>
 					</div>
@@ -48,12 +49,28 @@
 					</div>
 				</form>
 
-				<p>Lorem ipsum dolor sit <a href="#" rel="tip" data-placement="left" data-original-title="The last tip!">handle</a> amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco <a href="#" rel="tip" data-placement="right" data-original-title="The last tip!">handle</a> laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat <a href="#" rel="tip" data-placement="above" data-original-title="The last tip!">handle</a> pariatur. Excepteur sint occaecat non
-				proident, sunt in culpa qui officia deserunt mollit <a href="#" rel="tip" data-placement="below" data-original-title="The last tip!">handle</a> id est laborum.</p>
+				<section id="runway-comments">
+
+					<div class="comment well">
+						<a href="#" class="avatar"><img class="thumbnail" src="http://placehold.it/42x42" alt="Frank Lastname"></a>
+						<label class="poster">Frank Lastname</label>
+						<time class="time">posted 6 hours ago</time>
+						<p class="body">OMG OMG I WANT ONE!!!</p>
+					</div>
+
+					<div class="comment well">
+						<a href="#" class="avatar"><img class="thumbnail" src="http://placehold.it/42x42" alt="Fred"></a>
+						<label class="poster">Fred Lastname</label>
+						<time class="time">posted 5 hours, 59 min ago</time>
+						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+				</section>
 
 			</div>
 		</div>

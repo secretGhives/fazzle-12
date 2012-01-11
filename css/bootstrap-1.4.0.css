@@ -2047,7 +2047,7 @@ input[type=submit].btn::-moz-focus-inner {
 
 .modal .popover,
 .modal .twipsy {
-  z-index: 12000; }
+  z-index: 22000; }
 
 .twipsy {
   display: block;
@@ -2246,13 +2246,14 @@ input[type=submit].btn::-moz-focus-inner {
   overflow: hidden;
   min-height: 20em; }
   .roundabout li {
-    height: 10em;
+    height: 17em;
     width: 20em;
     background-color: #ccc;
     text-align: center;
     cursor: pointer; }
     .roundabout li.roundabout-in-focus {
-      cursor: default; }
+      cursor: default;
+      border: 1px solid lavender; }
     .roundabout li img {
       width: 100%;
       max-height: 100%; }

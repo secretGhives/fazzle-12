@@ -2,11 +2,30 @@
 .ar { text-align: right; }
 .al { text-align: left; }
 
+.topbar { z-index: 900; }
+#app-sections-nav li { line-height: 37px; }
 #app-footer { margin-top: 42px; }
 
 #page .marge { margin-top: 69px; }
 .page-header { margin-bottom: 1px; }
 
+#btn-logout { 
+padding: 0;
+line-height: 40px;
+background: transparent;
+margin-left: 13px;
+}
+#app-sections-nav .btn {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+
+.secondary-nav .open .dropdown-toggle { color: #39F; }
+.secondary-nav .dropdown-menu a {
+text-shadow: 0 1px 0 #fff !important;
+color: #37C !important;
+}
 
 .topbar-inner, .topbar .fill {
 	background: transparent;
@@ -38,7 +57,7 @@
 	color: #666;
 	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.69);
 }
-.topbar div > ul a:hover, .nav a:hover {
+.topbar div > ul a:hover {
 	color: #39f;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.42);
 	text-decoration: none;
@@ -48,7 +67,8 @@
 	margin-left: 0;
 	padding: 3px 20px 6px;
 	font-size: 30px;
-	color: #666;
+	color: #999;
+	font-weight: bold;
 }
 .topbar h3 a em { color: violet; }
 .topbar div > ul .menu-dropdown li a:hover, 
@@ -56,7 +76,8 @@
 .nav .menu-dropdown li a:hover, 
 .nav .dropdown-menu li a:hover {
 background: #39F;
-color: white;
+color: #fff !important;
+text-shadow: 0 0 0 #000 !important;
 }
 a.menu::after, .dropdown-toggle::after { border-top: 4px solid #39F; }
 .topbar input {
@@ -67,12 +88,71 @@ a.menu::after, .dropdown-toggle::after { border-top: 4px solid #39F; }
 	border: 1px solid #d9d9d9;
 	border-top: 1px solid #c0c0c0;
 }
+.page-header .ur-sm-avatar {
+display: inline-block;
+margin-right: 13px;
+}
+.page-header h1 { display: inline-block; vertical-align: super; }
 
 /* PROFILE PAGE */
-.sidebar .media-grid { margin-left: 0; }
+.sidebar .media-grid { margin-left: 0; margin-bottom: 13px; }
 .sidebar .media-grid a { margin: 1px; }
 .sidebar figure { margin: 0; padding: 0; }
-.sidebar .side-links { margin-bottom: 13px; display: block; }
+.sidebar .side-links { display: block; }
 .sidebar .btn { margin: 1px 0; }
 .profile-well { margin-bottom: 0; padding: 6px; }
 .shelves.well { padding: 9px; }
+.like.active { background: pink; }
+
+
+/* RUNWAY PAGE */
+.comment.well {
+background: #fff;
+padding: 9px;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+border-left: 3px solid #ddd;
+margin-bottom: -1px;
+position: relative;
+}
+.comment.well:hover { border-left: 3px solid #39F; }
+.comment.well .avatar,  .comment.well .poster { float: left; display: inline-block; }
+.comment.well .time { clear: both; display: block; font-size: 0.86em; }
+.comment.well .poster { font-weight: bold; }
+.comment.well .action { position: absolute; top: 6px; right: 6px; }
+
+/* LOGIN PAGE */
+#app-logo {
+	display: block;
+	margin: 0;
+	padding: 6px 13px;
+	font-size: 32px;
+	color: #999;
+	font-weight: bold;
+}
+#app-logo a:hover { text-decoration: none; }
+#app-logo em { color: violet; }
+
+#app-brand {
+display: block;
+position: fixed;
+z-index: 9999;
+top: 32px;
+right: 32px;
+width: 269px;
+background: rgba(255, 255, 255, 0.69);
+padding: 9px;
+}
+#app-brand .tabs {margin: 0;}
+#app-brand .tab-content {
+background: #fff;
+text-align: center;
+border: 1px solid #eee;
+border-top: 0;
+}
+#login #password { margin-top: 3px; }
+#btn-login { margin-top: 9px; width: 200px; }
+#btn-facebook { margin-bottom: 9px; }
+#btn-signup { margin-top: 13px; }
+#login-register input { margin-bottom: 3px; }

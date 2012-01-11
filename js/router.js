@@ -3,15 +3,18 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'views/login/main',
   'views/home/main',
   'views/profile/main',
   'views/buzz/main',
   'views/closet/main',
   'views/settings/main'
-], function($, _, Backbone, mainHomeView, profileView, buzzView, closetView, settingsView){
+], function($, _, Backbone, loginView, mainHomeView, profileView, buzzView, closetView, settingsView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
+      'login': 'showLogin',
+      'runway': 'showRunway',
       'profile': 'showProfile',
       'buzz': 'showBuzz',
       'closet': 'showCloset',
@@ -19,6 +22,9 @@ define([
 
       // Default
       '*actions': 'defaultAction'
+    },
+    showRunway: function(){
+      mainHomeView.render();
     },
     showProfile: function(){
       // Call render on the module we loaded in via the dependency array
@@ -36,10 +42,13 @@ define([
     showSettings: function(){
       settingsView.render();
     },
+    showLogin: function(){
+      loginView.render();
+    },
 
     defaultAction: function(actions){
       // We have no matching route, lets display the home page
-      mainHomeView.render();
+      //loginView.render();
     }
   });
 

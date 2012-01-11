@@ -36,3 +36,89 @@
 	resize:none;
 	overflow: auto;
 	}
+
+
+/* Accordian required stuff */
+@charset 'utf-8';
+/*************************************************
+*
+*	project:  	liteAccordion - horizontal accordion plugin for jQuery
+*	author:   	Nicola Hibbert
+*	url:	  	http://nicolahibbert.com/horizontal-accordion-jquery-plugin
+*	demo:	  	http://www.nicolahibbert.com/demo/liteAccordion
+*
+/*************************************************/
+/****************************************** Core */
+.accordion { text-align: left; font: 'Helvetica Neue', Verdana, Arial, sans-serif; }
+.accordion ol { position: relative; overflow: hidden; height: 100%; margin: 0; padding: 0; list-style-type: none; }
+.accordion li > h2 { color: black; font-weight: normal; margin: 0; z-index: 2; position: absolute; top: 0; left: 0; -webkit-transform: translateX(-100%) rotate(-90deg); -webkit-transform-origin: right top; -moz-transform: translateX(-100%) rotate(-90deg); -moz-transform-origin: right top; 
+	-o-transform: translateX(-100%) rotate(-90deg); -o-transform-origin: right top; -ms-transform: translateX(-100%) rotate(-90deg); -ms-transform-origin: right top; transform: translateX(-100%) rotate(-90deg); transform-origin: right top; filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+.accordion li > h2 span { display: block; padding-right: 9%; text-align: right; height: 90%; margin-top: 13px; }
+.accordion li > h2 b { color: #aaa; display: inline-block; position: absolute; top: 32%; top: 42%\9; left: 5%; left: 5%\9; text-align: center; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+.accordion li > h2:hover { cursor: pointer; }
+.accordion li > div { height: 100%; position: absolute; top: 0; z-index: 1; overflow-x: hidden; overflow-y: auto; background: white; }
+.accordion noscript p { padding: 10px; margin: 0; background: white; }
+
+/****************************************** Basic */
+.basic li > h2 { background: #e3e3e3; color: #000; line-height: normal; }
+.basic li > div p { margin: 10px; font-size: 14px; }
+.basic .selected {background: #eee !important;}
+
+
+#wardrobe {
+	width: 940px;
+	height: 369px;
+	padding: 0;
+	margin: 0;
+	background: #E8E8E8;
+	border: 0;
+	border-bottom: 1px solid #E8E8E8;
+	h2:hover {
+	  background: #f7f7f7;
+	}
+}
+#wardrobe .more{padding-top:10px;display:block}
+
+#wardrobe a{display:block;}
+.accordion-subgroup {
+padding: 0;
+margin: 0 0 9px 0;
+text-align: center;
+}
+.accordion-subgroup h3 {
+  border-top: 1px solid #38c;
+  padding: 3px 6px;
+  line-height: 22px;
+  color: #666;
+  text-align: left;
+}
+
+.closet-item {
+	display: inline-block;
+	position: relative;
+	margin: 3px;
+	padding: 0;
+	width: 96px;
+	height: 96px;
+	background: #EEE;
+}
+.closet-group-item-count {
+display: inline-block;
+float: right;
+font-size: 14px;
+line-height: 22px;
+}
+.closet-item-comments-counter {
+	display: inline-block;
+	position: absolute;
+	bottom: 5px;
+	right: 3px;
+	background: white;
+	padding: 1px 6px;
+	font-size: 10px;
+}
+.closet-item-image {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}

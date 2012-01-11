@@ -877,7 +877,7 @@ input[type=submit].btn {
 // Fix the stacking of these components when in modals
 .modal .popover,
 .modal .twipsy {
-	z-index: 12000;
+	z-index: 22000;
 }
 
 
@@ -1065,12 +1065,12 @@ input[type=submit].btn {
 	overflow: hidden; 
 	min-height: 20em; 
 	li {
-			height: 10em;
+			height: 17em;
 			width: 20em;
 			background-color: #ccc;
 			text-align: center;
 			cursor: pointer;
-			&.roundabout-in-focus { cursor: default; }
+			&.roundabout-in-focus { cursor: default; border: 1px solid lavender; }
 			img { width: 100%; max-height: 100%; }
 	}
 	span {display:block;}

@@ -4,6 +4,15 @@ define([
 	'underscore',
 	'backbone',
 	'text!templates/closet/main.html',
+	'order!partials/bootstrap-alerts',
+	'order!partials/bootstrap-buttons',
+	'order!partials/bootstrap-dropdown',
+	'order!partials/bootstrap-modal',
+	'order!partials/bootstrap-tabs',
+	'order!partials/bootstrap-roundabout',
+	'order!partials/bootstrap-twipsy',
+	'order!partials/bootstrap-popover',
+	'classes/accordian',
 	'classes/sample'
 ], function($, _, Backbone, closetTemplate){
 
@@ -16,6 +25,11 @@ define([
 
 			myAppName.console.log('views/closet/main.js says Hi');
 			//myAppName.console.log(myAppName.settings.isOnline);
+
+			$('#wardrobe').liteAccordion({
+			  slideSpeed : 300,
+		    enumerateSlides : true 
+			});
 			
 		}
 	});
