@@ -3,8 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/impress/main.html',
-  'classes/sample'
+  'text!templates/impress/main.html'
 ], function($, _, Backbone, impressTemplate){
 
   var impressView = Backbone.View.extend({

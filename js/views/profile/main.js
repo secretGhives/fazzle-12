@@ -3,18 +3,7 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/profile/main.html',
-	'order!partials/bootstrap-alerts',
-	'order!partials/bootstrap-buttons',
-	'order!partials/bootstrap-dropdown',
-	'order!partials/bootstrap-modal',
-	'order!partials/bootstrap-tabs',
-	'order!partials/bootstrap-roundabout',
-	'order!partials/bootstrap-twipsy',
-	'order!partials/bootstrap-popover',
-	'order!libs/jquery/easing',
-	'order!libs/jquery/mousewheel',
-	'order!partials/bootstrap-vacordian'
+	'text!templates/profile/main.html'
 ], function($, _, Backbone, profileTemplate){
 	var profileView = Backbone.View.extend({
 		el: $("#page"),
@@ -41,16 +30,6 @@ define([
 				animSpeed		: 300,
 				animOpacity		: 0.6,
 				visibleSlices	: 3
-			});
-
-			// add on logic
-			// ============
-			$('.add-on :checkbox').click(function () {
-				if ($(this).attr('checked')) {
-					$(this).parents('.add-on').addClass('active')
-				} else {
-					$(this).parents('.add-on').removeClass('active')
-				}
 			});
 
 		}

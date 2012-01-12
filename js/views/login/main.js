@@ -3,11 +3,7 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/login/main.html',
-	'order!libs/jquery/easing',
-	'order!libs/jquery/mousewheel',
-	'order!partials/bootstrap-vacordian',
-	'order!partials/bootstrap-tabs'
+	'text!templates/login/main.html'
 ], function($, _, Backbone, loginTemplate){
 	var loginView = Backbone.View.extend({
 		el: $("body"),
@@ -17,11 +13,10 @@ define([
 			var data = {};
 			var compiledTemplate = _.template( loginTemplate, data );
 
-			myAppName.console.log('views/login/main.js says Hi');
-
 			// Render template
 			this.el.html( compiledTemplate );
 
+			myAppName.console.log('views/login/main.js says Hi');
 
 			$('#va-accordion').vaccordion({
 				accordionW		: $(window).width(),

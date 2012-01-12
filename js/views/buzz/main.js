@@ -3,15 +3,7 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/buzz/main.html',
-	'order!partials/bootstrap-alerts',
-	'order!partials/bootstrap-buttons',
-	'order!partials/bootstrap-dropdown',
-	'order!partials/bootstrap-modal',
-	'order!partials/bootstrap-tabs',
-	'order!partials/bootstrap-twipsy',
-	'order!partials/bootstrap-popover',
-	'classes/sample'
+	'text!templates/buzz/main.html'
 ], function($, _, Backbone, buzzTemplate){
 	var buzzView = Backbone.View.extend({
 		el: $("#page"),

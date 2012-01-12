@@ -23,26 +23,29 @@ define([
       // Default
       '*actions': 'defaultAction'
     },
+    // Call render on the module we loaded in via the dependency array
     showRunway: function(){
+      // 'views/home/main'
       mainHomeView.render();
     },
     showProfile: function(){
-      // Call render on the module we loaded in via the dependency array
       // 'views/profile/main'
       profileView.render();
     },
-      // As above, call render on our loaded module
       // 'views/buzz/main'
     showBuzz: function(){
       buzzView.render();
     },
     showCloset: function(){
+      // 'views/closet/main'
       closetView.render();
     },
     showSettings: function(){
+      // 'views/settings/main'
       settingsView.render();
     },
     showLogin: function(){
+      // 'views/login/main'
       loginView.render();
     },
 

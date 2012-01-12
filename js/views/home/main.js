@@ -4,19 +4,25 @@ define([
 	'underscore',
 	'backbone',
 	'text!templates/home/main.html',
-	//'partials/bootstrap-alerts',
-	//'partials/bootstrap-dropdown',
-	//'partials/bootstrap-modal',
-	//'partials/bootstrap-tabs',
-	//'partials/bootstrap-buttons',
-	//'order!partials/bootstrap-twipsy',
-	//'order!partials/bootstrap-popover',
+	//libs
+	'jqueryui',
 	'libs/jquery/easing',
 	'libs/jquery/mousewheel',
+	//autostart
+	'bootstrap/bootstrap-tabs',
+	'bootstrap/bootstrap-alerts',
+	'bootstrap/bootstrap-modal',
+	'bootstrap/bootstrap-buttons',
+	'bootstrap/bootstrap-dropdown',
+	//requires init
+	'order!bootstrap/bootstrap-twipsy',
+	'order!bootstrap/bootstrap-popover',
+	'classes/roundabout',
+	'classes/accordian',
+	'classes/vacordian',
 	'classes/sample',
-	'order!jqueryui',
-	'order!partials/bootstrap-carausel',
-	'order!classes/carauselwrapper'
+	'order!classes/coulisse',
+	'order!classes/coulisseuiwrapper'
 ], function($, _, Backbone, mainHomeTemplate){
 
 	var mainHomeView = Backbone.View.extend({
@@ -68,7 +74,7 @@ define([
 						, images: data.feed.entry
 						, imageSrcGetter: ['content', 'src']
 						, linkHrefGetter: ['link', 1, 'href']
-						, activeSize: 350
+						, activeSize: 369
 						, inactiveSize: 200
 						, indexChanging: function (e, arg) {
 							var entry = data.feed.entry[arg.index];
