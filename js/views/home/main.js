@@ -9,7 +9,7 @@ define([
 	'libs/jquery/easing',
 	'libs/jquery/mousewheel',
 	'libs/jquery/chosen-min',
-	//'libs/jquery/storage',
+	'libs/jquery/storage',
 	//autostart
 	'bootstrap/bootstrap-tabs',
 	'bootstrap/bootstrap-alerts',
@@ -21,7 +21,7 @@ define([
 	//requires init
 	'order!bootstrap/bootstrap-twipsy',
 	'order!bootstrap/bootstrap-popover',
-	//'classes/tour',
+	'classes/tour',
 	'classes/roundabout',
 	'classes/accordian',
 	'classes/vacordian',
@@ -42,11 +42,55 @@ define([
 			//myAppName.console.log(myAppName.settings.isOnline);
 
 			// Run a site tour
-			// $("#tour-start").click(function(e) {
-			// 	e.preventDefault();
+			if(!(jQuery.Storage.get("tour_runway") == "true")){
+				var config = {
+						mainTitle: "First time here?",
+						saveCookie: true, 
+					steps: [
+					{
+						"name" 		: "tour_1",
+						"type"		: "warning",
+						"position"	: "B",
+						"text"		: "Main attraction, Public RUNWAY",
+						"time" 		: 5000
+					},
+					{
+						"name" 		: "tour_2",
+						"type"		: "info",
+						"text"		: "This is where your vote counts (like/dislike)",
+						"position"	: "R",
+						"time" 		: 5000
+					},
+					{
+						"name" 		: "tour_3",
+						"type"		: "success",
+						"text"		: "Shortcut menus to other areas of the app",
+						"position"	: "BL",
+						"time" 		: 5000
+					},
+					{
+						"name" 		: "tour_4",
+						"text"		: "Let the World know what you think",
+						"position"	: "BL",
+						"time" 		: 5000
+					},
+					{
+						"name" 		: "tour_5",
+						"type"		: "danger",
+						"text"		: "Load more comments.",
+						"position"	: "BL",
+						"time" 		: 5000
+					}]
+				};
 
-				
-			// });
+				//$.tour.start(config);
+
+			}
+
+			$("#tour-start").click(function(e) {
+				e.preventDefault();
+				$.tour.start(config);
+			});
 
 			// $(".max100").maxinput({
 			// 	limit		: 100,
@@ -105,52 +149,6 @@ define([
 					});
 				}
 			});
-
-			// if(!(jQuery.Storage.get("tour_runway") == "true")){
-			// 	var config = {
-			// 			mainTitle: "First time here?",
-			// 			saveCookie: true, 
-			// 		steps: [
-			// 		{
-			// 			"name" 		: "tour_1",
-			// 			"type"		: "warning",
-			// 			"position"	: "B",
-			// 			"text"		: "Main attraction, Public RUNWAY",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_2",
-			// 			"type"		: "info",
-			// 			"text"		: "This is where your vote counts (like/dislike)",
-			// 			"position"	: "R",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_3",
-			// 			"type"		: "success",
-			// 			"text"		: "Shortcut menus to other areas of the app",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_4",
-			// 			"text"		: "Let the World know what you think",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_5",
-			// 			"type"		: "danger",
-			// 			"text"		: "Load more comments.",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		}]
-			// 	};
-
-			// 	$.tour.start(config);
-
-			// }
-
 
 			
 		}
