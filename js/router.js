@@ -8,8 +8,9 @@ define([
   'views/profile/main',
   'views/buzz/main',
   'views/closet/main',
+  'views/closet/view',
   'views/settings/main'
-], function($, _, Backbone, loginView, mainHomeView, profileView, buzzView, closetView, settingsView){
+], function($, _, Backbone, loginView, mainHomeView, profileView, buzzView, closetView, itemsView, settingsView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
@@ -18,6 +19,7 @@ define([
       'profile': 'showProfile',
       'buzz': 'showBuzz',
       'closet': 'showCloset',
+      'view': 'showItems',
       'settings': 'showSettings',
 
       // Default
@@ -40,6 +42,10 @@ define([
       // 'views/closet/main'
       closetView.render();
     },
+    showItems: function(){
+      // 'views/closet/main'
+      itemsView.render();
+    },
     showSettings: function(){
       // 'views/settings/main'
       settingsView.render();
@@ -51,7 +57,7 @@ define([
 
     defaultAction: function(actions){
       // We have no matching route, lets display the home page
-      //loginView.render();
+      //mainHomeView.render();
     }
   });
 

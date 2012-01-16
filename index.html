@@ -68,7 +68,7 @@
 		</div>
 
 		<div id="page">
-			Loading....
+			<div class="loading"><span>loading</span></div>
 		</div>
 
 		<div id="app-footer" class="container ac">
@@ -97,18 +97,66 @@
 		</div>
 	</div>
 
+	<!-- UPLOAD ITEMS MODAL -->
+	<link rel="stylesheet" href="css/chosen.css">
 	<div id="modal-upload-items" class="modal hide fade" style="display: none; ">
 		<div class="modal-header">
 			<a href="#" class="close">×</a>
 			<h3>Upload items</h3>
 		</div>
 		<div class="modal-body">
-			<p class="ac">Drag 'N Drop multiple files here.</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn primary">Upload in background</a>
-			<a href="#" class="btn secondary danger">Cancel</a>
-		</div>
+
+				<ul class="tabs" data-tabs="tabs">
+					<li class="active"><a href="#upload-multiple">Multiple items</a></li>
+					<li><a href="#upload-single">Single item</a></li>
+				</ul>
+				
+				<div id="profile-tab-content" class="tab-content">
+
+					<div class="tab-pane active" id="upload-multiple">
+						<div class="upload well ac">
+							<p>Drag 'n Drop items to this area</p>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="upload-single">
+						<form>
+						  <fieldset>
+								<div class="upload well ac">
+									<p>Drag 'n Drop item to this area</p>
+								</div>
+								<h3 class="separator ac">- or -</h3>
+								<div class="clearfix">
+								  <label for="fileInput">Select item to upload</label>
+								  <div class="input">
+								    <input class="input-file" id="fileInput" name="fileInput" type="file">
+								  </div>
+								</div><!-- /clearfix -->
+						    <div class="clearfix">
+						      <label for="xlInput">Description</label>
+						      <div class="input">
+						        <input class="xlarge" id="xlInputUploadSingleDescription" name="xlInputUploadSingleDescription" size="30" type="text">
+						      </div>
+						    </div><!-- /clearfix -->
+						    <div class="clearfix">
+						      <label for="largeSelect">Category</label>
+						      <div class="input">
+						        <select class="xlarge chzn-select" name="largeSelect" id="singleCategorySelect" multiple>
+						          <option>Untitled</option>
+						          <option>Tops</option>
+						          <option>Bottoms</option>
+						        </select>
+						      </div>
+						    </div><!-- /clearfix -->
+						    <div class="actions">
+						      <input type="submit" class="btn primary" value="Upload">&nbsp;<button type="reset" class="btn">Cancel</button>
+						    </div>
+						  </fieldset>
+						</form>
+					</div><!-- /upload single item -->
+				</div><!-- /upload items tab content -->
+
+		</div><!-- /modal body -->
 	</div>
 
 </body>

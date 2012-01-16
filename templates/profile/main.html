@@ -4,15 +4,15 @@
 
 	<div class="content">
 		<div class="page-header">
-			<h1>Mister Fabulous <small>I like my hair, cause it's pretty!</small></h1>
+			<h1 class="tour_1">Mister Fabulous <small>I like my hair, cause it's pretty!</small></h1>
 		</div>
 
 		<div class="row">
 			<div class="span4 sidebar">
-				<figure>
+				<figure class="tour_2">
 					<img class="thumbnail" src="/img/ruso.png" alt="">
 				</figure>
-				<h3 id="tour-tabs">Friends (100)</h3>
+				<h3 class="tour_3">Friends (100)</h3>
 				<a href="#" class="side-links" data-controls-modal="modal-add-friends" data-backdrop="true" data-keyboard="true">Add friends..</a>
 				<ul class="media-grid">
 					<li><a href="#" rel="tip" title="Firstname Lastname" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
@@ -26,7 +26,7 @@
 					<li><a href="#" rel="tip" title="Firstname Lastname" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
 				</ul>
 
-				<h3 id="tour-tabs">Groups (22)</h3>
+				<h3 class="tour_4">Groups (22)</h3>
 				<a href="#" class="side-links" data-controls-modal="modal-create-group" data-backdrop="true" data-keyboard="true">Create a group..</a>
 				<ul class="media-grid">
 					<li><a href="#" rel="tip" title="Group name" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
@@ -49,7 +49,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 					<div class="alert-actions">
-						<a class="btn small" href="#">Yeah!</a> <a class="btn small" href="#">Next time..</a>
+						<a id="tour-start" class="btn small" href="#">Yeah!</a> <a class="btn small" href="#">Next time..</a>
 					</div>
 				</div>
 
@@ -57,7 +57,7 @@
 					<button class="btn" data-toggle="toggle">Edit profile</button>
 				</div>
 
-				<ul rel="roundabout" class="unstyled roundabout">
+				<ul rel="roundabout" class="unstyled roundabout tour_5">
 					<li><img class="thumbnail" src="http://placehold.it/260x221" alt=""></li>
 					<li><img class="thumbnail" src="http://placehold.it/260x221" alt=""></li>
 					<li><img class="thumbnail" src="http://placehold.it/260x221" alt=""></li>
@@ -70,17 +70,16 @@
 				</ul>
 
 				<div class="ac">
-					<button class="btn like" data-toggle="toggle"><span class="icon-btn">N</span>Like</button>
+					<button class="btn like tour_6" data-toggle="toggle"><span class="icon-btn">N</span>Like</button>
 				</div>
 
-				<ul class="tabs" data-tabs="tabs">
+				<ul class="tabs tour_7" data-tabs="tabs">
 					<li><a href="#profile-about">About</a></li>
 					<li class="active"><a href="#profile-shelves">Shelves</a></li>
 				</ul>
 				
 				<div id="profile-tab-content" class="tab-content">
 					<div class="tab-pane" id="profile-about">
-						<h4>About</h4>
 						<form>
 						  <fieldset>
 								<div class="clearfix">
@@ -136,7 +135,7 @@
 
 						<div class="shelves well ar">
 							<input type="text" class="profile-closet-search" placeholder="Search closet" label="Search closet" autocomplete="off"/>
-							<button class="btn primary">Add new item</button>
+							<button class="btn primary" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Add new item</button>
 						</div>
 
 						<div id="va-accordion" class="va-container">
@@ -150,7 +149,7 @@
 									<div class="va-content">
 										<p>55 items</p>
 										<ul>
-											<li><a href="#" class="btn">View</a></li>
+											<li><a href="#closet" class="btn primary large">View</a></li>
 											<li><a href="#" class="btn">Edit</a></li>
 											<li><a href="#" class="btn">Add new item</a></li>
 										</ul>
@@ -161,7 +160,7 @@
 									<div class="va-content">
 										<p>202 items</p>
 										<ul>
-											<li><a href="#" class="btn">View</a></li>
+											<li><a href="#closet" class="btn primary large">View</a></li>
 											<li><a href="#" class="btn">Edit</a></li>
 											<li><a href="#" class="btn">Add new item</a></li>
 										</ul>
@@ -172,7 +171,7 @@
 									<div class="va-content">
 										<p>2 items</p>
 										<ul>
-											<li><a href="#" class="btn">View</a></li>
+											<li><a href="#closet" class="btn primary large">View</a></li>
 											<li><a href="#" class="btn">Edit</a></li>
 											<li><a href="#" class="btn">Add new item</a></li>
 										</ul>
@@ -183,7 +182,7 @@
 									<div class="va-content">
 										<p>20 items</p>
 										<ul>
-											<li><a href="#" class="btn">View</a></li>
+											<li><a href="#closet" class="btn primary large">View</a></li>
 											<li><a href="#" class="btn">Edit</a></li>
 											<li><a href="#" class="btn">Add new item</a></li>
 										</ul>
@@ -194,7 +193,7 @@
 									<div class="va-content">
 										<p>9 items</p>
 										<ul>
-											<li><a href="#" class="btn">View</a></li>
+											<li><a href="#closet" class="btn primary large">View</a></li>
 											<li><a href="#" class="btn">Edit</a></li>
 											<li><a href="#" class="btn">Add new item</a></li>
 										</ul>

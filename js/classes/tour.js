@@ -1,308 +1,352 @@
 /*
- * jQuery Joyride Plugin 1.0
- * www.ZURB.com/playground
- * Copyright 2011, ZURB
- * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
-*/
+ * Main Code by: CODROPS
+ * http://tympanus.net/codrops/2010/12/21/website-tour/
+ * 
+ * Tranformed into a plugin by Nick Routsong
+ * blog.routydevelopment.com
+ * 
+ * Ver. 1.0
+ * 
+ * Example Step Object Properties:
+ * 
+ * "name" 		: "tour_1",
+ * "type"			: "warning",
+ * "position"	: "TL",
+ * "text"		: "You can create a tour to explain the functionality of your app",
+ * "time" 		: 5000
+ * 
+ * 
+ */
 
-(function($) {
-  $.fn.joyride = function(options) {
-
-	// +++++++++++++++++++
-	//   Defaults
-	// +++++++++++++++++++
-	var settings = {
-	  'tipLocation': 'bottom', // 'top' or 'bottom' in relation to parent
-	  'scrollSpeed': 300, // Page scrolling speed in milliseconds
-	  'timer': 0, // 0 = no timer, all other numbers = timer in milliseconds
-	  'startTimerOnClick': false, // true or false - true requires clicking the first button start the timer
-	  'nextButton': true, // true or false to control whether a next button is used
-	  'tipAnimation': 'pop', // 'pop' or 'fade' in each tip
-	  'tipAnimationFadeSpeed': 300, // when tipAnimation = 'fade' this is speed in milliseconds for the transition
-	  'cookieMonster': true, // true or false to control whether cookies are used
-	  'cookieName': 'JoyRide', // Name the cookie you'll use
-	  'cookieDomain': false, // Will this cookie be attached to a domain, ie. '.notableapp.com'
-	  'tipContainer': '#page', // Where will the tip be attached if not inline
-	  'inline': false, // true or false, if true the tip will be attached after the element
-	  'tipContent': '#tourContent' // What is the ID of the <ol> you put the content in
-	};
-
-	//Extend those options
-	var options = $.extend(settings, options);
+(function($){
+	$.tour = {};
 	
-	return this.each(function() {
-	  
-	  if ($(options.tipContent).length === 0) return;
-	  
-	  $(options.tipContent).hide();
+	$.tour.options = {
+		steps: {},
+		autoplay: false,
+		saveCookie: false,
+		current_step: 0,
+		showtime: 4000,
+		mainTitle: "Take a Tour"
+	};
+	
+	$.tour.start = function(params){
 
-	  var bodyOffset = $(options.tipContainer).children('*').first().position(),
-	  tipContent = $(options.tipContent + ' li'),
-	  count = skipCount = 0,
-	  prevCount = -1,
-	  timerIndicatorInstance,
-	  timerIndicatorTemplate = '<div class="tour-timer-indicator-wrap"><span class="tour-timer-indicator"></span></div>',
-	  tipTemplate = function(tipClass, index, buttonText, self) { return '<div class="tour-tip-guide ' + tipClass + '" id="joyRidePopup' + index + '"><span class="tour-nub"></span>' + $(self).html() + buttonText + '<a href="#close" class="tour-close-tip">\'</a>' + timerIndicatorInstance + '</div>'; },
-	  tipLayout = function(tipClass, index, buttonText, self) {
-		if (index == 0 && settings.startTimerOnClick && settings.timer > 0 || settings.timer == 0) {
-		  timerIndicatorInstance = '';
-		} else {
-		  timerIndicatorInstance = timerIndicatorInstance;
-		}
-		if (!tipClass) tipClass = '';
-		(buttonText != '') ? buttonText = '<button class="tour-next-tip small">' + buttonText + '</button>': buttonText = '';
-		if (settings.inline) {
-		  $(tipTemplate(tipClass, index, buttonText, self)).insertAfter('#' + $(self).attr('data-id'));
-		} else {
-		  $(options.tipContainer).append(tipTemplate(tipClass, index, buttonText, self));
-		}
-	  };
-
-	  if(!settings.cookieMonster || !$.cookie(settings.cookieName)) {
+		try {
+			
+			return Tour.start(params || {});
+			
+		} catch(e) {
 		
-	  tipContent.each(function(index) {
-		var buttonText = $(this).attr('data-text'),
-		tipClass = $(this).attr('class'),
-		self = this;
-
-		if (settings.nextButton && buttonText == undefined) {
-		  buttonText = 'Next';
+			var err = 'Tour Error: ' + e;
+			(typeof(console) != 'undefined' && console.error) ? 
+				console.error(err, params) : 
+				alert(err);
+				
 		}
-		if (settings.nextButton || !settings.nextButton && settings.startTimerOnClick) {
-		  if ($(this).attr('class')) {
-			tipLayout(tipClass, index, buttonText, self);
-		  } else {
-			tipLayout(false, index, buttonText, self);
-		  }
-		} else if (!settings.nextButton) {
-		  if ($(this).attr('class')) {
-			tipLayout(tipClass, index, '', self);
-		  } else {
-			tipLayout(false, index, '', self);
-		  }
-		}
-		$('#joyRidePopup' + index).hide();
-	  }); 
-	}
-	  
-	  showNextTip = function() {
-		var parentElementID = $(tipContent[count]).attr('data-id'),
-		parentElement = $('#' + parentElementID);
 		
-		if (parentElement.offset() === null) {
-		  count++;
-		  skipCount++;
-		  prevCount++;
-		  parentElementID = $(tipContent[count]).attr('data-id'),
-		  parentElement = $('#' + parentElementID);
-		}
-		var windowHalf = Math.ceil($(window).height() / 2),
-		currentTip = $('#joyRidePopup' + count),
-		currentTipPosition = parentElement.offset(),
-		currentParentHeight = parentElement.height() + 10,
-		currentTipHeight = currentTip.height() + 4,
-		tipOffset = 0;
+	};
+	
+	var Tour = {
+		 
+		//Private
+		total_steps: 0,
+		step: 0,
+			
+		start: function(options){
+			$.extend($.tour.options,options); 
+			Tour.total_steps = $.tour.options.steps.length;
+			Tour.showControls();
+		},  
 		
-		if (currentTip.length === 0) return;
+		begin: function(){
+			$('#activatetour,#latertour').remove();
+			$('#endtour,#restarttour,.latertour').show();
+			if(!$.tour.options.autoplay && Tour.total_steps > 1)
+				$('#nextstep').show();
+			Tour.showOverlay();
+			Tour.next();
+		},
 		
-		if (count < tipContent.length) {
-		  if (settings.tipAnimation == "pop") {
-			$('.tour-timer-indicator').width(0);
-			if (settings.timer > 0) {
-			  currentTip.show().children('.tour-timer-indicator-wrap').children('.tour-timer-indicator').animate({width: '100%'}, settings.timer);
-			} else {
-			  currentTip.show();
-			}
-		  } else if (settings.tipAnimation == "fade") {
-			$('.tour-timer-indicator').width(0);
-			if (settings.timer > 0) {
-			  currentTip.fadeIn(settings.tipAnimationFadeSpeed).children('.tour-timer-indicator-wrap').children('.tour-timer-indicator').animate({width: '100%'}, settings.timer);
-			} else {
-			  currentTip.fadeIn(settings.tipAnimationFadeSpeed);
-			}
-		  }
-		  
-		  // ++++++++++++++++++
-		  //   Tip Location 
-		  // ++++++++++++++++++
-		  
-		  if (settings.tipLocation == "bottom") {
-			currentTip.offset({top: (currentTipPosition.top + currentParentHeight + 14), left: (currentTipPosition.left - bodyOffset.left)});
-			currentTip.children('.tour-nub').addClass('top').removeClass('bottom');
-		  } else if (settings.tipLocation == "top") {
-			if (currentTipHeight >= currentTipPosition.top) {
-			  currentTip.offset({top: (currentTipPosition.top + currentParentHeight + 10 - bodyOffset.top), left: (currentTipPosition.left - bodyOffset.left)});
-			  currentTip.children('.tour-nub').addClass('top').removeClass('bottom');
-			} else {
-			  currentTip.offset({top: ((currentTipPosition.top - 4) - (currentParentHeight + currentTipHeight + bodyOffset.top)), left: (currentTipPosition.left - bodyOffset.left)});
-			  currentTip.children('.tour-nub').addClass('bottom').removeClass('top');
-			}
-		  }
-		  
-		  // Animate Scrolling when tip is off screen 
-		  tipOffset = Math.ceil(currentTip.offset().top - windowHalf);
-		  
-		  $("html, body").animate({
-			scrollTop: tipOffset
-		  }, settings.scrollSpeed);
-		  
-		  if (count > 0) {
-			if (skipCount > 0) {
-			  var hideCount = prevCount - skipCount;
-			  skipCount = 0;
-			} else {
-			  var hideCount = prevCount;
-			}
-			if (settings.tipAnimation == "pop") {
-			  $('#joyRidePopup' + hideCount).hide();
-			} else if (settings.tipAnimation == "fade") {
-			  $('#joyRidePopup' + hideCount).fadeOut(settings.tipAnimationFadeSpeed);
-			}
-		  }
-		  
-		// Hide the last tip when clicked
-		} else if ((tipContent.length - 1) < count) {
-		  if (skipCount > 0) {
-			var hideCount = prevCount - skipCount;
-			skipCount = 0;
-		  } else {
-			var hideCount = prevCount;
-		  }
-		  if (settings.cookieMonster == true) {
-			$.cookie(settings.cookieName, 'ridden', { expires: 365, domain: settings.cookieDomain });
-		  } else {
-			// Do not include cookie
-		  }
-		  if (settings.tipAnimation == "pop") {
-			$('#joyRidePopup' + hideCount).fadeTo(0, 0);
-		  } else if (settings.tipAnimation == "fade") {
-			$('#joyRidePopup' + hideCount).fadeTo(settings.tipAnimationFadeSpeed, 0);
-		  }
-		}
-		count++;
+		prev: function(){
+			if(!$.tour.options.autoplay){
+				if(Tour.step > 2)
+					$('#prevstep').show();
+				else
+					$('#prevstep').hide();
+				if(Tour.step == Tour.total_steps)
+					$('#nextstep').show();
+			}		
+			if(Tour.step <= 1)
+				return false;
+			--Tour.step;
+			Tour.showTooltip();
+		},
 		
-		if (prevCount < 0) {
-		  prevCount = 0;
-		} else {
-		  prevCount++;
+		next: function(){
+			
+			if(!$.tour.options.autoplay){
+				if(Tour.step > 0){
+					$('#prevstep').show();
+				} else {
+					$('#prevstep').hide();
+				}
+				if(Tour.step == Tour.total_steps - 1)
+					$('#nextstep').hide();
+				else
+					$('#nextstep').show();	
+			}	
+			if(Tour.step >= Tour.total_steps){
+				//if last step then end tour
+				Tour.end();
+				return false;
+			}
+			++Tour.step;
+			Tour.showTooltip();
+		},
+		
+		end: function(remind){
+			
+			if(typeof remind == 'undefined'){
+				remind = false;
+			}
+			
+			Tour.step = 0;
+			if($.tour.options.autoplay){
+				clearTimeout($.tour.options.showtime);
+			}
+			Tour.hideTooltip();
+			Tour.hideControls();
+			Tour.hideOverlay();
+			if($.tour.options.saveCookie == true && remind == false){
+				jQuery.Storage.set("tour","true");
+			}
+		},
+		
+		restart: function(){
+			Tour.step = 0;
+			if($.tour.options.autoplay){
+				clearTimeout($.tour.options.showtime);
+			}
+			Tour.next();
+		},
+		
+		cancel: function(remind){
+			Tour.end(remind);
+		},
+		
+		hideOverlay: function(){
+			$('#tour_overlay').remove();
+		},
+		
+		showOverlay: function(){
+			$('body').prepend('<div id="tour_overlay" class="overlay"></div>');
+		},
+		
+		hideControls: function(){
+			$('#tourcontrols').remove();
+		},
+		
+		showControls: function(){
+			var tourcontrols  = '<div id="tourcontrols" class="tourcontrols alert-message warning">';
+			tourcontrols += '<p>'+$.tour.options.mainTitle+'</p>';
+			tourcontrols += '<span class="btn primary" id="activatetour">Start the Tour</span>';
+			tourcontrols += '<span id="latertour" class="btn latertour">Later</span>';
+			if(!$.tour.options.autoplay){
+				tourcontrols += '<div class="nav"><span class="btn" id="prevstep" style="display:none;">< Previous</span>';
+				tourcontrols += '<span class="btn" id="nextstep" style="display:none;">Next ></span></div>';
+			}
+			tourcontrols += '<a id="restarttour" style="display:none;">Restart</span>';
+			tourcontrols += '<a id="endtour" style="display:none;">End</a>';
+			tourcontrols += '<a class="latertour" style="display:none;">Later</a>';
+			tourcontrols += '<span class="close" id="canceltour"></span>';
+			tourcontrols += '</div>';
+			
+			$('body').prepend(tourcontrols);
+			$('#tourcontrols').animate({'right':'30px'},500);
+			
+			var controls = $('body').find('#tourcontrols');
+			
+			controls.find('#activatetour').live('click',function(){
+				Tour.begin();
+			});
+			controls.find('.latertour').live('click',function(){
+				Tour.cancel(true);
+			});
+			controls.find('#canceltour').live('click',function(){
+				Tour.cancel(false);
+			});
+			controls.find('#endtour').live('click',function(){
+				Tour.cancel(false);
+			});
+			controls.find('#restarttour').live('click',function(){
+				Tour.restart();
+			});
+			controls.find('#nextstep').live('click',function(){
+				Tour.next();
+			});
+			controls.find('#prevstep').live('click',function(){
+				Tour.prev();
+			});
+			
+		},
+		
+		hideTooltip: function(){
+			$('#tour_tooltip').remove();
+		},
+		
+		showTooltip: function(){
+			//remove current tooltip
+			Tour.hideTooltip();
+			
+			var step_config		= $.tour.options.steps[Tour.step - 1];
+			var elem			= $('.' + step_config.name);
+			
+			if($.tour.options.autoplay){
+				$.tour.options.showtime = setTimeout(Tour.next(),step_config.time);
+			}
+					
+			var tooltip = $('<div>',{
+				id			: 'tour_tooltip',
+				class 	: 'tooltip alert-message '+step_config.type+'',
+				html		: '<p>'+step_config.text+'</p><span class="tooltip_arrow"></span>'
+			}).css({
+				'display'			: 'none'
+			});
+			
+			//the css properties the tooltip should have
+			var properties		= {};
+			var tip_position 	= step_config.position;
+			
+			//append the tooltip but hide it
+			$('body').prepend(tooltip);
+			
+			//get some info of the element
+			var e_w	= elem.outerWidth();
+			var e_h	= elem.outerHeight();
+			var e_l	= elem.offset().left;
+			var e_t	= elem.offset().top;
+			
+			switch(tip_position){
+				case 'TL'	:
+					properties = {
+						'left'	: e_l,
+						'top'	: e_t + e_h + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_TL');
+					break;
+				case 'TR'	:
+					properties = {
+						'left'	: e_l + e_w - tooltip.width() + 'px',
+						'top'	: e_t + e_h + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_TR');
+					break;
+				case 'BL'	:
+					properties = {
+						'left'	: e_l + 'px',
+						'top'	: e_t - tooltip.height() + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_BL');
+					break;
+				case 'BR'	:
+					properties = {
+						'left'	: e_l + e_w - tooltip.width() + 'px',
+						'top'	: e_t - tooltip.height() + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_BR');
+					break;
+				case 'LT'	:
+					properties = {
+						'left'	: e_l + e_w + 'px',
+						'top'	: e_t + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_LT');
+					break;
+				case 'LB'	:
+					properties = {
+						'left'	: e_l + e_w + 'px',
+						'top'	: e_t + e_h - tooltip.height() + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_LB');
+					break;
+				case 'RT'	:
+					properties = {
+						'left'	: e_l - tooltip.width() + 'px',
+						'top'	: e_t + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_RT');
+					break;
+				case 'RB'	:
+					properties = {
+						'left'	: e_l - tooltip.width() + 'px',
+						'top'	: e_t + e_h - tooltip.height() + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_RB');
+					break;
+				case 'T'	:
+					properties = {
+						'left'	: e_l + e_w/2 - tooltip.width()/2 + 'px',
+						'top'	: e_t + e_h + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_T');
+					break;
+				case 'R'	:
+					properties = {
+						'left'	: e_l - tooltip.width() + 'px',
+						'top'	: e_t + e_h/2 - tooltip.height()/2 + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_R');
+					break;
+				case 'B'	:
+					properties = {
+						'left'	: e_l + e_w/2 - tooltip.width()/2 + 'px',
+						'top'	: e_t - tooltip.height() + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_B');
+					break;
+				case 'L'	:
+					properties = {
+						'left'	: e_l + e_w  + 'px',
+						'top'	: e_t + e_h/2 - tooltip.height()/2 + 'px'
+					};
+					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_L');
+					break;
+			}
+			
+			/*
+				if the element is not in the viewport
+				we scroll to it before displaying the tooltip
+			 */
+			var w_t	= $(window).scrollTop();
+			var w_b = $(window).scrollTop() + $(window).height();
+			//get the boundaries of the element + tooltip
+			var b_t = parseFloat(properties.top,10);
+			
+			if(e_t < b_t)
+				b_t = e_t;
+			
+			var b_b = parseFloat(properties.top,10) + tooltip.height();
+			if((e_t + e_h) > b_b)
+				b_b = e_t + e_h;
+			
+			if((b_t < w_t || b_t > w_b) || (b_b < w_t || b_b > w_b)){
+				$('html, body').stop()
+				.animate({scrollTop: b_t}, 500, 'easeInOutExpo', function(){
+					//need to reset the timeout because of the animation delay
+					if($.tour.options.autoplay){
+						clearTimeout($.tour.options.showtime);
+						$.tour.options.showtime = setTimeout(Tour.next(),step_config.time);
+					}
+					//show the new tooltip
+					tooltip.css(properties).show();
+				});
+			}
+			else
+				//show the new tooltip
+				tooltip.css(properties).show();
 		}
-	  }
-	  if (!settings.inline) {
-	  $(window).resize(function() {
-		var parentElementID = $(tipContent[prevCount]).attr('data-id'),
-		currentTipPosition = $('#' + parentElementID).offset(),
-		currentParentHeight = $('#' + parentElementID).height(),
-		currentTipHeight = $('#joyRidePopup' + prevCount).height();
-		if (settings.tipLocation == "bottom") {
-		  $('#joyRidePopup' + prevCount).offset({top: (currentTipPosition.top + currentParentHeight + 20), left: currentTipPosition.left});
-		} else if (settings.tipLocation == "top") {
-		  if (currentTipPosition.top <= currentTipHeight) {
-			$('#joyRidePopup' + prevCount).offset({top: (currentTipPosition.top + currentParentHeight + 20), left: currentTipPosition.left});
-		  } else {
-			$('#joyRidePopup' + prevCount).offset({top: (currentTipPosition.top - (currentTipHeight + currentParentHeight)), left: currentTipPosition.left});
-		  }
-		}
-	  });
-	}
-	  
-	  // +++++++++++++++
-	  //   Timer 
-	  // +++++++++++++++
-	  
-	  var interval_id = null,
-	  showTimerState = false;
-	  
-	  if (!settings.startTimerOnClick && settings.timer > 0){
-	   showNextTip();
-	   interval_id = setInterval(function() {showNextTip()}, settings.timer);
-	  } else {
-	   showNextTip();
-	  }
-	  var endTip = function(e, interval_id, cookie, self) {
-		e.preventDefault();
-		clearInterval(interval_id);
-		if (cookie) {
-		   $.cookie(settings.cookieName, 'ridden', { expires: 365, domain: settings.cookieDomain });
-		}
-		$(self).parent().hide();
-	  }
-	  $('.tour-close-tip').click(function(e) {
-		endTip(e, interval_id, settings.cookieMonster, this);
-	  });
-	  
-	  // When the next button is clicked, show the next tip, only when cookie isn't present
-		$('.tour-next-tip').click(function(e) {
-		  e.preventDefault();
-		  if (count >= tipContent.length) {
-			endTip(e, interval_id, settings.cookieMonster, this);
-		  }
-		  if (settings.timer > 0 && settings.startTimerOnClick) {
-			showNextTip();
-			clearInterval(interval_id);
-			interval_id = setInterval(function() {showNextTip()}, settings.timer);
-		  } else if (settings.timer > 0 && !settings.startTimerOnClick){
-			clearInterval(interval_id);
-			interval_id = setInterval(function() {showNextTip()}, settings.timer);
-		  } else {
-			showNextTip();
-		  }
-		});
-	}); // each call
-  }; // joyride plugin call
-  
-  
-  // +++++++++++++++++++++++++++++
-  //   jQuery Cookie plugin
-  // +++++++++++++++++++++++++++++
-  
-  // Copyright (c) 2010 Klaus Hartl (stilbuero.de)
-  // Dual licensed under the MIT and GPL licenses:
-  // http://www.opensource.org/licenses/mit-license.php
-  // http://www.gnu.org/licenses/gpl.html
-  jQuery.cookie = function (key, value, options) {
-
-	  // key and at least value given, set cookie...
-	  if (arguments.length > 1 && String(value) !== "[object Object]") {
-		  options = jQuery.extend({}, options);
-
-		  if (value === null || value === undefined) {
-			  options.expires = -1;
-		  }
-
-		  if (typeof options.expires === 'number') {
-			  var days = options.expires, t = options.expires = new Date();
-			  t.setDate(t.getDate() + days);
-		  }
-
-		  value = String(value);
-
-		  return (document.cookie = [
-			  encodeURIComponent(key), '=',
-			  options.raw ? value : encodeURIComponent(value),
-			  options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
-			  options.path ? '; path=' + options.path : '',
-			  options.domain ? '; domain=' + options.domain : '',
-			  options.secure ? '; secure' : ''
-		  ].join(''));
-	  }
-
-	  // key and possibly options given, get cookie...
-	  options = value || {};
-	  var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
-	  return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
-  }; // cookie plugin call
+		
+	};
+	
 })(jQuery);
-
-$(window).load(function() {
- //  $(this).joyride({
-	// 'tipLocation': 'top',
-	// 'scrollSpeed': 300,
-	// 'nextButton': true,
-	// 'tipAnimation': 'fade',
-	// 'tipAnimationFadeSpeed': 500,
-	// 'cookieMonster': false,
-	// 'inline': true,
-	// 'tipContent': '#tourContent'
- //  });
-});

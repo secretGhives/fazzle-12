@@ -122,6 +122,7 @@ padding: 0.3em;
 	margin-left:20px;
 	color:#fff;
 	text-shadow: 0px 0px 1px white;
+	line-height: 96px !important;
 }
 .va-title-bg { background: rgba(0, 0, 0,0.42); }
 .va-content {
@@ -135,7 +136,11 @@ font-family: Georgia, serif;
 background: rgba(255, 255, 255,0.32);
 padding: 3px;
 }
-.va-slice ul { }
+.va-slice ul { 
+display: block;
+overflow: hidden;
+margin-top: 2em;
+}
 .va-slice ul li {
 	float:left;
 	display: inline-block;

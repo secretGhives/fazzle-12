@@ -9,12 +9,13 @@ define([
 	var closetView = Backbone.View.extend({
 		el: $("#page"),
 		render: function(){
-
-			//render template
-			this.el.html(closetTemplate);
+			var data = {};
+			var compiledTemplate = _.template( closetTemplate, data );
 
 			myAppName.console.log('views/closet/main.js says Hi');
-			//myAppName.console.log(myAppName.settings.isOnline);
+
+			// Render template
+			this.el.html( compiledTemplate );
 
 			$("[rel=tip]").twipsy({live: true});
 

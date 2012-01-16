@@ -54,7 +54,7 @@
   }
 
   $(function () {
-    $('body').delegate('.btn[data-toggle]', 'click', function () {
+    $('body').delegate('[data-toggle]', 'click', function () {
       $(this).button('toggle')
     })
   })

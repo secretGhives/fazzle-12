@@ -116,6 +116,11 @@ textarea {
   overflow: auto;
   vertical-align: top; }
 
+/*
+*   _                        
+* _|_ _  _  _  _  |    __  _ 
+*  | (_| /_ /_(/_ |  o |||(/_
+*/
 /* variables.scss
  * Variables and mixins to pre-ignite any new web development project
  * ------------------------------------------------------------------ */
@@ -2346,6 +2351,38 @@ input[type=submit].btn::-moz-focus-inner {
     border-bottom: none !important; }
     .tour-tip-guide .tour-close-tip:hover {
       color: shade(red, 32%); }
+
+.app-notification {
+  background: transparent;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  z-index: 99999;
+  text-align: center; }
+  .app-notification .message {
+    display: inline-block;
+    padding: 6px;
+    border: 1px solid;
+    border-top: 0;
+    background: gray;
+    border-color: #404040;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: compliment(gray); }
+    .app-notification .message.success {
+      background: #46a546;
+      border-color: compliment(#46a546);
+      color: white; }
+    .app-notification .message.error {
+      background: #9d261d;
+      border-color: compliment(#9d261d);
+      color: white; }
+    .app-notification .message.warning {
+      background: #049cdb;
+      border-color: compliment(#049cdb);
+      color: white; }
 
 /* Font.scss
  * Base styles for icons provided by web fonts

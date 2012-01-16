@@ -102,7 +102,8 @@ margin-right: 13px;
 .sidebar .btn { margin: 1px 0; }
 .profile-well { margin-bottom: 0; padding: 6px; }
 .shelves.well { padding: 9px; }
-.like.active { background: pink; }
+/* .like.active { background: pink; } */
+.like.active::before { color: red; }
 
 
 /* RUNWAY PAGE */
@@ -156,3 +157,32 @@ border-top: 0;
 #btn-facebook { margin-bottom: 9px; }
 #btn-signup { margin-top: 13px; }
 #login-register input { margin-bottom: 3px; }
+
+
+/* FULL SCREEN ITEM VIEWER WITH COMMENTS*/
+.fullscreen {
+position: absolute;
+z-index: 9999;
+background: pink;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+.fullscreen .page-header {
+margin: 0;
+height: 35px;
+background: lavender;
+}
+.fullscreen .ur-sm-avatar {
+margin: 0 13px 0 0;
+padding: 0;
+}
+.fullscreen .page-header h1 {
+vertical-align: top;
+margin: 0;
+padding: 0;
+}
