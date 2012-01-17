@@ -123,6 +123,18 @@ define([
 				}
 			);
 
+
+			$(".runway-reply-show").toggle(
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
+				}, 
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
+				}
+			);
+
+			
+
 			$.ajax({
 				url: 'https://picasaweb.google.com/data/feed/api/all?q=fashion'
 				, dataType: 'jsonp'
