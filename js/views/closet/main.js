@@ -17,12 +17,18 @@ define([
 			// Render template
 			this.el.html( compiledTemplate );
 
+			$('#btn-create-new-look').toggle(function() {
+					$('#closet-create-look').show();
+				}, function() {
+					$('#closet-create-look').hide();
+			});
+
+			$(".chzn-select").chosen();
+
+			$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
 			$("[rel=tip]").twipsy({live: true});
 
-			$('#wardrobe').liteAccordion({
-			 slideSpeed : 300,
-				enumerateSlides : true 
-			});
+			$('#st-accordion').accordion();
 			
 		}
 	});

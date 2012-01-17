@@ -53,7 +53,7 @@
     loadingText: 'loading...'
   }
 
-  $(function () {
+  $(document).ready(function () {
     $('body').delegate('[data-toggle]', 'click', function () {
       $(this).button('toggle')
     })

@@ -9,8 +9,9 @@ define([
   'views/buzz/main',
   'views/closet/main',
   'views/closet/view',
+  'views/closet/edit',
   'views/settings/main'
-], function($, _, Backbone, loginView, mainHomeView, profileView, buzzView, closetView, itemsView, settingsView){
+], function($, _, Backbone, loginView, mainHomeView, profileView, buzzView, closetView, viewItemsView, editItemsView, settingsView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
@@ -19,7 +20,8 @@ define([
       'profile': 'showProfile',
       'buzz': 'showBuzz',
       'closet': 'showCloset',
-      'view': 'showItems',
+      'view': 'showViewItems',
+      'edit': 'showEditItems',
       'settings': 'showSettings',
 
       // Default
@@ -42,9 +44,13 @@ define([
       // 'views/closet/main'
       closetView.render();
     },
-    showItems: function(){
-      // 'views/closet/main'
-      itemsView.render();
+    showViewItems: function(){
+      // 'views/closet/view'
+      viewItemsView.render();
+    },
+    showEditItems: function(){
+      // 'views/closet/edit'
+      editItemsView.render();
     },
     showSettings: function(){
       // 'views/settings/main'
