@@ -114,12 +114,17 @@ font-weight: bold;
 font-size: 1.2em;
 line-height: normal;
 }
-#profile-aboutme { font-weight: normal !important; }
 #profile-about .editing {
 border: 1px solid #39F;
 padding-left: 6px;
 border-image: initial;
 }
+#profile-view .more { margin-bottom: 3em; }
+#profile-comments-toggle { padding-bottom: 0.3em; cursor: pointer; }
+#profile-comments-toggle:before { content: ";"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #39F;}
+#profile-comments-toggle.active { border-bottom: 1px dotted #bbb; }
+#profile-comments-toggle.active:before { content: ":"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #37F;}
+#profile-view .more, #profile-view .comment-body-wrap { display: none; }
 
 
 /* RUNWAY PAGE */

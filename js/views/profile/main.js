@@ -42,6 +42,23 @@ define([
 					$('.profile-ei').addClass('editing').attr('contenteditable', 'true');
 			});
 
+			$('#profile-comments-toggle').toggle(function() {
+				$(this).addClass('active');
+					$(this).parent().find('.comment-body-wrap, .more').show();
+				}, function() {
+					$(this).removeClass('active');
+					$(this).parent().find('.comment-body-wrap, .more').hide();
+			});
+
+			$(".runway-reply-show").toggle(
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
+				}, 
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
+				}
+			);
+
 
 			// if(!(jQuery.Storage.get("tour") == "true")){
 			// 	var config = {
