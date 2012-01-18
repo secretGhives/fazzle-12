@@ -298,6 +298,11 @@ text-align: center;
 #fullscreen-sb-toggle {
 position: absolute;
 top: 3px;
+right: 36px;
+}
+#fullscreen-close {
+position: absolute;
+top: 3px;
 right: 6px;
 }
 #fullscreen-sb-toggle span { font-family: 'WebSymbolsRegular'; }
