@@ -22,7 +22,17 @@ define([
 					$('#fullscreen-sidebar').show();
 				}, function() {
 					$('#fullscreen-sidebar').hide();
-			});		
+			});
+
+			$(".runway-reply-show").toggle(
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
+				}, 
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
+				}
+			);
+			
 			
 		} // Render function ends here
 	});
