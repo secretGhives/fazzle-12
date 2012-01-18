@@ -337,6 +337,68 @@ a {
 .row > .offset-two-thirds {
   margin-left: 660px; }
 
+/* @group Basic Grid */
+.g-third, .g-two-thirds, .g-half, .g-fourth, .g-three-fourths, .g-fifth, .g-two-fifths, .g-three-fifths, .g-four-fifths, .g-sixth, .g-five-sixths {
+  float: left;
+  margin: 0px 2% 19px 0px;
+  display: inline-block; }
+
+.g-third {
+  width: 30%; }
+  .g-third:last-child {
+    margin-right: 0px; }
+
+.g-two-thirds {
+  width: 65%; }
+  .g-two-thirds:last-child {
+    margin-right: 0px; }
+
+.g-half {
+  width: 47.5%; }
+  .g-half:last-child {
+    margin-right: 0px; }
+
+.g-fourth {
+  width: 21.25%; }
+  .g-fourth:last-child {
+    margin-right: 0px; }
+
+.g-three-fourths {
+  width: 73.75%; }
+  .g-three-fourths:last-child {
+    margin-right: 0px; }
+
+.g-fifth {
+  width: 16%; }
+  .g-fifth:last-child {
+    margin-right: 0px; }
+
+.g-two-fifths {
+  width: 37%; }
+  .g-two-fifths:last-child {
+    margin-right: 0px; }
+
+.g-three-fifths {
+  width: 58%; }
+  .g-three-fifths:last-child {
+    margin-right: 0px; }
+
+.g-four-fifths {
+  width: 79%; }
+  .g-four-fifths:last-child {
+    margin-right: 0px; }
+
+.g-sixth {
+  width: 12.5%; }
+  .g-sixth:last-child {
+    margin-right: 0px; }
+
+.g-five-sixths {
+  width: 82.5%; }
+  .g-five-sixths:last-child {
+    margin-right: 0px; }
+
+/* @end */
 /* Typography.scss
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */

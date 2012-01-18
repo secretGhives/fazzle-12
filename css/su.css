@@ -242,7 +242,7 @@ border-top: 0;
 
 /* FULL SCREEN ITEM VIEWER WITH COMMENTS*/
 .fullscreen {
-position: absolute;
+position: fixed;
 z-index: 9999;
 background: #fff;
 top: 0;
@@ -267,12 +267,41 @@ vertical-align: top;
 margin: 0;
 padding: 0;
 }
-.fullscreen .span4.sidebar { background: #eee; }
+.fullscreen #fullscreen-sidebar { 
+background: #eee; 
+width: 420px; 
+position: absolute;
+top: 36px;
+bottom: 0;
+right: 0;
+left: auto;
+overflow-y: auto;
+z-index: 10000;
+}
+.fullscreen .main-image-view {
+background: #fff url(../img/tmp_share.jpg) no-repeat center center fixed;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+background-size: contain;
+position: absolute;
+top: 36px;
+bottom: 0;
+left: 0;
+right: 0;
+}
 #view-image-wrap {
 margin: 0;
 padding: 0;
 text-align: center;
 }
+#fullscreen-sb-toggle {
+position: absolute;
+top: 3px;
+right: 6px;
+}
+#fullscreen-sb-toggle span { font-family: 'WebSymbolsRegular'; }
+
 
 
 

@@ -18,8 +18,11 @@ define([
 			this.el.html( compiledTemplate );
 
 			//Everything else,
-
-			
+			$('#fullscreen-sb-toggle').toggle(function() {
+					$('#fullscreen-sidebar').show();
+				}, function() {
+					$('#fullscreen-sidebar').hide();
+			});		
 			
 		} // Render function ends here
 	});

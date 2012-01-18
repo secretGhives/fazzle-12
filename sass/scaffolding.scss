@@ -106,3 +106,21 @@ a {
   > .offset-one-third   { margin-left: 340px; }
   > .offset-two-thirds  { margin-left: 660px; }
 }
+
+
+/* @group Basic Grid */
+.g-third, .g-two-thirds, .g-half, .g-fourth, .g-three-fourths, .g-fifth, .g-two-fifths, .g-three-fifths, .g-four-fifths, .g-sixth, .g-five-sixths { 
+  float: left; margin: 0px 2% 19px 0px; display: inline-block;
+}
+.g-third { width: 30%; &:last-child{margin-right: 0px;} }
+.g-two-thirds { width: 65%; &:last-child{margin-right: 0px;} }
+.g-half { width: 47.5%; &:last-child{margin-right: 0px;} }
+.g-fourth { width: 21.25%; &:last-child{margin-right: 0px;} }
+.g-three-fourths { width: 73.75%; &:last-child{margin-right: 0px;} }
+.g-fifth { width: 16%; &:last-child{margin-right: 0px;} }
+.g-two-fifths { width: 37%; &:last-child{margin-right: 0px;} }
+.g-three-fifths { width: 58%; &:last-child{margin-right: 0px;} }
+.g-four-fifths { width: 79%; &:last-child{margin-right: 0px;} }
+.g-sixth { width: 12.5%; &:last-child{margin-right: 0px;} }
+.g-five-sixths { width: 82.5%; &:last-child{margin-right: 0px;} }
+/* @end */
