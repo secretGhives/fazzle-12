@@ -141,7 +141,7 @@ define([
 				, dataType: 'jsonp'
 				, data: {
 					alt: 'json'
-					, 'max-results': 20
+					, 'max-results': 13
 				}
 				, success: function (data) {
 					//console.log(data.feed.entry[0]);

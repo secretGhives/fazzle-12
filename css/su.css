@@ -283,6 +283,7 @@ padding: 0;
 vertical-align: top;
 margin: 0;
 padding: 0;
+font-size: 1.6em;
 }
 .fullscreen #fullscreen-sidebar { 
 background: #eee; 
@@ -296,7 +297,7 @@ overflow-y: auto;
 z-index: 10000;
 }
 .fullscreen .main-image-view {
-background: #fff url(../img/tmp_share.jpg) no-repeat center center fixed;
+background: #fff url(../img/tmp_share.jpg) no-repeat center center;
 -webkit-background-size: contain;
 -moz-background-size: contain;
 -o-background-size: contain;
@@ -306,6 +307,8 @@ top: 36px;
 bottom: 0;
 left: 0;
 right: 0;
+margin: 0;
+padding: 0;
 }
 #view-image-wrap {
 margin: 0;
@@ -325,6 +328,22 @@ right: 6px;
 #fullscreen-sb-toggle span { font-family: 'WebSymbolsRegular'; }
 #sidebar-comment-input-wrap { display: block; text-align: center; }
 #sidebar-comment-input { width: 369px; margin: 0.4em auto 0; display: block; }
+#fullscreen-thumbs {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+top: auto;
+text-align: center;
+padding: 0;
+margin: 0;
+background: lavender;
+line-height: 0;
+overflow-x: auto;
+overflow-y: hidden;
+white-space: nowrap;
+}
+
 
 
 /* CLOSET PAGE */

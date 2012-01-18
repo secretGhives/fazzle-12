@@ -246,17 +246,17 @@ if(typeof lds == 'undefined') lds = {};
         duration of the animation
         @field {number}
         */
-        var duration = options.duration || 800;
+        var duration = options.duration || 600;
         /**
         interval between animation steps (increase for better quality)
         @field {number}
         */
-        var interval = options.interval || 20;
+        var interval = options.interval || 9;
         /**
         slices of animating panels (increase or 0 for better quality)
         @field {number}
         */
-        var sliceCount = options.sliceCount || 10;
+        var sliceCount = options.sliceCount || 13;
         /**
         amount of the inactive panel that is visible (non-overlapped)
         @field {number}
@@ -561,7 +561,8 @@ if(typeof lds == 'undefined') lds = {};
             style.display = 'none';
             style.position = 'absolute';
 
-            if (link) link.href = linkHref;
+            //RUSO EDIT if (link) link.href = linkHref;
+            if (link) link.href = "#view";
             image.src = imageSrc;
         };
 

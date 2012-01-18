@@ -17,22 +17,26 @@ define([
 			// Render template
 			this.el.html( compiledTemplate );
 
-			//Everything else,
+			//Toggle Comments sidebar
 			$('#fullscreen-sb-toggle').toggle(function() {
 					$('#fullscreen-sidebar').show();
+					$('.main-image-view').css({
+						right: '420px'
+					});
 				}, function() {
 					$('#fullscreen-sidebar').hide();
+					$('.main-image-view').css({
+						right: '0'
+					});
 			});
 
-			$(".runway-reply-show").toggle(
-				function(){
-					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
-				}, 
-				function(){
-					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
-				}
-			);
-			
+			//Toggle thumbs bar
+			$('#fullscreen-poster').toggle(function() {
+					$('#fullscreen-thumbs').hide();
+				}, function() {
+					$('#fullscreen-thumbs').show();
+			});
+
 			
 		} // Render function ends here
 	});
