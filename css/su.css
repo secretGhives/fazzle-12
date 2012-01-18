@@ -136,6 +136,14 @@ border-bottom: 1px solid #ddd;
 border-left: 1px solid #ccc;
 border-top: 1px solid #ddd;
 border-right: 1px solid #ccc;
+-webkit-transition:  border-left-color 0.42s ease-in-out;
+-moz-transition:  border-left-color 0.42s ease-in-out;
+-o-transition:  border-left-color 0.42s ease-in-out;
+-ms-transition:  border-left-color 0.42s ease-in-out;
+transition:  border-left-color 0.42s ease-in-out;
+}
+.comment-body-wrap:hover {
+border-left-color: #39F;
 }
 .comment-wrap {
 margin-left: 60px;
