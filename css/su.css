@@ -107,7 +107,19 @@ margin-right: 13px;
 .shelves.well { padding: 9px; }
 /* .like.active { background: pink; } */
 .like.active::before { color: red; }
-
+#profile-about .input div {
+min-height: 24px;
+padding-top: 6px;
+font-weight: bold;
+font-size: 1.2em;
+line-height: normal;
+}
+#profile-aboutme { font-weight: normal !important; }
+#profile-about .editing {
+border: 1px solid #39F;
+padding-left: 6px;
+border-image: initial;
+}
 
 
 /* RUNWAY PAGE */

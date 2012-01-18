@@ -34,6 +34,14 @@ define([
 				visibleSlices	: 3
 			});
 
+			$('#profile-edit').toggle(function() {
+					$(this).removeClass('active');
+					$('.profile-ei').removeClass('editing').attr('contenteditable', 'false');
+				}, function() {
+					$(this).addClass('active');
+					$('.profile-ei').addClass('editing').attr('contenteditable', 'true');
+			});
+
 
 			// if(!(jQuery.Storage.get("tour") == "true")){
 			// 	var config = {

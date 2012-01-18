@@ -77,30 +77,24 @@
 					<div class="tab-pane" id="profile-about">
 
 						<div class="about well ar">
-							<button class="btn" data-toggle="toggle">Edit profile</button>
+							<button id="profile-edit" class="btn active">Edit profile</button>
 						</div>
 
 						<form>
 						  <fieldset>
-								<div class="clearfix">
+								<!-- <div class="clearfix">
 								  <label for="fileInput">Profile image</label>
 								  <div class="input">
 								    <input class="input-file" id="fileInput" name="fileInput" type="file">
 								  </div>
-								</div><!-- /clearfix -->
+								</div> -->
 						    <div class="clearfix">
-						      <label for="xlInput">Fist name</label>
+						      <label for="profile-name">Name</label>
 						      <div class="input">
-						        <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						        <div class="profile-ei editing" id="profile-name" contenteditable="true">Mister Fabulous</div>
 						      </div>
 						    </div><!-- /clearfix -->
-						    <div class="clearfix">
-						      <label for="xlInput">Last name</label>
-						      <div class="input">
-						        <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
-						      </div>
-						    </div><!-- /clearfix -->
-						    <div class="clearfix">
+						    <!-- <div class="clearfix">
 						      <label for="mediumSelect">Gender</label>
 						      <div class="input">
 						        <select class="medium" name="mediumSelect" id="mediumSelect">
@@ -108,25 +102,19 @@
 						          <option>Female</option>
 						        </select>
 						      </div>
-						    </div><!-- /clearfix -->
+						    </div> -->
 						    <div class="clearfix">
-						      <label for="xlInput">Location</label>
+						      <label for="profile-location">Location</label>
 						      <div class="input">
-						        <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+						        <div class="profile-ei editing" id="profile-location" contenteditable="true">Costa Rica</div>
 						      </div>
 						    </div><!-- /clearfix -->
 								<div class="clearfix">
-								  <label for="textarea">About me</label>
+								  <label for="profile-aboutme">About</label>
 								  <div class="input">
-								    <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
-								    <span class="help-block">
-								      Block of help text to describe the field above if need be.
-								    </span>
+								    <div class="profile-ei editing" id="profile-aboutme" contenteditable="true">I was born and raised in Alabama, my mom was a lady and my dad was a gent.  Then it was me.</div>
 								  </div>
 								</div>
-						    <div class="actions">
-						      <input type="submit" class="btn primary" value="Save changes">&nbsp;<button type="reset" class="btn">Cancel</button>
-						    </div>
 						  </fieldset>
 						</form>
 					</div>
