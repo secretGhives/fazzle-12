@@ -2,6 +2,9 @@
 .ar { text-align: right; }
 .al { text-align: left; }
 
+.inlined { display: inline-block; }
+.relative { position: relative; }
+
 .topbar { z-index: 900; }
 #app-sections-nav li { line-height: 37px; }
 #app-footer { margin-top: 42px; }
@@ -98,12 +101,13 @@ margin-right: 13px;
 .sidebar .media-grid { margin-left: 0; margin-bottom: 13px; }
 .sidebar .media-grid a { margin: 1px; }
 .sidebar figure { margin: 0; padding: 0; }
-.sidebar .side-links { display: block; }
+.sidebar .side-links { display: inline-block; }
 .sidebar .btn { margin: 1px 0; }
 .profile-well { margin-bottom: 0; padding: 6px; }
 .shelves.well { padding: 9px; }
 /* .like.active { background: pink; } */
 .like.active::before { color: red; }
+
 
 
 /* RUNWAY PAGE */
