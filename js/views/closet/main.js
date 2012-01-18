@@ -17,6 +17,10 @@ define([
 			// Render template
 			this.el.html( compiledTemplate );
 
+
+
+			$('#side-box').stickyScroll({ container: '.sidebar' });
+
 			$('#btn-create-new-look').toggle(function() {
 					$('#closet-create-look').show();
 				}, function() {

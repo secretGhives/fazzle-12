@@ -23,6 +23,7 @@ define([
 	'order!bootstrap/bootstrap-popover',
 	'classes/tour',
 	'classes/roundabout',
+	'classes/sticky',
 	//'classes/lite-accordian',
 	'classes/accordion',
 	'classes/vacordian',

@@ -269,6 +269,7 @@ text-align: center;
 
 
 /* CLOSET PAGE */
+.sidebar { position: relative; }
 #closet-create-look {
 	border: 1px dotted #39C;
 	border-top: 0;
@@ -276,4 +277,6 @@ text-align: center;
 	text-align: center;
 	display: none;
 }
-
+#side-box1.sticky-active {
+margin-top: 69px;
+}
