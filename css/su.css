@@ -355,6 +355,8 @@ white-space: nowrap;
 	text-align: center;
 	display: none;
 }
-#side-box1.sticky-active {
-margin-top: 69px;
+#btn-create-new-look.active {
+border-bottom: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
 }

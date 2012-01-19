@@ -26,7 +26,7 @@ define([
 	'classes/sticky',
 	//'classes/lite-accordian',
 	'classes/accordion',
-	'classes/vacordian',
+	//'classes/vacordian',
 	'classes/sample',
 	//'classes/contentflow',
 	'order!classes/coulisse',

@@ -22,8 +22,10 @@ define([
 			$('#side-box').stickyScroll({ container: '.sidebar' });
 
 			$('#btn-create-new-look').toggle(function() {
+					$(this).addClass('active');
 					$('#closet-create-look').show();
 				}, function() {
+					$(this).removeClass('active');
 					$('#closet-create-look').hide();
 			});
 

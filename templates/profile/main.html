@@ -44,7 +44,7 @@
 			<div class="span12">
 
 				<div class="profile-well ar">
-					<select id="profile-runway-categories" class="medium chzn-select">
+					<select id="profile-runway-categories" class="large chzn-select" multiple>
 						<option>Shelf 1</option>
 						<option>Shelf 2</option>
 						<option>Shelf 3</option>
@@ -224,70 +224,154 @@
 							<input type="text" class="profile-closet-search" placeholder="Search closet" label="Search closet" autocomplete="off"/>
 							<button class="btn primary" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Add new item</button>
 						</div>
+<style type="text/css">
+.image_stack {
+width: 200px;
+position: relative;
+margin: 9px;
+display: inline-block;
+height: 200px;
+}
+.image_stack img {
+position: absolute;
+border: 4px solid #FFF;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+max-height: 200px; max-width: 200px;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+.image_stack #photo1 { top: 0; left: 0; }
+.image_stack #photo2 { top: 3px; left: 3px; }
+.image_stack #photo3 { top: 6px; left: 1px; }
+.image_stack .rotate1 {
+-webkit-transform: rotate(9deg);
+-moz-transform: rotate(9deg);
+transform: rotate(9deg);
+-ms-transform:rotate(9deg);
+-o-transform:rotate(9deg);
+}
+.image_stack .rotate2 {
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+transform: rotate(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+}
+.image_stack .rotate3 {
+-webkit-transform: rotate(-9deg);
+-moz-transform: rotate(-9deg);
+transform: rotate(-9deg);
+-ms-transform:rotate(-9deg);
+-o-transform:rotate(-9deg);
+cursor: pointer;
+}
 
-						<div id="va-accordion" class="va-container">
-							<div class="va-nav">
-								<span class="va-nav-prev">Previous</span>
-								<span class="va-nav-next">Next</span>
+.single_photo a {
+display: block;
+border: 4px solid #fff;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+.single_photo { display: inline-block; margin-left: 1em; position: relative; }
+.single_photo img { display: block; max-height: 200px; max-width: 200px; }
+.single_photo a:hover {
+	-moz-transform: scale(1.1) rotate(0deg);
+	-webkit-transform: scale(1.1) rotate(0deg);
+	-o-transform: scale(1.1) rotate(0deg);
+	-ms-transform: scale(1.1) rotate(0deg);
+	transform: scale(1.1) rotate(0deg);
+}
+.stack-desc-wrap {
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(255, 255, 255, 0.9);
+z-index: 1;
+}
+.stack-desc-wrap label {
+float: none;
+display: block;
+text-align: left;
+width: auto;
+padding-left: 9px;
+}
+.stack-desc-itemcount {
+font-size: 0.8em;
+line-height: 1em;
+padding-bottom: 0.6em;
+color: #666;
+}
+.stack-desc { font-weight: bold; }
+</style>
+						<!-- Single photo -->
+						<div class="single_photo">
+							<div class="stack-desc-wrap">
+								<label class="stack-desc">Shelf title 1</label>
+								<label class="stack-desc-itemcount">1 item</label>
 							</div>
-							<div class="va-wrapper">
-								<div class="va-slice va-slice-1">
-									<h3 class="va-title"><span class="va-title-bg">Shelve Name 1</span></h3>
-									<div class="va-content">
-										<p>55 items</p>
-										<ul>
-											<li><a href="#closet" class="btn primary large">View</a></li>
-											<li><a href="#" class="btn">Edit</a></li>
-											<li><a href="#" class="btn">Add new item</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="va-slice va-slice-2">
-									<h3 class="va-title"><span class="va-title-bg">Shelve Name 2</span></h3>
-									<div class="va-content">
-										<p>202 items</p>
-										<ul>
-											<li><a href="#closet" class="btn primary large">View</a></li>
-											<li><a href="#" class="btn">Edit</a></li>
-											<li><a href="#" class="btn">Add new item</a></li>
-										</ul>
-									</div>	
-								</div>
-								<div class="va-slice va-slice-3">
-									<h3 class="va-title"><span class="va-title-bg">Shelve Name 3</span></h3>
-									<div class="va-content">
-										<p>2 items</p>
-										<ul>
-											<li><a href="#closet" class="btn primary large">View</a></li>
-											<li><a href="#" class="btn">Edit</a></li>
-											<li><a href="#" class="btn">Add new item</a></li>
-										</ul>
-									</div>	
-								</div>
-								<div class="va-slice va-slice-4">
-									<h3 class="va-title"><span class="va-title-bg">Shelve Name 4</span></h3>
-									<div class="va-content">
-										<p>20 items</p>
-										<ul>
-											<li><a href="#closet" class="btn primary large">View</a></li>
-											<li><a href="#" class="btn">Edit</a></li>
-											<li><a href="#" class="btn">Add new item</a></li>
-										</ul>
-									</div>	
-								</div>
-								<div class="va-slice va-slice-5">
-									<h3 class="va-title"><span class="va-title-bg">Shelve Name 5</span></h3>
-									<div class="va-content">
-										<p>9 items</p>
-										<ul>
-											<li><a href="#closet" class="btn primary large">View</a></li>
-											<li><a href="#" class="btn">Edit</a></li>
-											<li><a href="#" class="btn">Add new item</a></li>
-										</ul>
-									</div>	
-								</div>
+							<a href="#closet"><img src="http://placehold.it/200x200" alt="picture"></a>
+						</div>
+						<!--Stack 1  -->
+						<div class="image_stack">
+							<div class="stack-desc-wrap">
+								<label class="stack-desc">Shelf title 2</label>
+								<label class="stack-desc-itemcount">12 items</label>
 							</div>
-						</div><!-- /vacordian -->
+							<a href="#closet">
+								<img id="photo1" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo2" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo3" class="stackphotos"  src="http://placehold.it/200x200">
+								</a>
+						</div>
+						<!--Stack 2  -->
+						<div class="image_stack">
+							<div class="stack-desc-wrap">
+								<label class="stack-desc">Shelf title 3</label>
+								<label class="stack-desc-itemcount">42 items</label>
+							</div>
+							<a href="#closet">
+								<img id="photo1" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo2" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo3" class="stackphotos"  src="http://placehold.it/200x200">
+							</a>
+						</div>
+						<!--Stack 3  -->
+						<div class="image_stack">
+							<div class="stack-desc-wrap">
+								<label class="stack-desc">Shelf title 4</label>
+								<label class="stack-desc-itemcount">32 items</label>
+							</div>
+							<a href="#closet">
+								<img id="photo1" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo2" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo3" class="stackphotos"  src="http://placehold.it/200x200">
+							</a>
+						</div>
+						<!--Stack 4  -->
+						<div class="image_stack">
+							<div class="stack-desc-wrap">
+								<label class="stack-desc">Shelf title 5</label>
+								<label class="stack-desc-itemcount">33 items</label>
+							</div>
+							<a href="#closet">
+								<img id="photo1" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo2" class="stackphotos" src="http://placehold.it/200x200">
+								<img id="photo3" class="stackphotos"  src="http://placehold.it/200x200">
+							</a>
+						</div>
+
 					</div><!-- /profile shelves -->
 				</div><!-- /profile tab content -->
 
