@@ -21,8 +21,8 @@ define([
 			$('#va-accordion').vaccordion({
 				accordionW		: $(window).width(),
 				accordionH		: $(window).height(),
-				visibleSlices	: 4,
-				expandedHeight	: 420,
+				visibleSlices	: 3,
+				expandedHeight	: 555,
 				animOpacity		: 0.1,
 				contentAnimSpeed: 100
 			});

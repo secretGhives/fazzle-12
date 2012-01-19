@@ -50,7 +50,17 @@ define([
 					$('#closet-create-look').hide();
 			});
 
-			$(".chzn-select").chosen();
+			$(".chzn-select").chosen().change(function(){
+				var filter = $(this).val();
+				var list = $('#closet-shelf-list');
+				//alert( filter );
+				$(list).find("li:not(" + filter + ")").addClass("hide");
+				$(list).find("li" + filter).removeClass("hide");
+				alert('selected: ' + filter, 'success');
+				if (filter === null) {
+					$(list).find("li").removeClass("hide");
+				}
+			});
 
 			$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
 			$("[rel=tip]").twipsy({live: true});

@@ -26,7 +26,7 @@ define([
 	'classes/sticky',
 	//'classes/lite-accordian',
 	'classes/accordion',
-	//'classes/vacordian',
+	'classes/vacordian',
 	'classes/sample',
 	//'classes/contentflow',
 	'order!classes/coulisse',
@@ -106,12 +106,12 @@ define([
 			$("[rel=tip]").twipsy({live: true});
 
 			//Loading Demo button
-			var btn = $('#btn-create-new-look').click(function () {
-				btn.button('loading')
-				setTimeout(function () {
-					btn.button('reset')
-				}, 3000)
-			});
+			// var btn = $('#btn-create-new-look').click(function () {
+			// 	btn.button('loading')
+			// 	setTimeout(function () {
+			// 		btn.button('reset')
+			// 	}, 3000)
+			// });
 
 			$("#btn-like").toggle(
 				function(){
