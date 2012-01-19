@@ -85,6 +85,17 @@ define([
 			});
 
 
+			$("#friends-list").on("click", ".friend", function() {
+			  $(this).toggleClass("chosen");
+			  $("#friend-zoom").removeClass("hide");
+			});
+
+			// list navigator for friends managing
+			// $('#friends-list').listnav({
+			// 	includeNums: false,
+			// 	onClick: function(letter){ console.log('You clicked ' + letter); }
+			// });
+
 			// if(!(jQuery.Storage.get("tour") == "true")){
 			// 	var config = {
 			// 			mainTitle: "First time here?",

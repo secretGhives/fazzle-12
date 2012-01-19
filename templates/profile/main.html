@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/vacordian.css">
+<!-- <link rel="stylesheet" href="css/vacordian.css"> -->
 
 <div id="profile-view" class="container marge">
 
@@ -292,17 +292,79 @@
 
 </div> <!-- /container -->
 
+
 <div id="modal-add-friends" class="modal hide fade" style="display: none; ">
 	<div class="modal-header">
 		<a href="#" class="close">×</a>
 		<h3>Manage friends</h3>
 	</div>
 	<div class="modal-body">
-		<p>Alphabetical navigation with options for each friend, maybe different views of how list can be viewed,  icons only or a list.</p>
-	</div>
-	<div class="modal-footer">
-		<a href="#" class="btn primary">Primary</a>
-		<a href="#" class="btn secondary">Secondary</a>
+
+		<ul id="friends-list">
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Aar Sese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Bardona Sese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Brsd Tese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Brus Uese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Grisl Tese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Romero Uese</div>
+			</figure>
+			</li>
+			<li>
+			<figure class="friend">
+				<img class="friend-img" src="http://placehold.it/69x69">
+				<div class="friend-name">Zulu Vese</div>
+			</figure>
+			</li>
+
+		</ul>
+		
+		<section id="friend-zoom" class="hide">
+			<button class="btn return" onclick="$('#friend-zoom').toggleClass('hide')"><span class="icon-btn">X</span> Return to list</button>
+
+			<figure class="thumbnail">
+				<figcaption>Some awesome name</figcaption>
+				<img src="//placehold.it/117x132" />
+			</figure>
+			<div id="friend-zoom-location">Their location</div>
+			<div id="friend-zoom-about">Whatever they have in their about section</div>
+			<button class="btn"><span class="icon-btn">m</span> message</button>
+			<button class="btn"><span class="icon-btn">x</span> de-friend</button>
+			<select id="friend-zoom-groups" class="chzn-select" multiple data-placeholder="Add to groups..">
+				<option>Group name 1</option>
+				<option>Group 2</option>
+				<option>Group name 3</option>
+				<option>group 4</option>
+			</select>
+		</section>
+
 	</div>
 </div>
 

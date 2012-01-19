@@ -170,7 +170,6 @@ transform: rotate(-9deg);
 -o-transform:rotate(-9deg);
 cursor: pointer;
 }
-
 .single_photo a {
 display: block;
 border: 4px solid #fff;
@@ -214,6 +213,87 @@ padding-bottom: 0.6em;
 color: #666;
 }
 .stack-desc { font-weight: bold; }
+
+/* SECTION MANAGE FRIENDS */
+#manage-friends-wrap {
+min-height: 222px;
+}
+#friends-list {
+overflow-y: auto;
+overflow-x: hidden;
+max-height: 369px;
+margin: 0;
+padding: 0;
+}
+#friends-list li { display: block; margin: 0; }
+#friends-list figure.friend {
+display: block;
+padding: 0;
+margin: 0;
+position: relative;
+border-width: 0 0 1px 3px;
+border-color: #eee;
+border-style: solid;
+overflow: hidden;
+cursor: pointer;
+}
+#friends-list figure.friend:hover {
+border-left-color: #39F;
+border-bottom-color: #ccc;
+}
+#friends-list .friend-img {
+width: 69px;
+height: 69px;
+vertical-align: middle;
+display: inline-block;
+margin-right: 6px;
+}
+#friends-list .friend-name {
+padding: 0;
+margin: 0;
+border: 0;
+vertical-align: middle;
+display: inline-block;
+font-size: 1.6em;
+}
+#friends-list .friend:hover .friend-name {
+position: relative;
+display: inline-block;
+background: #fff;
+}
+#friend-zoom {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: #efefef;
+padding: 1em;
+overflow-y: auto;
+}
+figure.thumbnail { display: inline-block; float: left; margin: 1em 2em 1em 1em; }
+#friend-zoom-location { font-weight: bold; margin-bottom: 1em; }
+#friend-zoom-about { margin-bottom: 1em; }
+#friend-zoom-groups,
+#friend-zoom-groups_chzn { margin-top: 1em; }
+.modal-body { position: relative; }
+.btn.return { display: block; }
+
+.listNav { margin: 0; text-align: center; }
+.ln-letters { overflow:hidden; display: inline-block; }
+.ln-letters a { display: inline-block; padding: 2px 6px; border: 1px solid silver; border-right: none; text-decoration: none; }
+.ln-letters a.ln-last { border-right:1px solid silver; }
+.ln-letters a:hover,
+.ln-letters a.ln-selected { background-color:#eaeaea; }
+.ln-letters a.ln-disabled { color:#ccc; }
+.ln-letter-count { text-align:center; font-size:0.8em; line-height:1; margin-bottom:3px; color:#38c; bottom: 100%; top: auto !important; }
+.ln-no-match {width: 100%;text-align: center;display: block;}
+
+
+
+
+
+
 
 
 /* RUNWAY PAGE */

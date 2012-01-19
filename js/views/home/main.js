@@ -24,6 +24,7 @@ define([
 	'classes/tour',
 	'classes/roundabout',
 	'classes/sticky',
+	//'classes/listnav',
 	//'classes/lite-accordian',
 	'classes/accordion',
 	'classes/vacordian',
