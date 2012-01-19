@@ -18,6 +18,27 @@ define([
 			this.el.html( compiledTemplate );
 
 
+			$('.st-content img').draggable({ revert: true });
+			$( ".droppable" ).droppable({
+				tolerance: 'touch',
+				over: function() {
+					$(this).removeClass('out').addClass('over');
+				},
+				out: function() {
+					$(this).removeClass('over').addClass('out');
+				},
+				drop: function( event, ui ) {
+					var answer = alert('Added xxxx to the Look', 'success');
+					$( this ).addClass( "received" );
+					$( "<img>" ).attr( "src", ui.draggable.attr("src") ).appendTo( this );
+					//ui.draggable.remove();
+				}
+			});
+
+			$("#closet-view .droppable").delegate("img", "click", function() {
+				$(this).remove();
+				alert('Item removed from Creating a look', 'success');
+			});
 
 			$('#side-box').stickyScroll({ container: '.sidebar' });
 

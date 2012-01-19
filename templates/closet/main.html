@@ -7,13 +7,6 @@
 		</div>
 
 		<div class="row">
-			<div class="span16 closet">
-
-
-			</div>
-		</div>
-
-		<div class="row">
 			<div class="span4 sidebar">
 				<div id="side-box">
 					<h3>Options</h3>
@@ -28,10 +21,10 @@
 					<button id="btn-create-new-look" class="btn primary large span4" data-toggle="toggle">Create a look</button>
 					<fieldset id="closet-create-look">
 						<input type="text" class="span3" placeholder="Look title.."/>
-						<div class="ac well" style="margin-top: 9px; margin-bottom: 9px;">Drop area</div>
+						<div class="ac well droppable" style="margin-top: 9px; margin-bottom: 9px;" rel="pop" data-content="Drop items from the right into this area. Click on the item to remove it.  Press Clear to empty entire box." data-original-title="Drag n Drop" data-placement="above"></div>
 						<button class="btn primary">Save</button>
-						<button class="btn">Share</button>
-						<button class="btn">Clear</button>
+						<button class="btn" data-controls-modal="modal-universal-share" data-backdrop="true" data-keyboard="true">Share</button>
+						<button class="btn" onclick="$('.droppable').html(''); alert('New look creator cleared', 'success')">Clear</button>
 					</fieldset>
 
 					<button class="btn span4" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload new items</button>
