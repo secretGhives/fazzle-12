@@ -35,10 +35,12 @@ define([
 			// });
 
 			$('#profile-edit').toggle(function() {
-					$(this).removeClass('active');
+					$(this).removeClass('active success');
+					$(this).text('Edit profile');
 					$('.profile-ei').removeClass('editing').attr('contenteditable', 'false');
 				}, function() {
-					$(this).addClass('active');
+					$(this).addClass('active success');
+					$(this).text('Save profile');
 					$('.profile-ei').addClass('editing').attr('contenteditable', 'true');
 			});
 
