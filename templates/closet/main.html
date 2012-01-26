@@ -3,7 +3,7 @@
 	<div class="content">
 		<div class="page-header">
 			<a class="ur-sm-avatar" href="#profile" rel="tip" data-placement="right" data-original-title="Mister Fabulous (You)"><img class="thumbnail" src="./img/ruso.png" style="width:36px; height:36px;" alt=""></a>
-			<h1>Closet <small>OMG So much glittery stuff..</small></h1>
+			<h1>Closet <small class="closet-ei" contenteditable="false">OMG So much glittery stuff..</small></h1>
 		</div>
 
 		<div class="row">
@@ -11,13 +11,14 @@
 				<div id="side-box">
 					<h3>Options</h3>
 
-						<select id="closet-categories-filter" class="span4 chzn-select" multiple data-placeholder="Display only..">
-							<option value=".shelf-1">Shelf 1</option>
-							<option value=".shelf-2">Shelf 2</option>
-							<option value=".shelf-3">Shelf 3</option>
-							<option value=".shelf-4">Shelf 4</option>
-							<option value=".shelf-5">Shelf 5</option>
-						</select>
+					<select id="closet-categories-filter" class="span4 chzn-select" multiple data-placeholder="Display only..">
+						<option value=".wishlist">Wishlist</option>
+						<option value=".shelf-1">Shelf 1</option>
+						<option value=".shelf-2">Shelf 2</option>
+						<option value=".shelf-3">Shelf 3</option>
+						<option value=".shelf-4">Shelf 4</option>
+						<option value=".shelf-5">Shelf 5</option>
+					</select>
 
 					<button id="btn-create-new-look" class="btn primary large span4" data-toggle="toggle">Create a look</button>
 					<fieldset id="closet-create-look">
@@ -29,14 +30,50 @@
 					</fieldset>
 
 					<button class="btn span4" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload new items</button>
+
+					<button class="btn span4">Add new shelf</button>
+					<button id="closet-edit" class="btn span4">Edit closet</button>
 				</div>
 				&nbsp;
 			</div>
+			<!-- END SIDEBAR -->
 
-			<div class="span12">
+			<!-- MAIN CONTENT -->
+			<div id="closet-shelves" class="span12">
+
+				<div id="edit-closet-well" class="closet well ar hide">
+					<button class="btn">View</button>
+					<button class="btn success">Share</button>
+					<button class="btn danger">Delete</button>
+				</div>
 
 				<div id="st-accordion" class="st-accordion">
 					<ul id="closet-shelf-list">
+						<li class="wishlist">
+							<a href="#"><b class="label">32 items</b><em class="wish-heart">H</em>Wishlist<span class="st-arrow">Open/Close</span></a>
+							<div class="st-content">
+								<h2 class="st-content-title">From Bill Bbq's shelf title 3
+									<span class="label info">6 items</span>
+								</h2>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+
+								<hr class="separator-shelf"/>
+
+								<h2 class="st-content-title">from Frank Lastname's shelf title 1
+									<span class="label info">4 items</span>
+								</h2>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+								<a href="#view"><img src="http://placehold.it/120x120" /></a>
+							</div>
+						</li>
+
 						<li class="shelf-1">
 							<a href="#"><b class="label">16 items</b>Shelf title 1<span class="st-arrow">Open/Close</span></a>
 							<div class="st-content">

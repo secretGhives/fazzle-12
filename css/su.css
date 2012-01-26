@@ -5,6 +5,8 @@
 .inlined { display: inline-block; }
 .relative { position: relative; }
 
+.editing { border: 1px solid #39F; padding-left: 6px; }
+
 .topbar { z-index: 900; }
 #app-sections-nav li { line-height: 37px; }
 #app-footer { margin-top: 42px; }
@@ -113,11 +115,6 @@ padding-top: 6px;
 font-weight: bold;
 font-size: 1.2em;
 line-height: normal;
-}
-#profile-about .editing {
-border: 1px solid #39F;
-padding-left: 6px;
-border-image: initial;
 }
 #profile-view .more { margin-bottom: 3em; }
 #profile-comments-toggle { padding-bottom: 0.3em; cursor: pointer; }
@@ -531,3 +528,5 @@ border-bottom-left-radius: 0;
 }
 #closet-view .droppable { padding: 9px; }
 #closet-view .droppable img { max-width: 56px; margin: 1px; }
+li.wishlist { border-right: 1px solid pink; }
+.wish-heart { display: inline-block; margin: 0; font-family: 'SignifyLite'; color: pink; line-height: 1; }

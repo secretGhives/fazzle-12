@@ -40,7 +40,7 @@ define([
 				alert('Item removed from Creating a look', 'success');
 			});
 
-			$('#side-box').stickyScroll({ container: '.sidebar' });
+			$('#side-box').stickySidebar({padding: 42});
 
 			$('#btn-create-new-look').toggle(function() {
 					$(this).addClass('active');
@@ -48,6 +48,18 @@ define([
 				}, function() {
 					$(this).removeClass('active');
 					$('#closet-create-look').hide();
+			});
+
+			$('#closet-edit').toggle(function() {
+					$(this).addClass('active success');
+					$(this).text('Save closet');
+					$('#edit-closet-well').show();
+					$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
+				}, function() {
+					$(this).removeClass('active success');
+					$(this).text('Edit closet');
+					$('#edit-closet-well').hide();
+					$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
 			});
 
 			$(".chzn-select").chosen().change(function(){
