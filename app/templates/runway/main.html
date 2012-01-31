@@ -1,0 +1,307 @@
+<link rel="stylesheet" href="./assets/css/carausel.css">
+<!-- <link rel="stylesheet" href="css/contentflow.css"> -->
+
+<div id="runway-view" class="container marge">
+
+	<div class="content">
+		<div class="page-header">
+			<h1>Runway <small>Everyone else's stuff..</small></h1>
+		</div>
+
+		<div class="row">
+	
+			<div class="span12 runway">
+
+				<div class="alert alert-block alert-notice fade in">
+					<a class="close" data-dismiss="alert" href="#">×</a>
+					<h4 class="alert-heading">Fist time here?</h4>
+					<p>Click on Yeah! button to activate current's view tour.</p>
+					<p>
+						<a id="tour-start" class="btn primary small" href="#">Yeah</a> <a class="btn small" href="#">Next time</a>
+					</p>
+				</div>
+
+				<div id="runwayWrap" class="CoulisseDemo tour_1"></div>
+
+				<div class="ac">
+					<button id="btn-like" class="double-btn like tour_2">Like</button>
+					<!-- <button class="btn like large" data-toggle="toggle"><span class="icon-btn">N</span>Like</button> -->
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span3 sidebar">
+				<!--<h3 class="tour_3">Quick menu</h3>-->
+
+				<div class="well" style="padding: 8px 0;">
+					<ul class="nav list">
+						<li class="nav-header">Shortcuts</li>
+						<li class="active"><a href="/#">Public Runway</a></li>
+						<li><a href="/#profile">My Profile</a></li>
+						<li><a href="/#closet">My Closet</a></li>
+						<li class="nav-header">Other</li>
+						<li><a href="/#settings">Settings</a></li>
+						<li><a href="/help">Help</a></li>
+					</ul>
+				</div>
+
+				<button class="btn large span3" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload new items</button>
+				<!-- <button id="btn-create-new-look" class="btn span3" data-toggle="toggle">Create new look</button> -->
+				<button class="btn span3 primary" rel="pop" data-content="Use 'Find Friends' to start your fashion circle." data-original-title="Connect with your homies." data-placement="right" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true">Find friends</button>
+			</div>
+
+			<div class="span9">
+
+				<form id="runway-comments" action="" class="form-stacked">
+					<div class="clearfix tour_4">
+						<label for="xlInput3">Comment</label>
+						<div class="input">
+							<input class="span9" id="xlInput3" name="xlInput3" size="30" type="text">
+						</div>
+					</div>
+				</form>
+
+				<section id="runway-comments">
+
+					<div class="comment-body-wrap">
+						<div class="comment-wrap">
+							<div class="comment-header">
+								<span role="button" class="a-j Mo bg" title="Options menu"></span>
+								<a href="#profile" class="comment-author"><img src="http://placehold.it/48x48" width="48px" height="48px" alt="H Juggernaut's profile photo" class="comment-author-image"></a>
+								<div class="Ex">
+									<span class="eE">
+										<a href="#profile" class="comment-author-link">Frank Lastname</a>
+									</span>
+									<span class="comment-meta">
+										&nbsp;-&nbsp;
+										<a href="#" class="" title="Jan 5, 2012 11:29:03 PM">Jan 5, 2012</a>
+										&nbsp;-&nbsp;
+										<a href="#" class="" title="Sharing details">Public</a>
+									</span>
+								</div>
+							</div>
+							<div>
+								<p class="comment-content">Lorem ipsum dolor sit amet.</p>
+								<div class="comment-actions">
+									<a href="#" class="runway-reply-show">Comment</a> &nbsp;-&nbsp; <a href="#">Share</a>
+								</div>
+							</div>
+							<div class="runway-reply-wrap hide">
+								<textarea class="runway-comment-input" placeholder="Enter comment"></textarea>
+								<button class="btn primary runway-comment-post">Post comment</button>
+								<button class="btn runway-comment-cancel">Cancel</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="comment-body-wrap">
+						<div class="comment-wrap">
+							<div class="comment-header">
+								<span role="button" class="a-j Mo bg" title="Options menu"></span>
+								<a href="#profile" class="comment-author clearfix"><img src="http://placehold.it/48x48" width="48px" height="48px" alt="H Juggernaut's profile photo" class="comment-author-image"></a>
+								<div class="Ex">
+									<span class="eE">
+										<a href="#profile" class="comment-author-link">H Juggernaut</a>
+									</span>
+									<span class="comment-meta">
+										&nbsp;-&nbsp;
+										<a href="#" class="" title="Jan 7, 2012 8:29:03 PM">Jan 7, 2012</a>
+										&nbsp;-&nbsp;
+										<a href="#" class="" title="Sharing details">Public</a>
+									</span>
+								</div>
+							</div>
+
+							<div>
+								<div class="comment-gallery-wrap">
+									<ul class="thumbnails">
+										<li class="span4">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/300x220" alt="">
+											</a>
+										</li>
+										<li class="span2">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/160x120" alt="">
+											</a>
+										</li>
+										<li class="span2">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/160x120" alt="">
+											</a>
+										</li>
+										<li class="span2">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/160x120" alt="">
+											</a>
+										</li>
+										<li class="span2">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/160x120" alt="">
+											</a>
+										</li>
+										<li class="span2">
+											<a href="#" class="thumbnail">
+												<img src="http://placehold.it/160x120" alt="">
+											</a>
+										</li>
+									</ul>
+
+									<div class="comment-gallery-actions">
+										<a href="#closet">View</a> this album.
+									</div>
+								</div>
+
+								<p class="comment-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+								<div class="comment-actions">
+									<a href="#" class="runway-reply-show">Comment</a> &nbsp;-&nbsp; <a href="#">Share</a>
+								</div>
+							</div>
+							<div class="runway-reply-wrap hide">
+								<textarea class="runway-comment-input" placeholder="Enter comment"></textarea>
+								<button class="btn primary runway-comment-post">Post comment</button>
+								<button class="btn runway-comment-cancel">Cancel</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="more ac tour_5">
+						<a id="last_comment_2" class="load-more" href="#">more</a>
+					</div>
+
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+</div> <!-- /container -->
+<script>
+!function ($) {
+	$(function(){
+
+			// Run a site tour
+			// if(!(jQuery.Storage.get("tour_runway") == "true")){
+			// 	var config = {
+			// 			mainTitle: "First time here?",
+			// 			saveCookie: true, 
+			// 		steps: [
+			// 		{
+			// 			"name" 		: "tour_1",
+			// 			"type"		: "warning",
+			// 			"position"	: "B",
+			// 			"text"		: "Main attraction, Public RUNWAY",
+			// 			"time" 		: 5000
+			// 		},
+			// 		{
+			// 			"name" 		: "tour_2",
+			// 			"type"		: "info",
+			// 			"text"		: "This is where your vote counts (like/dislike)",
+			// 			"position"	: "R",
+			// 			"time" 		: 5000
+			// 		},
+			// 		{
+			// 			"name" 		: "tour_3",
+			// 			"type"		: "success",
+			// 			"text"		: "Shortcut menus to other areas of the app",
+			// 			"position"	: "BL",
+			// 			"time" 		: 5000
+			// 		},
+			// 		{
+			// 			"name" 		: "tour_4",
+			// 			"text"		: "Let the World know what you think",
+			// 			"position"	: "BL",
+			// 			"time" 		: 5000
+			// 		},
+			// 		{
+			// 			"name" 		: "tour_5",
+			// 			"type"		: "danger",
+			// 			"text"		: "Load more comments.",
+			// 			"position"	: "BL",
+			// 			"time" 		: 5000
+			// 		}]
+			// 	};
+
+			// 	//$.tour.start(config);
+
+			// };
+
+			// $("#tour-start").click(function(e) {
+			// 	e.preventDefault();
+			// 	$.tour.start(config);
+			// });
+
+			// $(".max100").maxinput({
+			// 	limit		: 100,
+			// 	showtext 	: true,
+			// 	message	: 'left'	
+			// });
+
+			$(".chzn-select").chosen();
+
+			$("[rel=pop]").popover();
+
+			//Loading Demo button
+			// var btn = $('#btn-create-new-look').click(function () {
+			// 	btn.button('loading')
+			// 	setTimeout(function () {
+			// 		btn.button('reset')
+			// 	}, 3000)
+			// });
+
+			$("#btn-like").toggle(
+				function(){
+					$(this).text("Dislike");
+					$(this).addClass("active");
+				}, 
+				function(){
+					$(this).text("Like");
+					$(this).removeClass("active");
+				}
+			);
+
+
+			$(".runway-reply-show").toggle(
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
+				}, 
+				function(){
+					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
+				}
+			);
+
+			
+
+			$.ajax({
+				url: 'https://picasaweb.google.com/data/feed/api/all?q=fashion'
+				, dataType: 'jsonp'
+				, data: {
+					alt: 'json'
+					, 'max-results': 13
+				}
+				, success: function (data) {
+					//console.log(data.feed.entry[0]);
+
+					$('#runwayWrap')
+					.coulisse({
+						index: 0
+						, cyclic:   true
+						, images: data.feed.entry
+						, imageSrcGetter: ['content', 'src']
+						, linkHrefGetter: ['link', 1, 'href']
+						, activeSize: 369
+						, inactiveSize: 200
+						, indexChanging: function (e, arg) {
+							var entry = data.feed.entry[arg.index];
+							if(!entry)alert(arg.index);
+								//console.log(entry);
+						}
+					});
+				}
+			});
+
+	})
+}(window.jQuery)
+</script>

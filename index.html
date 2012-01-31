@@ -1,217 +1,131 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<title>fazzle.me</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<!-- Temp Style REMOVE -->
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/su.css">
-	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
+	<title>FAZZLE.ME</title>
 
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
-	<![endif]-->
-	
-	<!-- REQUIRE SCRIPTS (INIT) -->
-	<script data-main="js/main" src="js/libs/require/require.js"></script>
-
-	<!-- OTHER INIT -->
-	<script defer src="js/classes/script.js"></script>
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/chosen.css">
+	<link rel="stylesheet" href="assets/css/su.css">
 
 </head>
 
 <body>
 
 	<div id="container" class="fadeOnLoad">
-	
-		<div class="topbar" data-dropdown="dropdown">
-			<div class="topbar-inner">
-				<div class="container">
-					<h3><a href="#runway">fazzle<em>.</em>me</a></h3>
-					<ul id="app-sections-nav" class="nav"><!-- URdFSZX -->
 
-						<li><button class="btn" onclick="window.location.href='#runway'" rel="tip" data-placement="below" data-original-title="Runway"><span class="icon-btn">R</span></button></li>
+		<!-- App Header -->
+		<div id="app-header" class="navbar-fixed-top">
+			<div class="container">
+				<h3 class="brand"><a href="#runway">fazzle<em>.</em>me</a></h3>
 
-						<li><button class="btn" onclick="window.location.href='#profile'" rel="tip" data-placement="below" data-original-title="Profile"><span class="icon-btn">U</span></button></li>
+				<div class="btn-toolbar">
 
-						<li><button class="btn" onclick="window.location.href='#buzz'" rel="tip" data-placement="below" data-original-title="Buzz"><span class="icon-btn">d</span></button></li>
+					<div class="btn-group"><!-- URdFSZX -->
+						<a class="btn" href="/#runway" rel="tip" data-placement="bottom" title="Runway"><span class="icon-btn">R</span></a>
+						<a class="btn" href="/#profile" rel="tip" data-placement="bottom" title="Profile"><span class="icon-btn">U</span></a>
+						<a class="btn" href="/#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="icon-btn">d</span></a>
+						<a class="btn" href="/#closet" rel="tip" data-placement="bottom" title="Closet"><span class="icon-btn">Z</span></a>
+					</div>
 
-						<li><button class="btn" onclick="window.location.href='#closet'" rel="tip" data-placement="below" data-original-title="Closet"><span class="icon-btn">Z</span></button></li>
+					<input id="header-find-input" type="search" placeholder="Find friends..">
 
-					</ul>
-					<form class="pull-left" action="">
-						<input type="text" placeholder="Find friends..">
-					</form>
-					<ul class="nav secondary-nav">
-						<li class="dropdown">
-							<a href="#settings" class="dropdown-toggle" rel="tip" data-placement="below" data-original-title="Settings">Mister Fabulous</a>
-							<ul class="dropdown-menu">
-								<li><a href="#settings">Account</a></li>
-								<li><a href="#settings">Privacy</a></li>
-							</ul>
-						</li>
-						<li><button id="btn-logout" onclick="window.location.href='#login'" rel="tip" data-placement="below" data-original-title="Exit"><span class="icon-btn">X</span></button></li>
-					</ul>
+					<div id="header-user-menu" class="btn-group">
+						<a class="btn" href="/#settings"><img class="thumbnail" src="./assets/img/ruso.png" style="width: auto; height: 16px;padding: 0;display: inline-block;vertical-align: top;border: 0;" alt=""> Mister Fabulous</a>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/#settings"><i class="icon pencil"></i> Account</a></li>
+							<li><a href="/#settings"><i class="icon trash"></i> Privacy</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon"></i> Logout</a></li>
+						</ul>
+					</div>
+
 				</div>
-			</div><!-- /topbar-inner -->
+			</div><!-- /app-header container -->
 		</div>
 
-		<div id="page">
+		<!-- Main container -->
+		<div role="main" id="main">
 			<div class="loading"><span>loading</span></div>
 		</div>
 
+		<!-- App footer -->
 		<div id="app-footer" class="container ac">
 			<label class="footer-label">©Fazzle.me</label>
 			<a href="#/site-terms">Terms</a> • <a href="#/site-policy">Content Policy</a> • <a href="#/site-privacy">Privacy</a>
 		</div>
-	</div>
 
-	<!-- Application colsole log -->
-	<aside id="console">
-		<div id="search_container"></div>
-		<div id="console_output"></div>
-	</aside>
-
-	<div id="modal-from-dom" class="modal hide fade" style="display: none; ">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>Modal Heading</h3>
-		</div>
-		<div class="modal-body">
-			<p>One fine body…</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn primary">Primary</a>
-			<a href="#" class="btn secondary">Secondary</a>
-		</div>
 	</div>
 
 
-	<!-- UNIVERSAL SHARE MODAL -->
-	<div id="modal-universal-share" class="modal hide fade" style="display: none; ">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>Share with friends..</h3>
-		</div>
-		<div class="modal-body">
-			<p>Autocomplete input box that will know the difference between email or a friend from the list.   Content that's being shared</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn primary">Share</a>
-			<a href="#" class="btn secondary">Naah</a>
-		</div>
-	</div>
 
-	<!-- DELETE ITEMS MODAL -->
-	<div id="modal-delete-items" class="modal hide fade" style="display: none; ">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>YOU SURE?!?!</h3>
-		</div>
-		<div class="modal-body">
-			<p>You're about to delete ITEM NAME, it's permanent.</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn primary">Do it.</a>
-			<a href="#" class="btn secondary">Oopsy</a>
-		</div>
-	</div>
 
-	<!-- UPLOAD ITEMS MODAL -->
-	<link rel="stylesheet" href="css/chosen.css">
-	<div id="modal-upload-items" class="modal hide fade" style="display: none; ">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>Upload items</h3>
-		</div>
-		<div class="modal-body">
+	<!-- Libraries -->
+	<script src="./assets/js/libs/jquery/jquery.js"></script>
+	<script src="./assets/js/libs/jquery/jqueryui-min.js"></script>
+	<script src="./assets/js/libs/underscore/underscore.js"></script>
+	<script src="./assets/js/libs/backbone/backbone.js"></script>
+	<script src="./assets/js/libs/bootstrap/bootstrap.js"></script>
 
-				<ul class="tabs" data-tabs="tabs">
-					<li class="active"><a href="#upload-multiple">Multiple items</a></li>
-					<li><a href="#upload-single">Single item</a></li>
-				</ul>
-				
-				<div id="profile-tab-content" class="tab-content">
+	<!-- Plugins -->
+	<script src="./assets/js/libs/jquery/easing.js"></script>
+	<script src="./assets/js/libs/jquery/mousewheel.js"></script>
+	<script src="./assets/js/libs/jquery/chosen-min.js"></script>
+	<script src="./assets/js/libs/jquery/storage.js"></script>
+	<script src="./assets/js/plugins/notifications.js"></script>
+	<script src="./assets/js/plugins/roundabout.js"></script>
+	<!--<script src="./assets/js/plugins/accordion.js"></script>-->
+	<script src="./assets/js/plugins/coulisse.js"></script>
+	<script src="./assets/js/plugins/coulisseuiwrapper.js"></script>
 
-					<div class="tab-pane active" id="upload-multiple">
-						<div class="upload well ac">
-							<p>Drag 'n Drop items to this area</p>
-						</div>
-					</div>
+	<!-- Application -->
+	<script src="./app/index.js"></script>
+	<script src="./app/modules/helper.js"></script>
+	<script src="./app/modules/runway.js"></script>
+	<script src="./app/modules/profile.js"></script>
+	<script src="./app/modules/buzz.js"></script>
+	<script src="./app/modules/closet.js"></script>
+	<!--<script src="./app/modules/settings.js"></script>-->
 
-					<div class="tab-pane" id="upload-single">
-						<form>
-						  <fieldset>
-								<div class="upload well ac">
-									<p>Drag 'n Drop item to this area</p>
-								</div>
-								<h3 class="separator ac">- or -</h3>
-								<div class="clearfix">
-								  <label for="fileInput">Select item to upload</label>
-								  <div class="input">
-								    <input class="input-file" id="fileInput" name="fileInput" type="file">
-								  </div>
-								</div><!-- /clearfix -->
-						    <div class="clearfix">
-						      <label for="xlInput">Description</label>
-						      <div class="input">
-						        <input class="xlarge" id="xlInputUploadSingleDescription" name="xlInputUploadSingleDescription" size="30" type="text">
-						      </div>
-						    </div><!-- /clearfix -->
-						    <div class="clearfix">
-						      <label for="largeSelect">Category</label>
-						      <div class="input">
-						        <select class="xlarge chzn-select" name="largeSelect" id="singleCategorySelect" multiple data-placeholder="Place in..">
-						          <option>Untitled</option>
-						          <option>Tops</option>
-						          <option>Bottoms</option>
-						        </select>
-						      </div>
-						    </div><!-- /clearfix -->
-						    <div class="actions">
-						      <input type="submit" class="btn primary" value="Upload">&nbsp;<button type="reset" class="btn">Cancel</button>
-						    </div>
-						  </fieldset>
-						</form>
-					</div><!-- /upload single item -->
-				</div><!-- /upload items tab content -->
 
-		</div><!-- /modal body -->
-	</div>
+	<script>
+	!function ($) {
+		$(function(){
+
+
+			$('[rel=tip]').tooltip();
+			
+
+		})
+	}(window.jQuery)
+	</script>
 
 </body>
-<!--// &#9734;  ☆ KUZYA
-                             -~-%%%-,,
-                           ,%       ^2%
-                          -ZZ2       22
-                          -22%-,    .22
+</html>
+<!--// &#9734;  ☆ KUZYA.COM
+														 -~-%%%-,,
+													 ,%       ^2%
+													-ZZ2       22
+													-22%-,    .22
  ~,2~ ,i,       qWE2      %qggp2222gggp2     .2Zg,          .- ,-
  ,,222NEEBBggggg222%      -WWWWWqQWWWFBF     `?ZW\,,,,ggggggp2%==-"
  ,,,ggBBBBBBBBBBBBgggg,   -222%2WB2^27Z^ ,ggggggBNBWBBBWBBBWB2s==~-
-   ,ggBBBBBWWBBBWBWWBBBBgg,  %%JE@P  qggBBBBBBWWBWBWBWWWWBWWBE2"""`
-   ``qBWWBBBBBWWBWNBWBBWBWBBm%%%%% .dWBWBBBWWWWBNWBBBBWWBWWWWE"""
-        `"WWWWBWHWBBBBEBWW"^ ,gggg,`/"WWWBWBWWBBWWNWBWBWWWWWF"^
-            ""WBgdWW"""   ggWWWWWBWBgg, `"""""""W3EBWF"\
-               ""F ~g  iqdWBBWBBNBWBWWWBr,   F -JWWW
-                   -7   "" ^^7@WWWWW/"7"-"\  ^
-                              3H@ZES
-                               3@EP`
-                                22,
-                                LL/
+	 ,ggBBBBBWWBBBWBWWBBBBgg,  %%JE@P  qggBBBBBBWWBWBWBWWWWBWWBE2"""`
+	 ``qBWWBBBBBWWBWNBWBBWBWBBm%%%%% .dWBWBBBWWWWBNWBBBBWWBWWWWE"""
+				`"WWWWBWHWBBBBEBWW"^ ,gggg,`/"WWWBWBWWBBWWNWBWBWWWWWF"^
+						""WBgdWW"""   ggWWWWWBWBgg, `"""""""W3EBWF"\
+							 ""F ~g  iqdWBBWBBNBWBWWWBr,   F -JWWW
+									 -7   "" ^^7@WWWWW/"7"-"\  ^
+															3H@ZES
+															 3@EP`
+																22,
+																LL/
 
-    ┌────────────────────────────────────────────────────────┐
-    │ Date of Creation ........................... Year 2012 │
-    └────────────────────────────────────────────────────────┘
+		┌────────────────────────────────────────────────────────┐
+		│ Date of Creation ........................... Year 2012 │
+		└────────────────────────────────────────────────────────┘
 //-->
-</html>
