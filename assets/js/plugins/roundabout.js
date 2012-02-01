@@ -63,9 +63,9 @@
 		tilt: 0.0,
 		minZ: 100,
 		maxZ: 280,
-		minOpacity: 0.4,
+		minOpacity: 0.6,
 		maxOpacity: 1.0,
-		minScale: 0.4,
+		minScale: 0.6,
 		maxScale: 1.0,
 		duration: 600,
 		btnNext: null,
@@ -394,7 +394,7 @@
 					// calculations
 					info.midStage = {
 						width: info.stage.width / 2,
-						height: info.stage.height / 2
+						height: info.stage.height / 3
 					};
 
 					info.nudge = {

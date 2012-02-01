@@ -150,7 +150,7 @@
 		showControls: function(){
 			var tourcontrols  = '<div id="tourcontrols" class="tourcontrols alert-message warning">';
 			tourcontrols += '<p>'+$.tour.options.mainTitle+'</p>';
-			tourcontrols += '<span class="btn primary" id="activatetour">Start the Tour</span>';
+			tourcontrols += '<span class="btn btn-primary" id="activatetour">Start the Tour</span>';
 			tourcontrols += '<span id="latertour" class="btn latertour">Later</span>';
 			if(!$.tour.options.autoplay){
 				tourcontrols += '<div class="nav"><span class="btn" id="prevstep" style="display:none;">< Previous</span>';

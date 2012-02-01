@@ -143,7 +143,7 @@ background: #666;
   src: url("../fonts/websymbols-regular-webfont.eot");
   src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/websymbols-regular-webfont.woff") format("woff"), url("../fonts/websymbols-regular-webfont.ttf") format("truetype"), url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"); }
 
-.icon-btn {
+.ico-btn {
   font-family: 'WebSymbolsRegular';
   padding: 3px;
   margin-right: 3px;
@@ -206,8 +206,8 @@ ROUNDABOUT
 */
 .roundabout {
   overflow: hidden;
-  min-height: 420px;
-  width: 620px; }
+  min-height: 360px;
+  width: 100%; }
   .roundabout li {
     height: 240px;
     width: 220px;
@@ -233,6 +233,7 @@ AWESOME LIKE BUTTON
 background-color: #3bb3e0;
 width: 150px;
 display: inline-block;
+border: 0;
 font-family: 'Open Sans', sans-serif;
 font-size: 1.3em;
 text-decoration: none;
