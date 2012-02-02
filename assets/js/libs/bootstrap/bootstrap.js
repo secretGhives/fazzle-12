@@ -49,7 +49,8 @@
   })
   
 }( window.jQuery )
- /* =========================================================
+
+/* =========================================================
  * bootstrap-modal.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#modals
  * =========================================================
@@ -258,7 +259,8 @@
   })
 
 }( window.jQuery )
- /* ============================================================
+
+/* ============================================================
  * bootstrap-dropdown.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#dropdowns
  * ============================================================
@@ -350,7 +352,8 @@
   })
 
 }( window.jQuery )
- /* =============================================================
+
+/* =============================================================
  * bootstrap-scrollspy.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#scrollspy
  * =============================================================
@@ -475,7 +478,8 @@
   })
 
 }( window.jQuery )
- /* ========================================================
+
+/* ========================================================
  * bootstrap-tab.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#tabs
  * ========================================================
@@ -605,7 +609,8 @@
   })
 
 }( window.jQuery )
- /* ===========================================================
+
+/* ===========================================================
  * bootstrap-tooltip.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#tooltips
  * Inspired by the original jQuery.tipsy by Jason Frame
@@ -875,7 +880,8 @@
   }
 
 }( window.jQuery )
- /* ===========================================================
+
+/* ===========================================================
  * bootstrap-popover.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#popovers
  * ===========================================================
@@ -915,8 +921,8 @@
         , title = this.getTitle()
         , content = this.getContent()
 
-      $tip.find('.title')[ $.type(title) == 'object' ? 'append' : 'html' ](title)
-      $tip.find('.content > *')[ $.type(content) == 'object' ? 'append' : 'html' ](content)
+      $tip.find('.popover-title')[ $.type(title) == 'object' ? 'append' : 'html' ](title)
+      $tip.find('.popover-content > *')[ $.type(content) == 'object' ? 'append' : 'html' ](content)
 
       $tip.removeClass('fade top bottom left right in')
     }
@@ -966,11 +972,12 @@
   $.fn.popover.defaults = $.extend({} , $.fn.tooltip.defaults, {
     placement: 'right'
   , content: ''
-  , template: '<div class="popover"><div class="arrow"></div><div class="inner"><h3 class="title"></h3><div class="content"><p></p></div></div></div>'
+  , template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
   })
 
 }( window.jQuery )
- /* ==========================================================
+
+/* ==========================================================
  * bootstrap-alert.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#alerts
  * ==========================================================
@@ -1061,7 +1068,8 @@
   })
 
 }( window.jQuery )
- /* ============================================================
+
+/* ============================================================
  * bootstrap-button.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#buttons
  * ============================================================
@@ -1159,7 +1167,8 @@
   })
 
 }( window.jQuery )
- /* =============================================================
+
+/* =============================================================
  * bootstrap-collapse.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#collapse
  * =============================================================
@@ -1232,7 +1241,7 @@
 
       this.$element
         .removeClass('collapse')
-        [dimension](size || '')
+        [dimension](size || 'auto')
         [0].offsetWidth
 
       this.$element.addClass('collapse')
@@ -1295,7 +1304,8 @@
   })
 
 }( window.jQuery )
- /* ==========================================================
+
+/* ==========================================================
  * bootstrap-carousel.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#carousel
  * ==========================================================
@@ -1449,7 +1459,8 @@
   })
 
 }( window.jQuery )
- /* =============================================================
+
+/* =============================================================
  * bootstrap-typeahead.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#typeahead
  * =============================================================

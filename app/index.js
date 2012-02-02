@@ -59,7 +59,7 @@ jQuery(function($) {
 	var Profile = fazzle.module("profile");
 	var Buzz = fazzle.module("buzz");
 	var Closet = fazzle.module("closet");
-	//var Settings = fazzle.module("settings");
+	var Settings = fazzle.module("settings");
 
 
 	// Defining the application router, you can attach sub routers here.
@@ -72,9 +72,11 @@ jQuery(function($) {
 			// If you have sub routers defined in additional modules, you can do attach them here. 
 			// This enables navigation such as 'app.routers.OtherRouter.navigate'
 			//
+			this.runway = new Profile.Router("runway/");
 			this.profile = new Profile.Router("profile/");
 			this.buzz = new Buzz.Router("buzz/");
 			this.closet = new Closet.Router("closet/");
+			this.settings = new Settings.Router("settings/");
 		},
 		index: function(hash) {
 			var route = this;

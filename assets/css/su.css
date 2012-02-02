@@ -82,6 +82,8 @@ vertical-align: bottom;
 }
 .page-header h1 { display: inline-block; vertical-align: super; }
 
+
+
 /* PROFILE PAGE */
 .sidebar .thumbnails { margin-left: 0; margin-bottom: 13px; }
 .sidebar .thumbnails li { margin: 1px; padding: 0; display: inline-block; }
@@ -106,6 +108,17 @@ line-height: normal;
 #profile-comments-toggle.active { border-bottom: 1px dotted #bbb; }
 #profile-comments-toggle.active:before { content: ":"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #37F;}
 #profile-view .more, #profile-view .comment-body-wrap { display: none; }
+#profile-name:before,
+#profile-location:before,
+#profile-aboutme:before {
+display: inline-block;
+margin-left: -69px;
+margin-right: 32px;
+}
+#profile-name:before { content: "Name:"; }
+#profile-location:before { content: "Location:"; }
+#profile-aboutme:before { content: "About:"; }
+
 .image_stack {
 width: 200px;
 position: relative;
@@ -683,7 +696,10 @@ border-bottom-left-radius: 0;
 #closet-categories-filter,
 #closet-categories-filter_chzn {
 vertical-align: bottom;
-margin-right: 2em;
+margin-right: 1em;
+width: auto !important;
+min-width: 200px;
+max-width: 369px;
 }
 #closet-view .droppable { padding: 9px; }
 #closet-view .droppable img { max-width: 56px; margin: 1px; }
@@ -714,3 +730,9 @@ border-top: 0;
 border-top-style: dashed;
 border-top-color: #f3f3f3;
 }
+
+
+
+
+/* SETTINSG PAGE */
+.sidebar .nav-tabs { width: 100%; }

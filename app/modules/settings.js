@@ -2,7 +2,37 @@
 
 	Settings.Model = Backbone.Model.extend({ /* ... */ });
 	Settings.Collection = Backbone.Collection.extend({ /* ... */ });
-	Settings.Router = Backbone.Router.extend({ /* ... */ });
+	//Settings.Router = Backbone.Router.extend({ /* ... */ });
+
+
+	var Helper = fazzle.module("helper");
+
+	Settings.Router = Helper.SubRoute.extend({
+		routes: {
+			"": "view"
+		},
+		view: function(hash) {
+			var route = this;
+			var settings = new Settings.Views.Home();
+
+			// Attach the runway to the DOM
+			settings.render(function(el) {
+				$("#main").html(el);
+
+				// Fix for hashes in pushState and hash fragment
+				if (hash && !route._alreadyTriggered) {
+					// Reset to home, pushState support automatically converts hashes
+					Backbone.history.navigate("", false);
+
+					// Trigger the default browser behavior
+					location.hash = hash;
+
+					// Set an internal flag to stop recursive looping
+					route._alreadyTriggered = true;
+				}
+			});
+		}
+	});
 
 	// This will fetch the tutorial template and render it.
 	Settings.Views.Home = Backbone.View.extend({

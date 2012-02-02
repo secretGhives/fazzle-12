@@ -20,11 +20,6 @@
 						<button class="btn" data-controls-modal="modal-universal-share" data-backdrop="true" data-keyboard="true">Share</button>
 						<button class="btn" onclick="$('.droppable').html(''); alert('New look creator cleared', 'success')">Clear</button>
 					</fieldset>
-
-					<button class="btn span3" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload new items</button>
-
-					<button class="btn span3">Add new shelf</button>
-					<button id="closet-edit" class="btn span3">Edit closet</button>
 				</div>
 				&nbsp;
 			</div>
@@ -33,7 +28,7 @@
 			<!-- MAIN CONTENT -->
 			<div id="closet-shelves" class="span9">
 
-				<div id="edit-closet-well" class="closet btn-toolbar ar hide">
+				<div id="edit-closet-well" class="closet btn-toolbar ar">
 
 					<select id="closet-categories-filter" class="span3 chzn-select" multiple data-placeholder="Display only..">
 						<option value=".wishlist">Wishlist</option>
@@ -45,9 +40,11 @@
 					</select>
 
 					<div class="btn-group">
-						<a class="btn" href="/#closet">View</a>
+						<a class="btn" id="closet-edit" href="/#closet">Edit</a>
+						<button class="btn" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload</button>
+						<a class="btn" href="/#closet">New shelf</a>
 						<a class="btn" href="/#closet">Share</a>
-						<a class="btn danger" href="/#closet">Delete</a>
+						<a class="btn btn-danger" href="/#closet">Delete</a>
 					</div>
 				</div>
 
@@ -290,14 +287,14 @@
 			});
 
 			$('#closet-edit').toggle(function() {
-					$(this).addClass('active success');
+					$(this).addClass('active btn-success');
 					$(this).text('Save closet');
-					$('#edit-closet-well').show();
+					//$('#edit-closet-well .btn-group').show();
 					$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
 				}, function() {
-					$(this).removeClass('active success');
+					$(this).removeClass('active btn-success');
 					$(this).text('Edit closet');
-					$('#edit-closet-well').hide();
+					//$('#edit-closet-well .btn-group').hide();
 					$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
 			});
 

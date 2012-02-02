@@ -565,7 +565,9 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {
   line-height: normal;
   border: 0;
   cursor: pointer;
-  border-radius: 0 \0/;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 input[type="file"] {
   padding: initial;
@@ -1112,7 +1114,7 @@ table .span12 {
   width: 924px;
   margin-left: 0;
 }
-[class*="icon-"] {
+[class^="icon-"] {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -1122,7 +1124,7 @@ table .span12 {
   background-repeat: no-repeat;
   *margin-right: .3em;
 }
-[class*="icon-"]:last-child {
+[class^="icon-"]:last-child {
   *margin-left: 0;
 }
 .icon-white {
