@@ -10,17 +10,17 @@ function cNotify(m,t,d){
 	switch (t){
 		case 'error':
 		case 'failed':
-			colorScheme =  'message error';
+			colorScheme =  'app-notification important';
 		break;
 		case 'success':
-			colorScheme = 'message success';
+			colorScheme = 'app-notification success';
 		break;
 		case 'warning':
-			colorScheme = 'message warning';
+			colorScheme = 'app-notification warning';
 		break;
-		case 'shape':
+		case 'info':
 		default:
-			colorScheme = 'message';
+			colorScheme = 'app-notification info';
 		break;
 	}
 	var duration = (d==undefined) ? 3000 : d;
@@ -30,7 +30,7 @@ function cNotify(m,t,d){
 	}
 	
 	cbNotifications++;
-	$('body').append('<div id="cbNotice-'+cbNotifications+'" class="app-notification" style="z-index:10000; position:fixed; top:0px; left:0px; width:100%; text-align:center; display:none;" onclick="$(this).slideUp(\'fast\');"></div>');
+	$('body').append('<div id="cbNotice-'+cbNotifications+'" class="app-notifications" style="z-index:10000; position:fixed; top:0px; left:0px; width:100%; text-align:center; display:none;" onclick="$(this).slideUp(\'fast\');"></div>');
 	
 	$('#cbNotice-'+cbNotifications).html('<span class="'+colorScheme+'">'+m+'</span>');
 		$('#cbNotice-'+cbNotifications).slideDown('fast',function(){
