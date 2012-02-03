@@ -23,9 +23,9 @@
 						<fieldset>
 							<legend>account settings</legend>
 							<div class="control-group">
-								<label class="control-label" for="input01">Public profile</label>
+								<label class="control-label">Public profile</label>
 								<div class="controls">
-									<select class="medium chosen" name="mediumSelect" id="mediumSelect1">
+									<select class="medium chzn-select" multiple data-placeholder="Display only.." name="ps-profile" id="ps-profile">
 										<option>Public</option>
 										<option>Friends</option>
 										<option>Me</option>
@@ -34,9 +34,9 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="input01">My Closet</label>
+								<label class="control-label">My Closet</label>
 								<div class="controls">
-									<select class="medium chosen" name="mediumSelect" id="mediumSelect1">
+									<select class="medium chzn-select" multiple data-placeholder="Display only to.." name="ps-closet" id="ps-closet">
 										<option>Public</option>
 										<option>Friends</option>
 										<option>Me</option>
@@ -45,9 +45,9 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="input01">My Buzz</label>
+								<label class="control-label">My Buzz</label>
 								<div class="controls">
-									<select class="medium chosen" name="mediumSelect" id="mediumSelect1">
+									<select class="medium chzn-select" multiple data-placeholder="Show only to.." name="ps-buzz" id="ps-buzz">
 										<option>Public</option>
 										<option>Friends</option>
 										<option>Me</option>
@@ -131,7 +131,10 @@
 !function ($) {
 	$(function(){
 
-
+		$(".chzn-select").chosen().change(function(){
+			var filter = $(this).val();
+			alert('selected: ' + filter);
+		});
 
 	})
 }(window.jQuery)

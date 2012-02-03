@@ -12,6 +12,7 @@
 .marge { margin-top: 42px; }
 
 .modal-backdrop { background: white; }
+.sidebar [class*="span"] { float: none; margin: 0; }
 
 
 /* APP HEADER
@@ -607,7 +608,7 @@ padding: 0;
 width: 100%;
 }
 .fullscreen .page-header {
-margin: 0;
+margin: 0; padding: 0;
 height: 35px;
 background: lavender;
 }
@@ -616,10 +617,11 @@ margin: 0 13px 0 0;
 padding: 0;
 }
 .fullscreen .page-header h1 {
-vertical-align: top;
 margin: 0;
 padding: 0;
 font-size: 1.6em;
+line-height: 34px;
+vertical-align: top;
 }
 .fullscreen #fullscreen-sidebar { 
 background: #eee; 
@@ -679,6 +681,7 @@ overflow-x: auto;
 overflow-y: hidden;
 white-space: nowrap;
 }
+#fullscreen-thumbs .thumbnail { display: inline-block; }
 
 
 
@@ -734,7 +737,7 @@ border-top: 0;
 border-top-style: dashed;
 border-top-color: #f3f3f3;
 }
-
+#closet-edit-view.marge { margin-top: 60px; }
 
 
 

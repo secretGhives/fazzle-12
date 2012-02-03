@@ -1,22 +1,21 @@
-(function(Closet) {
+(function(Viewing) {
 
-	Closet.Model = Backbone.Model.extend({ /* ... */ });
-	Closet.Collection = Backbone.Collection.extend({ /* ... */ });
-	//Closet.Router = Backbone.Router.extend({ /* ... */ });
+	Viewing.Model = Backbone.Model.extend({ /* ... */ });
+	Viewing.Collection = Backbone.Collection.extend({ /* ... */ });
+	//Viewing.Router = Backbone.Router.extend({ /* ... */ });
 
 	var Helper = fazzle.module("helper");
 
-	Closet.Router = Helper.SubRoute.extend({
+	Viewing.Router = Helper.SubRoute.extend({
 		routes: {
-			"": "view",
-			"closet/": "view"
+			"": "view"
 		},
 		view: function(hash) {
 			var route = this;
-			var closet = new Closet.Views.Home();
+			var viewing = new Viewing.Views.Home();
 
 			// Attach the runway to the DOM
-			closet.render(function(el) {
+			viewing.render(function(el) {
 				$("#main").html(el);
 
 				// Fix for hashes in pushState and hash fragment
@@ -34,9 +33,9 @@
 		}
 	});
 
-	// This will fetch the Main template and render it.
-	Closet.Views.Home = Backbone.View.extend({
-		template: "app/templates/closet/main.html",
+	// This will fetch the tutorial template and render it.
+	Viewing.Views.Home = Backbone.View.extend({
+		template: "app/templates/closet/view.html",
 
 		render: function(done) {
 			var view = this;
@@ -46,11 +45,8 @@
 				view.el.innerHTML = tmpl();
 
 				done(view.el);
-
 			});
-			
 		}
 	});
 
-
-})(fazzle.module("closet"));
+})(fazzle.module("viewing"));

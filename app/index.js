@@ -54,12 +54,16 @@ jQuery(function($) {
 	// Shorthand the application namespace
 	var app = fazzle.app;
 
-	// Include the example module
+	// Include the primary modules
 	var Runway = fazzle.module("runway");
 	var Profile = fazzle.module("profile");
 	var Buzz = fazzle.module("buzz");
 	var Closet = fazzle.module("closet");
 	var Settings = fazzle.module("settings");
+
+	// Include the secondary modules
+	var Viewing = fazzle.module("viewing");
+	var Editing = fazzle.module("editing");
 
 
 	// Defining the application router, you can attach sub routers here.
@@ -78,6 +82,9 @@ jQuery(function($) {
 			this.buzz = new Buzz.Router("buzz/");
 			this.closet = new Closet.Router("closet/");
 			this.settings = new Settings.Router("settings/");
+
+			this.viewing = new Viewing.Router("viewing/");
+			this.editing = new Editing.Router("editing/");
 		},
 		index: function(hash) {
 			var route = this;
