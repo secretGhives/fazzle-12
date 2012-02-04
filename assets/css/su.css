@@ -13,6 +13,7 @@
 
 .modal-backdrop { background: white; }
 .sidebar [class*="span"] { float: none; margin: 0; }
+.comment-gallery-wrap .thumbnails { margin: 1em 0 0 0; }
 
 
 /* APP HEADER
