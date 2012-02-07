@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+.timer{}
+	.timer .label{
+		position: absolute;
+		bottom: 10px;
+		left: 15px;
+		top: auto;
+		width: 270px;
+		height: 40px;
+	}
+	.timer .column{
+		text-align: center;	
+		width: 25%;
+		float: left;
+		padding-top: 3px;
+	}
+		.timer .column.full{
+			width: 100%;
+			padding-top: 8px;	
+		}
+		.timer .column .font-style5{
+			line-height: 14px;	
+		}

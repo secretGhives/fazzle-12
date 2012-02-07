@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+/* Scroll template */
+.feedreader.size3, .feedreader.size3 .module_wrap{
+	height: 43px;	
+}
+	.feedreader.size3 span{
+		display: inline-block;
+		padding: 10px 10px 0 10px;
+		width: 16px;
+		background: transparent url(../images/bullet_feed.png) no-repeat center center;
+	}
