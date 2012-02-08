@@ -91,6 +91,7 @@ vertical-align: bottom;
 #profile-view .sidebar h3 { font-size: 13px; vertical-align: initial; }
 #profile-view .sidebar .thumbnails { margin-left: 0; margin-bottom: 13px; }
 #profile-view .sidebar .thumbnails li { margin: 1px; padding: 0; display: inline-block; }
+#profile-view .sidebar .thumbnails a { display: block; }
 #profile-view .sidebar figure { margin: 0; padding: 0; margin-bottom: 1em; }
 #profile-view .sidebar .side-links { display: inline-block; }
 #profile-view .sidebar .btn { margin: 1px 0; }
@@ -122,6 +123,7 @@ margin-right: 32px;
 #profile-name:before { content: "Name:"; }
 #profile-location:before { content: "Location:"; }
 #profile-aboutme:before { content: "About:"; }
+#profile-tab-content .controls { margin-left: 96px; margin-bottom: 0.6em; }
 
 .image_stack {
 width: 200px;

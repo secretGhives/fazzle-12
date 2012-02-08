@@ -223,8 +223,15 @@ ROUNDABOUT
       height: 100%; }
   .roundabout span {
     display: block; }
-.roundabout .caption { display: none; max-height: 60px; overflow-y: auto; text-align: left; }
-.roundabout .roundabout-in-focus:hover .caption { display: block; }
+.roundabout .caption { display: none; max-height: 87px; overflow-y: auto; text-align: left; }
+/*.roundabout .roundabout-in-focus:hover .caption { display: block; }*/
+.roundabout .roundabout-in-focus .caption {
+display: block;
+position: absolute;
+bottom: -8em;
+left: -17em;
+right: -17em;
+}
 
 /*
 AWESOME LIKE BUTTON
