@@ -1,96 +1,141 @@
 <style>
-html, body { overflow: hidden; }
+body { background: #eee; }
 #app-header { display: none; }
 </style>
-<link rel="stylesheet" href="css/vacordian.css">
 
-<section id="app-brand">
-	<h3 id="app-logo"><a href="#">fazzle<em>.</em>me</a></h3>
+<div id="page-login" class="container">
 
-	<ul class="tabs" class="nav nav-tabs">
-		<li class="active"><a href="#login-signin" data-toggle="tab">Sign in</a></li>
-		<li><a href="#login-register" data-toggle="tab">Sign up</a></li>
-	</ul>
-
-	<div id="login-tab-content" class="tab-content">
-		<div class="tab-pane fade active in" id="login-signin">
-			<nav id="app-login-wrap">
-				<form id="login">
-					<fieldset id="inputs">
-						<input id="username" class="large" type="text" placeholder="Username" autofocus required>
-						<input id="password" class="large" type="password" placeholder="Password" required>
-						<button id="btn-login" class="btn large"><span class="ico-btn">w</span> Login</button>
-					</fieldset>
-				</form>
-
-				<h2>or</h2>
-
-				<a href="#runway" id="btn-facebook" class="btn btn-primary large"><span class="ico-btn">f</span> /w Facebook</a>
-			</nav>
-		</div>
-
-		<div class="tab-pane fade" id="login-register">
-			<form>
-				<fieldset>
-					<input class="large" id="anonName" name="anonName" placeholder="Name" type="text">
-					<input class="large" id="anonEmail" name="anonEmail" placeholder="Email" type="text">
-					<input id="btn-signup" type="submit" class="btn btn-primary large" value="Sign up">
-				</fieldset>
-			</form>
-		</div>
+	<div class="row">
+		<hgroup id="top-welcome" class="span12">
+			<h1>Get ready to be FAZZLE'd</h1>
+			<h2>Service for storing and sharing your closet</h2>
+		</hgroup>
 	</div>
 
-
-</section>
-
-<div id="page-login" class="container" style="margin:0px; width: 100%;">
-	<div id="va-accordion" class="va-container" style="margin-top:0px;">
-		<div class="va-nav">
-			<span class="va-nav-prev" style="top:10px;">Previous</span>
-			<span class="va-nav-next" style="bottom:10px;">Next</span>
-		</div>
-		<div class="va-wrapper">
-			<div class="va-slice va-slice-color-1">
-				<h3 class="va-title">What is it..</h3>
-				<div class="va-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item">
+				<img src="//placehold.it/940x400" alt="">
+				<div class="carousel-caption">
+					<h4>First Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 				</div>
 			</div>
-			<div class="va-slice va-slice-color-2">
-				<h3 class="va-title">Features</h3>
-				<div class="va-content">
-					<p>Too many to count..</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>	
+			<div class="item">
+				<img src="//placehold.it/940x400" alt="">
+				<div class="carousel-caption">
+					<h4>Second Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				</div>
 			</div>
-			<div class="va-slice va-slice-color-3">
-				<h3 class="va-title">Join in</h3>
-				<div class="va-content">
-					<p>We're waiting for you :D</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>	
+			<div class="item active">
+				<img src="//placehold.it/940x400" alt="">
+				<div class="carousel-caption">
+					<h4>Third Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+	</div>
+
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="span3">
+			<h2>One</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+		</div>
+		<div class="span3">
+			<h2>Two</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+		</div>
+		<div class="span3">
+			<h2>Three</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	 </div>
+		<div class="span3">
+			<section id="app-brand1">
+				<h3 id="app-logo"><a href="#">fazzle<em>.</em>me</a></h3>
+
+				<ul id="login-tabs" class="nav nav-tabs">
+					<li class="active"><a href="#login-signin" data-toggle="tab">Sign in</a></li>
+					<li><a href="#login-register" data-toggle="tab">Sign up</a></li>
+				</ul>
+
+				<div id="login-tab-content" class="tab-content">
+					<div class="tab-pane fade active in" id="login-signin">
+						<form id="login">
+							<fieldset id="inputs">
+								<input id="username" class="large" type="text" placeholder="Username" autofocus required>
+								<input id="password" class="large" type="password" placeholder="Password" required>
+								<button id="btn-login" class="btn"><span class="ico-btn">w</span> Login</button>
+							</fieldset>
+						</form>
+
+						<hr/>
+						
+						or login with <a href="#runway" id="btn-facebook" class="btn btn-primary large"><span class="ico-btn">f</span> Facebook</a>
+					</div>
+
+					<div class="tab-pane fade" id="login-register">
+						<form>
+							<fieldset>
+								<input class="large" id="anonName" name="anonName" placeholder="Name" type="text">
+								<input class="large" id="anonEmail" name="anonEmail" placeholder="Email" type="text">
+								<input id="btn-signup" type="submit" class="btn btn-primary large" value="Sign up">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<hr/>
+
+	<div id="login-features" class="row">
+		<hgroup id="feature-welcome" class="span12">
+			<h1>Awesome features</h1>
+			<h2>never be caught wearing a trashbag again</h2>
+		</hgroup>
+
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="span6">
+				<img src="//placehold.it/460x222" />
+			</div>
+			<div class="span6">
+				<h1>Runway</h1>
+				<p>View public runway or the ones you follow.  Set yours to either public or private.  Comment on looks, copy items your wishlist.. </p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span6 ar">
+				<h1>Closet</h1>
+				<p>Upload your entire closet and have your friends comment on how stylish it really is. Edit items with crop tool, create new looks by combining items from your closet.  Categorize by shelves and much more.. </p>
+			</div>
+			<div class="span6">
+				<img src="//placehold.it/460x222" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span6">
+				<img src="//placehold.it/460x222" />
+			</div>
+			<div class="span6">
+				<h1>Share</h1>
+				<p>You've gossiped about other's stuff, you've even posted your own and got a positive feedback. All that's left now is to spread the word, be the fashion star.</p>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Application colsole log -->
-<aside id="console">
-	<div id="search_container"></div>
-	<div id="console_output"></div>
-</aside>
+	<div class="hero-unit">
+		<h2>So, there you have it!</h2>
+		<p>Sign up, invite your friends, create new looks, share with others and gossip about everything that's going on in the fashion world.</p>
+	</div>
+
+</div>

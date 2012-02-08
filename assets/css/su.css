@@ -559,41 +559,6 @@ text-shadow:1px 1px 1px #FFFFFF;
 .load-more:hover { border:1px solid #39F; text-decoration: none; }
 .load-more:active { color:#666666; }
 
-/* LOGIN PAGE */
-#app-logo {
-	display: block;
-	margin: 0;
-	padding: 6px 13px;
-	font-size: 32px;
-	color: #999;
-	font-weight: bold;
-}
-#app-logo a:hover { text-decoration: none; }
-#app-logo em { color: violet; }
-
-#app-brand {
-display: block;
-position: fixed;
-z-index: 9999;
-top: 32px;
-right: 32px;
-width: 269px;
-background: rgba(255, 255, 255, 0.69);
-padding: 9px;
-}
-#app-brand .tabs {margin: 0;}
-#app-brand .tab-content {
-background: #fff;
-text-align: center;
-border: 1px solid #eee;
-border-top: 0;
-}
-#login #password { margin-top: 3px; }
-#btn-login { margin-top: 9px; width: 200px; }
-#btn-facebook { margin-bottom: 9px; }
-#btn-signup { margin-top: 13px; }
-#login-register input { margin-bottom: 3px; }
-
 
 /* FULL SCREEN ITEM VIEWER WITH COMMENTS*/
 .fullscreen {
@@ -768,3 +733,46 @@ border-top-color: #f3f3f3;
 .app-notification.info {
   background-color: #3a87ad;
 }
+
+
+
+
+
+
+
+/* LOGIN PAGE */
+#app-logo {
+	display: block;
+	margin: 0;
+	padding: 6px 13px;
+	font-size: 32px;
+	color: #999;
+	font-weight: bold;
+}
+#app-logo a:hover { text-decoration: none; }
+#app-logo em { color: violet; }
+
+#app-brand {
+display: block;
+position: fixed;
+z-index: 9999;
+top: 32px;
+right: 32px;
+width: 269px;
+background: rgba(255, 255, 255, 0.69);
+padding: 9px;
+}
+
+#btn-login { margin-top: 9px; width: 180px; }
+#btn-facebook { margin-bottom: 9px; }
+#btn-signup { margin-top: 13px; }
+
+#page-login hgroup { text-align: center; margin-top: 3em; margin-bottom: 2em; }
+#page-login hgroup h2 { font-size: 1.3em; color: #39F; }
+#page-login hgroup h1 { font-size: 3em; }
+#login-features .row { margin: 3em 0 0 0; }
+#login-tabs { margin-bottom: 0; }
+#login-tab-content { background: #fff; border: 1px solid #ddd; border-top: 0; text-align: center; }
+#login-tab-content input { width: auto; margin: 3px 0; }
+#login-tab-content .tab-pane { padding: 1em 0 0; }
+#login-features .span6 p { font-size: 18px; font-weight: 200; line-height: 27px; }
