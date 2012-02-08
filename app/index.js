@@ -64,6 +64,7 @@ jQuery(function($) {
 	// Include the secondary modules
 	var Viewing = fazzle.module("viewing");
 	var Editing = fazzle.module("editing");
+	var Login = fazzle.module("login");
 
 
 	// Defining the application router, you can attach sub routers here.
@@ -85,6 +86,7 @@ jQuery(function($) {
 
 			this.viewing = new Viewing.Router("viewing/");
 			this.editing = new Editing.Router("editing/");
+			this.login = new Login.Router("login/");
 		},
 		index: function(hash) {
 			var route = this;

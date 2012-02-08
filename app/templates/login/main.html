@@ -1,45 +1,44 @@
-<style>html, body { overflow: hidden; }</style>
+<style>
+html, body { overflow: hidden; }
+#app-header { display: none; }
+</style>
 <link rel="stylesheet" href="css/vacordian.css">
 
 <section id="app-brand">
 	<h3 id="app-logo"><a href="#">fazzle<em>.</em>me</a></h3>
 
-				<ul class="tabs" data-tabs="tabs">
-					<li class="active"><a href="#login-signin">Sign in</a></li>
-					<li><a href="#login-register">Sign up</a></li>
-				</ul>
-				
-				<div id="login-tab-content" class="tab-content">
+	<ul class="tabs" class="nav nav-tabs">
+		<li class="active"><a href="#login-signin" data-toggle="tab">Sign in</a></li>
+		<li><a href="#login-register" data-toggle="tab">Sign up</a></li>
+	</ul>
 
-					<div class="tab-pane active" id="login-signin">
-						<nav id="app-login-wrap">
-							<form id="login">
-								<fieldset id="inputs">
-									<input id="username" class="large" type="text" placeholder="Username" autofocus required>
-									<input id="password" class="large" type="password" placeholder="Password" required>
-									<button id="btn-login" class="btn large"><span class="ico-btn">w</span> Login</button>
-								</fieldset>
-							</form>
+	<div id="login-tab-content" class="tab-content">
+		<div class="tab-pane fade active in" id="login-signin">
+			<nav id="app-login-wrap">
+				<form id="login">
+					<fieldset id="inputs">
+						<input id="username" class="large" type="text" placeholder="Username" autofocus required>
+						<input id="password" class="large" type="password" placeholder="Password" required>
+						<button id="btn-login" class="btn large"><span class="ico-btn">w</span> Login</button>
+					</fieldset>
+				</form>
 
-							<h2>or</h2>
+				<h2>or</h2>
 
-							<a href="#runway" id="btn-facebook" class="btn btn-primary large"><span class="ico-btn">f</span> /w Facebook</a>
-						</nav>
+				<a href="#runway" id="btn-facebook" class="btn btn-primary large"><span class="ico-btn">f</span> /w Facebook</a>
+			</nav>
+		</div>
 
-					</div>
-
-					<div class="tab-pane" id="login-register">
-
-						<form>
-						  <fieldset>
-						    <input class="large" id="anonName" name="anonName" placeholder="Name" type="text">
-						    <input class="large" id="anonEmail" name="anonEmail" placeholder="Email" type="text">
-				      	<input id="btn-signup" type="submit" class="btn btn-primary large" value="Sign up">
-						  </fieldset>
-						</form>
-
-					</div>
-				</div>
+		<div class="tab-pane fade" id="login-register">
+			<form>
+				<fieldset>
+					<input class="large" id="anonName" name="anonName" placeholder="Name" type="text">
+					<input class="large" id="anonEmail" name="anonEmail" placeholder="Email" type="text">
+					<input id="btn-signup" type="submit" class="btn btn-primary large" value="Sign up">
+				</fieldset>
+			</form>
+		</div>
+	</div>
 
 
 </section>
