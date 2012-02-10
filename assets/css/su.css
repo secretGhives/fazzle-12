@@ -765,7 +765,7 @@ background: rgba(255, 255, 255, 0.69);
 padding: 9px;
 }
 
-#btn-login { margin-top: 9px; width: 180px; }
+#btn-login { margin-top: 5px; width: 160px; text-align: left; }
 #btn-facebook { margin-bottom: 9px; }
 #btn-signup { margin-top: 13px; }
 

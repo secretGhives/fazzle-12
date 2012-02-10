@@ -72,7 +72,6 @@ jQuery(function($) {
       "login": "display_login"
       //":hash": "index"
     },
-
 		index: function(hash) {
 			var route = this
 				, home = new Runway.Views.Home();
