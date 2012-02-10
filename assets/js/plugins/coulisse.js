@@ -562,7 +562,7 @@ if(typeof lds == 'undefined') lds = {};
             style.position = 'absolute';
 
             //RUSO EDIT if (link) link.href = linkHref;
-            if (link) link.href = "#viewing";
+            //if (link) link.href = "#viewing";
             image.src = imageSrc;
         };
 
