@@ -1,9 +1,4 @@
-// Change *namespace* to your namespace!
-// This contains the module definition factory function, application state,
-// events, and the router.
 this.fazzle = {
-	// Assist with code organization, by breaking up logical components of code
-	// into modules.
 	module: function() {
 		// Internal module cache.
 		var modules = {};
@@ -20,10 +15,6 @@ this.fazzle = {
 		};
 	}(),
 
-	// This is useful when developing if you don't want to use a
-	// build process every time you change a template.
-	//
-	// Delete if you are using a different template loading method.
 	fetchTemplate: function(path, done) {
 		window.JST = window.JST || {};
 
@@ -52,45 +43,39 @@ this.fazzle = {
 jQuery(function($) {
 
 	// Shorthand the application namespace
-	var app = fazzle.app;
+	var app = fazzle.app
 
 	// Include the primary modules
-	var Runway = fazzle.module("runway");
-	var Profile = fazzle.module("profile");
-	var Buzz = fazzle.module("buzz");
-	var Closet = fazzle.module("closet");
-	var Settings = fazzle.module("settings");
+		, Runway = fazzle.module("runway")
+		, Profile = fazzle.module("profile")
+		, Buzz = fazzle.module("buzz")
+		, Closet = fazzle.module("closet")
+		, Settings = fazzle.module("settings")
 
 	// Include the secondary modules
-	var Viewing = fazzle.module("viewing");
-	var Editing = fazzle.module("editing");
-	var Login = fazzle.module("login");
+		, Viewing = fazzle.module("viewing")
+		, Editing = fazzle.module("editing")
+		, Login = fazzle.module("login");
 
 
 	// Defining the application router, you can attach sub routers here.
 	var Router = Backbone.Router.extend({
-		routes: {
-			"runway": "index",
-			"": "index"
-			//":hash": "index"
-		},
-		initialize: function(){
-			// If you have sub routers defined in additional modules, you can do attach them here. 
-			// This enables navigation such as 'app.routers.OtherRouter.navigate'
-			//
-			this.runway = new Runway.Router("runway/");
-			this.profile = new Profile.Router("profile/");
-			this.buzz = new Buzz.Router("buzz/");
-			this.closet = new Closet.Router("closet/");
-			this.settings = new Settings.Router("settings/");
+    routes: {
+      "": "index",
+      "runway": "display_runway",
+      "profile": "display_profile",
+      "buzz": "display_buzz",
+      "closet": "display_closet",
+      "settings": "display_settings",
+      "viewing": "display_viewing",
+      "editing": "display_editing",
+      "login": "display_login"
+      //":hash": "index"
+    },
 
-			this.viewing = new Viewing.Router("viewing/");
-			this.editing = new Editing.Router("editing/");
-			this.login = new Login.Router("login/");
-		},
 		index: function(hash) {
-			var route = this;
-			var home = new Runway.Views.Home();
+			var route = this
+				, home = new Runway.Views.Home();
 
 			// Attach the runway to the DOM
 			home.render(function(el) {
@@ -108,38 +93,93 @@ jQuery(function($) {
 					route._alreadyTriggered = true;
 				}
 			});
-		}
+		},
+
+    display_runway: function() {
+      var route = this
+        , runway = new Runway.Views.Home();
+
+      runway.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_profile: function() {
+      var route = this
+        , profile = new Profile.Views.Home();
+
+      profile.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_buzz: function() {
+      var route = this
+        , buzz = new Buzz.Views.Home();
+
+      buzz.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_closet: function() {
+      var route = this
+        , closet = new Closet.Views.Home();
+
+      closet.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_settings: function() {
+      var route = this
+        , settings = new Settings.Views.Home();
+
+      settings.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_viewing: function() {
+      var route = this
+        , viewing = new Viewing.Views.Home();
+
+      viewing.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_editing: function() {
+      var route = this
+        , editing = new Editing.Views.Home();
+
+      editing.render(function(el) {
+        $("#main").html(el);
+      });
+    },
+
+    display_login: function() {
+      var route = this
+        , login = new Login.Views.Home();
+
+      login.render(function(el) {
+        $("#main").html(el);
+      });
+    }
 	});
 	
-	// Actually initialize
-	//new app.Router();
+  app.router = new Router();
+  Backbone.history.start({ pushState: true });
 
-	// Define your master router on the application namespace and trigger all
-	// navigation from this instance.
-	app.router = new Router();
+  $(document).on("click", "a:not([data-bypass])", function(e) {
+    // Get the anchor href and protcol
+    var href = $(this).attr("href");
+    var protocol = this.protocol + "//";
 
-	// Trigger the initial route and enable HTML5 History API support
-	Backbone.history.start({ pushState: true });
-
-	// All navigation that is relative should be passed through the navigate
-	// method, to be processed by the router.  If the link has a data-bypass
-	// attribute, bypass the delegation completely.
-	$(document).on("click", "a:not([data-bypass])", function(evt) {
-		// Get the anchor href and protcol
-		var href = $(this).attr("href");
-		var protocol = this.protocol + "//";
-
-		// Ensure the protocol is not part of URL, meaning its relative.
-		if (href.slice(0, protocol.length) !== protocol) {
-			// Stop the default event to ensure the link will not cause a page
-			// refresh.
-			evt.preventDefault();
-
-			// This uses the default router defined above, and not any routers
-			// that may be placed in modules.  To have this work globally (at the
-			// cost of losing all route events) you can change the following line
-			// to: Backbone.history.navigate(href, true);
-			app.router.navigate(href, true);
-		}
-	});
+    // Ensure the protocol is not part of URL, meaning its relative.
+    if (href.slice(protocol.length) !== protocol) {
+      e.preventDefault();
+      app.router.navigate(href, true);
+    }
+  });
 });
