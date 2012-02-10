@@ -13,6 +13,7 @@
 
 .modal-backdrop { background: white; }
 .sidebar [class*="span"] { float: none; margin: 0; }
+.sidebar-fixed { position: fixed; width: 220px; top: 49px; }
 .comment-gallery-wrap .thumbnails { margin: 1em 0 0 0; }
 
 

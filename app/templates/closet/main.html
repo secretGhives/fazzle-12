@@ -253,64 +253,87 @@
 
 		$("[rel=pop]").popover();
 
-			$('.accordion-inner img').draggable({ revert: true });
-			$( ".droppable" ).droppable({
-				tolerance: 'touch',
-				over: function() {
-					$(this).removeClass('out').addClass('over');
-				},
-				out: function() {
-					$(this).removeClass('over').addClass('out');
-				},
-				drop: function( event, ui ) {
-					var answer = alert('Added xxxx to the Look', 'success');
-					$( this ).addClass( "received" );
-					$( "<img>" ).attr( "src", ui.draggable.attr("src") ).appendTo( this );
-					//ui.draggable.remove();
-				}
-			});
+		$('.accordion-inner img').draggable({ revert: true });
+		$( ".droppable" ).droppable({
+			tolerance: 'touch',
+			over: function() {
+				$(this).removeClass('out').addClass('over');
+			},
+			out: function() {
+				$(this).removeClass('over').addClass('out');
+			},
+			drop: function( event, ui ) {
+				var answer = alert('Added xxxx to the Look', 'success');
+				$( this ).addClass( "received" );
+				$( "<img>" ).attr( "src", ui.draggable.attr("src") ).appendTo( this );
+				//ui.draggable.remove();
+			}
+		});
 
-			$("#closet-view .droppable").delegate("img", "click", function() {
-				$(this).remove();
-				alert('Item removed', 'success');
-			});
+		$("#closet-view .droppable").delegate("img", "click", function() {
+			$(this).remove();
+			alert('Item removed', 'success');
+		});
 
-			//$('#side-box').stickySidebar({padding: 42});
+		//Make sidebar sticky and come with the shelves
+		//$('#side-box').stickySidebar({padding: 42});
+    // fix sub nav on scroll
+    var $win = $(window)
+      , $side = $('#side-box')
+      , navSide = $('#side-box').length && $('#side-box').offset().top - 49
+      , isFixed = 0
+
+    processScroll()
+
+    $win.on('scroll', processScroll)
+
+    function processScroll() {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop >= navSide && !isFixed) {
+        isFixed = 1
+        $side.addClass('sidebar-fixed')
+      } else if (scrollTop <= navSide && isFixed) {
+        isFixed = 0
+        $side.removeClass('sidebar-fixed')
+      }
+    }
 
 
-			$('#btn-create-new-look').toggle(function() {
-					$(this).addClass('active');
-					$('#closet-create-look').show();
-				}, function() {
-					$(this).removeClass('active');
-					$('#closet-create-look').hide();
-			});
 
-			$('#closet-edit').toggle(function() {
-					$(this).addClass('active btn-success');
-					$(this).text('Save closet');
-					//$('#edit-closet-well .btn-group').show();
-					$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
-				}, function() {
-					$(this).removeClass('active btn-success');
-					$(this).text('Edit closet');
-					//$('#edit-closet-well .btn-group').hide();
-					$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
-			});
+    //Toggle Create new look panel
+		$('#btn-create-new-look').toggle(function() {
+				$(this).addClass('active');
+				$('#closet-create-look').show();
+			}, function() {
+				$(this).removeClass('active');
+				$('#closet-create-look').hide();
+		});
 
-			$(".chzn-select").chosen().change(function(){
-				var filter = $(this).val();
-				var list = $('#closet-shelf-list');
-				//alert( filter );
-				$(list).find("div.accordion-group:not(" + filter + ")").addClass("hide");
-				$(list).find("div.accordion-group" + filter).removeClass("hide");
-				alert('selected: ' + filter, 'success');
-				if (filter === null) {
-					$(list).find("div.accordion-group").removeClass("hide");
-				}
-			});
+		$('#closet-edit').toggle(function() {
+				$(this).addClass('active btn-success');
+				$(this).text('Save closet');
+				//$('#edit-closet-well .btn-group').show();
+				$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
+			}, function() {
+				$(this).removeClass('active btn-success');
+				$(this).text('Edit closet');
+				//$('#edit-closet-well .btn-group').hide();
+				$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
+		});
 
-			//$('#st-accordion').accordion({oneOpenedItem	: true});
+		$(".chzn-select").chosen().change(function(){
+			var filter = $(this).val();
+			var list = $('#closet-shelf-list');
+			//alert( filter );
+			$(list).find("div.accordion-group:not(" + filter + ")").addClass("hide");
+			$(list).find("div.accordion-group" + filter).removeClass("hide");
+			alert('selected: ' + filter, 'success');
+			if (filter === null) {
+				$(list).find("div.accordion-group").removeClass("hide");
+			}
+		});
+
+		//$('#st-accordion').accordion({oneOpenedItem	: true});
 
 	})
 }(window.jQuery)
