@@ -70,9 +70,9 @@ jQuery(function($) {
 	// Defining the application router, you can attach sub routers here.
 	var Router = Backbone.Router.extend({
 		routes: {
+			"": "index",
 			"runway": "index",
-			"": "index"
-			//":hash": "index"
+			":hash": "index"
 		},
 		initialize: function(){
 			// If you have sub routers defined in additional modules, you can do attach them here. 
