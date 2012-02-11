@@ -104,13 +104,12 @@
 					<div class="tab-pane" id="upload-camera">
 						<form class="form-horizontal">
 							<fieldset>
-								<span id="cam-status"></span>
+								<legend id="cam-status"></legend>
 								<div id="webcam" class="camera ac"></div>
-								<p>
-									<a href="javascript:webcam.capture(3);changeFilter();void(0);">Take a picture after 3 seconds</a> | 
-									<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture instantly</a>
+								<p class="ac">
+									<button class="btn" onclick="webcam.capture(3)">Take a picture after 3 seconds</button>
+									<button class="btn btn-success" onclick="webcam.capture()">Snap NOW!</button>
 								</p>
-								<canvas id="canvas" height="240" width="320"></canvas>
 								<ul id="cams"></ul>
 							</fieldset>
 						</form>
@@ -175,9 +174,9 @@
 
 	<script src="assets/js/plugins/notifications.js"></script>
 	<script src="assets/js/plugins/roundabout.js"></script>
+	<script src="assets/js/plugins/jcrop.js"></script>
 	<script src="assets/js/plugins/coulisse.js"></script>
 	<script src="assets/js/plugins/coulisseuiwrapper.js"></script>
-	<!--<script src="assets/js/plugins/sticky.js"></script>-->
 
 	<!-- Application -->
 	<script src="app/fazzle.js"></script>
@@ -211,19 +210,19 @@
 			var filter_on = false;
 			var filter_id = 0;
 
-			jQuery("#webcam").webcam({
+			$("#webcam").webcam({
 
 				width: 340,
 				height: 260,
 				mode: "callback",
-				swffile: "./assets/js/libs/webcam/jscam_canvas_only.swf",
+				swffile: "assets/js/libs/webcam/jscam_canvas_only.swf",
 
 				onTick: function(remain) {
 
 					if (0 == remain) {
-						jQuery("#cam-status").text("Cheese!");
+						$("#cam-status").text("Cheese!");
 					} else {
-						jQuery("#cam-status").text(remain + " seconds remaining...");
+						$("#cam-status").text(remain + " seconds remaining...");
 					}
 				},
 
@@ -323,14 +322,14 @@
 				},
 
 				debug: function (type, string) {
-					jQuery("#cam-status").html(type + ": " + string);
+					$("#cam-status").html(type + ": " + string);
 				},
 
 				onLoad: function () {
 
 					var cams = webcam.getCameraList();
 					for(var i in cams) {
-						jQuery("#cams").append("<li>" + cams[i] + "</li>");
+						$("#cams").append("<li>" + cams[i] + "</li>");
 					}
 				}
 			});

@@ -42,14 +42,15 @@
 					<div class="btn-group">
 						<a class="btn" id="closet-edit" href="/closet">Edit</a>
 						<a class="btn" data-toggle="modal" href="#modal-upload-items">Upload</a>
-						<a class="btn" href="/closet">New shelf</a>
+						<a class="btn" id="closet-new-shelf" href="/closet">New shelf</a>
 						<a class="btn" href="/closet">Share</a>
-						<a class="btn btn-danger" href="/closet">Delete</a>
+						<a class="btn btn-danger" id="closet-delete-shelf" href="/closet">Delete</a>
 					</div>
 				</div>
 
 				<div class="accordion" id="closet-shelf-list">
 					<div class="accordion-group wishlist">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">32 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfWishlist">
@@ -124,6 +125,7 @@
 					</div>
 
 					<div class="accordion-group shelf-1">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">16 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfOne">
@@ -170,6 +172,7 @@
 					</div>
 
 					<div class="accordion-group shelf-2">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">6 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfTwo">
@@ -189,6 +192,7 @@
 					</div>
 
 					<div class="accordion-group shelf-3">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">4 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfThree">
@@ -206,6 +210,7 @@
 					</div>
 
 					<div class="accordion-group shelf-4">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">2 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfFour">
@@ -221,6 +226,7 @@
 					</div>
 
 					<div class="accordion-group shelf-5">
+						<a class="close hide" rel="tip" data-placement="left" title="delete this shelf">&times;</a>
 						<div class="accordion-heading">
 							<span class="label">6 items</span>
 							<a class="accordion-toggle closet-ei" contenteditable="false" data-toggle="collapse" data-parent="#accordion2" href="#shelfFive">
@@ -249,8 +255,8 @@
 !function ($) {
 	$(function(){
 
-		console.log("loaded Closet");
 
+		$('[rel=tip]').tooltip();
 		$("[rel=pop]").popover();
 
 		$('.accordion-inner img').draggable({ revert: true });
@@ -281,11 +287,11 @@
     var $win = $(window)
       , $side = $('#side-box')
       , navSide = $('#side-box').length && $('#side-box').offset().top - 49
-      , isFixed = 0
+      , isFixed = 0;
 
-    processScroll()
+    processScroll();
 
-    $win.on('scroll', processScroll)
+    $win.on('scroll', processScroll);
 
     function processScroll() {
       var i, scrollTop = $win.scrollTop()
@@ -312,14 +318,32 @@
 		$('#closet-edit').toggle(function() {
 				$(this).addClass('active btn-success');
 				$(this).text('Save closet');
-				//$('#edit-closet-well .btn-group').show();
 				$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
+				alert("Editing closet");
 			}, function() {
 				$(this).removeClass('active btn-success');
-				$(this).text('Edit closet');
-				//$('#edit-closet-well .btn-group').hide();
+				$(this).text('Edit');
 				$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
+				alert("Finished editing");
 		});
+
+
+		//Delete individual shelves toggle
+		$('#closet-delete-shelf').toggle(function() {
+				$(this).addClass('active');
+				$(this).text('Finish');
+				$('.accordion-group .close').removeClass('hide');
+				alert("Delete shelves activated");
+			}, function() {
+				$(this).removeClass('active');
+				$(this).text('Delete');
+				$('.accordion-group .close').addClass('hide');
+		});
+		$('.accordion-group .close').click(function() {
+			$(this).parent().hide();
+			alert("Shelf deleted", "success");
+		});
+
 
 		$(".chzn-select").chosen().change(function(){
 			var filter = $(this).val();
@@ -333,7 +357,6 @@
 			}
 		});
 
-		//$('#st-accordion').accordion({oneOpenedItem	: true});
 
 	})
 }(window.jQuery)

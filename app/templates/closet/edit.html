@@ -34,7 +34,7 @@
 				</select>
 
 				<button class="btn span3" rel="pop" data-content="Once activated, select an area you wish to crop in the image." data-original-title="Crop tool" data-placement="right" data-toggle="toggle">Crop</button>
-				<button class="btn span3" data-controls-modal="modal-upload-items" data-backdrop="true" data-keyboard="true">Upload more..</button>
+				<button class="btn span3" data-toggle="modal" href="#modal-upload-items">Upload more..</button>
 
 				<hr class="separator"/>
 				<button class="btn btn-danger" data-controls-modal="modal-delete-items" data-backdrop="true" data-keyboard="true">Delete</button>
@@ -43,7 +43,7 @@
 			<div class="span9">
 
 				<figure id="edit-image-wrap">
-					<img src="./assets/img/tmp_share.jpg" width="100%" height="auto" />
+					<img id="crop-target" src="./assets/img/tmp_share.jpg"/>
 				</figure>
 
 			</div>
@@ -56,6 +56,8 @@
 	$(function(){
 
 		$(".chzn-select").chosen();
+
+		$('#crop-target').Jcrop();
 
 	})
 }(window.jQuery)
