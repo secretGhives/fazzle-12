@@ -10,7 +10,8 @@ var Runway = fazzle.module("runway")
 // Include the secondary modules
 	, Viewing = fazzle.module("viewing")
 	, Editing = fazzle.module("editing")
-	, Login = fazzle.module("login");
+	, Login = fazzle.module("login")
+	, Help = fazzle.module("help");
 
 // Defining the application router, you can attach sub routers here.
 var Router = Backbone.Router.extend({
@@ -23,7 +24,8 @@ var Router = Backbone.Router.extend({
 		"settings": "display_settings",
 		"viewing": "display_viewing",
 		"editing": "display_editing",
-		"login": "display_login"
+		"login": "display_login",
+		"help": "display_help"
 		//":hash": "index"
 	},
 
@@ -117,6 +119,15 @@ var Router = Backbone.Router.extend({
 			, login = new Login.Views.Home();
 
 		login.render(function(el) {
+			$("#main").html(el);
+		});
+	},
+	
+	display_help: function() {
+		var route = this
+			, help = new Help.Views.Home();
+
+		help.render(function(el) {
 			$("#main").html(el);
 		});
 	}  

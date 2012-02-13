@@ -2,13 +2,15 @@
 
 	<div class="content">
 
-		<div class="page-header">
+		<div id="buzz-header" class="page-header">
 			<a class="ur-sm-avatar" href="#profile" rel="tip" data-placement="right" data-original-title="Mister Fabulous (You)"><img class="thumbnail" src="./assets/img/ruso.png" style="width:36px; height:36px;" alt=""></a>
 			<h1>Buzz</h1>
 
 			<div id="buzz-links" class="buzz-links">
-				<a href="#janurary12">Jan '12</a>
-				<a href="#december11">Dec '11</a>
+				<select class="chzn-select" name="monthSelect" id="singleMonthSelect" data-placeholder="Place in..">
+					<option value="#janurary12">Jan '12</option>
+					<option value="#december11">Dec '11</option>
+				</select>
 			</div>
 
 		</div>
@@ -187,6 +189,36 @@
 !function ($) {
 	$(function(){
 
+
+			// fix sub nav on scroll
+			var $win = $(window)
+				, $side = $('#buzz-header')
+				, navSide = $('#buzz-header').length && $('#buzz-header').offset().top - 49
+				, isFixed = 0;
+
+			processScroll();
+
+			$win.on('scroll', processScroll);
+
+			function processScroll() {
+				var i, scrollTop = $win.scrollTop()
+				if (scrollTop >= navSide && !isFixed) {
+					isFixed = 1
+					$side.addClass('header-fixed')
+				} else if (scrollTop <= navSide && isFixed) {
+					isFixed = 0
+					$side.removeClass('header-fixed')
+				}
+			}
+
+
+			$(".chzn-select").chosen().change(function(){
+				var filter = $(this).val();
+				alert(filter, 'success');
+				window.location = filter;
+			});
+
+
 			var $sidescroll	= (function() {
 					
 					// the row elements
@@ -294,13 +326,13 @@
 								$rowsViewport.each( function() {
 								
 									$(this).find('div.buzz-left')
-										   .css({ left   : '0%' })
-										   .end()
-										   .find('div.buzz-right')
-										   .css({ right  : '0%' })
-										   .end()
-										   .find('a.buzz-circle')
-										   .addClass('buzz-circle-deco');
+											 .css({ left   : '0%' })
+											 .end()
+											 .find('div.buzz-right')
+											 .css({ right  : '0%' })
+											 .end()
+											 .find('a.buzz-circle')
+											 .addClass('buzz-circle-deco');
 								
 								});
 							
