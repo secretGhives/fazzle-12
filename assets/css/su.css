@@ -799,3 +799,5 @@ padding: 9px;
 #login-tab-content input { width: auto; margin: 3px 0; }
 #login-tab-content .tab-pane { padding: 1em 0 0; }
 #login-features .span6 p { font-size: 18px; font-weight: 200; line-height: 27px; }
+
+#page-login .hero-unit { margin-top: 6em; }
