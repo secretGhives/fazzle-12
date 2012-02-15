@@ -792,7 +792,8 @@ padding: 9px;
 
 #page-login hgroup { text-align: center; margin-top: 3em; margin-bottom: 2em; }
 #page-login hgroup h2 { font-size: 1.3em; color: #39F; }
-#page-login hgroup h1 { font-size: 3em; }
+#page-login hgroup h1 { font-size: 3em; color: #348; }
+#login-features h1 { color: #39F; }
 #login-features .row { margin: 3em 0 0 0; }
 #login-tabs { margin-bottom: 0; }
 #login-tab-content { background: #fff; border: 1px solid #ddd; border-top: 0; text-align: center; }
