@@ -168,6 +168,7 @@ background: #666;
   direction: ltr;
   text-align: left;
 }
+.jcrop-holder img { max-width: initial !important;}
 
 /* These styles define the border lines */
 .jcrop-vline,.jcrop-hline{background:#FFF url(../img/Jcrop.gif) top left repeat;font-size:0;position:absolute;}
