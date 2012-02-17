@@ -25,7 +25,7 @@ border-bottom: 2px solid #ddd;
 }
 .header-fixed {
 position: fixed !important;
-top: 31px;
+top: 30px;
 width: 940px;
 background: white;
 z-index: 9;
