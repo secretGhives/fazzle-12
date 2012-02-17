@@ -555,32 +555,73 @@ width: 100%;
 
 
 
-/* ACCORDION USED ON CLOSET PAGE */
 
-.st-accordion ul li > a span{
-background: transparent url(../img/st-accordion/down.png) no-repeat center center;
-text-indent:-9000px;
-width: 26px;
-height: 14px;
+
+
+
+
+/* 4. Carousel Styles
+**********************************************************************************************/
+
+#carousel {
+margin: 25px 0 50px 0;
+overflow: hidden;
+}
+
+#carousel img {
+-moz-box-shadow: 0 0 5px #000000;
+-webkit-box-shadow: 0 0 5px #000000;
+box-shadow: 0 0 5px #000000;
+}
+
+#carousel ul li {
+width: 296px;
+height: 420px;
+padding: 10px;
+}
+
+#carousel .arrow {
 position: absolute;
-top: 50%;
-right: -26px;
-margin-top: -7px;
-opacity:0;
--webkit-transition:  all 0.2s ease-in-out;
--moz-transition:  all 0.2s ease-in-out;
--o-transition:  all 0.2s ease-in-out;
--ms-transition:  all 0.2s ease-in-out;
-transition:  all 0.2s ease-in-out;
+top: 0px;
+width: 296px;
+height: 373px;
+background: url(assets/img/arrow.png) no-repeat 0 0;
+text-indent: -999px;
+cursor: pointer;
 }
-.st-accordion ul li > a:hover span{
-opacity:1;
-right: 10px;
+
+#carousel .back {
+background-position: 0 0;
+top: -135px;
+left: 0;
 }
-.st-accordion ul li.st-open > a span{
--webkit-transform:rotate(180deg);
--moz-transform:rotate(180deg);
-transform:rotate(180deg);
-right:10px;
-opacity:1;
+
+#carousel .back:hover {
+background-position: 0 -373px;
+}
+
+#carousel .forward {
+background-position: -310px 0;
+top: -135px;
+right: 0;
+}
+
+#carousel .forward:hover {
+background-position: -310px -373px;
+}
+
+a.thumbnail-frame {
+position: absolute;
+background: url(assets/img/post-frame-carousel.png) 0 0;
+width: 296px;
+height: 420px;
+}
+
+a.thumbnail-frame:hover {
+background-position: 0 -200px;
+}
+
+.video-embed {
+margin: 0;
+padding: 10px 10px 7px 10px;
 }
