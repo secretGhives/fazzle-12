@@ -149,7 +149,7 @@ background: #666;
   margin-right: 3px;
   text-decoration: none;
   cursor: pointer; }
-.ico-count { padding: 0 3px; }
+.ico-count { padding: 0 3px; font-size: smaller; }
 
 
 
@@ -560,68 +560,27 @@ width: 100%;
 
 
 
-/* 4. Carousel Styles
-**********************************************************************************************/
-
-#carousel {
-margin: 25px 0 50px 0;
-overflow: hidden;
-}
-
-#carousel img {
--moz-box-shadow: 0 0 5px #000000;
--webkit-box-shadow: 0 0 5px #000000;
-box-shadow: 0 0 5px #000000;
-}
-
-#carousel ul li {
-width: 296px;
-height: 420px;
-padding: 10px;
-}
+/* Carousel Styles
+**************************************************************************/
+#carousel {margin: 22px 0 42px 0; overflow: hidden; }
+#carousel img { max-height: 266px; max-width: 213px; }
+#carousel ul li { width: 213px; height: 266px; padding: 10px; }
 
 #carousel .arrow {
 position: absolute;
 top: 0px;
-width: 296px;
-height: 373px;
-background: url(assets/img/arrow.png) no-repeat 0 0;
+width: 232px;
+height: 275px;
+background: url(/assets/img/arrow.png) no-repeat 0 0;
 text-indent: -999px;
 cursor: pointer;
+background-color: rgba(255, 255, 255, 0.7);
 }
 
-#carousel .back {
-background-position: 0 0;
-top: -135px;
-left: 0;
-}
+#carousel .back { background-position: -33px 0; top: 6px; left: 0; }
+#carousel .back:hover { background-position: -33px -299px; }
+#carousel .forward { background-position: -357px 0; top: 6px; right: 0; }
+#carousel .forward:hover { background-position: -357px -299px; }
 
-#carousel .back:hover {
-background-position: 0 -373px;
-}
-
-#carousel .forward {
-background-position: -310px 0;
-top: -135px;
-right: 0;
-}
-
-#carousel .forward:hover {
-background-position: -310px -373px;
-}
-
-a.thumbnail-frame {
-position: absolute;
-background: url(assets/img/post-frame-carousel.png) 0 0;
-width: 296px;
-height: 420px;
-}
-
-a.thumbnail-frame:hover {
-background-position: 0 -200px;
-}
-
-.video-embed {
-margin: 0;
-padding: 10px 10px 7px 10px;
-}
+a.thumbnail-frame { position: absolute; width: 213px; height: 266px; }
+a.thumbnail-frame:hover { background: rgba(255, 255, 255, 0.1); }
