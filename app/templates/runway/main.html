@@ -53,30 +53,45 @@
 
 				<hr/>
 
-				<div class="well">
-					<strong>Trendsetter</strong>
+				<div id="tops-trendsetter">
+					<h3>Trendsetter</h3>
+					<a href="#viewing" rel="pop" data-placement="right" data-original-title="Frank Lastname" data-content="total points: 9999, badges, looks"><img class="thumbnail" src="http://placehold.it/96x96"></a>
 				</div>
 
-				<div class="well">
-					<strong>Standouts</strong>
+				<div id="tops-standouts" class="rw-tops">
+					<h4>Standouts</h4>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
 				</div>
 
-				<div class="well">
-					<strong>Most commented</strong>
+				<div id="tops-commented" class="rw-tops">
+					<h4>Most commented</h4>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
 				</div>
 
-				<div class="well">
-					<strong>Most added</strong>
+				<div id="tops-added" class="rw-tops">
+					<h4>Most added</h4>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
 				</div>
 
-				<div class="well">
-					<strong>Most liked</strong>
+				<div id="tops-liked" class="rw-tops">
+					<h4>Most liked</h4>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
 				</div>
 
-				<div class="well">
-					<strong>Most used</strong>
+				<div id="tops-used" class="rw-tops">
+					<h4>Most used</h4>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
+					<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
 				</div>
-
 			</div>
 
 			<div class="span9">
@@ -275,6 +290,8 @@
 			// 	e.preventDefault();
 			// 	$.tour.start(config);
 			// });
+
+			$("[rel=pop]").popover();
 
 			$(".chzn-select").chosen();
 

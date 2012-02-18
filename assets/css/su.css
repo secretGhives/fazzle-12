@@ -594,6 +594,11 @@ text-shadow:1px 1px 1px #FFFFFF;
 }
 .load-more:hover { border:1px solid #39F; text-decoration: none; }
 .load-more:active { color:#666666; }
+.rw-tops { margin-top: 1em; }
+.rw-tops a { display: inline-block; }
+#tops-trendsetter { text-align: center; }
+#tops-trendsetter a { display: inline-block; }
+
 
 
 /* FULL SCREEN ITEM VIEWER WITH COMMENTS*/

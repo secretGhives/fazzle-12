@@ -148,8 +148,9 @@ background: #666;
   padding: 3px;
   margin-right: 3px;
   text-decoration: none;
-  cursor: pointer; }
-.ico-count { padding: 0 3px; font-size: smaller; }
+  cursor: pointer; 
+}
+.ico-count { padding: 1px 3px; font-size: 10px; line-height: 13px; }
 
 
 
