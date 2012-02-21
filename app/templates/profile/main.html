@@ -46,7 +46,7 @@
 				</div>
 			
 				<h3 class="tour_3 inlined">Friends (100)</h3>
-				<a href="#" class="side-links" data-controls-modal="modal-add-friends" data-backdrop="true" data-keyboard="true" data-bypass>manage..</a>
+				<a class="side-links" data-toggle="modal" href="#modal-add-friends">manage..</a>
 				<ul class="thumbnails">
 					<li><a href="#" rel="tip" title="Firstname Lastname" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
 					<li><a href="#" rel="tip" title="Firstname Lastname" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
@@ -60,7 +60,7 @@
 				</ul>
 
 				<h3 class="tour_4 inlined">Groups (22)</h3>
-				<a href="#" class="side-links" data-controls-modal="modal-create-group" data-backdrop="true" data-keyboard="true">manage..</a>
+				<a class="side-links" data-toggle="modal" href="#modal-create-group">manage..</a>
 				<ul class="thumbnails">
 					<li><a href="#" rel="tip" title="Group name" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
 					<li><a href="#" rel="tip" title="Group name" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
@@ -74,7 +74,7 @@
 				</ul>
 
 				<h3 class="tour_4 inlined">Following (12)</h3>
-				<a href="#" class="side-links" data-controls-modal="modal-manage-follow" data-backdrop="true" data-keyboard="true">manage..</a>
+				<a class="side-links" data-toggle="modal" href="#modal-manage-follow">manage..</a>
 				<ul class="thumbnails">
 					<li><a href="#" rel="tip" title="Following name" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
 					<li><a href="#" rel="tip" title="Following name" data-placement="right"><img class="thumbnail" src="http://placehold.it/42x42" alt=""></a></li>
@@ -339,13 +339,20 @@
 							<button id="profile-edit" class="btn active btn-success">Save profile</button>
 						</div>
 
-						<form class="form-horizontal">
-							<fieldset>
-								<div class="controls profile-ei editing" id="profile-name" contenteditable="true">Mister Fabulous</div>
-								<div class="controls profile-ei editing" id="profile-aboutme" contenteditable="true">I was born and raised in Alabama, my mom was a lady and my dad was a gent.  Then it was me.</div>
-								<div class="controls profile-ei editing" id="profile-location" contenteditable="true">Costa Rica</div>
-							</fieldset>
-						</form>
+						<table id="profile-about-table">
+								<tr>
+									<td class="ar">Name: </td>
+									<td><div class="controls profile-ei editing" id="profile-name" contenteditable="true">Mister Fabulous</div></td>
+								</tr>
+								<tr>
+									<td class="ar">About: </td>
+									<td><div class="controls profile-ei editing" id="profile-aboutme" contenteditable="true">I was born and raised in Alabama, my mom was a lady and my dad was a gent.  Then it was me.</div></td>
+								</tr>
+								<tr>
+									<td class="ar">Location: </td>
+									<td><div class="controls profile-ei editing" id="profile-location" contenteditable="true">Costa Rica</div></td>
+								</tr>
+						</table>
 					</div>
 
 					<div class="tab-pane fade active in" id="profile-shelves">
@@ -486,7 +493,7 @@
 
 							<img src="https://chart.googleapis.com/chart?
 												cht=lc&amp;
-												chco=FF0000,0000FF,00FF00&amp;
+												chco=FF6342,ADDE63,63C6DE&amp;
 												chs=700x169&amp;
 												chd=s:FOETHECat,lkjtf3asv,KATYPSNXJ&amp;
 												chxt=x,y&amp;
@@ -699,28 +706,30 @@
 				<div class="friend-name">Zulu Vese</div>
 			</figure>
 			</li>
-
 		</ul>
 		
 		<section id="friend-zoom" class="hide">
-			<button class="btn return" onclick="$('#friend-zoom').toggleClass('hide')"><span class="ico-btn">X</span> Return to list</button>
-
-			<figure class="thumbnail">
-				<figcaption>Some awesome name</figcaption>
-				<img src="//placehold.it/117x132" />
-			</figure>
-			<div id="friend-zoom-location">Their location</div>
-			<div id="friend-zoom-about">Whatever they have in their about section</div>
-			<button class="btn"><span class="ico-btn">m</span> message</button>
-			<button class="btn"><span class="ico-btn">x</span> de-friend</button>
-			<select id="friend-zoom-groups" class="chzn-select" multiple data-placeholder="Add to groups..">
-				<option>Group name 1</option>
-				<option>Group 2</option>
-				<option>Group name 3</option>
-				<option>group 4</option>
-			</select>
+			<div class="span2">
+				<button class="btn return" onclick="$('#friend-zoom').toggleClass('hide')"><span class="ico-btn">X</span> Return to list</button>
+				<figure class="thumbnail">
+					<img src="./assets/img/ruso.png" />
+				</figure>
+			</div>
+			<div class="span4">
+				<div id="friend-zoom-name">Mister Fabulous</div>
+				<div id="friend-zoom-location">Costa Rica</div>
+				<button class="btn"><span class="ico-btn">r</span> Profile</button>
+				<button class="btn"><span class="ico-btn">x</span> De-Friend</button>
+				<button class="btn"><span class="ico-btn">q</span> Follow</button>
+				<select id="friend-zoom-groups" class="chzn-select" multiple data-placeholder="Add to groups..">
+					<option>Group name 1</option>
+					<option>Group 2</option>
+					<option>Group name 3</option>
+					<option>group 4</option>
+				</select>
+				<div id="friend-zoom-about">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+			</div>
 		</section>
-
 	</div>
 </div>
 
@@ -738,6 +747,19 @@
 	</div>
 </div>
 
+<div id="modal-manage-follow" class="modal hide fade" style="display: none; ">
+	<div class="modal-header">
+		<a href="#" class="close">×</a>
+		<h3>Manage people I follow</h3>
+	</div>
+	<div class="modal-body">
+		<p>Some mechanism for reassigning people I follow</p>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary">Primary</a>
+		<a href="#" class="btn secondary">Secondary</a>
+	</div>
+</div>
 
 <script>
 !function ($) {
@@ -770,14 +792,6 @@
 				$(this).addClass('active success');
 				$(this).text('Save profile');
 				$('.profile-ei').addClass('editing').attr('contenteditable', 'true');
-		});
-
-		$('#profile-comments-toggle').toggle(function() {
-			$(this).addClass('active');
-				$(this).parent().find('.comment-body-wrap, .more').show();
-			}, function() {
-				$(this).removeClass('active');
-				$(this).parent().find('.comment-body-wrap, .more').hide();
 		});
 
 		$(".runway-reply-show").toggle(
@@ -813,12 +827,12 @@
 		});
 
 
-		// $("#friends-list").on("click", ".friend", function() {
-		//   $(this).toggleClass("chosen");
-		//   $("#friend-zoom").removeClass("hide");
-		// });
+		$("#friends-list").on("click", ".friend", function() {
+		  $(this).toggleClass("chosen");
+		  $("#friend-zoom").removeClass("hide");
+		});
 
-		// list navigator for friends managing
+		//list navigator for friends managing
 		// $('#friends-list').listnav({
 		// 	includeNums: false,
 		// 	onClick: function(letter){ console.log('You clicked ' + letter); }
