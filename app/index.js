@@ -11,6 +11,7 @@ var Runway = fazzle.module("runway")
 	, Viewing = fazzle.module("viewing")
 	, Editing = fazzle.module("editing")
 	, Login = fazzle.module("login")
+	, RegisterInterest = fazzle.module("registerInterest")
 	, Help = fazzle.module("help");
 
 // Defining the application router, you can attach sub routers here.
@@ -25,6 +26,7 @@ var Router = Backbone.Router.extend({
 		"viewing": "display_viewing",
 		"editing": "display_editing",
 		"login": "display_login",
+		"register-interest": "display_register_interest",
 		"help": "display_help"
 		//":hash": "index"
 	},
@@ -122,7 +124,16 @@ var Router = Backbone.Router.extend({
 			$("#main").html(el);
 		});
 	},
-	
+
+	display_register_interest: function() {
+		var route = this
+			, registerInterest = new RegisterInterest.Views.Home();
+
+		registerInterest.render(function(el) {
+			$("#main").html(el);
+		});
+	},
+
 	display_help: function() {
 		var route = this
 			, help = new Help.Views.Home();
