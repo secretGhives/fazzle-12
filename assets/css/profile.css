@@ -1,0 +1,228 @@
+#profile-tabs.fixed {
+width: 940px;
+margin-left: auto;
+margin-right: auto;
+position: fixed;
+top: 40px;
+z-index: 9;
+background: #fff;
+}
+#profile-tabs figcaption { display: none; }
+#profile-tabs.fixed figcaption {
+position: absolute;
+right: 6px;
+top: 7px;
+font-size: 18px;
+line-height: normal;
+display: block;
+}
+#profile-view .sidebar figcaption {
+font-size: 18px;
+line-height: 33px;
+text-align: right;
+}
+#profile-tabs em {
+color: #666;
+}
+#profile-sb-controls .btn-large {
+display: block;
+width: 100%;
+margin-top: 0.6em;
+text-align: left;
+}
+
+#profile-tabs .org {display: none;}
+#profile-tabs .active .org {
+display: inline-block;
+margin-left: 6px;
+color: red;
+text-decoration: underline;
+cursor: pointer;
+}
+
+#profile-following-list .vcard {
+position: relative;
+min-height: 69px;
+border-bottom: 1px solid #eee;
+background: snow;
+}
+#profile-following-list .vcard .url {
+overflow: hidden;
+display: inline-block;
+vertical-align: top;
+}
+#profile-following-list .vcard .nickname,
+#profile-following-list .vcard .given-name { margin-top: 6px; display: inline-block; }
+#profile-following-list .vcard .follow-user-link {
+position: absolute;
+bottom: 11px;
+left: 81px;
+}
+#profile-following-list .vcard .photo {
+float: left;
+display: inline-block;
+margin-right: 1em;
+}
+#profile-following-list .vcard .given-name {
+color: #666;
+}
+#profile-following-list .latest-liked {
+float: right;
+margin: 0;
+position: absolute;
+right: 0;
+top: 0;
+}
+#profile-following-list .latest-liked li {
+display: table-cell;
+max-width: 69px;
+max-height: 69px;
+padding: 0 0 0 3px;
+border: 0;
+overflow: hidden;
+text-align: center;
+vertical-align: middle;
+}
+#profile-following-list .latest-liked li a {
+display: block;
+}
+
+.sb-control {padding: 4px 6px;}
+.sb-control .ico-btn {margin: 0;}
+.sb-control.rss {color: orange;}
+.sb-control.twitter {color: deepskyblue;}
+.sb-control.fb {color: royalblue;}
+.sb-control.gplus {color: red;}
+
+
+/* PROFILE PAGE */
+#profile-view .sidebar h3 { font-size: 13px; vertical-align: initial; }
+#profile-view .sidebar .thumbnails { margin-left: 0; margin-bottom: 13px; }
+#profile-view .sidebar .thumbnails li { margin: 1px; padding: 0; display: inline-block; }
+#profile-view .sidebar .thumbnails a { display: block; }
+#profile-view .sidebar figure { margin: 0; padding: 0; margin-bottom: 1em; }
+#profile-view .sidebar .side-links { display: inline-block; }
+.profile-well { margin-bottom: 0; padding: 6px; }
+.shelves.well { padding: 9px; }
+#profile-view .well { padding: 0.3em 1em; }
+#profile-about .well { padding: 0; }
+/* .like.active { background: pink; } */
+.like.active::before { color: red; }
+#profile-about .input div {
+min-height: 24px;
+padding-top: 6px;
+font-weight: bold;
+font-size: 1.2em;
+line-height: normal;
+}
+#profile-view .more { margin-bottom: 3em; }
+#profile-comments-toggle { padding-bottom: 0.3em; cursor: pointer; }
+#profile-comments-toggle:before { content: ";"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #39F;}
+#profile-comments-toggle.active { border-bottom: 1px dotted #bbb; }
+#profile-comments-toggle.active:before { content: ":"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #37F;}
+#profile-view .more, #profile-view .comment-body-wrap {  }
+#profile-name:before,
+#profile-location:before,
+#profile-aboutme:before { display: inline-block; margin-left: -69px; margin-right: 32px; }
+#profile-tab-content .controls { margin-left: 1em; margin-bottom: 0.6em; }
+#profile-about-table { margin: 0 3em; }
+#profile-about-table td { vertical-align: top; }
+#profile-about-table .ar { font-size: smaller; color: #999; }
+.image_stack {
+width: 200px;
+position: relative;
+margin: 9px;
+display: inline-block;
+height: 200px;
+}
+.image_stack img {
+position: absolute;
+border: 4px solid #FFF;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+max-height: 200px; max-width: 200px;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+.image_stack #photo1 { top: 0; left: 0; }
+.image_stack #photo2 { top: 3px; left: 3px; }
+.image_stack #photo3 { top: 6px; left: 1px; }
+.image_stack .rotate1 {
+-webkit-transform: rotate(9deg);
+-moz-transform: rotate(9deg);
+transform: rotate(9deg);
+-ms-transform:rotate(9deg);
+-o-transform:rotate(9deg);
+}
+.image_stack .rotate2 {
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+transform: rotate(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+}
+.image_stack .rotate3 {
+-webkit-transform: rotate(-9deg);
+-moz-transform: rotate(-9deg);
+transform: rotate(-9deg);
+-ms-transform:rotate(-9deg);
+-o-transform:rotate(-9deg);
+cursor: pointer;
+}
+.single_photo a {
+display: block;
+border: 4px solid #fff;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+.single_photo { display: inline-block; margin-left: 1em; position: relative; }
+.single_photo img { display: block; max-height: 190px; max-width: 190px; }
+.single_photo a:hover {
+	-moz-transform: scale(1.1) rotate(0deg);
+	-webkit-transform: scale(1.1) rotate(0deg);
+	-o-transform: scale(1.1) rotate(0deg);
+	-ms-transform: scale(1.1) rotate(0deg);
+	transform: scale(1.1) rotate(0deg);
+}
+.stack-desc-wrap {
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(255, 255, 255, 0.9);
+z-index: 1;
+}
+.stack-desc-wrap label {
+float: none;
+display: block;
+text-align: left;
+width: auto;
+padding-left: 9px;
+}
+.stack-desc-itemcount {
+font-size: 0.8em;
+line-height: 1em;
+padding-bottom: 0.6em;
+color: #666;
+}
+.stack-desc { font-weight: bold; }
+
+
+
+
+#profile-new-liked-stuff { margin-top: 3em; }
+#profile-new-liked-stuff h1 { margin-bottom: 0.3em; }
+#profile-new-liked-stuff .rw-thumbnail-detail {
+padding: 0 0.6em;
+max-width: 155px;
+}

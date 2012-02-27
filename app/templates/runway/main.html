@@ -1,248 +1,262 @@
-<link rel="stylesheet" href="./assets/css/carausel.css">
-<!-- <link rel="stylesheet" href="css/contentflow.css"> -->
-
 <div id="runway-view" class="container marge">
 
-	<div class="content">
-		<div class="page-header">
-			<h1>Runway <small>Everyone else's stuff..</small></h1>
-		</div>
+	<!-- Masthead
+	================================================== -->
+	<header class="jumbotron subhead" id="overview">
+		<h1>Runway</h1>
+		<p class="lead">Everyone else's stuff</p>
+		<div class="subnav ar">
 
-		<div class="row">
-	
-			<div class="span12 runway">
-
-				<div class="alert alert-block alert-notice fade in">
-					<a class="close" data-dismiss="alert" href="#">×</a>
-					<h4 class="alert-heading">Fist time here?</h4>
-					<p>Click on Yeah! button to activate current's view tour.</p>
-					<p>
-						<a id="tour-start" class="btn btn-primary small" href="#">Yeah</a> <a class="btn small" href="#">Next time</a>
-					</p>
-				</div>
-
-				<div id="runwayWrap" class="CoulisseDemo tour_1"></div>
-
-				<div class="ac">
-					<button id="btn-like" class="double-btn like tour_2">Like</button>
-					<!-- <button class="btn like large" data-toggle="toggle"><span class="ico-btn">N</span>Like</button> -->
-				</div>
-
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="span3 sidebar">
-				<!--<h3 class="tour_3">Quick menu</h3>-->
-				<div class="well" style="padding: 8px 0;">
-					<ul class="nav nav-list">
-						<li class="nav-header">Shortcuts</li>
-						<li><a data-toggle="modal" href="#modal-upload-items">Upload new items</a></li>
-						<li><a data-toggle="modal" href="#modal-invite-friends" rel="pop" data-content="Use 'Find Friends' to start your fashion circle." data-original-title="Connect with your homies." data-placement="right">Invite Friends..</a></li>
-
-						<li class="nav-header">Locations</li>
-						<li class="active"><a href="/">Public Runway</a></li>
-						<li><a href="/profile">My Profile</a></li>
-						<li><a href="/closet">My Closet</a></li>
-
-						<li class="nav-header">Other</li>
-						<li><a href="/settings">Settings</a></li>
-						<li><a href="/help">Help</a></li>
+			<div id="runway-controls" class="btn-toolbar">
+				<div class="btn-group">
+					<a class="btn" href="#"><i class="icon-cog"></i> Customize</a>
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Feautred items</a></li>
+						<li><a href="#">People you follow</a></li>
+						<li><a href="#">Shared with you</a></li>
+						<li><a href="#">Stuff you liked</a></li>
 					</ul>
 				</div>
-
-				<hr/>
-
-				<div id="tops-trendsetter">
-					<h3>Trendsetter</h3>
-					<a href="#viewing" class="egg" rel="pop" data-placement="right" data-original-title="Mister Fabulous" data-content="total points: 9999, badges, looks"><img src="./assets/img/ruso.png"></a>
+				
+				<div class="btn-group">
+					<a class="btn" href="#"><i class="icon-th-large"></i></a>
+					<a class="btn" href="#"><i class="icon-th"></i></a>
+					<a class="btn active" href="#"><i class="icon-th-list"></i></a>
 				</div>
-
-				<div id="tops-standouts" class="rw-tops">
-					<div class="rw-tops-wrap">
-						<h4>Standouts</h4>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-					</div>
-				</div>
-
-				<div id="tops-commented" class="rw-tops">
-					<div class="rw-tops-wrap">
-						<h4>Most commented</h4>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-					</div>
-				</div>
-
-				<div id="tops-added" class="rw-tops">
-					<div class="rw-tops-wrap">
-						<h4>Most added</h4>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-					</div>
-				</div>
-
-				<div id="tops-liked" class="rw-tops">
-					<div class="rw-tops-wrap">
-						<h4>Most liked</h4>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-					</div>
-				</div>
-
-				<div id="tops-used" class="rw-tops">
-					<div class="rw-tops-wrap">
-						<h4>Most used</h4>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-						<a href="#viewing"><img class="thumbnail" src="http://placehold.it/59x59"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="span9">
-
-				<form id="runway-comments" action="" class="form-stacked">
-					<div class="clearfix tour_4">
-						<label for="xlInput3">Comment</label>
-						<div class="input">
-							<input class="span9" id="xlInput3" name="xlInput3" size="30" type="text">
-						</div>
-					</div>
-				</form>
-
-				<section id="runway-comments">
-
-					<div class="comment-body-wrap">
-						<div class="comment-wrap">
-							<div class="comment-header">
-								<div class="btn-group Mo">
-									<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Remove</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Report</a></li>
-									</ul>
-								</div>
-								<a href="#profile" class="comment-author"><img src="http://placehold.it/48x48" width="48px" height="48px" alt="H Juggernaut's profile photo" class="comment-author-image"></a>
-								<div class="Ex">
-									<span class="eE">
-										<a href="#profile" class="comment-author-link">Frank Lastname</a>
-									</span>
-									<span class="comment-meta">
-										&nbsp;-&nbsp;
-										<a href="#" class="" title="Jan 5, 2012 11:29:03 PM">Jan 5, 2012</a>
-										&nbsp;-&nbsp;
-										<a href="#" class="" title="Sharing details">Public</a>
-									</span>
-								</div>
-							</div>
-							<div>
-								<p class="comment-content">Lorem ipsum dolor sit amet.</p>
-								<div class="comment-actions">
-									<a href="#" class="runway-reply-show">Comment</a> &nbsp;-&nbsp; <a href="#">Share</a>
-								</div>
-							</div>
-							<div class="runway-reply-wrap hide">
-								<textarea class="runway-comment-input" placeholder="Enter comment"></textarea>
-								<button class="btn btn-primary runway-comment-post">Post comment</button>
-								<button class="btn runway-comment-cancel">Cancel</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="comment-body-wrap">
-						<div class="comment-wrap">
-							<div class="comment-header">
-								<div class="btn-group Mo">
-									<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Link</a></li>
-										<li><a href="#">Remove</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Report</a></li>
-									</ul>
-								</div>
-								<a href="#profile" class="comment-author clearfix"><img src="http://placehold.it/48x48" width="48px" height="48px" alt="H Juggernaut's profile photo" class="comment-author-image"></a>
-								<div class="Ex">
-									<span class="eE">
-										<a href="#profile" class="comment-author-link">H Juggernaut</a>
-									</span>
-									<span class="comment-meta">
-										&nbsp;-&nbsp;
-										<a href="#" class="" title="Jan 7, 2012 8:29:03 PM">Jan 7, 2012</a>
-										&nbsp;-&nbsp;
-										<a href="#" class="" title="Sharing details">Public</a>
-									</span>
-								</div>
-							</div>
-
-							<div>
-								<div class="comment-gallery-wrap">
-									<ul class="thumbnails">
-										<li class="span4">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/360x268" alt="">
-											</a>
-										</li>
-										<li class="span2">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/160x120" alt="">
-											</a>
-										</li>
-										<li class="span2">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/160x120" alt="">
-											</a>
-										</li>
-										<li class="span2">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/160x120" alt="">
-											</a>
-										</li>
-										<li class="span2">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/160x120" alt="">
-											</a>
-										</li>
-										<li class="span2">
-											<a href="#" class="thumbnail">
-												<img src="http://placehold.it/160x120" alt="">
-											</a>
-										</li>
-									</ul>
-
-									<div class="comment-gallery-actions">
-										<a href="#closet">View</a> this album.
-									</div>
-								</div>
-
-								<p class="comment-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-								<div class="comment-actions">
-									<a href="#" class="runway-reply-show">Comment</a> &nbsp;-&nbsp; <a href="#">Share</a>
-								</div>
-							</div>
-							<div class="runway-reply-wrap hide">
-								<textarea class="runway-comment-input" placeholder="Enter comment"></textarea>
-								<button class="btn btn-primary runway-comment-post">Post comment</button>
-								<button class="btn runway-comment-cancel">Cancel</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="more ac tour_5">
-						<a id="last_comment_2" class="load-more" href="#">more</a>
-					</div>
-
-				</section>
-
 			</div>
 		</div>
+	</header>
+
+	<hr/>
+
+	<section id="runway-global">
+
+		<!-- Trippple -->
+		<div class="rw-global-item tripple">
+			<a href="#profile" class="user-icon">
+				<img src="//placehold.it/69x69" class="thumbnail">
+			</a>
+			<div class="user-runway">
+				<article class="rw-thumbnail-wrap large">
+					<figure>
+						<a href="#" class="rw-thumbnail">
+							<img src="http://placehold.it/522x555" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">
+							<li>
+								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+							
+							<li>
+								<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+								<p>Beautifil!</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+							<em class="msg">Press enter to post your comment</em>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+
+				<article class="rw-thumbnail-wrap large-side">
+					<figure>
+						<a href="#" class="rw-thumbnail">
+							<img src="http://placehold.it/316x254" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled"></ol>
+						
+						<div class="comment-entree">
+							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+							<em class="msg">Press enter to post your comment</em>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+
+				<article class="rw-thumbnail-wrap large-side">
+					<figure>
+						<a href="#" class="rw-thumbnail">
+							<img src="http://placehold.it/316x254" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">
+							<li>
+								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+							<em class="msg">Press enter to post your comment</em>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+			</div>
+			<hr/>
+		</div>
+
+		<!-- Double -->
+		<div class="rw-global-item double">
+			<a href="#profile" class="user-icon">
+				<img src="//placehold.it/69x69" class="thumbnail">
+			</a>
+			<div class="user-runway">
+
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#" class="rw-thumbnail">
+							<img src="http://placehold.it/419x419" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">							
+							<li>
+								<span class="vcard"><a href="/bcube" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">another user</span></a></span>
+								<p>Much amazing</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+							<em class="msg">Press enter to post your comment</em>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#" class="rw-thumbnail">
+							<img src="http://placehold.it/419x419" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">
+							<li>
+								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+							
+							<li>
+								<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+								<p>Beautifil!</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+							<em class="msg">Press enter to post your comment</em>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+			</div>
+			<hr/>
+		</div>
+
+		<!-- Single -->
+		<div class="rw-global-item single">
+			<a href="#profile" class="user-icon">
+				<img src="//placehold.it/69x69" class="thumbnail">
+			</a>
+			<article class="rw-thumbnail-wrap">
+				<figure>
+					<a href="#" class="rw-thumbnail">
+						<img src="http://placehold.it/844x666" alt="">
+					</a>
+					<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+				</figure>
+				<aside class="rw-thumbnail-detail">
+					<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+					<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+					<span class="rw-item-liked">liked by 99999</span>
+				</aside>
+
+				<!-- comments -->
+				<section class="comments comments-list">
+					<ol class="unstyled">
+						<li>
+							<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+							<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+						</li>
+						
+						<li>
+							<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+							<p>Beautifil!</p>
+						</li>
+						
+						<li>
+							<span class="vcard"><a href="/bcube" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">another user</span></a></span>
+							<p>Much amazing</p>
+						</li>
+
+						<li class="more-comments ac"><a href="#more" clas="comments-more">show more</a></li>
+					</ol>
+					
+					<div class="comment-entree">
+						<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
+						<em class="msg">Press enter to post your comment</em>
+					</div>
+				</section>
+				<!-- / comments -->
+			</article>
+			<hr/>
+		</div>
+
+	</section>
 
 	</div>
 </div> <!-- /container -->
@@ -250,119 +264,40 @@
 !function ($) {
 	$(function(){
 
-			// Run a site tour
-			// if(!(jQuery.Storage.get("tour_runway") == "true")){
-			// 	var config = {
-			// 			mainTitle: "First time here?",
-			// 			saveCookie: true, 
-			// 		steps: [
-			// 		{
-			// 			"name" 		: "tour_1",
-			// 			"type"		: "warning",
-			// 			"position"	: "B",
-			// 			"text"		: "Main attraction, Public RUNWAY",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_2",
-			// 			"type"		: "info",
-			// 			"text"		: "This is where your vote counts (like/dislike)",
-			// 			"position"	: "R",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_3",
-			// 			"type"		: "success",
-			// 			"text"		: "Shortcut menus to other areas of the app",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_4",
-			// 			"text"		: "Let the World know what you think",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		},
-			// 		{
-			// 			"name" 		: "tour_5",
-			// 			"type"		: "danger",
-			// 			"text"		: "Load more comments.",
-			// 			"position"	: "BL",
-			// 			"time" 		: 5000
-			// 		}]
-			// 	};
 
-			// 	//$.tour.start(config);
-
-			// };
-
-			// $("#tour-start").click(function(e) {
-			// 	e.preventDefault();
-			// 	$.tour.start(config);
-			// });
-
-			$("[rel=pop]").popover();
-
-			$(".chzn-select").chosen();
-
-			//Loading Demo button
-			// var btn = $('#btn-create-new-look').click(function () {
-			// 	btn.button('loading')
-			// 	setTimeout(function () {
-			// 		btn.button('reset')
-			// 	}, 3000)
-			// });
-
-			$("#btn-like").toggle(
-				function(){
-					$(this).text("Dislike");
-					$(this).addClass("active");
-				}, 
-				function(){
-					$(this).text("Like");
-					$(this).removeClass("active");
-				}
-			);
+		$(".button.like").toggle(
+			function(){
+				$(this).text("Dislike");
+				$(this).addClass("active").parent().addClass("active");
+			}, 
+			function(){
+				$(this).text("Like");
+				$(this).removeClass("active").parent().removeClass("active");
+			}
+		);
 
 
-			$(".runway-reply-show").toggle(
-				function(){
-					$(this).parent().parent().next(".runway-reply-wrap").removeClass("hide");
-				}, 
-				function(){
-					$(this).parent().parent().next(".runway-reply-wrap").addClass("hide");
-				}
-			);
+		// fix sub nav on scroll
+		var $win = $(window)
+			, $nav = $('.subnav')
+			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
+			, isFixed = 0;
 
-			
+		processScroll();
 
-			$.ajax({
-				url: 'https://picasaweb.google.com/data/feed/api/all?q=fashion'
-				, dataType: 'jsonp'
-				, data: {
-					alt: 'json'
-					, 'max-results': 13
-				}
-				, success: function (data) {
-					//console.log(data.feed.entry[0]);
+		$win.on('scroll', processScroll);
 
-					$('#runwayWrap')
-					.coulisse({
-						index: 0
-						, cyclic:   true
-						, images: data.feed.entry
-						, imageSrcGetter: ['content', 'src']
-						, linkHrefGetter: ['link', 1, 'href']
-						, activeSize: 369
-						, inactiveSize: 200
-						, indexChanging: function (e, arg) {
-							var entry = data.feed.entry[arg.index];
-							if(!entry)alert(arg.index);
-								//console.log(entry);
-						}
-					});
-				}
-			});
+		function processScroll() {
+			var i, scrollTop = $win.scrollTop()
+			if (scrollTop >= navTop && !isFixed) {
+				isFixed = 1
+				$nav.addClass('subnav-fixed')
+			} else if (scrollTop <= navTop && isFixed) {
+				isFixed = 0
+				$nav.removeClass('subnav-fixed')
+			}
+		};
+
 
 	})
 }(window.jQuery)

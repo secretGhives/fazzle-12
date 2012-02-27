@@ -1,0 +1,125 @@
+/* Comments */
+.comments {
+padding: 11px;
+border-top: 1px dashed lavender;
+}
+.photo .comments{
+padding-bottom:0;
+}
+
+.comments .vcard{ }
+
+.comments .vcard img{
+display:block;
+float:left;
+max-width: 42px;
+max-height: 42px;
+margin:0 10px 0 0;
+}
+
+.comments .vcard .fn{
+display:none;
+font:normal 13px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.comments form{
+position:relative;
+}
+
+.comments .comment-autocomplete{
+position:absolute;
+left:40px;
+z-index:1000;
+margin-top:-16px;
+background:#fff;
+border:1px solid #8a8f9c;
+-moz-border-radius:0 0 5px 5px;
+-webkit-border-radius: 0 0 5px 5px;
+border-radius: 0 0 5px 5px;
+}
+
+.comments .comment-autocomplete li{
+padding:4px 8px !important;
+color:#8a8f9c;
+}
+
+.comments .comment-autocomplete .username{
+color:#1f518e;
+}
+
+.comments .comment-autocomplete li:hover,
+.comments .comment-autocomplete li.selected{
+background:#373d48;
+color:#fff;
+cursor:pointer;
+}
+
+.comments .comment-autocomplete li:hover .username,
+.comments .comment-autocomplete li.selected .username{
+color:#fff;
+}
+
+.comments .text {
+max-width: 80%;
+min-width: 66%;
+margin: 0;
+padding: 5px 8px;
+border: 1px solid #39F;
+color: #588cc7;
+}
+
+.comments .msg{
+display:none;
+padding:1px 0 0 40px;
+font:normal 11px/13px "Helvetica Neue",Helvetica,Arial,sans-serif;
+color:#8a8f9c;
+}
+
+.comments .edit-comment{
+display:none;
+float:left;
+margin:-4px 0 -1px 3px;
+font:normal 11px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
+color:#f33;
+}
+
+.comments li:hover .edit-comment,
+.comments li.hover .edit-comment{
+display:block;
+}
+
+/* Comments :focus */
+.comments .comment-entree .vcard,
+.comments .comment-entree .msg,
+.comments-list li .vcard,
+.comments-list li .vcard .fn{ display:block; }
+
+.comments .comment-entree .text { }
+
+/* Comments :listing */
+.comments-list li {
+padding: 4px 0 0 50px;
+display: block;
+overflow: hidden;
+}
+
+.comments-list li:first-child { padding-top: 0; }
+.comments-list li .vcard { margin: 4px 0 0 -50px; }
+.comments-list li .vcard img { margin: 3px 12px 0px 0px; }
+
+.comments-list li p {
+word-break: break-word;
+font-size: 11px;
+line-height: 13px;
+}
+.double .comments-list p { max-width: 347px; }
+.large .comments-list p { max-width: 450px; }
+.large-side .comments-list p { max-width: 244px; }
+.single .comments-list p { max-width: 772px; }
+
+.comments-list .comment-entree .vcard .fn { display: none; }
+.comments-list li .comment-entree .msg { padding-bottom: 8px; padding-left: 0; }
+.comments-list .show-edit-comment .inner { display: none; }
+
+/*profile page*/
+.two-col .comments-list p { max-width: 273px; }

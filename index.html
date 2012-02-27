@@ -14,79 +14,60 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
 
 	<div id="container" class="fadeOnLoad">
 
-		<!-- App Header -->
-		<div id="app-header" class="navbar-fixed-top">
-			<div class="container">
-				<h3 class="brand"><a href="#runway">fazzle<em>.</em>me</a></h3>
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
 
-				<div class="btn-toolbar">
+          <a class="brand" href="#runway">fazzle<em class="ico-btn">R</em>me</a>
 
-					<div class="btn-group"><!-- URdFSZX -->
-						<a class="btn" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span></a>
-						<a class="btn" href="#profile" rel="tip" data-placement="bottom" title="Profile"><span class="ico-btn">U</span></a>
-						<a class="btn" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span><span class="ico-count btn-danger">99</span></a>
-						<a class="btn" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span></a>
-					</div>
+						<div id="header-user-controls" class="btn-group"><!-- URdFSZX -->
+							<a class="btn" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
+							<a class="btn user-img" href="#profile" rel="tip" data-placement="bottom" title="Profile"><img src="./assets/img/ruso.png"alt=""> Profile</a>
+							<a class="btn" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span> Closet</a>
+							<a class="btn" data-toggle="modal" href="#modal-upload-items" rel="tip" data-placement="bottom" title="Upload"><span class="ico-btn">+</span></a>
+							<a class="btn" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span> Buzz <span class="ico-count btn-danger">99</span></a>
+							<a class="btn" href="#find" rel="tip" data-placement="bottom" title="Find" id="header-find"><input id="header-find-input" type="search" placeholder="Find friends.."><span class="ico-btn">L</span></a>
+						</div>
 
-					<input id="header-find-input" type="search" placeholder="Find friends..">
+						<div id="header-user-menu" class="btn-group">
+							<a class="btn user-link" href="#settings">Mister Fabulous</a>
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#settings"><i class="icon pencil"></i> Account</a></li>
+								<li><a href="#settings"><i class="icon trash"></i> Privacy</a></li>
+								<li class="divider"></li>
+								<li><a href="#help"><i class="icon"></i> Help</a></li>
+								<li><a href="#login"><i class="icon"></i> Logout</a></li>
+							</ul>
+						</div>
 
-					<div id="header-user-menu" class="btn-group">
-						<a class="btn" href="#settings"><img class="thumbnail" src="./assets/img/ruso.png" style="width: auto; height: 16px;padding: 0;display: inline-block;vertical-align: top;border: 0;" alt=""> Mister Fabulous</a>
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#settings"><i class="icon pencil"></i> Account</a></li>
-							<li><a href="#settings"><i class="icon trash"></i> Privacy</a></li>
-							<li class="divider"></li>
-							<li><a href="#help"><i class="icon"></i> Help</a></li>
-							<li><a href="#login"><i class="icon"></i> Logout</a></li>
-						</ul>
-					</div>
 
-				</div>
-			</div><!-- /app-header container -->
-		</div>
+        </div>
+      </div>
+    </div>
+
 
 		<!-- Main container -->
 		<div role="main" id="main">
-			<div class="loading"><span>loading</span></div>
+			<div id="kuzyalives" class="loading"><span>loading</span></div>
 		</div>
 
 		<!-- App footer -->
 		<div id="app-footer" class="container ac">
 			<label class="footer-label">©Fazzle.me</label>
-			<a href="#help/site-terms">Terms</a> • <a href="#/site-policy">Content Policy</a> • <a href="#help/site-privacy">Privacy</a>
+			<a href="#help/site-terms">Terms</a> • <a href="#help/contacts">Contacts</a> • <a href="#help">Help</a>
 		</div>
 
 	</div>
 
 
 	<!-- MODALS -->
-	<!-- modal - Invite Friends -->
-	<div id="modal-invite-friends" class="modal hide fade" style="display: none; ">
-		<div class="modal-header">
-			<a class="close" data-dismiss="modal">×</a>
-			<h3>Inivite friends to Fazzle</h3>
-		</div>
-		<div class="modal-body">
-			<h4>Text in a modal</h4>
-			<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
-
-			<h4>Popover in a modal</h4>
-			<p>This <a href="#" class="btn" rel="pop" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on hover.</p>
-
-			<h4>Tooltips in a modal</h4>
-			<p><a href="#" rel="tip" data-original-title="Tooltip">This link</a> and <a href="#" rel="tip" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn btn-primary">Save changes</a>
-			<a href="#" class="btn" data-dismiss="modal">Close</a>
-		</div>
-	</div>
-
 	<!-- modal - Upload new items -->
 	<div id="modal-upload-items" class="modal hide fade" style="display: none; ">
 		<div class="modal-header">
@@ -154,31 +135,22 @@
 
 		</div><!-- /modal body -->
 	</div>
-
-
 					
 
 
 	<!-- Libraries -->
-	<script src="assets/js/libs/jquery/jquery.js"></script>
-	<script src="assets/js/libs/jquery/jqueryui-min.js"></script>
-	<script src="assets/js/libs/underscore/underscore.js"></script>
-	<script src="assets/js/libs/backbone/backbone.js"></script>
-	<script src="assets/js/libs/bootstrap/bootstrap.js"></script>
+	<script src="assets/libs/jquery/jquery.js"></script>
+	<script src="assets/libs/underscore/underscore.js"></script>
+	<script src="assets/libs/backbone/backbone.js"></script>
+	<script src="assets/libs/bootstrap/bootstrap.js"></script>
 
 	<!-- Plugins -->
-	<script src="assets/js/libs/jquery/easing.js"></script>
-	<script src="assets/js/libs/jquery/mousewheel.js"></script>
-	<script src="assets/js/libs/jquery/chosen-min.js"></script>
-	<script src="assets/js/libs/jquery/storage.js"></script>
-	<script src="assets/js/libs/webcam/webcam.js"></script>
+	<script src="assets/libs/jquery/chosen-min.js"></script>
+	<script src="assets/plugins/notifications.js"></script>
+	<script src="assets/plugins/jcarousel.js"></script>
+	<script src="assets/plugins/fancybox.js"></script>
+	<script src="assets/plugins/jcrop.js"></script>
 
-	<script src="assets/js/plugins/notifications.js"></script>
-	<script src="assets/js/plugins/jcarousel.js"></script>
-	<script src="assets/js/plugins/fancybox.js"></script>
-	<script src="assets/js/plugins/jcrop.js"></script>
-	<script src="assets/js/plugins/coulisse.js"></script>
-	<script src="assets/js/plugins/coulisseuiwrapper.js"></script>
 
 	<!-- Application -->
 	<script src="app/fazzle.js"></script>
@@ -200,146 +172,21 @@
 
 
 			$('[rel=tip]').tooltip();
-			//$("[rel=pop]").popover();
+			$(".chzn-select").chosen();
 
 
-
-
-			var pos = 0;
-			var ctx = null;
-			var cam = null;
-			var image = null;
-
-			var filter_on = false;
-			var filter_id = 0;
-
-			$("#webcam").webcam({
-
-				width: 340,
-				height: 260,
-				mode: "callback",
-				swffile: "assets/js/libs/webcam/jscam_canvas_only.swf",
-
-				onTick: function(remain) {
-
-					if (0 == remain) {
-						$("#cam-status").text("Cheese!");
-					} else {
-						$("#cam-status").text(remain + " seconds remaining...");
-					}
-				},
-
-				onSave: function(data) {
-
-					var col = data.split(";");
-					var img = image;
-
-					if (false == filter_on) {
-
-						for(var i = 0; i < 320; i++) {
-							var tmp = parseInt(col[i]);
-							img.data[pos + 0] = (tmp >> 16) & 0xff;
-							img.data[pos + 1] = (tmp >> 8) & 0xff;
-							img.data[pos + 2] = tmp & 0xff;
-							img.data[pos + 3] = 0xff;
-							pos+= 4;
-						}
-
-					} else {
-
-						var id = filter_id;
-						var r,g,b;
-						var r1 = Math.floor(Math.random() * 255);
-						var r2 = Math.floor(Math.random() * 255);
-						var r3 = Math.floor(Math.random() * 255);
-
-						for(var i = 0; i < 320; i++) {
-							var tmp = parseInt(col[i]);
-
-							/* Copied some xcolor methods here to be faster than calling all methods inside of xcolor and to not serve complete library with every req */
-
-							if (id == 0) {
-								r = (tmp >> 16) & 0xff;
-								g = 0xff;
-								b = 0xff;
-							} else if (id == 1) {
-								r = 0xff;
-								g = (tmp >> 8) & 0xff;
-								b = 0xff;
-							} else if (id == 2) {
-								r = 0xff;
-								g = 0xff;
-								b = tmp & 0xff;
-							} else if (id == 3) {
-								r = 0xff ^ ((tmp >> 16) & 0xff);
-								g = 0xff ^ ((tmp >> 8) & 0xff);
-								b = 0xff ^ (tmp & 0xff);
-							} else if (id == 4) {
-
-								r = (tmp >> 16) & 0xff;
-								g = (tmp >> 8) & 0xff;
-								b = tmp & 0xff;
-								var v = Math.min(Math.floor(.35 + 13 * (r + g + b) / 60), 255);
-								r = v;
-								g = v;
-								b = v;
-							} else if (id == 5) {
-								r = (tmp >> 16) & 0xff;
-								g = (tmp >> 8) & 0xff;
-								b = tmp & 0xff;
-								if ((r+= 32) < 0) r = 0;
-								if ((g+= 32) < 0) g = 0;
-								if ((b+= 32) < 0) b = 0;
-							} else if (id == 6) {
-								r = (tmp >> 16) & 0xff;
-								g = (tmp >> 8) & 0xff;
-								b = tmp & 0xff;
-								if ((r-= 32) < 0) r = 0;
-								if ((g-= 32) < 0) g = 0;
-								if ((b-= 32) < 0) b = 0;
-							} else if (id == 7) {
-								r = (tmp >> 16) & 0xff;
-								g = (tmp >> 8) & 0xff;
-								b = tmp & 0xff;
-								r = Math.floor(r / 255 * r1);
-								g = Math.floor(g / 255 * r2);
-								b = Math.floor(b / 255 * r3);
-							}
-
-							img.data[pos + 0] = r;
-							img.data[pos + 1] = g;
-							img.data[pos + 2] = b;
-							img.data[pos + 3] = 0xff;
-							pos+= 4;
-						}
-					}
-
-					if (pos >= 0x4B000) {
-						ctx.putImageData(img, 0, 0);
-						pos = 0;
-					}
-				},
-
-				onCapture: function () {
-					webcam.save();
-				},
-
-				debug: function (type, string) {
-					$("#cam-status").html(type + ": " + string);
-				},
-
-				onLoad: function () {
-
-					var cams = webcam.getCameraList();
-					for(var i in cams) {
-						$("#cams").append("<li>" + cams[i] + "</li>");
-					}
+			$("#header-find span").toggle(
+				function(){
+					$(this).text("<");
+					$("#header-find").addClass("active").find("input").addClass("active");
+				}, 
+				function(){
+					$(this).text("L");
+					$("#header-find").removeClass("active").find("input").removeClass("active");
 				}
-			});
+			);
 
 
-
-			
 
 		})
 	}(window.jQuery)
@@ -367,6 +214,6 @@
 																LL/
 
 		┌────────────────────────────────────────────────────────┐
-		│ Date of Creation ........................... Year 2012 │
+		│ Date of Creation ..................Feb...... Year 2012 │
 		└────────────────────────────────────────────────────────┘
 //-->

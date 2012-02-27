@@ -1,4 +1,10 @@
 @import url(custom.css);
+@import url(header.css);
+@import url(subnav.css);
+@import url(comments.css);
+@import url(runway.css);
+@import url(profile.css);
+@import url(closet.css);
 
 .ac { text-align: center; }
 .ar { text-align: right; }
@@ -42,10 +48,7 @@ box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
 *********************
 */
 #app-header { z-index: 900; }
-#app-header .container {
-background: #eee;
-padding: 0.6em 0.9em;
-}
+#app-header .container { }
 #app-header .brand {
 position: relative;
 display: inline-block;
@@ -83,7 +86,7 @@ border-top: 1px solid #c0c0c0;
 vertical-align: top;
 margin: 0 1em;
 }
-#header-user-menu { float: right; }
+
 
 
 /* APP FOOTER
@@ -109,128 +112,7 @@ vertical-align: bottom;
 
 
 
-/* PROFILE PAGE */
-#profile-view .sidebar h3 { font-size: 13px; vertical-align: initial; }
-#profile-view .sidebar .thumbnails { margin-left: 0; margin-bottom: 13px; }
-#profile-view .sidebar .thumbnails li { margin: 1px; padding: 0; display: inline-block; }
-#profile-view .sidebar .thumbnails a { display: block; }
-#profile-view .sidebar figure { margin: 0; padding: 0; margin-bottom: 1em; }
-#profile-view .sidebar .side-links { display: inline-block; }
-#profile-view .sidebar .btn { margin: 1px 0; }
-.profile-well { margin-bottom: 0; padding: 6px; }
-.shelves.well { padding: 9px; }
-#profile-view .well { padding: 0.3em 1em; }
-#profile-about .well { padding: 0; }
-/* .like.active { background: pink; } */
-.like.active::before { color: red; }
-#profile-about .input div {
-min-height: 24px;
-padding-top: 6px;
-font-weight: bold;
-font-size: 1.2em;
-line-height: normal;
-}
-#profile-view .more { margin-bottom: 3em; }
-#profile-comments-toggle { padding-bottom: 0.3em; cursor: pointer; }
-#profile-comments-toggle:before { content: ";"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #39F;}
-#profile-comments-toggle.active { border-bottom: 1px dotted #bbb; }
-#profile-comments-toggle.active:before { content: ":"; font-family: 'WebSymbolsRegular'; margin-right: 0.3em; color: #37F;}
-#profile-view .more, #profile-view .comment-body-wrap { display: none; }
-#profile-name:before,
-#profile-location:before,
-#profile-aboutme:before { display: inline-block; margin-left: -69px; margin-right: 32px; }
-#profile-tab-content .controls { margin-left: 1em; margin-bottom: 0.6em; }
-#profile-about-table { margin: 3em; }
-#profile-about-table td { vertical-align: top; }
-#profile-about-table .ar { font-size: smaller; color: #999; }
-.image_stack {
-width: 200px;
-position: relative;
-margin: 9px;
-display: inline-block;
-height: 200px;
-}
-.image_stack img {
-position: absolute;
-border: 4px solid #FFF;
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
--moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
--webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-max-height: 200px; max-width: 200px;
--webkit-transition: all .2s ease-in-out;
--moz-transition: all .2s ease-in-out;
--o-transition: all .2s ease-in-out;
--ms-transition: all .2s ease-in-out;
-transition: all .2s ease-in-out;
-}
-.image_stack #photo1 { top: 0; left: 0; }
-.image_stack #photo2 { top: 3px; left: 3px; }
-.image_stack #photo3 { top: 6px; left: 1px; }
-.image_stack .rotate1 {
--webkit-transform: rotate(9deg);
--moz-transform: rotate(9deg);
-transform: rotate(9deg);
--ms-transform:rotate(9deg);
--o-transform:rotate(9deg);
-}
-.image_stack .rotate2 {
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
-transform: rotate(0deg);
--ms-transform:rotate(0deg);
--o-transform:rotate(0deg);
-}
-.image_stack .rotate3 {
--webkit-transform: rotate(-9deg);
--moz-transform: rotate(-9deg);
-transform: rotate(-9deg);
--ms-transform:rotate(-9deg);
--o-transform:rotate(-9deg);
-cursor: pointer;
-}
-.single_photo a {
-display: block;
-border: 4px solid #fff;
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
--moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
--webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
--webkit-transition: all .2s ease-in-out;
--moz-transition: all .2s ease-in-out;
--o-transition: all .2s ease-in-out;
--ms-transition: all .2s ease-in-out;
-transition: all .2s ease-in-out;
-}
-.single_photo { display: inline-block; margin-left: 1em; position: relative; }
-.single_photo img { display: block; max-height: 190px; max-width: 190px; }
-.single_photo a:hover {
-	-moz-transform: scale(1.1) rotate(0deg);
-	-webkit-transform: scale(1.1) rotate(0deg);
-	-o-transform: scale(1.1) rotate(0deg);
-	-ms-transform: scale(1.1) rotate(0deg);
-	transform: scale(1.1) rotate(0deg);
-}
-.stack-desc-wrap {
-position: absolute;
-left: 0;
-bottom: 0;
-right: 0;
-background: rgba(255, 255, 255, 0.9);
-z-index: 1;
-}
-.stack-desc-wrap label {
-float: none;
-display: block;
-text-align: left;
-width: auto;
-padding-left: 9px;
-}
-.stack-desc-itemcount {
-font-size: 0.8em;
-line-height: 1em;
-padding-bottom: 0.6em;
-color: #666;
-}
-.stack-desc { font-weight: bold; }
+
 
 /* SECTION MANAGE FRIENDS */
 #manage-friends-wrap {
@@ -744,59 +626,6 @@ white-space: nowrap;
 
 
 
-/* CLOSET PAGE */
-.sidebar { position: relative; }
-#closet-create-look {
-	border: 1px dotted #39C;
-	border-top: 0;
-	padding: 9px;
-	text-align: center;
-	display: none;
-}
-#btn-create-new-look { width: 100%; margin-top: 1em; }
-#btn-create-new-look.active {
-border-bottom: 0;
-border-bottom-right-radius: 0;
-border-bottom-left-radius: 0;
-}
-#closet-categories-filter,
-#closet-categories-filter_chzn {
-vertical-align: bottom;
-margin-right: 1em;
-width: auto !important;
-min-width: 200px;
-max-width: 342px;
-}
-#closet-view .droppable { padding: 9px; }
-#closet-view .droppable img { max-width: 56px; margin: 1px; }
-#closet-shelves .wishlist { border-right: 1px solid pink; }
-.wish-heart { display: inline-block; margin: 0; font-family: 'SignifyLite'; color: pink; line-height: 1; margin-left: -0.6em; }
-#closet-shelf-list .accordion-heading .label { margin: 0 1em; }
-#closet-shelf-list .accordion-toggle {
-font-size: 32px;
-display: inline-block;
-position: relative;
-line-height: 42px;
-outline: none;
-text-decoration: none;
--webkit-transition: color 0.2s ease-in-out;
--moz-transition: color 0.2s ease-in-out;
--o-transition: color 0.2s ease-in-out;
--ms-transition: color 0.2s ease-in-out;
-transition: color 0.2s ease-in-out;
-vertical-align: middle;
-}
-#closet-shelves .accordion-group {
-border-left: 0;
-border-radius: 0;
-border-bottom-color: #c7deef;
-border-top: 0;
-}
-#closet-shelves .accordion-inner {
-border-top-style: dashed;
-border-top-color: #f3f3f3;
-}
-#closet-edit-view.marge { margin-top: 60px; }
 
 
 

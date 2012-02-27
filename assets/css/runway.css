@@ -1,0 +1,90 @@
+/* RUNWAY PAGE 
+==================*/
+
+.user-runway { overflow: hidden; }
+
+.user-icon {
+float: left;
+display: inline-block;
+margin-right: 1em;
+position: relative;
+}
+.user-icon::before {
+content: '';
+display: inline-block;
+border-bottom: 7px solid transparent;
+border-top: 7px solid transparent;
+border-left: 7px solid #ccc;
+border-left-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: 31px;
+right: -7px;
+}
+.user-icon::after {
+content: '';
+display: inline-block;
+border-bottom: 6px solid transparent;
+border-top: 6px solid transparent;
+border-left: 6px solid #ffffff;
+position: absolute;
+top: 32px;
+right: -5px;
+}
+
+
+.rw-thumbnail-wrap {
+float: left;
+position: relative;
+display: inline-block;
+margin: 1px;
+border: 1px solid #eee;
+}
+.rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
+.rw-thumbnail-detail { padding-left: 1em; }
+.rw-thumbnail { display: block; }
+
+.rw-item-title {
+display: block;
+font-size: 123%;
+line-height: normal;
+}
+.rw-item-liked {
+color: #999;
+font-size: smaller;
+}
+
+
+#runway-controls {
+top: 4px;
+right: 4px;
+margin: 0;
+position: relative;
+}
+
+
+/* TAKE CARE OF IT OPEN SCOPE */
+#runway-controls .dropdown-menu::before {
+content: '';
+display: inline-block;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;
+border-bottom: 7px solid #ccc;
+border-bottom-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: -7px;
+left: 9px;
+}
+#runway-controls .dropdown-menu::after {
+content: '';
+display: inline-block;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid #ffffff;
+position: absolute;
+top: -6px;
+left: 10px;
+}
+
+.subnav-fixed #runway-controls {
+width: 940px; margin-left: auto; margin-right: auto;;
+}

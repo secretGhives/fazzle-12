@@ -1,0 +1,54 @@
+/* CLOSET PAGE */
+.sidebar { position: relative; }
+#closet-create-look {
+	border: 1px dotted #39C;
+	border-top: 0;
+	padding: 9px;
+	text-align: center;
+	display: none;
+}
+#btn-create-new-look { width: 100%; margin-top: 1em; }
+#btn-create-new-look.active {
+border-bottom: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+#closet-categories-filter,
+#closet-categories-filter_chzn {
+vertical-align: bottom;
+margin-right: 1em;
+width: auto !important;
+min-width: 200px;
+max-width: 342px;
+}
+#closet-view .droppable { padding: 9px; }
+#closet-view .droppable img { max-width: 56px; margin: 1px; }
+#closet-shelves .wishlist { border-right: 1px solid pink; }
+.wish-heart { display: inline-block; margin: 0; font-family: 'SignifyLite'; color: pink; line-height: 1; margin-left: -0.6em; }
+#closet-shelf-list .accordion-heading .label { margin: 0 1em; }
+#closet-shelf-list .accordion-toggle {
+font-size: 32px;
+display: inline-block;
+position: relative;
+line-height: 42px;
+outline: none;
+text-decoration: none;
+-webkit-transition: color 0.2s ease-in-out;
+-moz-transition: color 0.2s ease-in-out;
+-o-transition: color 0.2s ease-in-out;
+-ms-transition: color 0.2s ease-in-out;
+transition: color 0.2s ease-in-out;
+vertical-align: middle;
+}
+#closet-shelves .accordion-group {
+border-left: 0;
+border-radius: 0;
+border-bottom-color: #c7deef;
+border-top: 0;
+}
+#closet-shelves .accordion-inner {
+border-top-style: dashed;
+border-top-color: #f3f3f3;
+}
+#closet-edit-view.marge { margin-top: 60px; }
+
