@@ -24,19 +24,19 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="#runway">fazzle<em class="ico-btn">R</em>me</a>
+          <a class="brand section-link" href="#runway">fazzle<em class="ico-btn">R</em>me</a>
 
 						<div id="header-user-controls" class="btn-group"><!-- URdFSZX -->
-							<a class="btn" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
-							<a class="btn user-img" href="#profile" rel="tip" data-placement="bottom" title="Profile"><img src="./assets/img/ruso.png"alt=""> Profile</a>
-							<a class="btn" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span> Closet</a>
+							<a class="btn section-link" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
+							<a class="btn user-img section-link" href="#profile" rel="tip" data-placement="bottom" title="Profile"><img src="./assets/img/ruso.png"alt=""> Profile</a>
+							<a class="btn section-link" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span> Closet</a>
 							<a class="btn" data-toggle="modal" href="#modal-upload-items" rel="tip" data-placement="bottom" title="Upload"><span class="ico-btn">+</span></a>
-							<a class="btn" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span> Buzz <span class="ico-count btn-danger">99</span></a>
+							<a class="btn section-link" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span> Buzz <span class="ico-count btn-danger">99</span></a>
 							<a class="btn" href="#find" rel="tip" data-placement="bottom" title="Find" id="header-find"><input id="header-find-input" type="search" placeholder="Find friends.."><span class="ico-btn">L</span></a>
 						</div>
 
 						<div id="header-user-menu" class="btn-group">
-							<a class="btn user-link" href="#settings">Mister Fabulous</a>
+							<a class="btn user-link section-link" href="#settings">Mister Fabulous</a>
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#settings"><i class="icon pencil"></i> Account</a></li>
@@ -173,6 +173,13 @@
 
 			$('[rel=tip]').tooltip();
 			$(".chzn-select").chosen();
+
+			$(".section-link").click(function(){
+				$link = $(".section-link");
+				$link.removeClass("active");
+
+				$(this).addClass("active");
+			});
 
 
 			$("#header-find span").toggle(

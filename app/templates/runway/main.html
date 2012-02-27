@@ -19,10 +19,15 @@
 					</ul>
 				</div>
 				
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-th-large"></i></a>
+				<!-- <div class="btn-group">
+					<a class="btn active" href="#"><i class="icon-th-large"></i></a>
 					<a class="btn" href="#"><i class="icon-th"></i></a>
-					<a class="btn active" href="#"><i class="icon-th-list"></i></a>
+					<a class="btn" href="#"><i class="icon-th-list"></i></a>
+				</div> -->
+				<div class="radio-group btngroup">
+					<label class="btn active"><input type="radio" name="radio1" checked="checked" /><i class="icon-th-large"></i></label>
+					<label class="btn"><input type="radio" name="radio1" /><i class="icon-th"></i></label>
+					<label class="btn"><input type="radio" name="radio1" /><i class="icon-th-list"></i></label>
 				</div>
 			</div>
 		</div>
@@ -269,12 +274,17 @@
 			function(){
 				$(this).text("Dislike");
 				$(this).addClass("active").parent().addClass("active");
+				$(this).parent().parent().parent().addClass("liked");
 			}, 
 			function(){
 				$(this).text("Like");
 				$(this).removeClass("active").parent().removeClass("active");
+				$(this).parent().parent().parent().removeClass("liked");
 			}
 		);
+
+
+$('.radio-group > label').radioGroup();
 
 
 		// fix sub nav on scroll
