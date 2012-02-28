@@ -112,6 +112,11 @@ vertical-align: bottom;
 
 
 
+/* MODAL SECTION SHELVES */
+#modal-shelves figure { padding: 0; margin: 0; }
+#modal-shelves figure img { max-width: 169px; max-height: 191px; }
+#modal-shelves .chzn-container { min-width: 100%; }
+#modal-shelves .modal-body { min-height: 325px; }
 
 
 /* SECTION MANAGE FRIENDS */
@@ -688,6 +693,7 @@ padding: 9px;
 #btn-login { margin-top: 5px; width: 160px; text-align: left; }
 #btn-facebook { margin-bottom: 9px; }
 #btn-signup { margin-top: 13px; }
+#login-register { margin-bottom: 1em; }
 
 #page-login hgroup { text-align: center; margin-top: 3em; margin-bottom: 2em; }
 #page-login hgroup h2 { font-size: 1.3em; color: #39F; }
@@ -701,3 +707,12 @@ padding: 9px;
 #login-features .span6 p { font-size: 18px; font-weight: 200; line-height: 27px; }
 
 #page-login .hero-unit { margin-top: 6em; }
+
+/* Register Interestest */
+#reg-interest-selections .thumbnail { display: inline-block; }
+.register-actions { margin: 0 3em 1em 3em; }
+.register-actions .btn-primary { margin-right: 1em; }
+#page-register-interest #top-welcome,
+#page-register-suggest #top-welcome { margin: 22px 96px 0; }
+#page-register-interest #top-welcome h2,
+#page-register-suggest #top-welcome h2 { font-size: 17px; }

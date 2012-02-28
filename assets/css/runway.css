@@ -39,7 +39,7 @@ display: inline-block;
 margin: 1px;
 border: 1px solid #eee;
 }
-.rw-thumbnail-wrap.liked { border-color: rgba(255, 192, 203, 0.6); }
+.rw-thumbnail-wrap.liked, #page-register-interest .liked  { border-color: rgba(255, 192, 203, 0.6); }
 .rw-thumbnail-wrap.liked a { color: #B50360; }
 .rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
 .rw-thumbnail-detail { padding-left: 1em; }

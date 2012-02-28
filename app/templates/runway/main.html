@@ -275,6 +275,7 @@
 				$(this).text("Dislike");
 				$(this).addClass("active").parent().addClass("active");
 				$(this).parent().parent().parent().addClass("liked");
+				$('#modal-shelves').modal('show');
 			}, 
 			function(){
 				$(this).text("Like");
