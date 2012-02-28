@@ -7,7 +7,7 @@
 		<p class="lead">Everyone else's stuff</p>
 		<div class="subnav ar">
 
-			<div id="runway-controls" class="btn-toolbar">
+			<div id="runway-controls" class="btn-toolbar page-controls">
 				<div class="btn-group">
 					<a class="btn" href="#"><i class="icon-cog"></i> Customize</a>
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -19,15 +19,15 @@
 					</ul>
 				</div>
 				
-				<!-- <div class="btn-group">
+				<!-- <div class="btn-group" data-toggle="buttons-radio">
 					<a class="btn active" href="#"><i class="icon-th-large"></i></a>
 					<a class="btn" href="#"><i class="icon-th"></i></a>
 					<a class="btn" href="#"><i class="icon-th-list"></i></a>
 				</div> -->
-				<div class="radio-group btn-group">
-					<label class="btn active"><input type="radio" name="radio1" checked="checked" /><i class="icon-th-large"></i></label>
-					<label class="btn"><input type="radio" name="radio1" /><i class="icon-th"></i></label>
-					<label class="btn"><input type="radio" name="radio1" /><i class="icon-th-list"></i></label>
+				<div class="btn-group" data-toggle="buttons-radio">
+					<button class="btn active">Random</button>
+					<button class="btn">Columns</button>
+					<button class="btn">List</button>
 				</div>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 			<div class="user-runway">
 				<article class="rw-thumbnail-wrap large">
 					<figure>
-						<a href="#" class="rw-thumbnail">
+						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/522x555" alt="">
 						</a>
 						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
@@ -59,20 +59,31 @@
 					<section class="comments comments-list">
 						<ol class="unstyled">
 							<li>
-								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
 								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
 							</li>
 							
 							<li>
-								<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
 								<p>Beautifil!</p>
+							</li>
+
+							<li class="you">
+								<a href="#profile" class="profile url">
+									<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+								</a>
+								<a href="#"  class="delete-comment">Delete</a>
+								<p>that piece of string hanging off her right leg is really bothering me</p>
 							</li>
 						</ol>
 						
 						<div class="comment-entree">
-							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-							<em class="msg">Press enter to post your comment</em>
+							<img src="/assets/img/ruso.png" alt="" class="photo" />
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
 						</div>
 					</section>
 					<!-- / comments -->
@@ -80,32 +91,7 @@
 
 				<article class="rw-thumbnail-wrap large-side">
 					<figure>
-						<a href="#" class="rw-thumbnail">
-							<img src="http://placehold.it/316x254" alt="">
-						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled"></ol>
-						
-						<div class="comment-entree">
-							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-							<em class="msg">Press enter to post your comment</em>
-						</div>
-					</section>
-					<!-- / comments -->
-				</article>
-
-				<article class="rw-thumbnail-wrap large-side">
-					<figure>
-						<a href="#" class="rw-thumbnail">
+						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/316x254" alt="">
 						</a>
 						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
@@ -119,15 +105,77 @@
 					<section class="comments comments-list">
 						<ol class="unstyled">
 							<li>
-								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
 								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+							
+							<li>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
+								<p>Beautifil!</p>
+							</li>
+
+							<li class="you">
+								<a href="#profile" class="profile url">
+									<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+								</a>
+								<a href="#"  class="delete-comment">Delete</a>
+								<p>that piece of string hanging off her right leg is really bothering me</p>
 							</li>
 						</ol>
 						
 						<div class="comment-entree">
-							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-							<em class="msg">Press enter to post your comment</em>
+							<img src="/assets/img/ruso.png" alt="" class="photo" />
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+
+				<article class="rw-thumbnail-wrap large-side">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/316x254" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">
+							<li>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
+								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+							
+							<li>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
+								<p>Beautifil!</p>
+							</li>
+
+							<li class="you">
+								<a href="#profile" class="profile url">
+									<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+								</a>
+								<a href="#"  class="delete-comment">Delete</a>
+								<p>that piece of string hanging off her right leg is really bothering me</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<img src="/assets/img/ruso.png" alt="" class="photo" />
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
 						</div>
 					</section>
 					<!-- / comments -->
@@ -145,37 +193,7 @@
 
 				<article class="rw-thumbnail-wrap">
 					<figure>
-						<a href="#" class="rw-thumbnail">
-							<img src="http://placehold.it/419x419" alt="">
-						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">							
-							<li>
-								<span class="vcard"><a href="/bcube" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">another user</span></a></span>
-								<p>Much amazing</p>
-							</li>
-						</ol>
-						
-						<div class="comment-entree">
-							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-							<em class="msg">Press enter to post your comment</em>
-						</div>
-					</section>
-					<!-- / comments -->
-				</article>
-
-				<article class="rw-thumbnail-wrap">
-					<figure>
-						<a href="#" class="rw-thumbnail">
+						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/419x419" alt="">
 						</a>
 						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
@@ -189,20 +207,77 @@
 					<section class="comments comments-list">
 						<ol class="unstyled">
 							<li>
-								<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
 								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
 							</li>
 							
 							<li>
-								<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
 								<p>Beautifil!</p>
+							</li>
+
+							<li class="you">
+								<a href="#profile" class="profile url">
+									<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+								</a>
+								<a href="#"  class="delete-comment">Delete</a>
+								<p>that piece of string hanging off her right leg is really bothering me</p>
 							</li>
 						</ol>
 						
 						<div class="comment-entree">
-							<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-							<em class="msg">Press enter to post your comment</em>
+							<img src="/assets/img/ruso.png" alt="" class="photo" />
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+						</div>
+					</section>
+					<!-- / comments -->
+				</article>
+
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/419x419" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 99999</span>
+					</aside>
+					<!-- comments -->
+					<section class="comments comments-list">
+						<ol class="unstyled">
+							<li>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
+								<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+							</li>
+							
+							<li>
+								<a href="#profile" class="profile url">
+									<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+								</a>
+								<p>Beautifil!</p>
+							</li>
+
+							<li class="you">
+								<a href="#profile" class="profile url">
+									<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+								</a>
+								<a href="#"  class="delete-comment">Delete</a>
+								<p>that piece of string hanging off her right leg is really bothering me</p>
+							</li>
+						</ol>
+						
+						<div class="comment-entree">
+							<img src="/assets/img/ruso.png" alt="" class="photo" />
+							<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
 						</div>
 					</section>
 					<!-- / comments -->
@@ -218,7 +293,7 @@
 			</a>
 			<article class="rw-thumbnail-wrap">
 				<figure>
-					<a href="#" class="rw-thumbnail">
+					<a href="#viewing" class="rw-thumbnail">
 						<img src="http://placehold.it/844x666" alt="">
 					</a>
 					<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
@@ -233,27 +308,31 @@
 				<section class="comments comments-list">
 					<ol class="unstyled">
 						<li>
-							<span class="vcard"><a href="/vacheblanche" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">someuser</span></a></span>
+							<a href="#profile" class="profile url">
+								<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+							</a>
 							<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
 						</li>
 						
 						<li>
-							<span class="vcard"><a href="/jmappin8" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">more user</span></a></span>
+							<a href="#profile" class="profile url">
+								<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+							</a>
 							<p>Beautifil!</p>
 						</li>
-						
-						<li>
-							<span class="vcard"><a href="/bcube" class="url"><img src="//placehold.it/42x42" alt="" class="photo" /><span class="fn nickname">another user</span></a></span>
-							<p>Much amazing</p>
-						</li>
 
-						<li class="more-comments ac"><a href="#more" clas="comments-more">show more</a></li>
+						<li class="you">
+							<a href="#profile" class="profile url">
+								<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+							</a>
+							<a href="#"  class="delete-comment">Delete</a>
+							<p>that piece of string hanging off her right leg is really bothering me</p>
+						</li>
 					</ol>
 					
 					<div class="comment-entree">
-						<span class="vcard"><a href="#profile" class="url"><img src="/assets/img/ruso.png" alt="" class="photo" /><span class="fn nickname">mrfabulous</span></a></span>
-						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.."></textarea>
-						<em class="msg">Press enter to post your comment</em>
+						<img src="/assets/img/ruso.png" alt="" class="photo" />
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
 					</div>
 				</section>
 				<!-- / comments -->
@@ -283,9 +362,6 @@
 				$(this).parent().parent().parent().removeClass("liked");
 			}
 		);
-
-
-$('.radio-group > label').radioGroup();
 
 
 		// fix sub nav on scroll
