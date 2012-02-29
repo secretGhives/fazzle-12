@@ -635,6 +635,13 @@
 			}
 		);
 
+		$(".entree-wrap .text").focus(function() {
+			$(this).parent().parent().addClass('focused');
+		});
+		$(".entree-wrap .text").blur(function() {
+			$(this).parent().parent().removeClass('focused');
+		});
+
 		$(".chzn-select").chosen();
 
 		$('#profile-edit').toggle(function() {

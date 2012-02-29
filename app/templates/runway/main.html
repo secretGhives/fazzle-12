@@ -481,6 +481,13 @@
 			}
 		);
 
+		$(".entree-wrap .text").focus(function() {
+			$(this).parent().parent().addClass('focused');
+		});
+		$(".entree-wrap .text").blur(function() {
+			$(this).parent().parent().removeClass('focused');
+		});
+
 
 		// fix sub nav on scroll
 		var $win = $(window)
