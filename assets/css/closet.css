@@ -16,10 +16,11 @@ border-bottom-left-radius: 0;
 #closet-categories-filter,
 #closet-categories-filter_chzn {
 vertical-align: bottom;
-margin-right: 1em;
+top: -3px;
 width: auto !important;
 min-width: 200px;
-max-width: 342px;
+max-width: 666px;
+right: 9px;
 }
 #closet-view .droppable { padding: 9px; }
 #closet-view .droppable img { max-width: 56px; margin: 1px; }
