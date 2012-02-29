@@ -19,7 +19,8 @@
 				</select>
 
 				<div class="btn-group">
-					<a class="btn" id="closet-edit" href="#closet">Edit</a>
+					<button id="btn-create-new-look" class="btn btn-primary" data-toggle="toggle">Create a look</button>
+					<button class="btn" id="closet-edit" data-toggle="toggle">Edit</button>
 					<button class="btn btn-danger disabled" id="closet-delete-shelf" disabled>Delete</button>
 				</div>
 			</div>
@@ -50,38 +51,13 @@
 								<h2 class="accordion-inner-title closet-ei" contenteditable="false">From Bill Bbq's shelf title 3</h2>
 							</div>
 							
-							<ul class="thumbnails">
-								<li class="span4">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/360x268" alt="">
-									</a>
-								</li>
-								<li class="span2">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/160x120" alt="">
-									</a>
-								</li>
-								<li class="span2">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/160x120" alt="">
-									</a>
-								</li>
-								<li class="span2">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/160x120" alt="">
-									</a>
-								</li>
-								<li class="span2">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/160x120" alt="">
-									</a>
-								</li>
-								<li class="span2">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/160x120" alt="">
-									</a>
-								</li>
-							</ul>
+							<a href="#editing"><img src="http://placehold.it/222x222" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/222x222" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+
 							<hr class="separator-shelf"/>
 						</div>
 
@@ -93,28 +69,12 @@
 								<h2 class="accordion-inner-title closet-ei" contenteditable="false">from Franks Lastname shelf title 1</h2>
 							</div>
 
-							<ul class="thumbnails">
-								<li class="span3">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/260x180" alt="">
-									</a>
-								</li>
-								<li class="span3">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/260x180" alt="">
-									</a>
-								</li>
-								<li class="span3">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/260x180" alt="">
-									</a>
-								</li>
-								<li class="span3">
-									<a href="#editing" class="thumbnail">
-										<img src="http://placehold.it/260x180" alt="">
-									</a>
-								</li>
-							</ul>
+							<a href="#editing"><img src="http://placehold.it/222x222" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
+							<a href="#editing"><img src="http://placehold.it/222x222" /></a>
+							<a href="#editing"><img src="http://placehold.it/120x120" /></a>
 						</div>
 					</div>
 				</div>
@@ -337,6 +297,21 @@
 			</div>
 		</div>
 
+		<!-- CREATE A LOOK -->
+		<div id="closet-create-look">
+			<div id="create-look-wrap">
+				<input type="text" id="create-look-name" placeholder="Name new look.."/>
+				<div id="create-look-dropzone" class="ac well droppable" rel="pop" data-content="Drop items from the right into this area. Click on the item to remove it.  Press Clear to empty entire box." data-original-title="Drag n Drop" data-placement="top"></div>
+				<button class="btn btn-success btn-large">Save</button>
+				<button class="btn btn-info btn-large" data-controls-modal="modal-universal-share" data-backdrop="true" data-keyboard="true">Share</button>
+				<a class="btn" href="#closet" onclick="$('.droppable').html(''); alert('New look creator cleared', 'success')">Clear</a>
+
+				<div class="alert alert-info">
+					<strong>Heads up!</strong> Drag and Drop items from your shelves into "Drop Zone".  Click on the item in the drop zone to remove it.  Name your look and press save.
+				</div>
+			</div>
+		</div>
+
 	</section>
 
 </div> <!-- /container -->
@@ -344,41 +319,43 @@
 !function ($) {
 	$(function(){
 
-
-
-		//Make sidebar sticky and come with the shelves
-		//$('#side-box').stickySidebar({padding: 42});
-		// fix sub nav on scroll
-		var $win = $(window)
-			, $side = $('#side-box')
-			, navSide = $('#side-box').length && $('#side-box').offset().top - 49
-			, isFixed = 0;
-
-		processScroll();
-
-		$win.on('scroll', processScroll);
-
-		function processScroll() {
-			var i, scrollTop = $win.scrollTop()
-			if (scrollTop >= navSide && !isFixed) {
-				isFixed = 1
-				$side.addClass('sidebar-fixed')
-			} else if (scrollTop <= navSide && isFixed) {
-				isFixed = 0
-				$side.removeClass('sidebar-fixed')
-			}
-		}
-
-
-
 		//Toggle Create new look panel
 		$('#btn-create-new-look').toggle(function() {
 				$(this).addClass('active');
 				$('#closet-create-look').show();
+				$('#closet-shelves').addClass('sidebar');
+				$('#overview').addClass('sidebar');
+				alert("Create a look is Active. When finished press it again.")
 			}, function() {
 				$(this).removeClass('active');
 				$('#closet-create-look').hide();
+				$('#closet-shelves').removeClass('sidebar');
+				$('#overview').removeClass('sidebar');
 		});
+
+
+		$('.accordion-inner img').draggable({ revert: true });
+		$( ".droppable" ).droppable({
+			tolerance: 'touch',
+			over: function() {
+				$(this).removeClass('out').addClass('over');
+			},
+			out: function() {
+				$(this).removeClass('over').addClass('out');
+			},
+			drop: function( event, ui ) {
+				var answer = alert('Added xxxx to the Look', 'success');
+				$( this ).addClass( "received" );
+				$( "<img>" ).attr( "src", ui.draggable.attr("src") ).appendTo( this );
+				//ui.draggable.remove();
+			}
+		});
+
+		$("#closet-view .droppable").delegate("img", "click", function() {
+			$(this).remove();
+			alert('Item removed', 'success');
+		});
+		
 
 		$('#closet-edit').toggle(function() {
 				$(this).addClass('active btn-success');
@@ -400,11 +377,13 @@
 				$(this).addClass('active');
 				$(this).text('Finish');
 				$('.accordion-group .close').removeClass('hide');
-				alert("Delete shelves activated");
+				$('#closet-edit').attr("disabled", "disabled").addClass("disabled");
+				alert("Delete shelves activated, click finish to re-enable Save");
 			}, function() {
 				$(this).removeClass('active');
 				$(this).text('Delete');
 				$('.accordion-group .close').addClass('hide');
+				$('#closet-edit').removeAttr("disabled").removeClass("disabled");
 		});
 		$('.accordion-group .close').click(function() {
 			$(this).parent().hide();
@@ -423,6 +402,25 @@
 				$(list).find("div.accordion-group").removeClass("hide");
 			}
 		});
+
+
+		// fix sub nav on scroll
+		var $win = $(window)
+			, $nav = $('.subnav')
+			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
+			, isFixed = 0;
+		processScroll();
+		$win.on('scroll', processScroll);
+		function processScroll() {
+			var i, scrollTop = $win.scrollTop()
+			if (scrollTop >= navTop && !isFixed) {
+				isFixed = 1
+				$nav.addClass('subnav-fixed')
+			} else if (scrollTop <= navTop && isFixed) {
+				isFixed = 0
+				$nav.removeClass('subnav-fixed')
+			}
+		};
 
 
 	})

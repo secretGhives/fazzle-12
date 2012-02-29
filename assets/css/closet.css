@@ -1,18 +1,35 @@
 /* CLOSET PAGE */
-.sidebar { position: relative; }
+#closet-shelves.sidebar { margin-left: 353px; position: relative; }
+#closet-view #overview.sidebar { margin-left: 342px; }
 #closet-create-look {
-	border: 1px dotted #39C;
-	border-top: 0;
-	padding: 9px;
-	text-align: center;
-	display: none;
+border: 1px dotted #eee;
+border-width: 0 1px 0 0;
+padding: 0;
+background: #2c2c2c;
+display: none;
+position: fixed;
+top: 41px;
+left: 0;
+right: auto;
+bottom: 0;
+width: 369px;
+overflow-y: auto;
+margin: 0;
+z-index: 9999;
 }
-#btn-create-new-look { width: 100%; margin-top: 1em; }
-#btn-create-new-look.active {
-border-bottom: 0;
-border-bottom-right-radius: 0;
-border-bottom-left-radius: 0;
+#create-look-wrap { margin: 22px 9px 13px 9px; position: relative; }
+#create-look-name {
+width: 100%;
+padding-left: 0;
+padding-right: 0;
+box-shadow: 0 0 0;
+border: 0;
+text-indent: 9px;
+margin-bottom: 0;
 }
+#create-look-wrap .alert { margin-top: 2em; }
+#btn-create-new-look {  }
+#btn-create-new-look.active {  }
 #closet-categories-filter,
 #closet-categories-filter_chzn {
 vertical-align: bottom;
@@ -20,10 +37,28 @@ top: -3px;
 width: auto !important;
 min-width: 200px;
 max-width: 666px;
-right: 9px;
+margin-right: 9px;
 }
-#closet-view .droppable { padding: 9px; }
-#closet-view .droppable img { max-width: 56px; margin: 1px; }
+
+#create-look-dropzone {
+padding: 9px;
+margin-top: 6px;
+margin-bottom: 9px;
+min-height: 111px;
+position: relative;
+}
+#create-look-dropzone:before {
+display: block;
+content: "Drop Zone";
+font-size: 1.6em;
+font-weight: bold;
+color: rgba(222, 222, 222, 0.6);
+position: absolute;
+top: 50%;
+left: 50%;
+margin: -13px 0 0 -50px;
+}
+#create-look-dropzone img { max-width: 56px; margin: 1px; }
 #closet-shelves .wishlist { border-right: 1px solid pink; }
 .wish-heart { display: inline-block; margin: 0; font-family: 'SignifyLite'; color: pink; line-height: 1; margin-left: -0.6em; }
 #closet-shelf-list .accordion-heading .label { margin: 0 1em; }

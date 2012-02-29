@@ -55,6 +55,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>23</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -103,6 +104,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>3</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -151,6 +153,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>0</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -208,6 +211,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>23</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -256,6 +260,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>23</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -313,6 +318,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>118976</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -361,6 +367,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>999999+</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -418,6 +425,7 @@
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 						<span class="rw-item-liked">liked by 99999</span>
+						<a class="spch-bub-inside" href="#runway"><em>100k+</em></a>
 					</aside>
 					<!-- comments -->
 					<section class="comments comments-list">
@@ -481,6 +489,12 @@
 			}
 		);
 
+		$('.spch-bub-inside').click(function() {
+			$(this).parent().next().slideToggle();
+			return false;
+		});
+
+
 		$(".entree-wrap .text").focus(function() {
 			$(this).parent().parent().addClass('focused');
 		});
@@ -494,11 +508,8 @@
 			, $nav = $('.subnav')
 			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
 			, isFixed = 0;
-
 		processScroll();
-
 		$win.on('scroll', processScroll);
-
 		function processScroll() {
 			var i, scrollTop = $win.scrollTop()
 			if (scrollTop >= navTop && !isFixed) {

@@ -1,0 +1,46 @@
+/**** Speech Bubble Icons *****/
+
+.spch-bub-inside,
+.spch-bub-outside {
+text-decoration: none;
+position: relative;
+}
+
+
+a.spch-bub-inside,
+a.spch-bub-outside { color: #999; }
+.spch-bub-inside em,
+.spch-bub-outside em { font-style: normal; }
+
+.spch-bub-inside em {
+background: #bbb;
+color: #FFF;
+padding: 0 0.42em;
+-moz-border-radius: 0.25em;
+-webkit-border-radius: 0.25em;
+border-radius: 0.25em;
+position: relative;
+}
+.spch-bub-inside em::before {
+width: 0;
+height: 0;
+position: absolute;
+top: 13px;
+left: 0;
+display: block;
+border-left: 0.45em solid #bbb;
+border-bottom: 0.45em solid #FFF;
+border-bottom: 0.45em solid rgba(0,0,0,0);
+overflow: hidden;
+content: ' ';
+}
+a.spch-bub-inside:hover { color: #777; text-decoration: none; }
+a.spch-bub-inside:hover em {
+cursor: pointer;
+background: #777;
+color: #fff;
+text-decoration: none;
+}
+a.spch-bub-inside:hover em::before {
+  border-left: 0.45em solid #777;
+}

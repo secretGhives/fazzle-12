@@ -68,6 +68,7 @@
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 								<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 								<span class="rw-item-liked">liked by 99999</span>
+								<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
 							</aside>
 							<!-- comments -->
 							<section class="comments comments-list">
@@ -116,6 +117,7 @@
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 								<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 								<span class="rw-item-liked">liked by 99999</span>
+								<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
 							</aside>
 							<!-- comments -->
 							<section class="comments comments-list">
@@ -164,6 +166,7 @@
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
 								<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 								<span class="rw-item-liked">liked by 99999</span>
+								<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
 							</aside>
 							<!-- comments -->
 							<section class="comments comments-list">
@@ -635,6 +638,11 @@
 			}
 		);
 
+		$('.spch-bub-inside').click(function() {
+			$(this).parent().next().fadeToggle();
+			return false;
+		});
+
 		$(".entree-wrap .text").focus(function() {
 			$(this).parent().parent().addClass('focused');
 		});
@@ -674,22 +682,19 @@
 
 		// fix sub nav on scroll
 		var $win = $(window)
-			, $nav = $('#profile-tabs')
-			, navTop = $('#profile-tabs').length && $('#profile-tabs').offset().top - 40
+			, $nav = $('.subnav')
+			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
 			, isFixed = 0;
-
 		processScroll();
-
 		$win.on('scroll', processScroll);
-
 		function processScroll() {
 			var i, scrollTop = $win.scrollTop()
 			if (scrollTop >= navTop && !isFixed) {
 				isFixed = 1
-				$nav.addClass('fixed')
+				$nav.addClass('subnav-fixed')
 			} else if (scrollTop <= navTop && isFixed) {
 				isFixed = 0
-				$nav.removeClass('fixed')
+				$nav.removeClass('subnav-fixed')
 			}
 		};
 

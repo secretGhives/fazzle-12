@@ -1,5 +1,5 @@
 /* Comments */
-.comments { padding: 11px; border-top: 1px dashed lavender; }
+.comments { padding: 11px; border-top: 1px dashed lavender; display: none; }
 .photo .comments { padding-bottom: 0; }
 .comments .text { }
 

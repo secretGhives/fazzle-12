@@ -67,7 +67,7 @@
     navigation: function(action){
 
       if( action == "" ) {
-        action = "runway";
+        action = "login";
       }
 
       //
