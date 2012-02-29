@@ -1,8 +1,18 @@
+(function($){
+
+FazzleX.Modules.register({
+	id: 'runway',
+	template: "app/templates/runway/main.html"
+});
+
+})(jQuery);
+
+/*
 (function(Runway) {
 
-  Runway.Model = Backbone.Model.extend({ /* ... */ });
-  Runway.Collection = Backbone.Collection.extend({ /* ... */ });
-  Runway.Router = Backbone.Router.extend({ /* ... */ });
+  Runway.Model = Backbone.Model.extend({ });
+  Runway.Collection = Backbone.Collection.extend({ });
+  Runway.Router = Backbone.Router.extend({ });
 
   // This will fetch the tutorial template and render it.
   Runway.Views.Home = Backbone.View.extend({
@@ -13,10 +23,6 @@
       fazzle.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
         done(view.el);
-
-        /**
-         * Do stuff here
-         */
         console.log("Home/Runway");
         
       });
@@ -24,3 +30,4 @@
   });
 
 })(fazzle.module("runway"));
+*/

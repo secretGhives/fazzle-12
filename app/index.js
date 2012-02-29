@@ -1,5 +1,5 @@
 (function() {
-
+/*
 // Include the example module
 var Runway = fazzle.module("runway")
 	, Profile = fazzle.module("profile")
@@ -18,6 +18,7 @@ var Runway = fazzle.module("runway")
 // Defining the application router, you can attach sub routers here.
 var Router = Backbone.Router.extend({
 	routes: {
+
 		"": "index",
 		"runway": "display_runway",
 		"profile": "display_profile",
@@ -191,6 +192,6 @@ jQuery(function($) {
 			app.router.navigate(href, true);
 		}
 	});
-});
+}); */
 
 })();

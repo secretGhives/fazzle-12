@@ -1,8 +1,17 @@
-(function(Closet) {
+(function($){
 
-	Closet.Model = Backbone.Model.extend({ /* ... */ });
-	Closet.Collection = Backbone.Collection.extend({ /* ... */ });
-	Closet.Router = Backbone.Router.extend({ /* ... */ });
+FazzleX.Modules.register({
+	id: 'closet',
+	template: "app/templates/closet/main.html"
+});
+
+})(jQuery);
+
+/*(function(Closet) {
+
+	Closet.Model = Backbone.Model.extend({ });
+	Closet.Collection = Backbone.Collection.extend({ });
+	Closet.Router = Backbone.Router.extend({ });
 
 
 	// This will fetch the Main template and render it.
@@ -15,9 +24,6 @@
 				view.el.innerHTML = tmpl();
 				done(view.el);
 
-				/**
-				 * Do stuff here
-				 */
 				console.log("Closet");
 				
 			});
@@ -25,4 +31,4 @@
 	});
 
 
-})(fazzle.module("closet"));
+})(fazzle.module("closet"));*/

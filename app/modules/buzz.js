@@ -1,8 +1,17 @@
-(function(Buzz) {
+(function($){
 
-	Buzz.Model = Backbone.Model.extend({ /* ... */ });
-	Buzz.Collection = Backbone.Collection.extend({ /* ... */ });
-	Buzz.Router = Backbone.Router.extend({ /* ... */ });
+FazzleX.Modules.register({
+	id: 'buzz',
+	template: "app/templates/buzz/main.html"
+});
+
+})(jQuery);
+
+/*(function(Buzz) {
+
+	Buzz.Model = Backbone.Model.extend({ });
+	Buzz.Collection = Backbone.Collection.extend({  });
+	Buzz.Router = Backbone.Router.extend({  });
 
 	// This will fetch the tutorial template and render it.
 	Buzz.Views.Home = Backbone.View.extend({
@@ -14,13 +23,10 @@
 				view.el.innerHTML = tmpl();
 				done(view.el);
 
-				/**
-				 * Do stuff here
-				 */
 				console.log("Buzz");
 				
 			});
 		}
 	});
 
-})(fazzle.module("buzz"));
+})(fazzle.module("buzz"));*/

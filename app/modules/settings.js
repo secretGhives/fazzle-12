@@ -1,8 +1,17 @@
+(function($){
+
+FazzleX.Modules.register({
+	id: 'settings',
+	template: "app/templates/settings/main.html"
+});
+
+})(jQuery);
+/*
 (function(Settings) {
 
-	Settings.Model = Backbone.Model.extend({ /* ... */ });
-	Settings.Collection = Backbone.Collection.extend({ /* ... */ });
-	Settings.Router = Backbone.Router.extend({ /* ... */ });
+	Settings.Model = Backbone.Model.extend({});
+	Settings.Collection = Backbone.Collection.extend({  });
+	Settings.Router = Backbone.Router.extend({ });
 
 
 	// This will fetch the tutorial template and render it.
@@ -15,13 +24,10 @@
 				view.el.innerHTML = tmpl();
 				done(view.el);
 
-				/**
-				 * Do stuff here
-				 */
 				console.log("Settings");
 				
 			});
 		}
 	});
 
-})(fazzle.module("settings"));
+})(fazzle.module("settings"));*/

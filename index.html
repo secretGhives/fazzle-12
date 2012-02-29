@@ -199,13 +199,15 @@
 	<script src="app/modules/register-interest.js"></script>
 	<script src="app/modules/register-suggest.js"></script>
 	<script src="app/modules/help.js"></script>
-	<script src="app/index.js"></script>
+	<!--<script src="app/index.js"></script> -->
 
 
 	<script>
 	!function ($) {
 		$(function(){
 
+			window.fazzleInstance = $('#main').fazzleUi({
+			});
 
 			$('[rel=tip]').tooltip();
 			$(".chzn-select").chosen();

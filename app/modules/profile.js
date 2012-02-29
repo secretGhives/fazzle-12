@@ -1,8 +1,18 @@
-(function(Profile) {
+(function($){
 
-	Profile.Model = Backbone.Model.extend({ /* ... */ });
-	Profile.Collection = Backbone.Collection.extend({ /* ... */ });
-	Profile.Router = Backbone.Router.extend({ /* ... */ });
+FazzleX.Modules.register({
+	id: 'profile',
+	template: "app/templates/profile/main.html"
+});
+
+})(jQuery);
+
+
+/*(function(Profile) {
+
+	Profile.Model = Backbone.Model.extend({ });
+	Profile.Collection = Backbone.Collection.extend({ });
+	Profile.Router = Backbone.Router.extend({ });
 
 
 	// This will fetch the tutorial template and render it.
@@ -32,13 +42,10 @@
 				view.el.innerHTML = tmpl();
 				done(view.el);
 
-				/**
-				 * Do stuff here
-				 */
 				console.log("Profile");
 				
 			});
 		}
 	});
 
-})(fazzle.module("profile"));
+})(fazzle.module("profile")); */
