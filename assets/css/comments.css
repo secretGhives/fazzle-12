@@ -1,61 +1,33 @@
 /* Comments */
 .comments { padding: 11px; border-top: 1px dashed lavender; }
 .photo .comments { padding-bottom: 0; }
+.comments .text { }
 
-.comments .text {
-max-width: 80%;
-min-width: 66%;
-margin: 0;
-}
-
-.comments .msg {
-display:none;
-padding:1px 0 0 42px;
-font-size: 11px;
-color:#999;
-}
-
-.comments li:hover .delete-comment { display: inline-block; }
-.comments .delete-comment {
-display: none;
-position: absolute;
-right: 3px;
-font-size: 9px;
-color: pink;
-top: 3px;
-}
-
+.comments .you:hover .delete-comment { display: inline-block; }
+.comments .delete-comment { display: none; position: absolute; right: 3px; font-size: 9px; color: pink; top: 3px; }
 .comments li.you p:hover { border: 1px solid #eee; }
 
-/* Comments :focus */
-.comment-entree .msg { display:block; }
-.comment-entree .text { width: 74.468085099%; }
-.comment-entree.active .profile { }
-.comment-entree .profile { width: 14.89361702%; display: inline-block; }
+
+
 
 /* Comments :listing */
-.comments-list li {
-padding: 3px 0 0 0;
-display: block;
-overflow: hidden;
-position: relative;
-}
-.comments-list li .comment-entree .msg { padding-bottom: 8px; padding-left: 0; }
+.comments-list li { padding: 3px 0 0 0; display: block; overflow: hidden; position: relative; }
 .comments-list li:first-child { padding-top: 0; }
-.comments-list li p {
-word-break: break-word;
-font-size: 11px;
-line-height: 13px;
-margin-left: 50px;
-}
+.comments-list li p { font-size: 11px; line-height: 13px; margin-left: 50px; }
 .comments-list li.you p { margin-top: 16px; }
 
-.double .comments-list p { max-width: 347px; }
-.large .comments-list p { max-width: 450px; }
-.large-side .comments-list p { max-width: 244px; }
-.single .comments-list p { max-width: 772px; }
-.two-col .comments-list p { max-width: 268px; }
+.double .comments-list {  }
+.large .comments-list {  }
+.large-side .comments-list {  }
+.single .comments-list {  }
+.two-col .comments-list {  }
 
 .comments .profile.url { display: inline-block; float: left; }
 .comment-entree .photo,
 .comments .profile.url img { max-height: 42px; max-width: 42px; width: 42px; }
+
+.entree-wrap { margin-left: 50px; }
+.comment-entree { position: relative; min-height: 42px; }
+.comment-entree .photo { float: left; display: inline-block; }
+.comment-entree .text { display: block; width: 100%; padding-right: 0; padding-left: 0; margin: 0; text-indent: 9px; }
+.comment-entree.active .photo { visibility: hidden; }

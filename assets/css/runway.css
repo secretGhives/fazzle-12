@@ -1,13 +1,13 @@
 /* RUNWAY PAGE 
 ==================*/
-
-.user-runway { overflow: hidden; }
-
+.rw-global-item { position: relative; overflow: hidden; }
+.user-runway { display: inline-block; padding: 0 0 0 90px; margin: 0; }
 .user-icon {
-float: left;
 display: inline-block;
 margin-right: 1em;
-position: relative;
+position: absolute;
+top: 0;
+left: 0;
 }
 .user-icon::before {
 content: '';
@@ -31,14 +31,7 @@ top: 32px;
 right: -5px;
 }
 
-
-.rw-thumbnail-wrap {
-float: left;
-position: relative;
-display: inline-block;
-margin: 1px;
-border: 1px solid #eee;
-}
+.rw-thumbnail-wrap { position: relative; display: inline-block; border: 1px solid #eee; vertical-align: top; }
 .rw-thumbnail-wrap.liked, #page-register-interest .liked  { border-color: rgba(255, 192, 203, 0.6); }
 .rw-thumbnail-wrap.liked a { color: #B50360; }
 .rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
@@ -87,6 +80,15 @@ top: -6px;
 left: 10px;
 }
 
-.subnav-fixed .page-controls {
-width: 940px; margin-left: auto; margin-right: auto;
-}
+.subnav-fixed .page-controls { width: 940px; margin-left: auto; margin-right: auto; }
+
+/* runway page */
+.user-runway.tripple .rw-thumbnail-wrap { max-width: 278px; }
+.user-runway.doubleb .large { max-width: 522px; }
+.user-runway.doubleb .large-side { max-width: 320px; }
+.user-runway.double .rw-thumbnail-wrap { max-width: 421px; }
+.user-runway.single .rw-thumbnail-wrap { max-width: 848px; }
+/* profile page */
+.rw-thumbnail-wrap.ff-first { max-width: 698px; }
+.rw-thumbnail-wrap.two-col { max-width: 346px; }
+#profile-new-liked-stuff .rw-thumbnail-wrap { width: 170px; }
