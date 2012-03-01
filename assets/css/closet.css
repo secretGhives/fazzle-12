@@ -88,3 +88,22 @@ border-top-color: #f3f3f3;
 }
 #closet-edit-view.marge { margin-top: 60px; }
 
+
+
+
+
+/* ITEM VIEWING PAGE */
+#single-item-options.side-fixed {
+background: #fff;
+width: 220px;
+position: fixed;
+top: 42px;
+}
+#item-social {
+padding: 0;
+text-align: center;
+margin-top: 9px;
+background: #FBFBFB;
+border-left: 0;
+border-right: 0;
+}

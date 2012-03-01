@@ -68,6 +68,29 @@
 
 
 	<!-- MODALS -->
+	<!-- modal - Share -->
+	<div id="modal-share" class="modal hide fade" style="display: none; ">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>Share this item</h3>
+		</div>
+		<div class="modal-body">
+			<div class="row-fluid">
+				<figure class="span4">
+					<img src="/assets/img/viewing/view5.jpg">
+				</figure>
+				<div class="span8">
+					<input type="text" class="modal-input" id="upload-description" placeholder="Email or Fazzle username">
+					<textarea name="share-body" id="share-body" class="modal-input" placehold="Enter message.."></textarea>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary btn-large">Share</button>
+						<button type="reset" class="btn">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<!-- modal - Shelves -->
 	<div id="modal-shelves" class="modal hide fade" style="display: none; ">
@@ -96,6 +119,8 @@
 						<option>Bags</option>
 						<option>Assesories</option>
 					</select>
+
+					<a href="#closet/shelves/manage" class="manage-cats-link">Manage shelves</a>
 				</div>
 			</div>
 		</div>

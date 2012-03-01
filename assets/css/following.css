@@ -1,0 +1,46 @@
+.follow-list { position: relative; }
+.follow-list-item {
+position: relative;
+min-height: 69px;
+border-bottom: 1px solid #eee;
+background: snow;
+display: block;
+overflow: hidden;
+}
+.follow-list .vcard {
+position: relative;
+min-height: 69px;
+border-bottom: 1px solid #eee;
+background: snow;
+overflow: hidden;
+display: inline-block;
+vertical-align: top;
+float: left;
+}
+.follow-user-link { position: absolute; top: 32px; left: 82px; }
+.follow-list .vcard .nickname,
+.follow-list .vcard .given-name { margin-top: 6px; display: inline-block; }
+.follow-list .vcard .photo { float: left; display: inline-block; margin-right: 1em; }
+.follow-list .vcard .given-name { color: #666; }
+.follow-list .latest-liked {
+float: right;
+margin: 0;
+display: block;
+padding: 0;
+width: 481px;
+max-width: 481px;
+text-align: right;
+}
+.follow-list .latest-liked li {
+display: inline-block;
+max-width: 111px;
+max-height: 111px;
+padding: 0 0 0 3px;
+border: 0;
+overflow: hidden;
+text-align: center;
+vertical-align: middle;
+margin: 0;
+}
+.follow-list .latest-liked li a { display: block; margin: 0; padding: 0; }
+.follow-list .latest-liked img { padding: 0; margin: 0; }

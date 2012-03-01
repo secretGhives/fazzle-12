@@ -7,6 +7,7 @@
 @import url(closet.css);
 @import url(buzz.css);
 @import url(bubbles.css);
+@import url(following.css);
 
 .ac { text-align: center; }
 .ar { text-align: right; }
@@ -112,6 +113,13 @@ vertical-align: bottom;
 }
 .page-header h1 { display: inline-block; vertical-align: super; }
 
+
+
+/* MODAL SECTION SHARE */
+#modal-share .modal-input { width: 339px; max-width: 339px; }
+#modal-share figure { padding: 0; margin: 0; }
+#modal-share figure img { max-width: 169px; max-height: 191px; }
+#modal-share .modal-body { min-height: 169px; }
 
 
 /* MODAL SECTION SHELVES */
@@ -376,96 +384,20 @@ clear: both;
 
 
 
-/* FULL SCREEN ITEM VIEWER WITH COMMENTS*/
-.fullscreen {
-position: fixed;
-z-index: 9999;
-background: #fff;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: 0;
-padding: 0;
-width: 100%;
-}
-.fullscreen .page-header {
-margin: 0; padding: 0;
-height: 35px;
-background: lavender;
-}
-.fullscreen .ur-sm-avatar {
-margin: 0 13px 0 0;
-padding: 0;
-}
-.fullscreen .page-header h1 {
-margin: 0;
-padding: 0;
-font-size: 1.6em;
-line-height: 34px;
-vertical-align: top;
-}
-.fullscreen #fullscreen-sidebar { 
-background: #eee; 
-width: 420px; 
-position: absolute;
-top: 36px;
-bottom: 0;
-right: 0;
-left: auto;
-overflow-y: auto;
-z-index: 10000;
-}
-.fullscreen .main-image-view {
-background: #fff url(../img/tmp_share.jpg) no-repeat center center;
--webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
-position: absolute;
-top: 36px;
-bottom: 0;
-left: 0;
-right: 0;
-margin: 0;
-padding: 0;
-}
+/* SINGLE ITEM VIEWER */
 #view-image-wrap {
 margin: 0;
 padding: 0;
 text-align: center;
 }
-#fullscreen-sb-toggle {
-position: absolute;
-top: 3px;
-right: 36px;
-}
-#fullscreen-close {
-position: absolute;
-top: 3px;
-right: 6px;
-}
-#fullscreen-sb-toggle span { font-family: 'WebSymbolsRegular'; }
-#sidebar-comment-input-wrap { display: block; text-align: center; }
-#sidebar-comment-input { width: 369px; margin: 0.4em auto 0; display: block; }
-#fullscreen-thumbs {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-top: auto;
+#view-image-wrap figcation {
+display: block;
 text-align: center;
-padding: 0;
-margin: 0;
-background: lavender;
-line-height: 0;
-overflow-x: auto;
-overflow-y: hidden;
-white-space: nowrap;
+font-size: 1.42em;
+margin-top: 9px;
+word-break: break-word;
 }
-#fullscreen-thumbs .thumbnail { display: inline-block; }
-
-
+.view-image-details { color: #999; }
 
 
 

@@ -40,53 +40,6 @@ text-decoration: underline;
 cursor: pointer;
 }
 
-#profile-following-list .vcard {
-position: relative;
-min-height: 69px;
-border-bottom: 1px solid #eee;
-background: snow;
-}
-#profile-following-list .vcard .url {
-overflow: hidden;
-display: inline-block;
-vertical-align: top;
-}
-#profile-following-list .vcard .nickname,
-#profile-following-list .vcard .given-name { margin-top: 6px; display: inline-block; }
-#profile-following-list .vcard .follow-user-link {
-position: absolute;
-bottom: 11px;
-left: 81px;
-}
-#profile-following-list .vcard .photo {
-float: left;
-display: inline-block;
-margin-right: 1em;
-}
-#profile-following-list .vcard .given-name {
-color: #666;
-}
-#profile-following-list .latest-liked {
-float: right;
-margin: 0;
-position: absolute;
-right: 0;
-top: 0;
-}
-#profile-following-list .latest-liked li {
-display: table-cell;
-max-width: 69px;
-max-height: 69px;
-padding: 0 0 0 3px;
-border: 0;
-overflow: hidden;
-text-align: center;
-vertical-align: middle;
-}
-#profile-following-list .latest-liked li a {
-display: block;
-}
-
 .sb-control {padding: 4px 6px;}
 .sb-control .ico-btn {margin: 0;}
 .sb-control.rss {color: orange;}
@@ -128,6 +81,8 @@ line-height: normal;
 #profile-about-table { margin: 0 3em; }
 #profile-about-table td { vertical-align: top; }
 #profile-about-table .ar { font-size: smaller; color: #999; }
+
+.photo-stacks { padding-bottom: 2em; }
 .image_stack {
 width: 200px;
 position: relative;

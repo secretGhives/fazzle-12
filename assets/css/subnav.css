@@ -90,3 +90,21 @@
             border-radius: 0;
   }
 }
+
+
+/* Profile page subnav */
+#profile-tabs.subnav {
+height: 33px;
+border-top: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+#profile-tabs.toolbar-fixed {
+position: fixed;
+top: 41px;
+background: #eee;
+width: 698px;
+z-index: 9;
+padding: 0;
+border-bottom: 1px solid #aaa;
+}
