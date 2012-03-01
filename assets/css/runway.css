@@ -80,8 +80,6 @@ top: -6px;
 left: 10px;
 }
 
-.subnav-fixed .page-controls { width: 940px; margin-left: auto; margin-right: auto; }
-
 /* runway page */
 .user-runway.tripple .rw-thumbnail-wrap { max-width: 278px; }
 .user-runway.doubleb .large { max-width: 522px; }

@@ -1,3 +1,4 @@
+@import url(chosen.css);
 @import url(custom.css);
 @import url(header.css);
 @import url(subnav.css);
@@ -8,6 +9,7 @@
 @import url(buzz.css);
 @import url(bubbles.css);
 @import url(following.css);
+@import url(achievements.css);
 
 .ac { text-align: center; }
 .ar { text-align: right; }
@@ -211,13 +213,6 @@ overflow-y: auto;
 
 #stats-overview h3 { color: #999; }
 #stats-overview h3 em { font-size: 1.3em; color: #333; }
-#stats-achievements .trophy {
-display: inline-block;
-position: relative;
-padding-left: 56px;
-max-width: 159px;
-}
-#stats-achievements .trophy img { position: absolute; top: 3px; left: 3px; }
 #stats-tops .span3 a { display: inline-block; }
 #stats-tops { margin-bottom: 3em; }
 
@@ -234,30 +229,6 @@ max-width: 159px;
 
 
 /* RUNWAY PAGE */
-.Mo { float: right; margin-right: -55px; }
-.Mo .btn { border: 0; background: 0; box-shadow: 0 0 0 #fff; padding: 0 3px; line-height: normal; }
-.Mo .dropdown-menu { left: auto; right: 0; }
-
-.egg img { margin: 0.6em; max-width: 132px; border-radius: 50% 50% 50% 50%/60% 60% 40% 40%; }
-.egg {
-display: inline-block;
-background-color: gold;
--webkit-border-radius: 63px 63px 63px 63px/ 108px 108px 72px 72px;
-border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-}
-.egg:hover {
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
-filter: alpha(opacity=99);
--webkit-box-shadow: 0px 0px 32px 13px rgba(255,244,193,0.8);
--moz-box-shadow: 0px 0px 32px 13px rgba(255,244,193,0.8);
-box-shadow: 0px 0px 32px 13px rgba(255,244,193,0.8);
-}
-
 .comment-body-wrap {
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;

@@ -57,7 +57,7 @@ cursor: pointer;
 #profile-view .sidebar .side-links { display: inline-block; }
 .profile-well { margin-bottom: 0; padding: 6px; }
 .shelves.well { padding: 9px; }
-#profile-view .well { padding: 0.3em 1em; }
+#profile-view #stats-counters .well { padding: 0.3em 1em; }
 #profile-about .well { padding: 0; }
 /* .like.active { background: pink; } */
 .like.active::before { color: red; }
