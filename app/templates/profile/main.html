@@ -349,7 +349,7 @@
 								<img src="//placehold.it/69x69" class="photo">
 								<strong class="nickname">username</strong>
 							</a>
-							<button class="btn follow-user-link following active" data-toggle="button">Following</button>
+							<a href="#" class="follow-user-link following active">following</a>
 							<ul class="latest-liked">
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
@@ -363,7 +363,7 @@
 								<img src="//placehold.it/69x69" class="photo">
 								<strong class="nickname">username</strong>
 							</a>
-							<button class="btn follow-user-link following active" data-toggle="button">Following</button>
+							<a href="#" class="follow-user-link following active">following</a>
 							<ul class="latest-liked">
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
@@ -377,7 +377,7 @@
 								<img src="//placehold.it/69x69" class="photo">
 								<strong class="nickname">username</strong>
 							</a>
-							<button class="btn follow-user-link following active" data-toggle="button">Following</button>
+							<a href="#" class="follow-user-link following active">following</a>
 							<ul class="latest-liked">
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
 								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
@@ -666,6 +666,12 @@
 		});
 		$(".entree-wrap .text").blur(function() {
 			$(this).parent().parent().removeClass('focused');
+		});
+
+		$(".follow-user-link.following.active").click(function() {
+			$(this).text("follow").removeClass("following active").parent().fadeOut("slow");
+			alert("You are no longer following Persons Name", "error");
+			return false;
 		});
 
 		$(".chzn-select").chosen();

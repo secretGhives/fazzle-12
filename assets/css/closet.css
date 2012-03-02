@@ -108,3 +108,6 @@ background: #FBFBFB;
 border-left: 0;
 border-right: 0;
 }
+#viewing-haveit-click .iconic.active {  }
+#viewing-feature-click .iconic.active { color: orange; font-size: 18px; }
+#viewing-towishlist-click .iconic.active { color: red; }

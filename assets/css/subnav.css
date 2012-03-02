@@ -113,7 +113,7 @@ border-bottom: 1px solid #aaa;
 #closet-view .subnav-fixed {
 position: fixed;
 top: 41px;
-left: 370px;
+left: 0;
 right: 0;
 z-index: 1020;
 border-color: #d5d5d5;
@@ -126,4 +126,5 @@ border-radius: 0;
 box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
 filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-#closet-view .subnav-fixed .page-controls { width: auto; margin-left: auto; margin-right: auto; }
+#closet-view .sidebar .subnav-fixed { left: 370px; }
+#closet-view .sidebar .subnav-fixed .page-controls { width: auto; margin-left: auto; margin-right: auto; }

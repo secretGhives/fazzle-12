@@ -1,3 +1,5 @@
+@import url(fonts.css);
+@import url(notifications.css);
 @import url(chosen.css);
 @import url(custom.css);
 @import url(header.css);
@@ -378,28 +380,6 @@ word-break: break-word;
 .sidebar .nav-tabs { width: 100%; }
 
 
-
-/* TOP NOTIFICATIONS STYLES */
-.app-notification {
-	padding: 6px 9px;
-	margin: 0;
-	font-size: 11px;
-	color: #ffffff;
-	text-transform: uppercase;
-	background-color: #999999;
-}
-.app-notification.important {
-	background-color: #b94a48;
-}
-.app-notification.warning {
-	background-color: #f89406;
-}
-.app-notification.success {
-	background-color: #468847;
-}
-.app-notification.info {
-	background-color: #3a87ad;
-}
 
 
 

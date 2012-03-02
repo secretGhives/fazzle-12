@@ -167,7 +167,7 @@
 							<img src="//placehold.it/69x69" class="photo">
 							<strong class="nickname">username</strong>
 						</a>
-						<button class="btn follow-user-link" data-toggle="button">Follow</button>
+						<a href="#" class="follow-user-link">follow</a>
 						<ul class="latest-liked">
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -181,7 +181,7 @@
 							<img src="//placehold.it/69x69" class="photo">
 							<strong class="nickname">username</strong>
 						</a>
-						<button class="btn follow-user-link" data-toggle="button">Follow</button>
+						<a href="#" class="follow-user-link">follow</a>
 						<ul class="latest-liked">
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -195,7 +195,7 @@
 							<img src="//placehold.it/69x69" class="photo">
 							<strong class="nickname">username</strong>
 						</a>
-						<button class="btn follow-user-link" data-toggle="button">Follow</button>
+						<a href="#" class="follow-user-link">follow</a>
 						<ul class="latest-liked">
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -212,13 +212,13 @@
 			<div id="single-item-options">
 				<ul class="nav nav-list">
 					<li class="nav-header">List header</li>
-					<li><a data-toggle="modal" href="#modal-shelves"><i class="icon-plus"></i> Add to shelf</a></li>
-					<li><a href="#"><i class="icon-gift"></i> Add to wishlist</a></li>
-					<li><a href="#"><i class="icon-check"></i> I've got it</a></li>
+					<li><a data-toggle="modal" href="#modal-shelves"><i class="iconic plus"></i> Add to shelf</a></li>
+					<li><a id="viewing-towishlist-click" href="#"><i class="iconic box"></i> Add to wishlist</a></li>
+					<li><a id="viewing-haveit-click" href="#"><i class="iconic check"></i> I have it</a></li>
 					<li class="nav-header">Another list header</li>
-					<li><a href="#"><i class="icon-star"></i> Feature on my page</a></li>
-					<li><a data-toggle="modal" href="#modal-share"><i class="icon-share"></i> Share</a></li>
-					<li><a href="#"><i class="icon-shopping-cart"></i> BUY</a></li>
+					<li><a id="viewing-feature-click" href="#"><i class="iconic star"></i> Feature on my page</a></li>
+					<li><a data-toggle="modal" href="#modal-share"><i class="iconic share"></i> Share</a></li>
+					<li><a id="viewing-buy-click" href="#"><i class="iconic tag_fill"></i> BUY</a></li>
 				</ul>
 
 				<div class="well" id="item-social">
@@ -256,6 +256,49 @@
 				$(this).text("Like");
 				$(this).removeClass("active").parent().removeClass("active");
 				$(this).parent().parent().parent().removeClass("liked");
+			}
+		);
+
+		$("#viewing-towishlist-click").toggle(
+			function(){
+				$(this).children('.iconic').addClass("active");
+				alert("Added Title of this item to Wishlist", "success");
+			}, 
+			function(){
+				$(this).children('.iconic').removeClass("active");
+				alert("This item has been removed from your Wishlist");
+			}
+		);
+
+		$("#viewing-haveit-click").toggle(
+			function(){
+				$(this).children('.iconic').addClass("active");
+			}, 
+			function(){
+				$(this).children('.iconic').removeClass("active");
+				alert("You no longer own this item");
+			}
+		);
+
+		$("#viewing-feature-click").toggle(
+			function(){
+				$(this).children('.iconic').addClass("active");
+				alert("This item is now Featured on your profile");
+			}, 
+			function(){
+				$(this).children('.iconic').removeClass("active");
+				alert("This item is no longer featured on your profile");
+			}
+		);
+
+		$(".follow-user-link").toggle(
+			function(){
+				$(this).text("following").addClass("following active");
+				alert("You are now following Persons Name", "success");
+			}, 
+			function(){
+				$(this).text("follow").removeClass("following active");
+				alert("You are no longer following Persons Name", "error");
 			}
 		);
 
