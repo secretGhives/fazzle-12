@@ -302,7 +302,7 @@
 			<div id="create-look-wrap">
 				<input type="text" id="create-look-name" placeholder="Name new look.."/>
 				<div id="create-look-dropzone" class="ac well droppable" rel="pop" data-content="Drop items from the right into this area. Click on the item to remove it.  Press Clear to empty entire box." data-original-title="Drag n Drop" data-placement="top"></div>
-				<button class="btn btn-success btn-large">Save</button>
+				<a data-toggle="modal" href="#modal-shelves" class="btn btn-success btn-large"><i class="icon-plus"></i> Save</a>
 				<a class="btn btn-info btn-large" data-toggle="modal" href="#modal-share">Share</a>
 				<button class="btn" onclick="$('.droppable').html(''); alert('Cleared', 'success');">Clear</button>
 
@@ -362,12 +362,14 @@
 				$(this).text('Save');
 				$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
 				$('#closet-delete-shelf').removeAttr("disabled").removeClass("disabled");
+				$('.accordion-body').css({'height': 'auto'}).addClass('in');
 				alert("Editing closet");
 			}, function() {
 				$(this).removeClass('active btn-success');
 				$(this).text('Edit');
 				$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
 				$('#closet-delete-shelf').attr("disabled", "disabled").addClass("disabled");
+				$('.accordion-body').css({'height': '0px'}).removeClass('in');
 				alert("Finished editing");
 		});
 
