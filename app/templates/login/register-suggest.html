@@ -36,7 +36,7 @@ hr {border-bottom: 1px solid #DDD;}
 					<img src="//placehold.it/69x69" class="photo">
 					<strong class="nickname">username</strong>
 				</a>
-				<button class="btn follow-user-link" data-toggle="button">Follow</button>
+				<a href="#" class="follow-user-link">follow</a>
 				<ul class="latest-liked">
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -50,7 +50,7 @@ hr {border-bottom: 1px solid #DDD;}
 					<img src="//placehold.it/69x69" class="photo">
 					<strong class="nickname">username</strong>
 				</a>
-				<button class="btn follow-user-link" data-toggle="button">Follow</button>
+				<a href="#" class="follow-user-link">follow</a>
 				<ul class="latest-liked">
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -64,7 +64,7 @@ hr {border-bottom: 1px solid #DDD;}
 					<img src="//placehold.it/69x69" class="photo">
 					<strong class="nickname">username</strong>
 				</a>
-				<button class="btn follow-user-link" data-toggle="button">Follow</button>
+				<a href="#" class="follow-user-link">follow</a>
 				<ul class="latest-liked">
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 					<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -81,7 +81,16 @@ hr {border-bottom: 1px solid #DDD;}
 !function ($) {
 	$(function(){
 
-
+		$(".follow-user-link").toggle(
+			function(){
+				$(this).text("following").addClass("following active");
+				alert("You are now following Persons Name", "success");
+			}, 
+			function(){
+				$(this).text("follow").removeClass("following active");
+				alert("You are no longer following Persons Name", "error");
+			}
+		);
 
 	})
 }(window.jQuery)

@@ -11,7 +11,7 @@ text-shadow: 0 0 0;
 #header-user-controls .user-img { padding: 0 0.6em 0 0; }
 #header-user-controls .user-img img {
 width: auto;
-height: 32px;
+height: 33px;
 padding: 0;
 display: inline-block;
 vertical-align: middle;
@@ -55,7 +55,14 @@ box-shadow: 0 0 0;
 background-color: #111;
 outline: 0;
 }
-
+#header-user-controls .btn .caret { color: white; margin-top: 11px; border-top: 4px solid white; }
+#header-user-controls .dropdown-toggle {
+height: 25px;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+#header-user-controls .user-img {  }
 
 /* search input */
 #header-find { padding: 0; line-height: 32px !important; } 

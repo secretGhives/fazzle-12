@@ -338,7 +338,54 @@
 
 				<!-- Followers Tab -->
 				<div class="tab-pane fade" id="profile-followers">
-				followers
+
+					<div class="well">
+						<p>No one is following you? No worries, your time will come!</p>
+					</div>
+
+					<ol id="profile-followers-list" class="unstyled follow-list">
+						<li class="follow-list-item">
+							<a href="#profile" class="url vcard">
+								<img src="//placehold.it/69x69" class="photo">
+								<strong class="nickname">username</strong>
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+							<ul class="latest-liked">
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+							</ul>		
+						</li>
+
+						<li class="follow-list-item">
+							<a href="#profile" class="url vcard">
+								<img src="//placehold.it/69x69" class="photo">
+								<strong class="nickname">username</strong>
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+							<ul class="latest-liked">
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+							</ul>		
+						</li>
+
+						<li class="follow-list-item">
+							<a href="#profile" class="url vcard">
+								<img src="//placehold.it/69x69" class="photo">
+								<strong class="nickname">username</strong>
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+							<ul class="latest-liked">
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+								<li><a href="#closet/item"><img src="//placehold.it/69x69" alt=""></a></li>
+							</ul>		
+						</li>
+					</ol>
 				</div>
 
 				<!-- Following Tab -->
@@ -668,11 +715,22 @@
 			$(this).parent().parent().removeClass('focused');
 		});
 
-		$(".follow-user-link.following.active").click(function() {
+		$("#profile-following-list .follow-user-link.following.active").click(function() {
 			$(this).text("follow").removeClass("following active").parent().fadeOut("slow");
 			alert("You are no longer following Persons Name", "error");
 			return false;
 		});
+
+		$("#profile-followers-list .follow-user-link").toggle(
+			function(){
+				$(this).text("following").addClass("following active");
+				alert("You are now following Persons Name", "success");
+			}, 
+			function(){
+				$(this).text("follow").removeClass("following active");
+				alert("You are no longer following Persons Name", "error");
+			}
+		);
 
 		$(".chzn-select").chosen();
 

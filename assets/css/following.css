@@ -44,3 +44,6 @@ margin: 0;
 }
 .follow-list .latest-liked li a { display: block; margin: 0; padding: 0; }
 .follow-list .latest-liked img { padding: 0; margin: 0; }
+
+/* profile page */
+#profile-view .follow-user-link { top: 32px; }

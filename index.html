@@ -23,30 +23,38 @@
 			<div class="navbar-inner">
 				<div class="container">
 
-					<a class="brand section-link" href="#runway">fazzle<em class="ico-btn">R</em>me</a>
+					<a class="brand section-link" href="#random">fazzle<em class="ico-btn">R</em>me</a>
 
-						<div id="header-user-controls" class="btn-group"><!-- URdFSZX -->
-							<a class="btn section-link" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
-							<a class="btn user-img section-link" href="#profile" rel="tip" data-placement="bottom" title="Profile"><img src="./assets/img/ruso.png"alt=""> Profile</a>
-							<a class="btn section-link" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span> Closet</a>
-							<a class="btn" data-toggle="modal" href="#modal-upload-items" rel="tip" data-placement="bottom" title="Upload"><span class="ico-btn">+</span></a>
-							<a class="btn section-link" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span> Buzz <span class="ico-count btn-danger">99</span></a>
-							<a class="btn" href="#find" rel="tip" data-placement="bottom" title="Find" id="header-find"><input id="header-find-input" type="search" placeholder="Find friends.."><span class="ico-btn">L</span></a>
-						</div>
+					<div id="header-user-controls" class="btn-group"><!-- URdFSZX -->
+						<a class="btn section-link" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#" rel="tip" data-placement="bottom" title="Browse"><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#runway/popular">Popular right now</a></li>
+							<li><a href="#runway/top">Top contributors</a></li>
+							<li><a href="#runway/brands">Stores & Brands</a></li>
+							<li class="divider"></li>
+							<li><a href="#runway/women">Women Clothing</a></li>
+							<li><a href="#runway/men">Men Clothing</a></li>
+						</ul>
 
-						<div id="header-user-menu" class="btn-group">
-							<a class="btn user-link section-link" href="#settings">Mister Fabulous</a>
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#settings"><i class="icon pencil"></i> Account</a></li>
-								<li><a href="#settings"><i class="icon trash"></i> Privacy</a></li>
-								<li class="divider"></li>
-								<li><a href="#help"><i class="icon"></i> Help</a></li>
-								<li><a href="#login"><i class="icon"></i> Logout</a></li>
-							</ul>
-						</div>
+						<a class="btn user-img section-link" href="#profile" rel="tip" data-placement="bottom" title="Profile"><img src="./assets/img/ruso.png"alt=""> Profile</a>
+						<a class="btn section-link" href="#closet" rel="tip" data-placement="bottom" title="Closet"><span class="ico-btn">Z</span> Closet</a>
+						<a class="btn" data-toggle="modal" href="#modal-upload-items" rel="tip" data-placement="bottom" title="Upload"><span class="ico-btn">+</span></a>
+						<a class="btn section-link" href="#buzz" rel="tip" data-placement="bottom" title="Buzz"><span class="ico-btn">d</span> Buzz <span class="ico-count btn-danger">99</span></a>
+						<a class="btn" href="#find" rel="tip" data-placement="bottom" title="Find" id="header-find"><input id="header-find-input" type="search" placeholder="Find friends.."><span class="ico-btn">L</span></a>
+					</div>
 
-
+					<div id="header-user-menu" class="btn-group">
+						<a class="btn user-link section-link" href="#settings">Mister Fabulous</a>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#settings/account"><i class="icon pencil"></i> Account</a></li>
+							<li><a href="#settings/privacy"><i class="icon trash"></i> Privacy</a></li>
+							<li class="divider"></li>
+							<li><a href="#help"><i class="icon"></i> Help</a></li>
+							<li><a href="#login"><i class="icon"></i> Logout</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -67,6 +75,43 @@
 
 
 	<!-- MODALS -->
+	<!-- modal - manage shelves -->
+	<div id="modal-manage-shelves" class="modal hide fade" style="display: none; ">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>Manage shelves</h3>
+		</div>
+		<div class="modal-body">
+			<h4>List of all the shelves you've created</h4>
+			<p>List will be able to rename the shelf and also delete the shelf.  When deleting a shelf, question will be asked where to move all of the items in the shelf, or just dispose of them completely.</p>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Save changes</a>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+	</div>
+
+	<!-- modal - manage password -->
+	<div id="modal-manage-password" class="modal hide fade" style="display: none; ">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>Change your password</h3>
+		</div>
+		<div class="modal-body">
+			<h4>Current password</h4>
+			<p><input type="text" id="manage-password-old" class="text"></p>
+
+			<h4>New password</h4>
+			<p><input type="password" id="manage-password-new" class="text">
+				<input type="password" id="manage-password-repeat" class="text"></p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Save changes</a>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+	</div>
+	
 	<!-- modal - Share -->
 	<div id="modal-share" class="modal hide fade" style="display: none; ">
 		<div class="modal-header">
@@ -81,12 +126,12 @@
 				<div class="span8">
 					<input type="text" class="modal-input" id="upload-description" placeholder="Email or Fazzle username">
 					<textarea name="share-body" id="share-body" class="modal-input" placehold="Enter message.."></textarea>
-					<div class="form-actions">
-						<button type="submit" class="btn btn-primary btn-large">Share</button>
-						<button type="reset" class="btn">Cancel</button>
-					</div>
 				</div>
 			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Share</a>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
 		</div>
 	</div>
 
