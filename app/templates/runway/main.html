@@ -8,14 +8,14 @@
 		<div class="subnav ar">
 
 			<div id="runway-controls" class="btn-toolbar page-controls">
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-cog"></i> Customize</a>
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Feautred items</a></li>
-						<li><a href="#">People you follow</a></li>
-						<li><a href="#">Shared with you</a></li>
-						<li><a href="#">Stuff you liked</a></li>
+
+				<div class="btn-group popdown-wrap">
+					<a class="popdown" href="#" data-toggle="popdown"><i class="icon-cog"></i> Customize</a>
+					<ul class="popdown-menu">
+						<li><label class="checkbox"><input type="checkbox"> Feautred items</label></li>
+						<li><label class="checkbox"><input type="checkbox"> People you follow</label></li>
+						<li><label class="checkbox"><input type="checkbox"> Shared with you</label></li>
+						<li><label class="checkbox"><input type="checkbox"> Stuff you liked</label></li>
 					</ul>
 				</div>
 				
@@ -475,6 +475,16 @@
 	$(function(){
 
 
+		$(".popdown").toggle(
+			function(){
+				$(this).next('.popdown-menu').show();
+			}, 
+			function(){
+				$(this).next('.popdown-menu').hide();
+			}
+		);
+
+
 		$(".button.like").toggle(
 			function(){
 				$(this).text("Dislike");
@@ -493,7 +503,6 @@
 			$(this).parent().next().slideToggle();
 			return false;
 		});
-
 
 		$(".entree-wrap .text").focus(function() {
 			$(this).parent().parent().addClass('focused');

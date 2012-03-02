@@ -82,7 +82,7 @@ line-height: normal;
 #profile-about-table td { vertical-align: top; }
 #profile-about-table .ar { font-size: smaller; color: #999; }
 
-.photo-stacks { padding-bottom: 2em; }
+.photo-stacks { padding: 1.6em 0 2em 1em; }
 .image_stack {
 width: 200px;
 position: relative;
