@@ -50,10 +50,11 @@ font-size: smaller;
 
 
 .page-controls {
-top: 4px;
-right: 4px;
-margin: 0;
+top: 1px;
+right: 6px;
+margin: 3px auto;
 position: relative;
+width: 940px;
 }
 
 
@@ -86,6 +87,16 @@ left: 10px;
 .user-runway.doubleb .large-side { max-width: 320px; }
 .user-runway.double .rw-thumbnail-wrap { max-width: 421px; }
 .user-runway.single .rw-thumbnail-wrap { max-width: 848px; }
+
+/* rw - list (follow) */
+#runway-list-follow .latest-liked img { width: 170px; }
+#runway-list-follow .latest-liked li { max-width: 173px; max-height: 100%; }
+#runway-list-follow .latest-liked { width: 711px; max-width: 711px; }
+
+/* rw - columns (2 cols)*/
+#runway-columns .rw-thumbnail-wrap.two-col { max-width: 466px; }
+
+
 /* profile page */
 .rw-thumbnail-wrap.ff-first { max-width: 698px; }
 .rw-thumbnail-wrap.two-col { max-width: 346px; }

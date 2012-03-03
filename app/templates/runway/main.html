@@ -24,10 +24,10 @@
 					<a class="btn" href="#"><i class="icon-th"></i></a>
 					<a class="btn" href="#"><i class="icon-th-list"></i></a>
 				</div> -->
-				<div class="btn-group" data-toggle="buttons-radio">
-					<button class="btn active">Random</button>
-					<button class="btn">Columns</button>
-					<button class="btn">List</button>
+				<div id="runway-control-buttons" class="btn-group" data-toggle="buttons-radio">
+					<button rel="runway-global" class="btn rw-random active">Random</button>
+					<button rel="runway-columns" class="btn rw-columns">Columns</button>
+					<button rel="runway-list" class="btn rw-list">List</button>
 				</div>
 			</div>
 		</div>
@@ -35,9 +35,8 @@
 
 	<hr/>
 
-	<section id="runway-global">
-
-
+	<!-- Runway Global -->
+	<section id="runway-global" class="rw-filter">
 		<!-- tripple -->
 		<div class="rw-global-item">
 			<a href="#profile" class="user-icon">
@@ -465,7 +464,336 @@
 			</div>
 			<hr/>
 		</div>
+	</section>
 
+	<!-- Runway Columns -->
+	<section id="runway-columns" class="rw-filter hide">
+		<article class="rw-thumbnail-wrap two-col">
+			<figure>
+				<a href="#viewing" class="rw-thumbnail">
+					<img src="http://placehold.it/466x466" alt="">
+				</a>
+				<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+			</figure>
+			<aside class="rw-thumbnail-detail">
+				<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+				<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+				<span class="rw-item-liked">liked by 99999</span>
+				<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
+			</aside>
+			<!-- comments -->
+			<section class="comments comments-list">
+				<ol class="unstyled">
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+					</li>
+					
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Beautifil!</p>
+					</li>
+
+					<li class="you">
+						<a href="#profile" class="profile url">
+							<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+						</a>
+						<a href="#"  class="delete-comment">Delete</a>
+						<p>that piece of string hanging off her right leg is really bothering me</p>
+					</li>
+				</ol>
+				
+				<div class="comment-entree">
+					<img src="/assets/img/ruso.png" alt="" class="photo" />
+					<div class="entree-wrap">
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+					</div>
+				</div>
+			</section>
+			<!-- / comments -->
+		</article>
+		<!--  -->
+		<article class="rw-thumbnail-wrap two-col">
+			<figure>
+				<a href="#viewing" class="rw-thumbnail">
+					<img src="http://placehold.it/466x466" alt="">
+				</a>
+				<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+			</figure>
+			<aside class="rw-thumbnail-detail">
+				<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+				<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+				<span class="rw-item-liked">liked by 99999</span>
+				<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
+			</aside>
+			<!-- comments -->
+			<section class="comments comments-list">
+				<ol class="unstyled">
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+					</li>
+					
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Beautifil!</p>
+					</li>
+
+					<li class="you">
+						<a href="#profile" class="profile url">
+							<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+						</a>
+						<a href="#"  class="delete-comment">Delete</a>
+						<p>that piece of string hanging off her right leg is really bothering me</p>
+					</li>
+				</ol>
+				
+				<div class="comment-entree">
+					<img src="/assets/img/ruso.png" alt="" class="photo" />
+					<div class="entree-wrap">
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+					</div>
+				</div>
+			</section>
+			<!-- / comments -->
+		</article>
+		<!--  -->
+		<article class="rw-thumbnail-wrap two-col">
+			<figure>
+				<a href="#viewing" class="rw-thumbnail">
+					<img src="http://placehold.it/466x466" alt="">
+				</a>
+				<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+			</figure>
+			<aside class="rw-thumbnail-detail">
+				<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+				<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+				<span class="rw-item-liked">liked by 99999</span>
+				<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
+			</aside>
+			<!-- comments -->
+			<section class="comments comments-list">
+				<ol class="unstyled">
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+					</li>
+					
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Beautifil!</p>
+					</li>
+
+					<li class="you">
+						<a href="#profile" class="profile url">
+							<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+						</a>
+						<a href="#"  class="delete-comment">Delete</a>
+						<p>that piece of string hanging off her right leg is really bothering me</p>
+					</li>
+				</ol>
+				
+				<div class="comment-entree">
+					<img src="/assets/img/ruso.png" alt="" class="photo" />
+					<div class="entree-wrap">
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+					</div>
+				</div>
+			</section>
+			<!-- / comments -->
+		</article>
+		<!--  -->
+		<article class="rw-thumbnail-wrap two-col">
+			<figure>
+				<a href="#viewing" class="rw-thumbnail">
+					<img src="http://placehold.it/466x466" alt="">
+				</a>
+				<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+			</figure>
+			<aside class="rw-thumbnail-detail">
+				<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+				<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+				<span class="rw-item-liked">liked by 99999</span>
+				<a class="spch-bub-inside" href="#runway"><em>999+</em></a>
+			</aside>
+			<!-- comments -->
+			<section class="comments comments-list">
+				<ol class="unstyled">
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows</p>
+					</li>
+					
+					<li>
+						<a href="#profile" class="profile url">
+							<img src="//placehold.it/42x42" rel="tip" title="someotheruser" class="photo" />
+						</a>
+						<p>Beautifil!</p>
+					</li>
+
+					<li class="you">
+						<a href="#profile" class="profile url">
+							<img src="/assets/img/ruso.png" rel="tip" title="misterfabulous" class="photo">
+						</a>
+						<a href="#"  class="delete-comment">Delete</a>
+						<p>that piece of string hanging off her right leg is really bothering me</p>
+					</li>
+				</ol>
+				
+				<div class="comment-entree">
+					<img src="/assets/img/ruso.png" alt="" class="photo" />
+					<div class="entree-wrap">
+						<textarea name="comment-msg" rows="1" class="text" placeholder="comment.." rel="tip" data-placement="down" data-title="Press enter to post your comment"></textarea>
+					</div>
+				</div>
+			</section>
+			<!-- / comments -->
+		</article>
+	</section>
+
+	<!-- Runway List -->
+	<section id="runway-list" class="rw-filter hide">
+		<ol id="runway-list-follow" class="unstyled follow-list">		
+			<li class="follow-list-item">
+				<a href="#profile" class="url vcard">
+					<img src="//placehold.it/69x69" class="photo">
+					<strong class="nickname">username</strong>
+				</a>
+				<a href="#" class="follow-user-link">follow</a>
+				<ul class="latest-liked">
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+				</ul>		
+			</li>
+
+			<li class="follow-list-item">
+				<a href="#profile" class="url vcard">
+					<img src="//placehold.it/69x69" class="photo">
+					<strong class="nickname">username</strong>
+				</a>
+				<a href="#" class="follow-user-link">follow</a>
+				<ul class="latest-liked">
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+				</ul>		
+			</li>
+
+			<li class="follow-list-item">
+				<a href="#profile" class="url vcard">
+					<img src="//placehold.it/69x69" class="photo">
+					<strong class="nickname">username</strong>
+				</a>
+				<a href="#" class="follow-user-link">follow</a>
+				<ul class="latest-liked">
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+					<li class="rw-thumbnail-wrap">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/170x170" alt="">
+							</a>
+							<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						</figure>
+					</li>
+				</ul>		
+			</li>
+		</ol>
 	</section>
 
 	</div>
@@ -474,6 +802,24 @@
 !function ($) {
 	$(function(){
 
+		$("#runway-list .follow-user-link").toggle(
+			function(){
+				$(this).text("following").addClass("following active");
+				alert("You are now following Persons Name", "success");
+			}, 
+			function(){
+				$(this).text("follow").removeClass("following active");
+				alert("You are no longer following Persons Name", "error");
+			}
+		);
+
+		$("#runway-control-buttons button").click(function(){
+			var curValue = $(this).attr('rel'),
+					targets = $('section.rw-filter');
+			targets.addClass('hide');
+			$("section#" + curValue).removeClass('hide');
+
+		});
 
 		$(".popdown").toggle(
 			function(){

@@ -11,7 +11,7 @@ text-shadow: 0 0 0;
 #header-user-controls .user-img { padding: 0 0.6em 0 0; }
 #header-user-controls .user-img img {
 width: auto;
-height: 33px;
+height: 32px;
 padding: 0;
 display: inline-block;
 vertical-align: middle;
@@ -24,6 +24,7 @@ margin: 0;
 position: relative;
 top: 7px;
 }
+#header-user-menu .dropdown-menu { min-width: 133px; }
 #header-user-controls {
 display: inline-block;
 margin: 0;
@@ -57,7 +58,7 @@ outline: 0;
 }
 #header-user-controls .btn .caret { color: white; margin-top: 11px; border-top: 4px solid white; }
 #header-user-controls .dropdown-toggle {
-height: 25px;
+/*height: 25px;*/
 -webkit-border-radius: 0;
 -moz-border-radius: 0;
 border-radius: 0;
