@@ -116,3 +116,4 @@ border-right: 0;
 #closet-edit-view .editable { width: 100%; max-width: 370px; }
 #closet-edit-view .edit-label { margin-top: 1em; font-weight: bold; }
 #closet-edit-view #edit-image-wrap { margin: 0; }
+#closet-edit-view #edit-category_chzn { max-width: 380px; min-width: 220px; width: auto !important; }
