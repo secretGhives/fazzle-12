@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html><head><title>Grabber</title>
+<link rel="stylesheet" media="all" href="/assets/css/bootstrap.css" />
+<link rel="stylesheet" media="all" href="grabber.css" />
+
+<script src="/assets/libs/jquery/jquery.js"></script>
+<script src="/assets/libs/jquery/jqueryui-min.js" language="javascript"></script>
+<script src="/assets/libs/jquery/countdown-min.js" language="javascript"></script>
+<script src="grabber.js" language="javascript"></script>
+<script src="helper.js" language="javascript"></script>
+
+<script type="text/javascript">
+$(document).ajaxSend(function(event, xhr, settings) {
+function getCookie(name) {
+	var cookieValue = null;
+	if (document.cookie && document.cookie != '') {
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = jQuery.trim(cookies[i]);
+			// Does this cookie string begin with the name we want?
+			if (cookie.substring(0, name.length + 1) == (name + '=')) {
+				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				break;
+			}
+		}
+	}
+	return cookieValue;
+}
+function sameOrigin(url) {
+	// url could be relative or scheme relative or absolute
+	var host = document.location.host; // host + port
+	var protocol = document.location.protocol;
+	var sr_origin = '//' + host;
+	var origin = protocol + sr_origin;
+	// Allow absolute or scheme relative URLs to same origin
+	return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+		(url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+		// or any other URL that isn't scheme relative or absolute i.e relative.
+		!(/^(\/\/|http:|https:).*/.test(url));
+}
+function safeMethod(method) {
+	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+function postMethod(method) {
+	return (/^POST$/.test(method));
+}
+if (postMethod(settings.type) && sameOrigin(settings.url)) {
+	var val_cookie = getCookie('csrftoken');
+	if(typeof(val_cookie) != undefined && val_cookie != null && val_cookie.length > 0 )
+		xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+}
+});
+</script>
+
+</head>
+
+<body class="tagger-js" style="background-color: #eff1f7;">
+<div id="main">
+
+	<form class="no_image" style="display:none;">
+		<div id="f-head" class="brand">
+			<a class="close_box" href="#">x</a>
+			fazzle<em>*</em>me
+		</div>
+		<div id="f-main">
+			*
+			<p><strong>Couldn't find any good images on this page.</strong></p>
+			<p>The images might not be large enough, or they might be protected or inside a web plugin.</p>
+			<p>Try again on a different page?</p>
+		</div>
+		<div id="f-foot">
+			<a class="btn close_box" href="#">Cancel</a>
+		</div>
+	</form>
+
+	<form class="add_thing" style="display:none;">
+		<div id="f-head" class="brand">
+			<a class="close_box" href="#">x</a>
+			fazzle<em>*</em>me
+		</div>
+		<div id="f-main">
+			<img class="f-preview" id="f-picked-image" src="" pick_id="">
+			<div id="f-imgpick">
+				<a class="img-pick" did="0" href="#"> < </a><a class="img-pick" did="1" href="#"> > </a>
+			</div>
+			<input type="text" id="f-whatisit" name="f-whatisit" class="f-field">
+			<input type="text" name="f-note" placeholder="Optional: add a short note?" class="f-field f-ghost" id="f-note-for-thing" maxlength="200">
+
+			<select name="f-category" id="f-category-for-thing" size="1">
+				<option value="-1">Put in category...</option>
+				<option value="-2">-----</option>
+				<option value="Mens">Men&#39;s</option>							
+				<option value="Womens">Women&#39;s</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+
+		<div id="f-foot">
+				<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='2319fffad7351c3cf32589ed76e26664' /></div>
+			<span class="next-action">
+			<a class="btn add_new_thing" href="#">Like it!</a> <a href="#" class="l2 cancel_add_thing">Cancel</a> <!--<a href="#" class="l2" id="f-taglink">Tag photo</a>-->
+			</span>
+			<span class="status-msg" style="display:none;margin-left:5px;">
+			<strong>Saving...</strong>
+			</span>
+		</div>
+	</form>
+	
+	<form class="add_tags">
+		<div id="f-head" class="brand">
+			<a class="close_box" href="#">x</a>
+			fazzle<em>*</em>me
+		</div>
+		<div id="f-main">
+			<fieldset class="image" style="display:none;">
+			<div class="tag-photo" id="f-tagger"><img id="f-tag-image" src=""/></div>
+			</fieldset>
+			
+			<fieldset class="action">				
+			<ul>
+				<li>
+				<label></label>
+				</li>
+				<li style="display:none;" class="second-tab">
+				<input type="text" name="f-note" placeholder="Optional: add a short note?" class="f-field f-ghost" id="f-note-for-photo" maxlength="200">
+				<select name="f-category" id="f-category-for-photo" size="1">
+					<option value="-1">Put in category...</option>
+					<option value="-2">-----</option>
+					<option value="Mens">Mens</option>
+					<option value="Womens">Womens</option>
+				</select>
+				</li>
+			</ul>
+			</fieldset>
+		</div>
+		<div id="f-foot">
+			<a class="btn register" href="#">Done</a>
+			<a href="#" class="l2 cancel_tag">Cancel</a>
+		</div>
+	</form>
+	
+	<div class="need_login" style="display:none;">
+		<a href="javascript:pop_login()" class='require_login'>Sign in</a>
+		<div id="list" style="display:none"></div>
+	</div>
+</div>
+</body>
+</html>

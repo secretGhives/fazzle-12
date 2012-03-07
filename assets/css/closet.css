@@ -111,3 +111,8 @@ border-right: 0;
 #viewing-haveit-click .iconic.active {  }
 #viewing-feature-click .iconic.active { color: orange; font-size: 18px; }
 #viewing-towishlist-click .iconic.active { color: red; }
+
+/* ITEM EDITING PAGE */
+#closet-edit-view .editable { width: 100%; max-width: 370px; }
+#closet-edit-view .edit-label { margin-top: 1em; font-weight: bold; }
+#closet-edit-view #edit-image-wrap { margin: 0; }
