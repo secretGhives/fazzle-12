@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html><head><title>Fazzle Bookmark</title>
+<link rel="stylesheet" media="all" href="/assets/css/bootstrap.css" />
+<link rel="stylesheet" media="all" href="/assets/css/chosen.css" />
+<link rel="stylesheet" media="all" href="/assets/css/fonts.css" />
+<link rel="stylesheet" media="all" href="bookmark.css" />
+
+<script src="/assets/libs/jquery/jquery.js"></script>
+<script src="/assets/libs/bootstrap/bootstrap.min.js"></script>
+<script src="/assets/libs/jquery/chosen-min.js"></script>
+<!-- <script src="bookmark.js" language="javascript"></script> -->
+
+<script type="text/javascript">
+
+	!function ($) {
+		$(function(){
+
+
+			$('[rel=tip]').tooltip();
+			$(".chzn-select").chosen();
+
+			$(".close_box").click(function() {
+				$("img.fazzled", parent.document.body).removeClass("fazzled");
+				$("#fazzle-bookmarklet", parent.document.body).remove();
+			});
+
+
+		})
+	}(window.jQuery);
+
+// $(document).ajaxSend(function(event, xhr, settings) {
+// function getCookie(name) {
+// 	var cookieValue = null;
+// 	if (document.cookie && document.cookie != '') {
+// 		var cookies = document.cookie.split(';');
+// 		for (var i = 0; i < cookies.length; i++) {
+// 			var cookie = jQuery.trim(cookies[i]);
+// 			// Does this cookie string begin with the name we want?
+// 			if (cookie.substring(0, name.length + 1) == (name + '=')) {
+// 				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	return cookieValue;
+// }
+// function sameOrigin(url) {
+// 	// url could be relative or scheme relative or absolute
+// 	var host = document.location.host; // host + port
+// 	var protocol = document.location.protocol;
+// 	var sr_origin = '//' + host;
+// 	var origin = protocol + sr_origin;
+// 	// Allow absolute or scheme relative URLs to same origin
+// 	return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+// 		(url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+// 		// or any other URL that isn't scheme relative or absolute i.e relative.
+// 		!(/^(\/\/|http:|https:).*/.test(url));
+// }
+// function safeMethod(method) {
+// 	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+// }
+
+// function postMethod(method) {
+// 	return (/^POST$/.test(method));
+// }
+// if (postMethod(settings.type) && sameOrigin(settings.url)) {
+// 	var val_cookie = getCookie('csrftoken');
+// 	if(typeof(val_cookie) != undefined && val_cookie != null && val_cookie.length > 0 )
+// 		xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+// }
+// });
+</script>
+
+</head>
+
+<body id="fazzle-bookmark">
+
+<header id="bookmark-header">
+	<h1 id="bookmark-brand">fazzle<em>R</em>me</h1>
+	<a id="bookmark-close" class="close_box" href="#">x</a>
+</header>
+
+<section id="bookmark-body">
+
+	<div id="bookmark-null" style="display:none;">
+		<p><strong>Couldn't find any good images on this page.</strong></p>
+		<p>The images might not be large enough, or they might be protected or inside a web plugin.</p>
+		<p>Try again on a different page?</p>
+	</div>
+
+	<figure id="bookmark-image-wrap">
+		<img src="//placehold.it/315x315" alt="" id="bookmark-image">
+	</figure>
+
+	<div id="bookmark-image-title" contenteditable="true" class="editable">Pretty skirt on top of a girl</div>
+	<div id="bookmark-image-url" contenteditable="true" class="editable">http://somewebsite/category/prettygirl.jpg</div>
+
+	<select id="bookmark-shelf-select" class="chzn-select" name="largeSelect" multiple data-placeholder="Place in..">
+		<option>Untitled</option>
+		<option>Tops</option>
+		<option>Bottoms</option>
+	</select>
+
+</section>
+
+<footer id="bookmark-footer">
+	<a class="btn btn-primary add_new_thing" href="#">Add to shelf!</a>
+	<a class="btn close_box" href="#">Cancel</a>
+</footer>
+
+</body>
+</html>

@@ -31,7 +31,9 @@
 
 					<ul class="instructions">
 						<li>Turn on your Bookmarks toolbar from the View menu.</li>
-						<li>Drag this link to the toolbar: <a href='javascript:(function () { alert("this would make a bookmarklet")})();' style="text-decoration: underline;"><strong>Fazzle it</strong></a></li>
+						<li><a href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('src','http://localhost:8000/assets/libs/bookmarklet/bookmarklet.js');document.body.appendChild(e)})())" onclick="return clicked(event)">DO ME</a>
+
+						Drag this link to the toolbar: <a href='javascript:(function () { alert("this would make a bookmarklet")})();' style="text-decoration: underline;"><strong>Fazzle it</strong></a></li>
 					</ul>
 
 					<img src="//placehold.it/693x369" alt="animated gif" class="animated-gif">
