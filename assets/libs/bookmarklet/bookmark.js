@@ -17,10 +17,10 @@ function addCSS(url){
 (function(){
 
  
-  var iframe_url = "/assets/libs/bookmarklet/bookmark.html";
+  var iframe_url = "//fazzle.kuzya.com/assets/libs/bookmarklet/bookmark.html";
   var existing_iframe = document.getElementById('fazzle_bookmarklet_iframe');
     
-  addCSS("/assets/libs/bookmarklet/bookmark.css");
+  addCSS("//fazzle.kuzya.com/assets/libs/bookmarklet/bookmark.css");
  
   var div = document.createElement("div");
   div.id = "fazzle-bookmarklet";
