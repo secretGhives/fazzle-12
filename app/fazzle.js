@@ -75,6 +75,24 @@
     }
   });
 
+// "Add a Contact" button view
+window.FacebookLoginView = Backbone.View.extend({
+  el: $('#login-tabs'),
+  
+  events: {
+    'click': 'add'
+  },
+  
+  initialize: function(){
+    console.log('Initializing Home View');
+  },
+  
+  add: function( event ){
+    //event.preventDefault();
+    alert('this');
+  }
+});
+
   // define class extensions we're using.
   $.fn.fazzleUi = function(cfg){
     var o = {

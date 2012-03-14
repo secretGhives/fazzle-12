@@ -195,7 +195,7 @@
 		<div class="modal-body">
 
 			<div class="alert alert-info">
-				<strong>Heads up!</strong> Best way to get items in your closet is by tagging them on their manufacturer's site using <a href='javascript:(function () { alert("this would make a bookmarklet")})();' style="text-decoration: underline;"><strong>Fazzle it</strong></a> bookmarklet. ( <a href="javascript:(function(){_my_script=document.createElement('SCRIPT');_my_script.type='text/javascript';_my_script.src='//fazzle.kuzya.com/assets/libs/bookmarklet/bookmark.js?';document.getElementsByTagName('head')[0].appendChild(_my_script);})();">Your Bookmarklet</a> )  Or any of the options bellow.
+				<strong>Heads up!</strong> Best way to get items in your closet is by tagging them on their manufacturer's site using <a id="codeOut" href="javascript:(function(){if(!($=window.jQuery)){script=document.createElement('script');script.src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';script.onload=fazzleFavelet;document.body.appendChild(script);}else{fazzleFavelet();}function fazzleFavelet(){_ff_script=document.createElement('SCRIPT');_ff_script.type='text/javascript';_ff_script.src='http://fazzle.kuzya.com/assets/libs/bookmarklet/bookmark.js?';document.getElementsByTagName('head')[0].appendChild(_ff_script);}})();"><strong>fazzle it</strong></a> bookmarklet.  Or any of the options bellow.
 			</div>
 
 			<div class="tabbable tabs-left">
@@ -270,6 +270,7 @@
 	<script src="assets/libs/jquery/chosen-min.js"></script>
 	<script src="assets/plugins/notifications.js"></script>
 	<script src="assets/plugins/jcrop.js"></script>
+	<!--<script src="assets/plugins/masonry.min.js"></script>-->
 
 
 	<!-- Application -->
