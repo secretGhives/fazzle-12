@@ -4,7 +4,6 @@
 	================================================== -->
 	<header class="jumbotron subhead" id="overview">
 		<h1>Closet</h1>
-		<p class="lead">Some other clever message or explanation</p>
 		<div class="subnav ar">
 
 			<div id="closet-controls" class="btn-toolbar page-controls">
@@ -21,7 +20,7 @@
 				<div class="btn-group">
 					<button id="btn-create-new-look" class="btn btn-primary" data-toggle="toggle">Create a look</button>
 					<button class="btn" id="closet-edit" data-toggle="toggle">Edit</button>
-					<button class="btn btn-danger disabled" id="closet-delete-shelf" disabled>Delete</button>
+					<button class="btn btn-danger disabled hide" id="closet-delete-shelf" disabled>Delete</button>
 				</div>
 			</div>
 		</div>
@@ -297,21 +296,21 @@
 			</div>
 		</div>
 
-		<!-- CREATE A LOOK -->
-		<div id="closet-create-look">
-			<div id="create-look-wrap">
-				<input type="text" id="create-look-name" placeholder="Name new look.."/>
-				<div id="create-look-dropzone" class="ac well droppable" rel="pop" data-content="Drop items from the right into this area. Click on the item to remove it.  Press Clear to empty entire box." data-original-title="Drag n Drop" data-placement="top"></div>
-				<a data-toggle="modal" href="#modal-shelves" class="btn btn-success"><i class="icon-plus"></i> Save</a>
-				<a class="btn btn-info" data-toggle="modal" href="#modal-share">Share</a>
-				<button class="btn" onclick="$('.droppable').html(''); alert('Cleared', 'success');">Clear</button>
+	</section>
 
-				<div class="alert alert-info">
-					<strong>Heads up!</strong> Drag and Drop items from your shelves into "Drop Zone".  Click on the item in the drop zone to remove it.  Name your look and press save.
-				</div>
+	<!-- CREATE A LOOK -->
+	<section id="closet-create-look">
+		<div id="create-look-wrap">
+			<input type="text" id="create-look-name" placeholder="Name new look.."/>
+			<div id="create-look-dropzone" class="ac well droppable" rel="pop" data-content="Drop items from the right into this area. Click on the item to remove it.  Press Clear to empty entire box." data-original-title="Drag n Drop" data-placement="top"></div>
+			<a data-toggle="modal" href="#modal-shelves" class="btn btn-success"><i class="icon-plus"></i> Save</a>
+			<a class="btn btn-info" data-toggle="modal" href="#modal-share">Share</a>
+			<button class="btn" onclick="$('.droppable').html(''); alert('Cleared', 'success');">Clear</button>
+
+			<div class="alert alert-info">
+				<strong>Heads up!</strong> Drag and Drop items from your shelves into "Drop Zone".  Click on the item in the drop zone to remove it.  Name your look and press save.
 			</div>
 		</div>
-
 	</section>
 
 </div> <!-- /container -->
@@ -323,14 +322,12 @@
 		$('#btn-create-new-look').toggle(function() {
 				$(this).addClass('active');
 				$('#closet-create-look').show();
-				$('#closet-shelves').addClass('sidebar');
-				$('#overview').addClass('sidebar');
+				$('#closet-view').addClass('sidebar');
 				alert("Create a look is Active. When finished press it again.")
 			}, function() {
 				$(this).removeClass('active');
 				$('#closet-create-look').hide();
-				$('#closet-shelves').removeClass('sidebar');
-				$('#overview').removeClass('sidebar');
+				$('#closet-view').removeClass('sidebar');
 		});
 
 
@@ -361,14 +358,14 @@
 				$(this).addClass('active btn-success');
 				$(this).text('Save');
 				$('.closet-ei').addClass('editing').attr('contenteditable', 'true');
-				$('#closet-delete-shelf').removeAttr("disabled").removeClass("disabled");
+				$('#closet-delete-shelf').removeAttr("disabled").removeClass("disabled hide");
 				$('.accordion-body').css({'height': 'auto'}).addClass('in');
 				alert("Editing closet");
 			}, function() {
 				$(this).removeClass('active btn-success');
 				$(this).text('Edit');
 				$('.closet-ei').removeClass('editing').attr('contenteditable', 'false');
-				$('#closet-delete-shelf').attr("disabled", "disabled").addClass("disabled");
+				$('#closet-delete-shelf').attr("disabled", "disabled").addClass("disabled hide");
 				$('.accordion-body').css({'height': '0px'}).removeClass('in');
 				alert("Finished editing");
 		});

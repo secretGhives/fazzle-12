@@ -1,6 +1,7 @@
 /* CLOSET PAGE */
-#closet-shelves.sidebar { margin-left: 353px; position: relative; }
-#closet-view #overview.sidebar { margin-left: 342px; }
+#closet-shelves.sidebar { position: relative; }
+#closet-view #overview.sidebar {  }
+#closet-view.sidebar { width: auto; margin-left: 369px; }
 #closet-create-look {
 border: 1px dotted #eee;
 border-width: 0 1px 0 0;
@@ -15,7 +16,7 @@ bottom: 0;
 width: 369px;
 overflow-y: auto;
 overflow-x: hidden;
-z-index: 99;
+z-index: 1100;
 margin: 0;
 }
 #create-look-wrap { margin: 22px 9px 13px 9px; position: relative; }
