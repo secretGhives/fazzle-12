@@ -7,11 +7,13 @@
 @import url(comments.css);
 @import url(runway.css);
 @import url(profile.css);
+@import url(brand.css);
 @import url(closet.css);
 @import url(buzz.css);
 @import url(bubbles.css);
 @import url(following.css);
 @import url(achievements.css);
+@import url(listnav.css);
 
 
 .ac { text-align: center; }
@@ -199,16 +201,6 @@ overflow-y: auto;
 #friend-zoom-groups_chzn { margin-top: 1em; }
 .modal-body { position: relative; }
 .btn.return { display: block; }
-
-.listNav { margin: 0; text-align: center; }
-.ln-letters { overflow:hidden; display: inline-block; }
-.ln-letters a { display: inline-block; padding: 2px 6px; border: 1px solid silver; border-right: none; text-decoration: none; }
-.ln-letters a.ln-last { border-right:1px solid silver; }
-.ln-letters a:hover,
-.ln-letters a.ln-selected { background-color:#eaeaea; }
-.ln-letters a.ln-disabled { color:#ccc; }
-.ln-letter-count { text-align:center; font-size:0.8em; line-height:1; margin-bottom:3px; color:#38c; bottom: 100%; top: auto !important; }
-.ln-no-match {width: 100%;text-align: center;display: block;}
 
 .profile-achievements { margin-bottom: 1em; }
 .profile-achievements img { cursor: pointer; width: 32px; }

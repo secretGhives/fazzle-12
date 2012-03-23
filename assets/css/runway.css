@@ -101,5 +101,11 @@ left: 10px;
 .rw-thumbnail-wrap.ff-first { max-width: 698px; }
 .rw-thumbnail-wrap.two-col { max-width: 346px; }
 #profile-new-liked-stuff .rw-thumbnail-wrap { width: 170px; }
+
 /* single item page */
 .rw-thumbnail-wrap.related-items { max-width: 346px; }
+
+
+/* brand page */
+#brand-catalog .rw-thumbnail-wrap { width: 228px; }
+

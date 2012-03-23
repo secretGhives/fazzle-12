@@ -1,0 +1,39 @@
+/* default styling example
+----------------------------------------------------------------- */
+
+.listNav {
+margin: 0;
+display: inline-block;
+position: relative;
+top: 13px;
+}
+
+.ln-letters { overflow:hidden; }
+.ln-letters a {
+font-size: 0.9em;
+display: block;
+float: left;
+padding: 2px 6px;
+border-right: none;
+text-decoration: none;
+}
+.ln-letters a.ln-last { }
+.ln-letters a:hover,
+.ln-letters a.ln-selected { background-color:#eaeaea; }
+.ln-letters a.ln-disabled { color:#ccc; }
+.ln-letter-count {
+text-align: center;
+font-size: 0.8em;
+line-height: 1;
+margin-bottom: 3px;
+color: #AAA;
+top: -11px !important;
+}
+#brands-list {
+-moz-column-count: 3;
+-moz-column-gap: 20px;
+-webkit-column-count: 3;
+-webkit-column-gap: 20px;
+column-count: 3;
+column-gap: 20px;
+}
