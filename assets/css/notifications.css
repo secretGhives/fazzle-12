@@ -1,20 +1,6 @@
 /* TOP NOTIFICATIONS STYLES */
-.app-notification {
-	padding: 6px 9px;
-	margin: 0;
-	color: #ffffff;
-	background-color: #999999;
-}
-.app-notification.important {
-	background-color: #b94a48;
-}
-.app-notification.warning {
-	background-color: #f89406;
-}
-.app-notification.success {
-	background-color: #468847;
-}
-.app-notification.info {
-	background-color: #3a87ad;
-}
-
+.app-notification { padding: 6px 9px; margin: 0; color: #ffffff; background-color: #999999; }
+.app-notification.important { background-color: #b94a48; }
+.app-notification.warning { background-color: #f89406; }
+.app-notification.success { background-color: #468847; }
+.app-notification.info { background-color: #3a87ad; }

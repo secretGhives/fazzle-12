@@ -1,0 +1,3 @@
+.sidebar [class*="span"] { float: none; margin: 0; }
+.sidebar-fixed { position: fixed; width: 220px; top: 49px; }
+.sidebar .nav-tabs { width: 100%; }

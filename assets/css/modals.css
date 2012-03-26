@@ -1,0 +1,15 @@
+.modal-backdrop { background: white; }
+
+
+/* MODAL SECTION SHARE */
+#modal-share .modal-input { width: 339px; max-width: 339px; }
+#modal-share figure { padding: 0; margin: 0; }
+#modal-share figure img { max-width: 169px; max-height: 191px; }
+#modal-share .modal-body { min-height: 169px; }
+
+
+/* MODAL SECTION SHELVES */
+#modal-shelves figure { padding: 0; margin: 0; }
+#modal-shelves figure img { max-width: 169px; max-height: 191px; }
+#modal-shelves .chzn-container { min-width: 100%; }
+#modal-shelves .modal-body { min-height: 325px; }

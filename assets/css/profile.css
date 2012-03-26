@@ -181,3 +181,8 @@ color: #666;
 padding: 0 0.6em;
 max-width: 155px;
 }
+
+
+.profile-achievements { margin-bottom: 1em; }
+.profile-achievements img { cursor: pointer; width: 32px; }
+#profile-stats h2 { margin-top: 2em; }

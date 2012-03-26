@@ -36,7 +36,7 @@
 	<hr/>
 
 	<!-- Runway Global -->
-	<section id="runway-global" class="rw-filter">
+	<section id="runway-global" class="global-filter">
 		<!-- tripple -->
 		<div class="rw-global-item">
 			<a href="#profile" class="user-icon">
@@ -467,7 +467,7 @@
 	</section>
 
 	<!-- Runway Columns -->
-	<section id="runway-columns" class="rw-filter hide">
+	<section id="runway-columns" class="global-filter hide">
 		<article class="rw-thumbnail-wrap two-col">
 			<figure>
 				<a href="#viewing" class="rw-thumbnail">
@@ -666,7 +666,7 @@
 	</section>
 
 	<!-- Runway List -->
-	<section id="runway-list" class="rw-filter hide">
+	<section id="runway-list" class="global-filter hide">
 		<ol id="runway-list-follow" class="unstyled follow-list">		
 			<li class="follow-list-item">
 				<a href="#profile" class="url vcard">
@@ -815,7 +815,7 @@
 
 		$("#runway-control-buttons button").click(function(){
 			var curValue = $(this).attr('rel'),
-					targets = $('section.rw-filter');
+					targets = $('section.global-filter');
 			targets.addClass('hide');
 			$("section#" + curValue).removeClass('hide');
 

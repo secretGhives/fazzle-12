@@ -5,10 +5,13 @@ padding: 6px 6px 6px 56px;
 max-width: 108px;
 }
 .achievements-list .trophy img {
-margin: 0;
-padding: 0;
+margin: 0; padding: 0;
 display: inline-block;
 position: absolute;
-left: 6px;
-top: 6px;
+left: 6px; top: 6px;
 }
+
+.stats-overview h3 { color: #999; }
+.stats-overview h3 em { font-size: 1.3em; color: #333; }
+.stats-tops .span3 a { display: inline-block; }
+.stats-tops { margin-bottom: 3em; }

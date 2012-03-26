@@ -1,0 +1,44 @@
+/* Single item view
+	- when viewing a single item on a page
+*/
+#view-image-wrap {
+margin: 0;
+padding: 0;
+text-align: center;
+}
+#view-image-wrap figcation {
+display: block;
+text-align: center;
+font-size: 1.42em;
+margin-top: 9px;
+word-break: break-word;
+}
+.view-image-details { color: #999; }
+
+#single-item-options.side-fixed {
+background: #fff;
+width: 220px;
+position: fixed;
+top: 42px;
+}
+#item-social {
+padding: 0;
+text-align: center;
+margin-top: 9px;
+background: #FBFBFB;
+border-left: 0;
+border-right: 0;
+}
+#viewing-haveit-click .iconic.active {  }
+#viewing-feature-click .iconic.active { color: orange; font-size: 18px; }
+#viewing-towishlist-click .iconic.active { color: red; }
+
+
+/* Edit item view
+	- when editing a single item on a page
+*/
+#closet-edit-view.marge { margin-top: 60px; }
+#closet-edit-view .editable { width: 100%; max-width: 370px; }
+#closet-edit-view .edit-label { margin-top: 1em; font-weight: bold; }
+#closet-edit-view #edit-image-wrap { margin: 0; }
+#closet-edit-view #edit-category_chzn { max-width: 380px; min-width: 220px; width: auto !important; }
