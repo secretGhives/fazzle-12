@@ -109,6 +109,20 @@
 		});
 		$('#magazine').turn({width: 940, height: 465, page: 1, acceleration: true, shadows: !$.isTouch});
 
+		$(".button.like").toggle(
+			function(){
+				$(this).text("Dislike");
+				$(this).addClass("active").parent().addClass("active");
+				$(this).parent().parent().parent().addClass("liked");
+				$('#modal-shelves').modal('show');
+			}, 
+			function(){
+				$(this).text("Like");
+				$(this).removeClass("active").parent().removeClass("active");
+				$(this).parent().parent().parent().removeClass("liked");
+			}
+		);
+
 
 	})
 }(window.jQuery)
