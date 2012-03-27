@@ -12,8 +12,90 @@
 	<!-- Stores and Brands List -->
 	<section id="popular-list" class="global-filter">
 
-		POPULAR LIST
+		<div id='magazine'>
+			<div id="page-1" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/470x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
 
+			<div id="page-2" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/278x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
+
+			<div id="page-3" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/470x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
+
+			<div id="page-4" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/333x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
+		</div>
+
+		<div id="magazine-pre">
+			<h1>Super Popular stuff</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+
+		<div id="magazine-end">
+			<h1>That's it for now</h1>
+			<p>Check back later since this list is constantly updated based on user activity.</p>
+		</div>
+<!-- 		
+		<div id="next"> <i></i> </div>
+		<div id="previous"> <i></i> </div>
+ -->
 	</section>
 
 	</div>
@@ -22,6 +104,10 @@
 !function ($) {
 	$(function(){
 
+		$('#magazine').bind('turned', function(e, page) {
+			console.log('Current view: ', $('#magazine').turn('view'));
+		});
+		$('#magazine').turn({width: 940, height: 465, page: 1, acceleration: true, shadows: !$.isTouch});
 
 
 	})
