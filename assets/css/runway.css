@@ -112,6 +112,7 @@ left: 10px;
 
 
 /* Popular page */
+#popular-view { margin-top: 69px; }
 #magazine {
 overflow: hidden;
 z-index: 1;
