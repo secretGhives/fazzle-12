@@ -25,7 +25,7 @@
 				<article class="rw-thumbnail-wrap">
 					<figure>
 						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/278x420" alt="">
+							<img src="http://placehold.it/333x420" alt="">
 						</a>
 						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
 					</figure>
@@ -36,6 +36,29 @@
 						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
 					</aside>
 				</article>
+
+				<aside class="rw-followlist-wrap">
+					<div class="vcard">
+						<a href="#profile" class="url" rel="tip" title="nickname" data-placement="left">
+							<img src="//placehold.it/96x96" class="photo">
+						</a>
+						<a href="#" class="follow">follow</a>
+					</div>
+
+					<div class="vcard">
+						<a href="#profile" class="url" rel="tip" title="nickname" data-placement="left">
+							<img src="//placehold.it/96x96" class="photo">
+						</a>
+						<a href="#" class="follow">follow</a>
+					</div>
+
+					<div class="vcard">
+						<a href="#profile" class="url" rel="tip" title="nickname" data-placement="left">
+							<img src="//placehold.it/96x96" class="photo">
+						</a>
+						<a href="#" class="follow">follow</a>
+					</div>
+				</aside>
 			</div>
 
 			<div id="page-3" class="page">
@@ -59,7 +82,41 @@
 				<article class="rw-thumbnail-wrap">
 					<figure>
 						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/333x420" alt="">
+							<img src="http://placehold.it/470x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
+
+			<div id="page-5" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/470x420" alt="">
+						</a>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+					</figure>
+					<aside class="rw-thumbnail-detail">
+						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
+						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+						<span class="rw-item-liked">liked by 9999+</span>
+						<a class="spch-bub-inside" href="#closet/item/comments"><em>23</em></a>
+					</aside>
+				</article>
+			</div>
+
+			<div id="page-6" class="page">
+				<article class="rw-thumbnail-wrap">
+					<figure>
+						<a href="#viewing" class="rw-thumbnail">
+							<img src="http://placehold.it/470x420" alt="">
 						</a>
 						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
 					</figure>
@@ -113,6 +170,8 @@
 				$(this).parent().parent().parent().removeClass("liked");
 			}
 		);
+
+		$('[rel=tip]').tooltip();
 
 
 	})

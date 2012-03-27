@@ -116,14 +116,9 @@ left: 10px;
 #magazine {
 overflow: hidden;
 z-index: 1;
+height: 666px !important;
 }
-#magazine .page { 
-background-image: -webkit-gradient(linear, left top, right top, from(#eee), color-stop(50%, #eee), color-stop(50%, #ddd), to(#ddd));
-background-image: -moz-linear-gradient(left, #eee, #eee 50%, #ddd 50%, #ddd);
-background-size: 2px;
--webkit-background-size: 2px;
--moz-background-size: 2px;
-}
+#magazine .page { background: #fff; }
 #popular-list { position: relative; }
 #magazine-pre {
 width: 333px;
@@ -148,6 +143,9 @@ position: absolute;
 top: 111px;
 right: 69px;
 }
+#popular-view .rw-followlist-wrap { display: inline-block; vertical-align: top; width: 96px; }
+#popular-view .vcard { margin-bottom: 32px; }
+#popular-view .vcard a { line-height: 12px; display: block; }
 #popular-view #next, #popular-view #previous {
 	opacity:0;
 	position:absolute;
