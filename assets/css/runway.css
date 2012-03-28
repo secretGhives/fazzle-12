@@ -113,12 +113,37 @@ left: 10px;
 
 /* Popular page */
 #popular-view { margin-top: 69px; }
+#popular-list .rw-thumbnail-wrap { max-height: 464px; background: transparent; border: 0; }
 #magazine {
 overflow: hidden;
 z-index: 1;
 height: 666px !important;
 }
 #magazine .page { background: #fff; }
+#magazine .page.first { text-align: right; }
+#magazine .page.right {
+-webkit-box-shadow: inset 11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+box-shadow: inset 11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+text-align: right;
+border-left: 1px solid rgba(0, 0, 0, 0.26);
+}
+#magazine .page.right aside { text-align: left; }
+
+#magazine .page.left { 
+-webkit-box-shadow: inset -11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset -11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+box-shadow: inset -11px 0px 13px -3px rgba(0, 0, 0, 0.2);
+text-align: left;
+}
+#magazine .page.left aside { text-align: right; }
+#magazine .page.last { text-align: left; }
+
+#magazine .page aside {
+padding-left: 1em;
+padding-right: 1em;
+}
+
 #popular-list { position: relative; }
 #magazine-pre {
 width: 333px;
@@ -143,7 +168,8 @@ position: absolute;
 top: 111px;
 right: 69px;
 }
-#popular-view .rw-followlist-wrap { display: inline-block; vertical-align: top; width: 96px; }
+#popular-list .follow-user-link { position: static; }
+#popular-view .rw-followlist-wrap { display: inline-block; vertical-align: top; width: 96px; margin-top: 1em; }
 #popular-view .vcard { margin-bottom: 32px; }
 #popular-view .vcard a { line-height: 12px; display: block; }
 #popular-view #next, #popular-view #previous {
