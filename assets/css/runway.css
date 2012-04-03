@@ -35,9 +35,9 @@ right: -5px;
 .rw-thumbnail-wrap.liked, #page-register-interest .liked  { border-color: rgba(255, 192, 203, 0.6); }
 .rw-thumbnail-wrap.liked a { color: #B50360; }
 .rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
-.rw-thumbnail-detail { padding-left: 1em; }
+.rw-thumbnail-detail { padding: 9px 0 0 9px; }
 .rw-thumbnail { display: block; }
-
+.rw-thumbnail img { margin: 0; padding: 0; display: block; }
 .rw-item-title {
 display: block;
 font-size: 123%;

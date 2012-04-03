@@ -41,7 +41,7 @@ border-bottom: 2px solid #ddd;
 }
 
 .accordion-sub-header h2 { display: inline-block; vertical-align: middle; }
-
+.thumbnail { line-height: 0; }
 
 
 /* APP FOOTER

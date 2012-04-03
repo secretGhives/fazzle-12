@@ -43,7 +43,7 @@
 								<a href="#viewing" class="rw-thumbnail">
 									<img src="http://placehold.it/698x698" alt="">
 								</a>
-								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 							</figure>
 							<aside class="rw-thumbnail-detail">
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
@@ -92,7 +92,7 @@
 								<a href="#viewing" class="rw-thumbnail">
 									<img src="http://placehold.it/346x346" alt="">
 								</a>
-								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 							</figure>
 							<aside class="rw-thumbnail-detail">
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
@@ -141,7 +141,7 @@
 								<a href="#viewing" class="rw-thumbnail">
 									<img src="http://placehold.it/346x346" alt="">
 								</a>
-								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+								<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 							</figure>
 							<aside class="rw-thumbnail-detail">
 								<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
@@ -674,17 +674,22 @@
 	$(function(){
 
 
-		$(".button.like").toggle(
+		$(".btn.like").toggle(
 			function(){
 				$(this).text("Dislike");
-				$(this).addClass("active").parent().addClass("active");
+				$(this).addClass("active btn-inverse").parent().addClass("active");
 				$(this).parent().parent().parent().addClass("liked");
 				$('#modal-shelves').modal('show');
+				$('<a href="#" class="btn like-edit">S</a>').click(function(e) {
+					e.preventDefault();
+					$('#modal-shelves').modal('show');
+				}).insertAfter( $(this) );
 			}, 
 			function(){
 				$(this).text("Like");
-				$(this).removeClass("active").parent().removeClass("active");
+				$(this).removeClass("active btn-inverse").parent().removeClass("active");
 				$(this).parent().parent().parent().removeClass("liked");
+				$(this).next('.like-edit').remove();
 			}
 		);
 

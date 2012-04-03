@@ -83,7 +83,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/278x420" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -117,7 +117,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/278x420" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -151,7 +151,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/278x420" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -194,7 +194,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/421x421" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -228,7 +228,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/421x421" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -271,7 +271,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/522x555" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -305,7 +305,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/320x254" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -348,7 +348,7 @@ hr {border-bottom: 1px solid #DDD;}
 						<a href="#viewing" class="rw-thumbnail">
 							<img src="http://placehold.it/848x666" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="button like">Like</a></div>
+						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#viewing" class="rw-item-title">Title for this item</a>
@@ -406,19 +406,11 @@ hr {border-bottom: 1px solid #DDD;}
 		// });
 
 
-		$(".button.like").toggle(
-			function(){
+		$(".btn.like").click(function(e){
 				//$(this).text("Dislike");
-				$(this).addClass("active").parent().addClass("active");
-				$(this).parent().parent().parent().addClass("liked");
-				alert("Sign up to activate this feature.")
-			}, 
-			function(){
-				//$(this).text("Like");
-				$(this).removeClass("active").parent().removeClass("active");
-				$(this).parent().parent().parent().removeClass("liked");
-			}
-		);
+				e.preventDefault();
+				alert("Sign up to activate this feature.");
+			});
 
 		$('.spch-bub-inside').click(function() {
 			$(this).parent().next().slideToggle();
