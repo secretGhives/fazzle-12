@@ -227,3 +227,68 @@ right: 69px;
 #next.visible:hover, #previous.visible:hover {
 	opacity:1 !important;
 }
+
+
+
+
+/* SLOT MACHINE  - LANDING PAGE */
+#selecting-sex {
+position: absolute;
+top: 32px;
+left: 132px;
+}
+#selecting-category {
+position: absolute;
+top: 32px;
+right: 110px;
+}
+#btn-slotme {
+position: absolute;
+bottom: -69px;
+left: 13px;
+}
+#slot-overview {
+position: relative;
+min-height: 369px;
+padding: 113px 69px 3px 69px;
+margin-top: 32px;
+}
+#item-drop-area p {
+line-height: 222px;
+}
+#item-drop-area {
+width: 222px;
+height: 222px;
+margin: 0 auto;
+position: relative;
+}
+
+#txt-what {
+position: absolute;
+top: 69px;
+left: -288px;
+font-size: 7em;
+}
+#txt-does {
+position: absolute;
+top: 132px;
+left: -252px;
+font-size: 5em;
+}
+#txt-match {
+position: absolute;
+top: 162px;
+right: -130px;
+font-size: 4.2em;
+width: 196px;
+text-align: right;
+line-height: 0.8;
+font-weight: normal;
+}
+#txt-match em {
+font-size: 2em;
+position: absolute;
+top: 35px;
+right: -54px;
+font-weight: bold;
+}
