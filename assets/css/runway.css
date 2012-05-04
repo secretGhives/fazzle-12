@@ -292,3 +292,46 @@ top: 35px;
 right: -54px;
 font-weight: bold;
 }
+
+
+#slot-results {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(255, 255, 255, 0.93);
+}
+#slot-results-header {
+margin: 3em 0 2em 6em;
+}
+.slot-body {
+width: 222px;
+margin: 0 auto;
+}
+#slot-r-belt { }
+#slot-results figure { position: relative; }
+#slot-results figcaption { position: absolute; }
+#slot-r-accessories {
+position: absolute !important;
+left: 69px;
+top: 369px;
+}
+
+#spin-btn-group {
+position: absolute;
+top: 470px;
+right: 160px;
+}
+#results-welcom {
+position: absolute;
+top: 122px;
+left: 112px;
+}
+#results-det {
+position: absolute;
+top: 142px;
+right: 192px;
+width: 142px;
+text-align: right;
+}

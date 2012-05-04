@@ -1,73 +1,4 @@
 <style type="text/css">
-
-ul { list-style: none; padding: 0; margin: 0;}
-
-.jSlots-wrapper {
-    overflow: hidden;
-    height: 20px;
-    display: inline-block; /* to size correctly, can use float too, or width*/
-    border: 1px solid #999;
-}
-
-.slot {
-    float: left;
-}
-
-
-
-/* ---------------------------------------------------------------------
-   FANCY EXAMPLE
---------------------------------------------------------------------- */
-.fancy .jSlots-wrapper {
-    overflow: hidden;
-    height: 100px;
-    display: inline-block; /* to size correctly, can use float too, or width*/
-    border: 1px solid #999;
-}
-
-.fancy .slot li {
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
-    font-family: 'Gravitas One', serif;
-    border-left: 1px solid #999;
-}
-
-.fancy .slot:first-child li {
-    border-left: none;
-}
-
-.fancy .slot li:nth-child(7) {
-    background-color: #FFCE29;
-}
-.fancy .slot li:nth-child(6) {
-    background-color: #FFA22B;
-}
-.fancy .slot li:nth-child(5) {
-    background-color: #FF8645;
-}
-.fancy .slot li:nth-child(4) {
-    background-color: #FF6D3F;
-}
-.fancy .slot li:nth-child(3) {
-    background-color: #FF494C;
-}
-.fancy .slot li:nth-child(2) {
-    background-color: #FF3333;
-}
-.fancy .slot li:nth-child(1),
-.fancy .slot li:nth-child(8) {
-    background-color: #FF0000;
-}
-
-.fancy .slot li span {
-    display: block;
-}
-
 /* ---------------------------------------------------------------------
    ANIMATIONS
 --------------------------------------------------------------------- */
@@ -158,12 +89,12 @@ ul { list-style: none; padding: 0; margin: 0;}
 
 
 
-.winner li {
+.winner {
     -webkit-animation: winnerBox 2s infinite linear;
        -moz-animation: winnerBox 2s infinite linear;
         -ms-animation: winnerBox 2s infinite linear;
 }
-.winner li span {
+.winner p {
      -webkit-animation: winner 2s infinite linear;
         -moz-animation: winner 2s infinite linear;
          -ms-animation: winner 2s infinite linear;
@@ -175,60 +106,72 @@ ul { list-style: none; padding: 0; margin: 0;}
 
 <div id="slot-view" class="container">
 
-  <a href="#slot-overview" data-toggle="tab">Upload</a>
-  <a href="#slot-results" data-toggle="tab">Results</a>
-
-  <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active in" id="slot-overview">
-      <div id="selecting-sex">
-        <b>I am a</b> 
-        <div class="btn-group inlined" data-toggle="buttons-radio">
-          <button class="btn">Girl</button>
-          <button class="btn">Boy</button>
-        </div>
-      </div>
-
-      <div id="selecting-category" class="ar">
-        <b>and I can't decide on what to wear with my</b>
-        <br/>
-        <div class="btn-group inlined" data-toggle="buttons-radio">
-          <button class="btn">Head</button>
-          <button class="btn">Torso</button>
-          <button class="btn">Legs</button>
-          <button class="btn">Feet</button>
-        </div>
-      </div>
-
-      <div id="item-drop-area" class="well">
-        <h1 id="txt-what">What</h1>
-        <span class="lead" id="txt-does">does my</span>
-
-        <p class="ac">Drop image here</p>
-
-        <h1 id="txt-match">match with<em>?</em></h1>
-        <button class="btn btn-primary btn-large" id="btn-slotme">Fazzle ME!</button>
+  <section id="slot-overview">
+    <div id="selecting-sex">
+      <b>I am a</b> 
+      <div class="btn-group inlined" data-toggle="buttons-radio">
+        <button class="btn">Girl</button>
+        <button class="btn">Boy</button>
       </div>
     </div>
 
-
-    <div class="tab-pane fade" id="slot-results">
-      <section id="spin-list" class="global-filter">
-
-        <div class="fancy">
-          <ul class="slot">
-            <!-- In reverse order so the 7s show on load -->
-            <li><span>F</span></li>
-            <li><span>A</span></li>
-            <li><span>Z</span></li>
-            <li><span>Z</span></li>
-            <li><span>L</span></li>
-            <li><span>E</span></li>
-          </ul>
-        </div>
-        <button class="btn btn-primary btn-large" id="btn-fancyme">Fazzle ME!</button>
-      </section>
+    <div id="selecting-category" class="ar">
+      <b>and I can't decide on what to wear with my</b>
+      <br/>
+      <div class="btn-group inlined" data-toggle="buttons-radio">
+        <button class="btn">Head</button>
+        <button class="btn">Torso</button>
+        <button class="btn">Legs</button>
+        <button class="btn">Feet</button>
+      </div>
     </div>
-  </div>
+
+    <div id="item-drop-area" class="well">
+      <h1 id="txt-what">What</h1>
+      <span class="lead" id="txt-does">does my</span>
+
+      <p class="ac">Drop image here</p>
+
+      <h1 id="txt-match">match with<em>?</em></h1>
+      <button class="btn btn-primary btn-large" id="btn-slotme">Fazzle ME!</button>
+    </div>
+  </section>
+
+  <section id="slot-results" class="hide">
+
+    <h1 id="results-welcom">Congrats</h1>
+    <h3 id="results-det">we've got just a match for your</h3>
+    
+    <figure id="slot-r-head" class="slot-body">
+      <figcaption>head</figcaption>
+      <img src="//placehold.it/222x222" alt="Head">
+    </figure>
+    <figure id="slot-r-torso" class="slot-body">
+      <figcaption>torso</figcaption>
+      <img src="//placehold.it/222x222" alt="Torso">
+    </figure>
+    <figure id="slot-r-accessories">
+      <figcaption>accessories</figcaption>
+      <img src="//placehold.it/222x222" alt="Accessories">
+    </figure>
+    <figure id="slot-r-belt" class="slot-body">
+      <figcaption>belt</figcaption>
+      <img src="//placehold.it/222x69" alt="Belt">
+    </figure>
+    <figure id="slot-r-legs" class="slot-body">
+      <figcaption>legs</figcaption>
+      <img src="//placehold.it/222x222" alt="Legs">
+    </figure>
+    <figure id="slot-r-feet" class="slot-body">
+      <figcaption>feet</figcaption>
+      <img src="//placehold.it/222x222" alt="Feet">
+    </figure>
+
+    <div id="spin-btn-group">
+      <button id="spin-again" class="btn btn-large btn-success">SPIN!</button>
+      <button id="spin-back" class="btn btn-large">Go back</button>
+    </div>
+  </section>
 
 </div> <!-- /container -->
 
@@ -236,34 +179,21 @@ ul { list-style: none; padding: 0; margin: 0;}
 !function ($) {
 	$(function(){
 
-        // fancy example
-        $('.fancy .slot').jSlots({
-            number : 6,
-            winnerNumber : 1,
-            spinner : '#btn-fancyme',
-            easing : 'easeOutSine',
-            time : 3333,
-            loops : 6,
-            onStart : function() {
-                $('.slot').removeClass('winner');
-            },
-            onWin : function(winCount, winners) {
-                // only fires if you win
-                
-                $.each(winners, function() {
-                    this.addClass('winner');
-                    console.log("7 hit the board");
-                });
 
-                // react to the # of winning slots                 
-                if ( winCount === 1 ) {
-                    //alert('You got ' + winCount + ' 7!!!');
-                } else if ( winCount > 1 ) {
-                    //alert('You got ' + winCount + ' 7’s!!!');
-                }
-                
-            }
-        });
+    $('#spin-again').click(function(e) {
+      e.preventDefault();
+      alert("Trr trr rrrr rrr");
+    });
+
+    $('#btn-slotme').click(function(e) {
+      e.preventDefault();
+      $('#slot-results').show('fast');
+    });
+
+    $('#spin-back').click(function(e) {
+      e.preventDefault();
+      $('#slot-results').hide('fast');
+    });
 
 	})
 }(window.jQuery)
