@@ -161,6 +161,11 @@
       //$('#slot-results figure').toggleClass('flipped');
     });
 
+    $('#slot-results figure').click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('flipped');
+    });
+
     $('#btn-slotme').click(function(e) {
       e.preventDefault();
       $('#slot-results').show('fast');
