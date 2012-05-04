@@ -1,106 +1,63 @@
 <style type="text/css">
-/* ---------------------------------------------------------------------
-   ANIMATIONS
---------------------------------------------------------------------- */
+    .container {
+      -webkit-perspective: 800px;
+         -moz-perspective: 800px;
+          -ms-perspective: 800px;
+           -o-perspective: 800px;
+              perspective: 800px;
+    }
+    
+    #slot-results figure {
+      width: 222px;
+      max-height: 222px;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+          -ms-transition: -ms-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform-origin: right center;
+         -moz-transform-origin: right center;
+          -ms-transform-origin: right center;
+           -o-transform-origin: right center;
+              transform-origin: right center;
+    }
+    
+    #slot-results figure.flipped {
+      -webkit-transform: translateX( -100% ) rotateY( -180deg );
+         -moz-transform: translateX( -100% ) rotateY( -180deg );
+          -ms-transform: translateX( -100% ) rotateY( -180deg );
+           -o-transform: translateX( -100% ) rotateY( -180deg );
+              transform: translateX( -100% ) rotateY( -180deg );
+    }
+    
+    #slot-results figure img {
+      display: block;
+      text-align: center;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+          -ms-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+    
+    #slot-results figure .front { background: #fff; }
+    
+    #slot-results figure .back {
+      background: #f9f9f9;
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+          -ms-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+    }
 
-@-webkit-keyframes winner {
-        0%, 50%, 100% {
-            -webkit-transform: rotate(0deg);
-            font-size:70px;
-            color: #fff;
-        }
-        25% {
-            -webkit-transform: rotate(20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-        75% {
-            -webkit-transform: rotate(-20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-}
-@-moz-keyframes winner {
-        0%, 50%, 100% {
-            -moz-transform: rotate(0deg);
-            font-size:70px;
-            color: #fff;
-        }
-        25% {
-            -moz-transform: rotate(20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-        75% {
-            -moz-transform: rotate(-20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-}
-@-ms-keyframes winner {
-        0%, 50%, 100% {
-            -ms-transform: rotate(0deg);
-            font-size:70px;
-            color: #fff;
-        }
-        25% {
-            -ms-transform: rotate(20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-        75% {
-            -ms-transform: rotate(-20deg);
-            font-size:90px;
-            color: #FF16D8;
-        }
-}
-
-
-@-webkit-keyframes winnerBox {
-        0%, 50%, 100% {
-            box-shadow: inset 0 0  0px yellow;
-            background-color: #FF0000;
-        }
-        25%, 75% {
-            box-shadow: inset 0 0 30px yellow;
-            background-color: aqua;
-        }
-}
-@-moz-keyframes winnerBox {
-        0%, 50%, 100% {
-            box-shadow: inset 0 0  0px yellow;
-            background-color: #FF0000;
-        }
-        25%, 75% {
-            box-shadow: inset 0 0 30px yellow;
-            background-color: aqua;
-        }
-}
-@-ms-keyframes winnerBox {
-        0%, 50%, 100% {
-            box-shadow: inset 0 0  0px yellow;
-            background-color: #FF0000;
-        }
-        25%, 75% {
-            box-shadow: inset 0 0 30px yellow;
-            background-color: aqua;
-        }
-}
-
-
-
-.winner {
-    -webkit-animation: winnerBox 2s infinite linear;
-       -moz-animation: winnerBox 2s infinite linear;
-        -ms-animation: winnerBox 2s infinite linear;
-}
-.winner p {
-     -webkit-animation: winner 2s infinite linear;
-        -moz-animation: winner 2s infinite linear;
-         -ms-animation: winner 2s infinite linear;
-}
-
-.navbar.navbar-fixed-top { display: none !important; }
+.navbar.navbar-fixed-top, #app-footer { display: none !important; }
 </style>
 
 
@@ -144,27 +101,38 @@
     
     <figure id="slot-r-head" class="slot-body">
       <figcaption>head</figcaption>
-      <img src="//placehold.it/222x222" alt="Head">
+      <img src="//placehold.it/222x222/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x222" class="back" alt="Head 1">
     </figure>
+
     <figure id="slot-r-torso" class="slot-body">
       <figcaption>torso</figcaption>
-      <img src="//placehold.it/222x222" alt="Torso">
+      <img src="//placehold.it/222x222/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x222" class="back" alt="Head 1">
     </figure>
+
     <figure id="slot-r-accessories">
       <figcaption>accessories</figcaption>
-      <img src="//placehold.it/222x222" alt="Accessories">
+      <img src="//placehold.it/222x222/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x222" class="back" alt="Head 1">
     </figure>
+
     <figure id="slot-r-belt" class="slot-body">
       <figcaption>belt</figcaption>
-      <img src="//placehold.it/222x69" alt="Belt">
+      <img src="//placehold.it/222x69/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x69" class="back" alt="Head 1">
     </figure>
+
     <figure id="slot-r-legs" class="slot-body">
       <figcaption>legs</figcaption>
-      <img src="//placehold.it/222x222" alt="Legs">
+      <img src="//placehold.it/222x222/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x222" class="back" alt="Head 1">
     </figure>
+
     <figure id="slot-r-feet" class="slot-body">
       <figcaption>feet</figcaption>
-      <img src="//placehold.it/222x222" alt="Feet">
+      <img src="//placehold.it/222x222/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/222x222" class="back" alt="Head 1">
     </figure>
 
     <div id="spin-btn-group">
@@ -183,6 +151,14 @@
     $('#spin-again').click(function(e) {
       e.preventDefault();
       alert("Trr trr rrrr rrr");
+
+      $('#slot-results figure').each(function(i){
+        $(this).delay(i*222).fadeIn(222,function(){
+          $(this).toggleClass('flipped');
+        });
+      });
+
+      //$('#slot-results figure').toggleClass('flipped');
     });
 
     $('#btn-slotme').click(function(e) {

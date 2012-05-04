@@ -305,11 +305,13 @@ background: rgba(255, 255, 255, 0.93);
 #slot-results-header {
 margin: 3em 0 2em 6em;
 }
-.slot-body {
-width: 222px;
-margin: 0 auto;
+.slot-body { }
+#slot-r-belt {
+position: absolute !important;
+left: 50%;
+margin-left: -112px;
+top: 475px;
 }
-#slot-r-belt { }
 #slot-results figure { position: relative; }
 #slot-results figcaption { position: absolute; }
 #slot-r-accessories {
@@ -334,4 +336,30 @@ top: 142px;
 right: 192px;
 width: 142px;
 text-align: right;
+}
+
+
+#slot-r-head {
+position: absolute !important;
+left: 50%;
+margin-left: -112px;
+top: 22px;
+}
+#slot-r-torso {
+position: absolute !important;
+left: 50%;
+margin-left: -112px;
+top: 251px;
+}
+#slot-r-legs {
+position: absolute !important;
+left: 50%;
+margin-left: -112px;
+top: 546px;
+}
+#slot-r-feet {
+position: absolute !important;
+left: 50%;
+margin-left: -112px;
+top: 770px;
 }
