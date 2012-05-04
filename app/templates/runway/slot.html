@@ -161,9 +161,10 @@
       //$('#slot-results figure').toggleClass('flipped');
     });
 
-    $('#slot-results figure').click(function(e) {
-      e.preventDefault();
-      $(this).toggleClass('flipped');
+
+    $("#slot-results").on("click", "img", function() {
+      $(this).parent().toggleClass("flipped");
+      console.log("did it");
     });
 
     $('#btn-slotme').click(function(e) {
