@@ -46,3 +46,75 @@ padding: 9px;
 #page-register-suggest #top-welcome { margin: 22px 96px 0; }
 #page-register-interest #top-welcome h2,
 #page-register-suggest #top-welcome h2 { font-size: 17px; }
+
+#slot-results {
+  -webkit-perspective: 940px;
+     -moz-perspective: 940px;
+      -ms-perspective: 940px;
+       -o-perspective: 940px;
+          perspective: 940px;
+}
+#slot-r-compiled {
+width: 616px !important;
+height: 396px !important;
+max-height: 396px !important;
+position: absolute;
+right: 9px;
+top: 160px;
+}
+#slot-r-compiled img {
+position: static !important;
+height: 545px;
+}
+
+#slot-results figure {
+  width: 111px;
+  max-height: 111px;
+	padding: 0;
+	margin: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+     -moz-transition: -moz-transform 0.3s;
+      -ms-transition: -ms-transform 0.3s;
+       -o-transition: -o-transform 0.3s;
+          transition: transform 0.3s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: right center;
+     -moz-transform-origin: right center;
+      -ms-transform-origin: right center;
+       -o-transform-origin: right center;
+          transform-origin: right center;
+}
+
+#slot-results figure.flipped {
+  -webkit-transform: translateX( -100% ) rotateY( -180deg );
+     -moz-transform: translateX( -100% ) rotateY( -180deg );
+      -ms-transform: translateX( -100% ) rotateY( -180deg );
+       -o-transform: translateX( -100% ) rotateY( -180deg );
+          transform: translateX( -100% ) rotateY( -180deg );
+}
+
+#slot-results figure img {
+  display: block;
+  text-align: center;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#slot-results figure .front { background: #fff; }
+
+#slot-results figure .back {
+  background: #f9f9f9;
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+      -ms-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+}

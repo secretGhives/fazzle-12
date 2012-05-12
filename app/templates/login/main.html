@@ -14,6 +14,91 @@ hr {border-bottom: 1px solid #DDD;}
 
 <div id="page-login" class="container">
 
+  <section id="slot-overview">
+    <div id="selecting-sex">
+      <b>I am a</b> 
+      <div class="btn-group inlined" data-toggle="buttons-radio">
+        <button class="btn">Girl</button>
+        <button class="btn">Boy</button>
+      </div>
+    </div>
+
+    <div id="selecting-category" class="ar">
+      <b>and I can't decide on what to wear with my</b>
+      <br/>
+      <div class="btn-group inlined" data-toggle="buttons-radio">
+        <button class="btn">Head</button>
+        <button class="btn">Torso</button>
+        <button class="btn">Legs</button>
+        <button class="btn">Feet</button>
+      </div>
+    </div>
+
+    <div id="item-drop-area" class="well">
+      <h1 id="txt-what">What</h1>
+      <span class="lead" id="txt-does">does my</span>
+
+      <p class="ac">Drop image here</p>
+
+      <h1 id="txt-match">match with<em>?</em></h1>
+      <button class="btn btn-primary btn-large" id="btn-slotme">Fazzle ME!</button>
+    </div>
+  </section>
+
+  <section id="slot-results" class="hide">
+
+    <h1 id="results-welcom">Tada!!</h1>
+    <h3 id="results-det">we've got just a match for your</h3>
+    
+    <figure id="slot-r-head" class="slot-body">
+      <figcaption>head</figcaption>
+      <img src="//placehold.it/111x111/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x111" class="back" alt="Head 1">
+    </figure>
+
+    <figure id="slot-r-torso" class="slot-body">
+      <figcaption>torso</figcaption>
+      <img src="//placehold.it/111x111/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x111" class="back" alt="Head 1">
+    </figure>
+
+    <figure id="slot-r-accessories">
+      <figcaption>accessories</figcaption>
+      <img src="//placehold.it/111x111/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x111" class="back" alt="Head 1">
+    </figure>
+
+    <figure id="slot-r-belt" class="slot-body">
+      <figcaption>belt</figcaption>
+      <img src="//placehold.it/111x32/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x32" class="back" alt="Head 1">
+    </figure>
+
+    <figure id="slot-r-legs" class="slot-body">
+      <figcaption>legs</figcaption>
+      <img src="//placehold.it/111x169/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x169" class="back" alt="Head 1">
+    </figure>
+
+    <figure id="slot-r-feet" class="slot-body">
+      <figcaption>feet</figcaption>
+      <img src="//placehold.it/111x111/000000/ff0000" class="front" alt="Head">
+      <img src="//placehold.it/111x111" class="back" alt="Head 1">
+    </figure>
+
+    <div id="slot-r-compiled">
+      <img src="//placehold.it/666x545">
+    </div>
+
+    <div id="spin-btn-group">
+      <button id="spin-again" class="btn btn-large btn-primary">SPIN AGAIN!</button>
+      <button id="spin-save" class="btn btn-large btn-success">Save</button>
+      <a id="spin-back" href="#">Go back</a>
+    </div>
+  </section>
+
+	<hr/>
+
 	<div class="row">
 		<hgroup id="top-welcome" class="span12">
 			<h2>Service for storing and sharing your closet</h2>
@@ -400,6 +485,42 @@ hr {border-bottom: 1px solid #DDD;}
 <script>
 !function ($) {
 	$(function(){
+
+
+		// SLOT MACHINE STUFF
+    $('#spin-again').click(function(e) {
+      e.preventDefault();
+      alert("Trr trr rrrr rrr");
+
+      $('#slot-results figure').each(function(i){
+        $(this).delay(i*222).fadeIn(222,function(){
+          $(this).toggleClass('flipped');
+        });
+      });
+      //$('#slot-results figure').toggleClass('flipped');
+    });
+
+    $("#slot-results").on("click", "img", function() {
+      $(this).parent().toggleClass("flipped");
+      console.log("did it");
+    });
+
+    $('#btn-slotme').click(function(e) {
+      e.preventDefault();
+      $('#slot-results').show('fast');
+    });
+
+    $('#spin-back').click(function(e) {
+      e.preventDefault();
+      $('#slot-results').hide('fast');
+    });
+
+    $('#spin-save').click(function(e) {
+      e.preventDefault();
+      alert("Generated look has been saved to your closet, or login details", "success");
+    });
+    // END SLOT MACHINE STUFF
+
 
 		// $('#runway-global').masonry({
 		// 	itemSelector: '.rw-thumbnail-wrap'

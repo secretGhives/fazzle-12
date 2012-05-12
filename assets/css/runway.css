@@ -232,6 +232,7 @@ right: 69px;
 
 
 /* SLOT MACHINE  - LANDING PAGE */
+/*#slot-overview .btn-group {z-index: 1;}*/
 #selecting-sex {
 position: absolute;
 top: 32px;
@@ -295,71 +296,71 @@ font-weight: bold;
 
 
 #slot-results {
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
+position: relative;
+top: -517px;
 background: rgba(255, 255, 255, 0.93);
-min-height: 1069px;
+min-height: 713px;
+width: 940px;
+margin-bottom: -500px;
 }
 #slot-results-header {
 margin: 3em 0 2em 6em;
 }
 .slot-body { }
 #slot-r-belt {
-position: absolute !important;
-left: 50%;
-margin-left: -112px;
-top: 475px;
+position: absolute;
+left: 169px;
+top: 335px;
+height: 32px;
 }
 #slot-results figcaption { position: absolute; z-index: 999; }
 #slot-r-accessories {
-position: absolute !important;
-left: 69px;
-top: 369px;
+position: absolute;
+left: 39px;
+top: 250px;
+height: 111px;
 }
 
 #spin-btn-group {
 position: absolute;
-top: 470px;
-right: 160px;
+top: 99px;
+right: 350px;
 }
 #results-welcom {
 position: absolute;
-top: 122px;
-left: 112px;
+top: 22px;
+left: 63px;
 }
 #results-det {
 position: absolute;
-top: 142px;
-right: 192px;
-width: 142px;
+top: 36px;
+right: 222px;
+width: 281px;
 text-align: right;
 }
 
 
 #slot-r-head {
-position: absolute !important;
-left: 50%;
-margin-left: -112px;
-top: 22px;
+position: absolute;
+left: 169px;
+top: 111px;
+height: 111px;
 }
 #slot-r-torso {
-position: absolute !important;
-left: 50%;
-margin-left: -112px;
-top: 251px;
+position: absolute;
+left: 169px;
+top: 223px;
+height: 111px;
 }
 #slot-r-legs {
-position: absolute !important;
-left: 50%;
-margin-left: -112px;
-top: 546px;
+position: absolute;
+left: 169px;
+top: 368px;
+height: 169px;
 }
 #slot-r-feet {
-position: absolute !important;
-left: 50%;
-margin-left: -112px;
-top: 770px;
+position: absolute;
+left: 169px;
+top: 538px;
+height: 111px;
 }
