@@ -241,7 +241,7 @@ left: 132px;
 #selecting-category {
 position: absolute;
 top: 32px;
-right: 110px;
+right: 212px;
 }
 #btn-slotme {
 position: absolute;
@@ -321,6 +321,8 @@ top: 250px;
 height: 111px;
 }
 
+#spin-back { left: 316px; position: relative; }
+
 #spin-btn-group {
 position: absolute;
 top: 99px;
@@ -335,10 +337,14 @@ left: 63px;
 position: absolute;
 top: 36px;
 right: 222px;
-width: 281px;
+width: 396px;
 text-align: right;
 }
-
+#results-det em {
+text-decoration: underline;
+text-underline-color: red;
+text-underline-style: wave;
+}
 
 #slot-r-head {
 position: absolute;
@@ -363,4 +369,7 @@ position: absolute;
 left: 169px;
 top: 538px;
 height: 111px;
+}
+.slot-body.disabled {
+border-right: 3px solid tomato;
 }
