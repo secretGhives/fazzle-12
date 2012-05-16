@@ -69,7 +69,7 @@ height: 545px;
 
 #slot-results figure {
   width: 111px;
-  max-height: 111px;
+/*  max-height: 111px;*/
 	padding: 0;
 	margin: 0;
   -webkit-transition: -webkit-transform 0.3s;
