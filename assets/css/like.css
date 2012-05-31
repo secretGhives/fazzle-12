@@ -2,7 +2,7 @@
 AWESOME LIKE BUTTON
 */
 .rw-thumbnail-wrap figure:hover .big-like-button-wrapper { display: block; }
-#closet-item-view #item-primary .big-like-button-wrapper { bottom: 42px; }
+#closet-item-view #item-primary .big-like-button-wrapper {  }
 .big-like-button-wrapper {
 display: none;
 position: absolute;
@@ -38,7 +38,7 @@ line-height: 22px;
 }
 .btn.like.active:hover { }
 .btn.like:hover {  }
-.liked::before {
+.liked .rw-thumbnail-detail::before {
 content: "H";
 position: absolute;
 bottom: 3px;

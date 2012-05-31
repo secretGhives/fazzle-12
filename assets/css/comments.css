@@ -4,8 +4,15 @@
 .comments .text { }
 
 .comments .you:hover .delete-comment { display: inline-block; }
-.comments .delete-comment { display: none; position: absolute; right: 3px; font-size: 9px; color: pink; top: 3px; }
-.comments li.you p:hover { border: 1px solid #eee; }
+.comments .delete-comment { display: none; position: absolute; right: 3px; font-size: 9px; color: tomato; top: 3px; }
+.comments li.you { position: relative; }
+.comments-more {
+text-align: center;
+font-size: 11px;
+background: #EEE;
+line-height: 23px;
+cursor: pointer;
+}
 
 
 
@@ -14,7 +21,7 @@
 .comments-list li { padding: 3px 0 0 0; display: block; overflow: hidden; position: relative; }
 .comments-list li:first-child { padding-top: 0; }
 .comments-list li p { font-size: 11px; line-height: 13px; }
-.comments-list li.you p { margin-top: 16px; }
+.comments-list li.you p { margin-right: 42px; }
 
 .double .comments-list {  }
 .large .comments-list {  }

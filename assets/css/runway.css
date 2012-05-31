@@ -48,7 +48,7 @@ margin: 6px;
 .rw-thumbnail-wrap.liked, #page-register-interest .liked  { position: relative; }
 .rw-thumbnail-wrap.liked a { /*color: #B50360;*/ }
 .rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
-.rw-thumbnail-detail { padding: 9px 0 0 9px; }
+.rw-thumbnail-detail { padding: 9px 0 0 9px; position: relative; }
 .rw-thumbnail { display: block; }
 .rw-thumbnail img { margin: 0; padding: 0; display: block; }
 .rw-item-title {
@@ -115,7 +115,7 @@ left: 10px;
 #profile-new-liked-stuff .rw-thumbnail-wrap {  }
 
 /* single item page */
-.rw-thumbnail-wrap.related-items { max-width: 346px; }
+.rw-thumbnail-wrap.related-items { width: 336px; }
 
 
 /* brand page */
@@ -389,3 +389,5 @@ height: 111px;
 .rw-thumbnail-wrap.half {width:456px;}
 .rw-thumbnail-wrap.single {width:926px;}
 .rw-thumbnail-wrap.columns {width:299px;}
+.rw-thumbnail-wrap.ff-second {width: 336px;}
+.rw-thumbnail-wrap.ff-third {width: 336px;}
