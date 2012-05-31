@@ -2,11 +2,11 @@
 
 	<section id="closet-item-wrap" class="row">
 
-		<div class="span9">
+		<div class="span9 clearfix">
 			<section id="item-primary" class="rw-thumbnail-wrap">
 				<figure id="view-image-wrap">
 					<img src="/assets/img/viewing/view5.jpg" width="auto" height="auto">
-					<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
+					<div class="big-like-button-wrapper"><em class="like">H</em></div>
 					<figcation>Title of the image</figcation>
 					<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
 					<span class="rw-item-liked">liked by 99999</span>
@@ -51,16 +51,16 @@
 
 			<hr/>
 
-			<section id="related-items">
+			<section id="related-items" class="clearfix">
 
 				<h3>Related items</h3>
 
 				<article class="rw-thumbnail-wrap related-items">
 					<figure>
 						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/344x420" alt="">
+							<img src="http://placehold.it/336x420" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
+						<div class="big-like-button-wrapper"><em class="like">H</em></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
@@ -107,9 +107,9 @@
 				<article class="rw-thumbnail-wrap related-items">
 					<figure>
 						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/344x420" alt="">
+							<img src="http://placehold.it/336x420" alt="">
 						</a>
-						<div class="big-like-button-wrapper"><em>H</em><a href="#" class="btn like">Like</a></div>
+						<div class="big-like-button-wrapper"><em class="like">H</em></div>
 					</figure>
 					<aside class="rw-thumbnail-detail">
 						<a href="#profile/item-view" class="rw-item-title">Title for this item</a>
@@ -163,12 +163,14 @@
 				<ol id="item-tofollow-list" class="unstyled follow-list">
 
 					<li class="follow-list-item">
-						<a href="#profile" class="url vcard">
-							<img src="//placehold.it/69x69" class="photo">
-							<strong class="nickname">username</strong>
-						</a>
-						<a href="#" class="follow-user-link">follow</a>
+						<div class="user-card">
+							<a href="#profile" class="url vcard" rel="tip" data-placement="right" title="Users Full name or Username">
+								<img src="//placehold.it/69x69" class="photo">
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+						</div>
 						<ul class="latest-liked">
+							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -177,12 +179,14 @@
 					</li>
 
 					<li class="follow-list-item">
-						<a href="#profile" class="url vcard">
-							<img src="//placehold.it/69x69" class="photo">
-							<strong class="nickname">username</strong>
-						</a>
-						<a href="#" class="follow-user-link">follow</a>
+						<div class="user-card">
+							<a href="#profile" class="url vcard" rel="tip" data-placement="right" title="Users Full name or Username">
+								<img src="//placehold.it/69x69" class="photo">
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+						</div>
 						<ul class="latest-liked">
+							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -191,12 +195,14 @@
 					</li>
 
 					<li class="follow-list-item">
-						<a href="#profile" class="url vcard">
-							<img src="//placehold.it/69x69" class="photo">
-							<strong class="nickname">username</strong>
-						</a>
-						<a href="#" class="follow-user-link">follow</a>
+						<div class="user-card">
+							<a href="#profile" class="url vcard" rel="tip" data-placement="right" title="Users Full name or Username">
+								<img src="//placehold.it/69x69" class="photo">
+							</a>
+							<a href="#" class="follow-user-link">follow</a>
+						</div>
 						<ul class="latest-liked">
+							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
 							<li><a href="#closet/item"><img src="//placehold.it/111x111" alt=""></a></li>
@@ -247,10 +253,11 @@
 !function ($) {
 	$(function(){
 
-		$(".btn.like").toggle(
+		$('[rel=tip]').tooltip();
+
+		$(".like").toggle(
 			function(){
-				$(this).text("Dislike");
-				$(this).addClass("active btn-inverse").parent().addClass("active");
+				$(this).parent().addClass("active");
 				$(this).parent().parent().parent().addClass("liked");
 				$('#modal-shelves').modal('show');
 				$('<a href="#" class="btn like-edit">S</a>').click(function(e) {
@@ -259,12 +266,12 @@
 				}).insertAfter( $(this) );
 			}, 
 			function(){
-				$(this).text("Like");
-				$(this).removeClass("active btn-inverse").parent().removeClass("active");
+				$(this).parent().removeClass("active");
 				$(this).parent().parent().parent().removeClass("liked");
 				$(this).next('.like-edit').remove();
 			}
 		);
+
 
 		$("#viewing-towishlist-click").toggle(
 			function(){

@@ -1,5 +1,6 @@
 /* RUNWAY PAGE 
 ==================*/
+#runway-global { clear: both; }
 .rw-global-item { position: relative; overflow: hidden; }
 .user-runway { display: inline-block; padding: 0 0 0 90px; margin: 0; }
 .user-icon {
@@ -31,9 +32,21 @@ top: 32px;
 right: -5px;
 }
 
-.rw-thumbnail-wrap { position: relative; display: inline-block; border: 1px solid #eee; vertical-align: top; background: white; }
-.rw-thumbnail-wrap.liked, #page-register-interest .liked  { border-color: rgba(255, 192, 203, 0.6); }
-.rw-thumbnail-wrap.liked a { color: #B50360; }
+.rw-thumbnail-wrap { 
+/*
+position: relative;
+display: inline-block;
+*/
+border: 1px solid 
+#EEE;
+vertical-align: top;
+background: 
+white;
+float: left;
+margin: 6px;
+}
+.rw-thumbnail-wrap.liked, #page-register-interest .liked  { position: relative; }
+.rw-thumbnail-wrap.liked a { /*color: #B50360;*/ }
 .rw-thumbnail-wrap figure { position: relative; margin: 0; padding: 0; }
 .rw-thumbnail-detail { padding: 9px 0 0 9px; }
 .rw-thumbnail { display: block; }
@@ -99,8 +112,7 @@ left: 10px;
 
 /* profile page */
 .rw-thumbnail-wrap.ff-first { max-width: 698px; }
-.rw-thumbnail-wrap.two-col { max-width: 346px; }
-#profile-new-liked-stuff .rw-thumbnail-wrap { width: 170px; }
+#profile-new-liked-stuff .rw-thumbnail-wrap {  }
 
 /* single item page */
 .rw-thumbnail-wrap.related-items { max-width: 346px; }
@@ -367,3 +379,11 @@ top: 538px;
 height: 111px;
 }
 .slot-body.disabled { box-shadow: 0px 0px 13px orange; }
+
+
+
+/* Runway Item sizes */
+.rw-thumbnail-wrap.fourth {width:221px;}
+.rw-thumbnail-wrap.third {width:690px;}
+.rw-thumbnail-wrap.half {width:456px;}
+.rw-thumbnail-wrap.single {width:926px;}

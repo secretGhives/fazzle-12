@@ -35,7 +35,7 @@
 }
 .ico-btn.s { font-family: 'SignifyLite'; }
 .ico-btn.i { font-family: 'IconicFill'; }
-.iconic { display:inline-block; font-family: 'IconicFill'; }
+.iconic { display:inline-block; font-family: 'IconicFill'; font-style: normal; }
 .iconic.active { color: tomato; }
 .ico-count { padding: 1px 3px; font-size: 10px; line-height: 13px; }
 

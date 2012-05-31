@@ -2,33 +2,27 @@
 .follow-list-item {
 position: relative;
 min-height: 69px;
-border-bottom: 1px solid #eee;
-background: snow;
+margin-bottom: 3px;
 display: block;
 overflow: hidden;
 }
 .follow-list .vcard {
 position: relative;
 min-height: 69px;
-border-bottom: 1px solid #eee;
-background: snow;
-overflow: hidden;
 display: inline-block;
 vertical-align: top;
-float: left;
 }
-.follow-user-link { position: absolute; top: 49px; left: 87px; padding: 6px 0; }
+.follow-user-link { display: block; }
+.user-card {display: inline-block; text-align: center;}
 .follow-list .vcard .nickname,
 .follow-list .vcard .given-name { margin-top: 6px; display: inline-block; }
-.follow-list .vcard .photo { float: left; display: inline-block; margin-right: 1em; }
+.follow-list .vcard .photo { display: inline-block; }
 .follow-list .vcard .given-name { color: #666; }
 .follow-list .latest-liked {
 float: right;
 margin: 0;
 display: block;
 padding: 0;
-width: 481px;
-max-width: 481px;
 text-align: right;
 }
 .follow-list .latest-liked li {
@@ -46,4 +40,4 @@ margin: 0;
 .follow-list .latest-liked img { padding: 0; margin: 0; display: block; }
 
 /* profile page */
-#profile-view .follow-user-link { top: 32px; }
+#profile-view .follow-user-link {  }

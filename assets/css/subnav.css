@@ -110,7 +110,8 @@ border-bottom: 1px solid #aaa;
 }
 
 /* closet page subnav */
-#closet-view .subnav-fixed {
+#closet-view .subnav-fixed,
+#runway-view .subnav-fixed  {
 position: fixed;
 top: 41px;
 left: 0;

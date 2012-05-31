@@ -40,8 +40,8 @@ text-decoration: underline;
 cursor: pointer;
 }
 
-.sb-control {padding: 4px 6px;}
-.sb-control .ico-btn {margin: 0;}
+.sb-control {  }
+.sb-control .ico-btn {margin: 0; font-size: 17px;}
 .sb-control.rss {color: orange;}
 .sb-control.twitter {color: deepskyblue;}
 .sb-control.fb {color: royalblue;}
@@ -177,10 +177,7 @@ color: #666;
 
 #profile-new-liked-stuff { margin-top: 3em; }
 #profile-new-liked-stuff h1 { margin-bottom: 0.3em; }
-#profile-new-liked-stuff .rw-thumbnail-detail {
-padding: 0 0.6em;
-max-width: 155px;
-}
+#profile-new-liked-stuff .rw-thumbnail-detail {padding: 0 0.6em; padding-top: 6px;}
 
 
 .profile-achievements { margin-bottom: 1em; }

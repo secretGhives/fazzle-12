@@ -8,27 +8,23 @@ display: none;
 position: absolute;
 bottom: 6px;
 right: 6px;
-min-width: 88px;
-height: 38px;
 text-align: left;
 outline: none;
-background: rgba(0,0,0,0.32);
+background: 
+rgba(0, 0, 0, 0.32);
 border-radius: 3px;
 }
-.big-like-button-wrapper.active { width: 123px; }
-.big-like-button-wrapper.active em { color: red; }
+.big-like-button-wrapper.active { background: rgba(255,255,255,0.93); }
+.big-like-button-wrapper.active em { color: red;  }
 .big-like-button-wrapper em { 
-color: pink; 
-position: relative;
-top: 2px;
-left: 3px;
-margin: 0; padding: 0;
+color: pink;
+margin: 0;
+padding: 0 3px;
 font-style: normal;
 font-size: 32px;
 line-height: 22px;
-display: inline-block;
 font-family: 'SignifyLite';
-cursor: default;
+cursor: pointer;
 }
 .btn.like.active { }
 .btn.like {
@@ -45,8 +41,8 @@ line-height: 22px;
 .liked::before {
 content: "H";
 position: absolute;
-top: 3px;
-left: 6px;
+bottom: 3px;
+right: 2px;
 font-style: normal;
 font-size: 16px;
 line-height: 16px;
@@ -57,15 +53,16 @@ z-index: 3;
 }
 .like-edit {
 position: relative;
-left: 4px;
-line-height: 22px;
+right: 2px;
+margin: 0;
 font-family: 'WebSymbolsRegular';
-padding: 4px 6px;
+padding: 0 3px;
 color: #333 !important;
 background-image: none;
 box-shadow: 0 0 0;
 border: 0;
 background-color: transparent;
+bottom: 9px;
 }
 .like-edit:hover {
 color: #111 !important;

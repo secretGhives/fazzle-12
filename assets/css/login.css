@@ -20,20 +20,34 @@ background: rgba(255, 255, 255, 0.69);
 padding: 9px;
 }
 
-#btn-login { margin-top: 5px; width: 160px; text-align: left; }
-#btn-facebook { margin-bottom: 9px; }
-#btn-signup { margin-top: 13px; }
-#login-register { margin-bottom: 1em; }
+#login-signin hr {margin: 9px;}
+
+#btn-login { position: absolute;
+line-height: 48px;
+display: block;
+top: 22px;
+right: 3px;
+margin-bottom: 2px; }
+#btn-facebook { display: block; margin-top: 19px; }
+#btn-signup { position: absolute;
+line-height: 48px;
+display: block;
+top: 22px;
+right: 3px;
+margin-bottom: 2px;
+width: 52px; }
+#login-register {  }
 
 #page-login hgroup { text-align: center; margin-top: 3em; margin-bottom: 2em; }
 #page-login hgroup h2 { font-size: 1.3em; color: #39F; }
 #page-login hgroup h1 { font-size: 3em; color: #348; }
 #login-features h1 { color: #39F; }
 #login-features .row { margin: 3em 0 0 0; }
-#login-tabs { margin-bottom: 0; }
-#login-tab-content { background: #fff; border: 1px solid #ddd; border-top: 0; text-align: center; }
-#login-tab-content input { width: auto; margin: 3px 0; }
-#login-tab-content .tab-pane { padding: 1em 0 0; }
+#login-tabs { margin-bottom: 0; margin-top: 13px; }
+#login-tabs .active a {background: #EEE;}
+#login-tab-content { background: #eee; border: 1px solid #ddd; border-top: 0; position: relative; }
+#login-tab-content input { width: 123px; margin-bottom: 2px; }
+#login-tab-content .tab-pane { padding: 22px 3px; }
 #login-features .span6 p { font-size: 18px; font-weight: 200; line-height: 27px; }
 
 #page-login .hero-unit { margin-top: 6em; }
