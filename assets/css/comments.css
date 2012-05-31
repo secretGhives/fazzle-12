@@ -1,5 +1,5 @@
 /* Comments */
-.comments { padding: 11px; border-top: 1px dashed lavender; display: none; }
+.comments { padding: 11px; border-top: 1px dashed lavender; display: block; position: relative; background: #FAFAFA; z-index: 1; }
 .photo .comments { padding-bottom: 0; }
 .comments .text { }
 
@@ -13,7 +13,7 @@
 /* Comments :listing */
 .comments-list li { padding: 3px 0 0 0; display: block; overflow: hidden; position: relative; }
 .comments-list li:first-child { padding-top: 0; }
-.comments-list li p { font-size: 11px; line-height: 13px; margin-left: 50px; }
+.comments-list li p { font-size: 11px; line-height: 13px; }
 .comments-list li.you p { margin-top: 16px; }
 
 .double .comments-list {  }
@@ -22,7 +22,7 @@
 .single .comments-list {  }
 .two-col .comments-list {  }
 
-.comments .profile.url { display: inline-block; float: left; }
+.comments .profile.url { display: inline-block; }
 .comment-entree .photo,
 .comments .profile.url img { max-height: 42px; max-width: 42px; width: 42px; }
 

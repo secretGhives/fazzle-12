@@ -265,6 +265,7 @@ position: relative;
 min-height: 369px;
 padding: 113px 69px 3px 69px;
 margin-top: 32px;
+background: #FAFCFF;
 }
 #item-drop-area p {
 line-height: 222px;
@@ -387,3 +388,4 @@ height: 111px;
 .rw-thumbnail-wrap.third {width:690px;}
 .rw-thumbnail-wrap.half {width:456px;}
 .rw-thumbnail-wrap.single {width:926px;}
+.rw-thumbnail-wrap.columns {width:299px;}
