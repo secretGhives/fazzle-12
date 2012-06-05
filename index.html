@@ -230,9 +230,34 @@
 
 					<div class="tab-pane active" id="upload-multiple">
 						<form class="form-horizontal">
+							<script>
+							function imagesSelected(myFiles) {
+							  for (var i = 0, f; f = myFiles[i]; i++) {
+							    var imageReader = new FileReader();
+							    imageReader.onload = (function(aFile) {
+							      return function(e) {
+							        var span = document.createElement('span');
+							        span.innerHTML = ['<img class="images" src="', e.target.result,'" title="', aFile.name, '"/>'].join('');
+							        document.getElementById('thumbs').insertBefore(span, null);
+							      };
+							    })(f);
+							    imageReader.readAsDataURL(f);
+							  }
+							}
+
+							function dropIt(e) {  
+							   imagesSelected(e.dataTransfer.files); 
+							   e.stopPropagation();  
+							   e.preventDefault();   
+							}  
+							</script>
 							<fieldset>
-								<div class="upload well ac">
-									<p>Drag 'n Drop items to this area</p>
+								<div id="upload-well" class="upload well ac" ondragenter="return false" ondragover="return false" ondrop="dropIt(event)">
+									<output id="thumbs"></output>
+								</div>
+
+								<div class="alert alert-block">
+									<strong>Heads up!</strong> Drag & drop or choose images from your local file system: <input type="file" id="input" size="10" multiple="true" onchange="imagesSelected(this.files)" />
 								</div>
 							</fieldset>
 						</form>
@@ -340,13 +365,27 @@
 
 			$(".brand").click(function(e) {
 				e.preventDefault();
-				alert("This would load up random profile/shelf/item each time");
+				alert("This would load up random profile/shelf/item each time, also testing html5 notifications");
+				//Fire up notification, code bellow
+				askPermission();
 			});
 
 
 
 		})
 	}(window.jQuery)
+	</script>
+
+
+	<!-- Lets dingle with example of notification -->
+	<script> 
+	  function askPermission(){
+	    webkitNotifications.requestPermission(testNotification);
+	  }
+	  function testNotification(){
+	    var notification = webkitNotifications.createNotification('//placehold.it/69x69', 'Welcome back Mister Fabulous', 'You have gazillions of notifications');
+	    notification.show();
+	  }    
 	</script>
 
 </body>

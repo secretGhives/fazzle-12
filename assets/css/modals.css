@@ -13,3 +13,9 @@
 #modal-shelves figure img { max-width: 169px; max-height: 191px; }
 #modal-shelves .chzn-container { min-width: 100%; }
 #modal-shelves .modal-body { min-height: 325px; }
+
+
+/* MODAL SECTION UPLOAD ITEMS */
+/*Multiple Upload */
+#upload-well { max-height: 193px; overflow-y: auto; }
+#upload-well img { max-width: 69px; max-height: 69px; vertical-align: middle; margin: 2px; }
