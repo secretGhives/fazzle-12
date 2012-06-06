@@ -1,5 +1,6 @@
 /* Comments */
-.comments { padding: 11px; border-top: 1px dashed lavender; display: block; position: relative; background: #FAFAFA; z-index: 1; }
+.comments { padding: 11px; border-top: 1px dashed lavender; display: none; position: absolute; background: rgba(250, 250, 250, 0.96); z-index: 1; top: 0; bottom: 47px; left: 0; right: 0; overflow-y: auto; }
+ .comments.show { display: block; }
 .photo .comments { padding-bottom: 0; }
 .comments .text { }
 
@@ -136,6 +137,9 @@ text-shadow:1px 1px 1px #FFFFFF;
 .spch-bub-inside, .spch-bub-outside { text-decoration: none; position: relative; }
 a.spch-bub-inside, a.spch-bub-outside { color: #999; }
 .spch-bub-inside em, .spch-bub-outside em { font-style: normal; }
+
+.spch-bub-inside.active em { background: tomato; }
+.spch-bub-inside.active em::before { border-left: 0.45em solid tomato; }
 
 .spch-bub-inside em {
 background: #bbb;
