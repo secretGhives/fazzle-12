@@ -11,7 +11,7 @@
 					<a class="popdown" href="#" data-toggle="popdown"><i class="icon-cog"></i> Customize</a>
 					<ul class="popdown-menu">
 						<li><label class="checkbox"><input type="checkbox" id="rw-control-featured" checked> Feautred items</label></li>
-						<li><label class="checkbox"><input type="checkbox" id="rw-control-comments" checked> Top 3 comments</label></li>
+						<!-- <li><label class="checkbox"><input type="checkbox" id="rw-control-comments" checked> Top 3 comments</label></li> -->
 						<li><label class="checkbox"><input type="checkbox" id="rw-control-follow" checked> People you follow</label></li>
 						<li><label class="checkbox"><input type="checkbox" id="rw-control-shared" checked> Shared with you</label></li>
 						<li><label class="checkbox"><input type="checkbox" id="rw-control-liked" checked> Stuff you liked</label></li>
@@ -550,22 +550,6 @@
 			function(){	$(this).next('.popdown-menu').hide();	}
 		);
 
-		// START TOOLBAR FILTER CHECKBOXES
-		$('#rw-control-comments').change(function () {                
-		   $('.comments').toggle(this.checked);
-		}).change(); //ensure visible state matches initially
-
-		$('#rw-control-liked').change(function () {                
-		   $('.rw-thumbnail-wrap.liked').toggle(this.checked);
-		}).change(); //ensure visible state matches initially
-
-		$('#rw-control-featured').change(function () {                
-		   $('.rw-thumbnail-wrap.featured-item').toggle(this.checked);
-		}).change(); //ensure visible state matches initially
-
-		// END TOOLBAR FILTER CHECKBOXES
-
-
 		$(".like").toggle(
 			function(){
 				$(this).parent().addClass("active").attr("data-original-title", "Dislike it");
@@ -584,10 +568,28 @@
 		);
 
 
-		// $('.spch-bub-inside').click(function() {
-		// 	$(this).parent().next().slideToggle();
-		// 	return false;
-		// });
+		$('.spch-bub-inside').click(function() {
+			$(this).toggleClass('active');
+			$(this).parent().next().toggleClass('show');
+			return false;
+		});
+
+
+
+		// START TOOLBAR FILTER CHECKBOXES
+		// $('#rw-control-comments').change(function () {                
+		//    $('.comments').toggle(this.checked);
+		// }).change(); //ensure visible state matches initially
+
+		$('#rw-control-liked').change(function () {                
+		   $('.rw-thumbnail-wrap.liked').toggle(this.checked);
+		}).change(); //ensure visible state matches initially
+
+		$('#rw-control-featured').change(function () {                
+		   $('.rw-thumbnail-wrap.featured-item').toggle(this.checked);
+		}).change(); //ensure visible state matches initially
+
+		// END TOOLBAR FILTER CHECKBOXES
 
 
 		// fix sub nav on scroll

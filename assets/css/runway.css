@@ -34,9 +34,9 @@ right: -5px;
 
 .rw-thumbnail-wrap { 
 /*
-position: relative;
 display: inline-block;
 */
+position: relative;
 border: 1px solid 
 #EEE;
 vertical-align: top;
