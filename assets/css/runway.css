@@ -1,5 +1,11 @@
 /* RUNWAY PAGE 
 ==================*/
+
+.dropdown-menu .checkbox {
+padding: 0px 9px 0px 32px;
+color: #333;
+}
+
 #runway-global { clear: both; }
 .rw-global-item { position: relative; overflow: hidden; }
 .user-runway { display: inline-block; padding: 0 0 0 90px; margin: 0; }
@@ -61,6 +67,7 @@ color: #999;
 font-size: smaller;
 }
 
+#runway-control-buttons {}
 
 .page-controls {
 top: 1px;

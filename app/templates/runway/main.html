@@ -3,31 +3,34 @@
 	<!-- Masthead
 	================================================== -->
 	<header class="jumbotron subhead" id="overview">
-		<h1>Runway</h1>
-		<p class="lead">Everyone else's stuff</p>
-		<div class="subnav ar">
-			<div id="runway-controls" class="btn-toolbar page-controls">
-				<div class="btn-group popdown-wrap">
-					<a class="popdown" href="#" data-toggle="popdown"><i class="icon-cog"></i> Customize</a>
-					<ul class="popdown-menu">
-						<li><label class="checkbox"><input type="checkbox" id="rw-control-featured" checked> Feautred items</label></li>
-						<!-- <li><label class="checkbox"><input type="checkbox" id="rw-control-comments" checked> Top 3 comments</label></li> -->
-						<li><label class="checkbox"><input type="checkbox" id="rw-control-follow" checked> People you follow</label></li>
-						<li><label class="checkbox"><input type="checkbox" id="rw-control-shared" checked> Shared with you</label></li>
-						<li><label class="checkbox"><input type="checkbox" id="rw-control-liked" checked> Stuff you liked</label></li>
-					</ul>
-				</div>
 
-				<div id="runway-control-buttons" class="btn-group" data-toggle="buttons-radio">
-					<button rel="runway-global" class="btn rw-random active">Random</button>
-					<button rel="runway-columns" class="btn rw-columns">Columns</button>
-					<button rel="runway-list" class="btn rw-list">List</button>
-				</div>
-			</div>
+		<div class="navbar subnav container" id="runway-controls">
+		  <div class="navbar-inner">
+		    <a class="brand" href="#">Runway</a>
+		    <ul class="nav pull-right">
+		      <li>
+						<div id="runway-control-buttons" class="btn-group" data-toggle="buttons-radio">
+							<button rel="runway-global" class="btn rw-random active">Random</button>
+							<button rel="runway-columns" class="btn rw-columns">Columns</button>
+							<button rel="runway-list" class="btn rw-list">List</button>
+						</div>
+		      </li>
+		      <li class="divider-vertical"></li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i> Customize <b class="caret"></b></a>
+					  <ul class="dropdown-menu">
+							<li><label class="checkbox"><input type="checkbox" id="rw-control-featured" checked> Feautred items</label></li>
+							<li><label class="checkbox"><input type="checkbox" id="rw-control-follow" checked> People you follow</label></li>
+							<li><label class="checkbox"><input type="checkbox" id="rw-control-shared" checked> Shared with you</label></li>
+							<li><label class="checkbox"><input type="checkbox" id="rw-control-liked" checked> Stuff you liked</label></li>
+							<!-- <li><label class="checkbox"><input type="checkbox" id="rw-control-comments" checked> Top 3 comments</label></li> -->
+					  </ul>
+					</li>
+		    </ul>
+		  </div>
 		</div>
-	</header>
 
-	<hr/>
+	</header>
 
 	<!-- Runway Global -->
 	<section id="runway-global" class="global-filter">
@@ -566,6 +569,11 @@
 				$(this).next('.like-edit').remove();
 			}
 		);
+
+		$("#runway-controls .dropdown-menu").click(function(event) {
+			// Act on the event
+			event.stopPropagation();
+		});
 
 
 		$('.spch-bub-inside').click(function() {

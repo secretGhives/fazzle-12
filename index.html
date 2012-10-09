@@ -12,13 +12,13 @@
 	<link rel="stylesheet" href="assets/css/su.css">
 </head>
 
-<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<body data-spy="scroll" data-spy="affix" data-offset-top="200">
 
 	<div id="container" class="fadeOnLoad">
 
 	<!-- Navbar
 		================================================== -->
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 
@@ -28,6 +28,7 @@
 						<a class="btn section-link" href="#runway" rel="tip" data-placement="bottom" title="Runway"><span class="ico-btn">R</span> Runway</a>
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#" rel="tip" data-placement="bottom" title="Browse"><span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="#wishlist">Your Wishlist</a></li>
 							<li><a href="#popular">Popular right now</a></li>
 							<li><a href="#top">Top contributors</a></li>
 							<li><a href="#brands">Stores & Brands</a></li>
@@ -311,7 +312,6 @@
 	<script src="assets/plugins/jcrop.js"></script>
 	<script src="assets/plugins/jslot.js"></script>
 	<script src="assets/plugins/listnav.js"></script>
-	<script src="assets/plugins/turn.min.js"></script>
 	<script src="assets/plugins/imagesLoaded.js"></script>
 	
 
@@ -335,6 +335,7 @@
 	<script src="app/modules/register-interest.js"></script>
 	<script src="app/modules/register-suggest.js"></script>
 	<script src="app/modules/help.js"></script>
+	<script src="app/modules/wishlist.js"></script>
 
 
 	<script>
@@ -372,8 +373,6 @@
 				//Fire up notification, code bellow
 				askPermission();
 			});
-
-
 
 		})
 	}(window.jQuery)

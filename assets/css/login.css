@@ -23,20 +23,13 @@ padding: 9px;
 #login-signin hr {margin: 9px;}
 
 #btn-login { position: absolute;
-line-height: 48px;
+line-height: 52px;
 display: block;
-top: 22px;
+top: 6px;
 right: 3px;
 margin-bottom: 2px; }
-#btn-facebook { display: block; margin-top: 19px; margin-left: auto;
-margin-right: auto; max-width: 93px; line-height: 32px; }
-#btn-signup { position: absolute;
-line-height: 48px;
-display: block;
-top: 22px;
-right: 3px;
-margin-bottom: 2px;
-width: 52px; }
+#btn-facebook {}
+#btn-signup {position: absolute; line-height: 116px; display: block; top: 6px; right: 3px; margin-bottom: 2px; width: 56px; }
 #login-register {  }
 
 #page-login hgroup { text-align: center; margin-top: 3em; margin-bottom: 2em; }
@@ -47,8 +40,8 @@ width: 52px; }
 #login-tabs { margin-bottom: 0; margin-top: 13px; }
 #login-tabs .active a {background: #EEE;}
 #login-tab-content { background: #eee; border: 1px solid #ddd; border-top: 0; position: relative; }
-#login-tab-content input { width: 123px; margin-bottom: 2px; }
-#login-tab-content .tab-pane { padding: 22px 3px; }
+#login-tab-content input, #login-tab-content select { width: 109px; margin-bottom: 2px; }
+#login-tab-content .tab-pane { padding: 6px 3px; }
 #login-features .span6 p { font-size: 18px; font-weight: 200; line-height: 27px; }
 
 #page-login .hero-unit { margin-top: 6em; }
