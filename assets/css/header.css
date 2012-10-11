@@ -84,7 +84,7 @@ text-shadow: 0 0 0;
 #header-user-controls .user-img { padding: 0 0.6em 0 0; }
 #header-user-controls .user-img img {
 width: auto;
-height: 32px;
+height: 33px;
 padding: 0;
 display: inline-block;
 vertical-align: middle;
@@ -105,7 +105,7 @@ position: relative;
 top: 3px;
 }
 #header-user-controls .btn {
-line-height: 24px;
+line-height: 25px;
 vertical-align: middle;
 
 color: #ccc;
@@ -142,7 +142,7 @@ border-radius: 0;
 #header-find { padding: 0; line-height: 32px !important; } 
 #header-find-input {
 margin: -2px 0.6em 0 0;
-width: 132px;
+width: 119px;
 height: 20px;
 line-height: 24px;
 display: none;

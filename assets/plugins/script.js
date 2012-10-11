@@ -8,15 +8,11 @@ function console_slide(evt){
   if (evt.keyCode === Esc || evt.keyCode === Tilde) {// Esc
     if(visible==false){
         visible = true;
-        $('#console').animate({
-            bottom: 0
-        });
+        alert("Show some menu");
     }
     else if(visible==true){
         visible = false;
-        $('#console').animate({
-            bottom: -350
-        });
+        alert("Hide that menu");
     }
     return false;
   }
@@ -27,3 +23,42 @@ function console_slide(evt){
 ////////////////////////////////////////////////////////////////////////////////
 // ON DOM READY
 ////////////////////////////////////////////////////////////////////////////////
+$(function() {
+
+
+
+
+
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+// ON WINDOW LOADED
+////////////////////////////////////////////////////////////////////////////////
+$(window).load(function() {
+
+  // attach tooltips
+  $('[rel=tip]').tooltip();
+
+  // Like button events
+  $(".like").toggle(
+    function(){
+      $(this).parent().addClass("active").attr("data-original-title", "Dislike it");
+      $(this).parent().parent().parent().addClass("liked");
+      $('#modal-shelves').modal('show');
+      $('<a href="#" class="btn like-edit" rel="tip" title="Edit">S</a>').click(function(e) {
+        e.preventDefault();
+        $('#modal-shelves').modal('show');
+      }).insertAfter( $(this) );
+    }, 
+    function(){
+      $(this).parent().removeClass("active").attr("data-original-title", "Like it");
+      $(this).parent().parent().parent().removeClass("liked");
+      $(this).next('.like-edit').remove();
+    }
+  );
+
+  // activate dropdown-menu plugin
+  $(".chzn-select").chosen();
+
+});

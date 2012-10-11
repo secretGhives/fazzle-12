@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="assets/css/su.css">
 </head>
 
-<body data-spy="scroll" data-spy="affix" data-offset-top="200">
+<body>
 
 	<div id="container" class="fadeOnLoad">
 
@@ -153,6 +153,22 @@
 					<textarea name="share-body" id="share-body" class="modal-input" placeholder="Enter message.."></textarea>
 				</div>
 			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Share</a>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+	</div>
+
+		<!-- modal - Share - Wishlist -->
+	<div id="modal-share-wishlist" class="modal hide fade" style="display: none; ">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>Share this list</h3>
+		</div>
+		<div class="modal-body">
+			<input type="text" class="modal-input" id="upload-description" placeholder="Email or Fazzle username">
+			<textarea name="share-body" id="share-body" class="modal-input span6" placeholder="Enter message.."></textarea>
 		</div>
 		<div class="modal-footer">
 			<a href="#" class="btn btn-primary">Share</a>
@@ -303,6 +319,7 @@
 	<script src="assets/libs/bootstrap/bootstrap.js"></script>
 
 	<!-- Plugins -->
+	<script src="assets/plugins/script.js"></script>
 	<script src="assets/plugins/masonry.min.js"></script>
 	<!-- 
 	<script src="assets/plugins/scroll.js"></script>
@@ -345,8 +362,7 @@
 			window.fazzleInstance = $('#main').fazzleUi({
 			});
 
-			$('[rel=tip]').tooltip();
-			$(".chzn-select").chosen();
+			
 
 			$(".section-link").click(function(){
 				$link = $(".section-link");

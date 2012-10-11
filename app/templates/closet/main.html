@@ -3,30 +3,33 @@
 	<!-- Masthead
 	================================================== -->
 	<header class="jumbotron subhead" id="overview">
-		<h1>Closet</h1>
-		<div class="subnav ar">
-
-			<div id="closet-controls" class="btn-toolbar page-controls">
-				<select id="closet-categories-filter" class="dropdown-menu chzn-select" multiple data-placeholder="Display only..">
-					<option value=".wishlist">Wishlist</option>
-					<option value=".shelf-head-asses">Head Assesories</option>
-					<option value=".shelf-head">Head</option>
-					<option value=".shelf-torso">Tops</option>
-					<option value=".shelf-bottoms">Bottoms</option>
-					<option value=".shelf-foot">Footing</option>
-					<option value=".shelf-6">Assesories</option>
-				</select>
-
-				<div class="btn-group">
-					<button id="btn-create-new-look" class="btn btn-primary">Create a look</button>
-					<button class="btn btn-danger disabled hide" id="closet-delete-shelf" rel="tip" title="Activate Delete option" disabled>Delete</button>
-					<button class="btn" id="closet-edit" rel="tip" title="Activate Edit option">Edit</button>
-				</div>
-			</div>
+		<div class="navbar">
+		  <div class="navbar-inner">
+		  	<a class="brand" href="#">Closet</a>
+		    <ul class="nav pull-right" id="closet-controls" class="btn-toolbar page-controls">
+		      <li>
+						<select id="closet-categories-filter" class="dropdown-menu chzn-select" multiple data-placeholder="Display only..">
+							<option value=".wishlist">Wishlist</option>
+							<option value=".shelf-head-asses">Head Assesories</option>
+							<option value=".shelf-head">Head</option>
+							<option value=".shelf-torso">Tops</option>
+							<option value=".shelf-bottoms">Bottoms</option>
+							<option value=".shelf-foot">Footing</option>
+							<option value=".shelf-6">Assesories</option>
+						</select>
+		      </li>
+		      <li>
+						<div class="btn-group">
+							<button id="btn-create-new-look" class="btn btn-primary">Create a look</button>
+							<button class="btn btn-danger disabled hide" id="closet-delete-shelf" rel="tip" title="Activate Delete option" disabled>Delete</button>
+							<button class="btn" id="closet-edit" rel="tip" title="Activate Edit option">Edit</button>
+						</div>
+		      </li>
+		    </ul>
+		  </div>
 		</div>
 	</header>
 
-	<hr/>
 
 	<section id="closet-shelves">
 

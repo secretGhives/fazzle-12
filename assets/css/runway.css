@@ -391,6 +391,7 @@ height: 111px;
 
 
 /* Runway Item sizes */
+.rw-thumbnail-wrap.wishlist {width: 219px;}
 .rw-thumbnail-wrap.fourth {width:221px;}
 .rw-thumbnail-wrap.third {width:690px;}
 .rw-thumbnail-wrap.half {width:456px;}
