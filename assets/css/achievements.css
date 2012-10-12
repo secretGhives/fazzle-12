@@ -2,7 +2,9 @@
 display: inline-block;
 position: relative;
 padding: 6px 6px 6px 56px;
-max-width: 108px;
+max-width: 284px;
+font-size: 12px;
+line-height: 13px;
 }
 .achievements-list .trophy img {
 margin: 0; padding: 0;
@@ -11,6 +13,8 @@ position: absolute;
 left: 6px; top: 6px;
 }
 
+.widget {border-right: 1px solid #CCC;padding-right: 9px;padding-left: 6px;}
+.widget:last-child {border-right: 0;}
 .stats-overview h3 { color: #999; }
 .stats-overview h3 em { font-size: 1.3em; color: #333; }
 .stats-tops .span3 a { display: inline-block; }

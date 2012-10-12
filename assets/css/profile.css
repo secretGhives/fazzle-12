@@ -30,6 +30,7 @@ width: 100%;
 margin-top: 0.6em;
 text-align: left;
 }
+#profile-tabs a {font-size: 13px;}
 
 #profile-tabs .org {display: none;}
 #profile-tabs .active .org {

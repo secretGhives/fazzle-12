@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="span9">
 
-			<ul id="profile-tabs" class="nav nav-tabs subnav">
+			<ul id="profile-tabs" class="nav nav-tabs">
 				<li><a href="#profile-about" data-toggle="tab">About<em id="profile-edit" class="org org-about"> save</em></a></li>
 				<li class="active"><a href="#profile-runway" data-toggle="tab">Runway</a></li>
 				<li><a href="#profile-shelves" data-toggle="tab"><em>999</em> Shelves<em class="org org-shelves"> organize</em></a></li>
@@ -442,19 +442,15 @@
 					<!--  -->
 					<div id="profile-stats-overview" class="stats-overview">
 						<div id="profile-stats-counters" class="stats-counters">
-							<div class="well inlined">
-								<h3><em>99999</em> Points</h3>
-							</div>
-
-							<div class="well inlined">
+							<div class="widget inlined">
 								<h3><em>28</em> Trophies</h3>
 							</div>
 
-							<div class="well inlined">
+							<div class="widget inlined">
 								<h3><em>99</em> Shelves</h3>
 							</div>
 
-							<div class="well inlined">
+							<div class="widget inlined">
 								<h3><em>99999</em> Items</h3>
 							</div>
 						</div>
@@ -773,8 +769,8 @@
 
 		// fix sub nav on scroll
 		var $win = $(window)
-			, $nav = $('.subnav')
-			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
+			, $nav = $('#profile-tabs')
+			, navTop = $('#profile-tabs').length && $('#profile-tabs').offset().top - 40
 			, isFixed = 0;
 		processScroll();
 		$win.on('scroll', processScroll);
@@ -782,10 +778,10 @@
 			var i, scrollTop = $win.scrollTop()
 			if (scrollTop >= navTop && !isFixed) {
 				isFixed = 1
-				$nav.addClass('toolbar-fixed')
+				$nav.addClass('fixed')
 			} else if (scrollTop <= navTop && isFixed) {
 				isFixed = 0
-				$nav.removeClass('toolbar-fixed')
+				$nav.removeClass('fixed')
 			}
 		};
 
