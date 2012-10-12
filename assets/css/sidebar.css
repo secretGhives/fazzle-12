@@ -69,3 +69,14 @@ bottom: 270px;
 }
 
 .sidenav em {display: block;font-size: 11px;line-height: 11px;color: #BBB;}
+
+
+
+
+/* WISHLIST */
+.new-wishlist {
+display: block;
+margin: 0 0 -1px;
+padding: 8px 14px;
+border: 1px solid #E5E5E5;
+}

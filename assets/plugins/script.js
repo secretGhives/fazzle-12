@@ -29,6 +29,7 @@ $(function() {
 
 
 
+
 });
 
 
@@ -60,5 +61,6 @@ $(window).load(function() {
 
   // activate dropdown-menu plugin
   $(".chzn-select").chosen();
+
 
 });

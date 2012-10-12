@@ -19,11 +19,11 @@
 
 		<div class="row">
 		  <div class="span3">
-		  	<button class="btn btn-success btn-block">Create another Wish List</button>
-		    <ul class="nav nav-list sidenav affix-top" data-spy="affix" data-offset-top="200">
-		      <li class="active"><a href="#components"><i class="icon-chevron-right"></i> My Favorites <em>11 items</em></a></li>
-		      <li class=""><a href="#plugins"><i class="icon-chevron-right"></i> Must Buy <em>11 items</em></a></li>
-		      <li class=""><a href="#variables"><i class="icon-chevron-right"></i> Thinking about it <em>11 items</em></a></li>
+		  	<button id="create-new-wishlist" class="btn btn-success btn-block">Create another Wish List</button>
+		    <ul id="sidebar-wishlist" class="nav nav-list sidenav affix-top" data-spy="affix" data-offset-top="200">
+		      <li class="active"><a href="/#my-favorites"><i class="icon-chevron-right"></i> My Favorites <em>11 items</em></a></li>
+		      <li class=""><a href="/#must-buy"><i class="icon-chevron-right"></i> Must Buy <em>11 items</em></a></li>
+		      <li class=""><a href="/#thinking-about-it"><i class="icon-chevron-right"></i> Thinking about it <em>11 items</em></a></li>
 		    </ul>
 		  </div>
 		  <div class="span9">
@@ -237,7 +237,19 @@
 !function ($) {
 	$(function(){
 
+		$("#create-new-wishlist").click(function() {
+			// Act on the event
+			var html = '<li class="new-wishlist"><div class="input-append"><input class="span2" size="16" type="text" placeholder="Name your wish list"><button class="btn" type="button">OK!</button></div></li>';
+			$("#sidebar-wishlist").append(html);
+		});
 
+
+    $(".new-wishlist button").live("click", function(){
+    	var inputData = $(this).parent().parent().find("input[type=text]").val();
+    	var newString = '<a href="/#'+inputData+'"><i class="icon-chevron-right"></i> '+inputData+' <em>0 items</em></a>';
+      $(this).parent().parent().html(newString);
+      $(".new-wishlist").removeClass("new-wishlist");
+    });
 
 	})
 }(window.jQuery)
