@@ -145,10 +145,9 @@ a.spch-bub-inside, a.spch-bub-outside { color: #999; }
 background: #bbb;
 color: #FFF;
 padding: 0 0.42em;
--moz-border-radius: 0.25em;
--webkit-border-radius: 0.25em;
 border-radius: 0.25em;
 position: relative;
+font-size: 11px;
 }
 .spch-bub-inside em::before {
 width: 0;

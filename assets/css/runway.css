@@ -57,15 +57,9 @@ margin: 6px;
 .rw-thumbnail-detail { padding: 9px 0 0 9px; position: relative; }
 .rw-thumbnail { display: block; }
 .rw-thumbnail img { margin: 0; padding: 0; display: block; }
-.rw-item-title {
-display: block;
-font-size: 123%;
-line-height: normal;
-}
-.rw-item-liked {
-color: #999;
-font-size: smaller;
-}
+.rw-item-title {display: block;font-size: 100%;line-height: normal;}
+.rw-item-liked {color: #999;font-size: 11px;}
+.rw-item-postedby {font-size: 12px;}
 
 #runway-control-buttons {}
 
