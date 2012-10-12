@@ -20,6 +20,8 @@ border-bottom: 1px solid #aaa;
 }
 
 /* closet page subnav */
+#buzz-view .subnav-fixed, 
+#wishlist-view .subnav-fixed, 
 #closet-view .subnav-fixed, 
 #runway-view .subnav-fixed {
 position: fixed;

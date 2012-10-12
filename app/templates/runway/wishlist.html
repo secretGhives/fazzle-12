@@ -3,7 +3,7 @@
 	<!-- Masthead
 	================================================== -->
 	<header class="jumbotron subhead" id="overview">
-		<div class="navbar">
+		<div class="navbar subnav container">
 		  <div class="navbar-inner">
 		  	<a class="brand" href="#">Wish List</a>
 		    <ul class="nav pull-right">
@@ -18,213 +18,218 @@
 	<section id="wishlist-list" class="global-filter">
 
 		<div class="row">
-		  <div class="span3">
-		  	<button id="create-new-wishlist" class="btn btn-success btn-block">Create another Wish List</button>
-		    <ul id="sidebar-wishlist" class="nav nav-list sidenav affix-top" data-spy="affix" data-offset-top="200">
-		      <li class="active"><a href="/#my-favorites"><i class="icon-chevron-right"></i> My Favorites <em>11 items</em></a></li>
-		      <li class=""><a href="/#must-buy"><i class="icon-chevron-right"></i> Must Buy <em>11 items</em></a></li>
-		      <li class=""><a href="/#thinking-about-it"><i class="icon-chevron-right"></i> Thinking about it <em>11 items</em></a></li>
-		    </ul>
-		  </div>
+			<div class="span3">
+			  <div id="wishlist-sidenav">
+			  	<button id="create-new-wishlist" class="btn btn-success btn-block">Create another Wish List</button>
+			    <ul id="sidebar-wishlist" class="nav nav-list sidenav affix-top" data-spy="affix" data-offset-top="200">
+			      <li class="active"><a href="#wishlist#my-favorites"><i class="icon-chevron-right"></i> My Favorites <em>11 items</em></a></li>
+			      <li class=""><a href="#wishlist#must-buy"><i class="icon-chevron-right"></i> Must Buy <em>11 items</em></a></li>
+			      <li class=""><a href="#wishlist#thinking-about-it"><i class="icon-chevron-right"></i> Thinking about it <em>11 items</em></a></li>
+			    </ul>
+			  </div>
+			</div>
 		  <div class="span9">
 
-				<article class="rw-thumbnail-wrap wishlist liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/221x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+		  	<section id="my-favorites">
+		  		<h1 class="wishlist-section-title">My Favorites</h1>
+					<article class="rw-thumbnail-wrap wishlist liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/221x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
 
-				<article class="rw-thumbnail-wrap wishlist liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/221x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+					<article class="rw-thumbnail-wrap wishlist liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/221x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
 
-				<article class="rw-thumbnail-wrap wishlist liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/221x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+					<article class="rw-thumbnail-wrap wishlist liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/221x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
 
-				<article class="rw-thumbnail-wrap wishlist liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/221x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+					<article class="rw-thumbnail-wrap wishlist liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/221x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
 
-				<article class="rw-thumbnail-wrap wishlist-half liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/453x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+					<article class="rw-thumbnail-wrap wishlist-half liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/453x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
 
-				<article class="rw-thumbnail-wrap wishlist-full liked">
-					<figure>
-						<a href="#viewing" class="rw-thumbnail">
-							<img src="http://placehold.it/686x293" alt="">
-						</a>
-						<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
-					</figure>
-					<aside class="rw-thumbnail-detail">
-						<a href="#viewing" class="rw-item-title">Title for this item</a>
-						<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
-						<span class="rw-item-liked">liked by 99999</span>
-						<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
-					</aside>
-					<!-- comments -->
-					<section class="comments comments-list">
-						<ol class="unstyled">
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
-							</li>
-							
-							<li>
-								<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
-							</li>
-						</ol>
-						<div class="comments-more">view more</div>
-					</section>
-					<!-- / comments -->
-				</article>
+					<article class="rw-thumbnail-wrap wishlist-full liked">
+						<figure>
+							<a href="#viewing" class="rw-thumbnail">
+								<img src="http://placehold.it/686x293" alt="">
+							</a>
+							<div class="big-like-button-wrapper active" rel="tip" data-placement="left" data-original-title="Dislike it"><em class="like">H</em><a href="#" class="btn like-edit" rel="tip" title="Edit">S</a></div>
+						</figure>
+						<aside class="rw-thumbnail-detail">
+							<a href="#viewing" class="rw-item-title">Title for this item</a>
+							<a href="#profile" class="rw-item-postedby">Mister Fabulous</a>
+							<span class="rw-item-liked">liked by 99999</span>
+							<a class="spch-bub-inside" href="#viewing"><em>23</em></a>
+						</aside>
+						<!-- comments -->
+						<section class="comments comments-list">
+							<ol class="unstyled">
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username user</strong></a> Beautifil Omg so cool, uspeli vibrasit' tavar v ulitsu...</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>nickname yours</strong></a> What is this stuff? and how did it get here? I have no clue, tell someone else!</p>
+								</li>
+								
+								<li>
+									<p><a href="#profile" class="profile url"><strong>username</strong></a> Beautifil!</p>
+								</li>
+							</ol>
+							<div class="comments-more">view more</div>
+						</section>
+						<!-- / comments -->
+					</article>
+				</section>
 
 		  </div>
 		</div>
@@ -250,6 +255,26 @@
       $(this).parent().parent().html(newString);
       $(".new-wishlist").removeClass("new-wishlist");
     });
+
+
+
+		// fix sub nav on scroll
+		var $win = $(window)
+			, $nav = $('.subnav')
+			, navTop = $('.subnav').length && $('.subnav').offset().top - 40
+			, isFixed = 0;
+		processScroll();
+		$win.on('scroll', processScroll);
+		function processScroll() {
+			var i, scrollTop = $win.scrollTop()
+			if (scrollTop >= navTop && !isFixed) {
+				isFixed = 1
+				$nav.addClass('subnav-fixed')
+			} else if (scrollTop <= navTop && isFixed) {
+				isFixed = 0
+				$nav.removeClass('subnav-fixed')
+			}
+		};
 
 	})
 }(window.jQuery)
