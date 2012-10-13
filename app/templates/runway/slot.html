@@ -1,61 +1,24 @@
 <style type="text/css">
-    .container {
-      -webkit-perspective: 800px;
-         -moz-perspective: 800px;
-          -ms-perspective: 800px;
-           -o-perspective: 800px;
-              perspective: 800px;
-    }
-    
-    #slot-results figure {
-      width: 222px;
-      max-height: 222px;
-      -webkit-transition: -webkit-transform 0.3s;
-         -moz-transition: -moz-transform 0.3s;
-          -ms-transition: -ms-transform 0.3s;
-           -o-transition: -o-transform 0.3s;
-              transition: transform 0.3s;
-      -webkit-transform-style: preserve-3d;
-         -moz-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-           -o-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      -webkit-transform-origin: right center;
-         -moz-transform-origin: right center;
-          -ms-transform-origin: right center;
-           -o-transform-origin: right center;
-              transform-origin: right center;
-    }
-    
-    #slot-results figure.flipped {
-      -webkit-transform: translateX( -100% ) rotateY( -180deg );
-         -moz-transform: translateX( -100% ) rotateY( -180deg );
-          -ms-transform: translateX( -100% ) rotateY( -180deg );
-           -o-transform: translateX( -100% ) rotateY( -180deg );
-              transform: translateX( -100% ) rotateY( -180deg );
-    }
-    
-    #slot-results figure img {
-      display: block;
-      text-align: center;
-      position: absolute;
-      -webkit-backface-visibility: hidden;
-         -moz-backface-visibility: hidden;
-          -ms-backface-visibility: hidden;
-           -o-backface-visibility: hidden;
-              backface-visibility: hidden;
-    }
-    
-    #slot-results figure .front { background: #fff; }
-    
-    #slot-results figure .back {
-      background: #f9f9f9;
-      -webkit-transform: rotateY( 180deg );
-         -moz-transform: rotateY( 180deg );
-          -ms-transform: rotateY( 180deg );
-           -o-transform: rotateY( 180deg );
-              transform: rotateY( 180deg );
-    }
+.container {perspective: 800px;}
+
+#slot-results figure {
+width: 222px;
+max-height: 222px;
+transition: transform 0.3s;
+transform-style: preserve-3d;
+transform-origin: right center;
+}
+
+#slot-results figure.flipped {transform: translateX( -100% ) rotateY( -180deg );}
+
+#slot-results figure img {
+display: block;
+text-align: center;
+position: absolute;
+backface-visibility: hidden;
+}
+#slot-results figure .front { background: #fff; }
+#slot-results figure .back {background: #f9f9f9;transform: rotateY( 180deg );}
 
 .navbar.navbar-fixed-top, #app-footer { display: none !important; }
 </style>

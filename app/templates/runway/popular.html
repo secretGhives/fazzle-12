@@ -15,26 +15,7 @@
 !function ($) {
 	$(function(){
 
-		$(".btn.like").toggle(
-			function(){
-				$(this).text("Dislike");
-				$(this).addClass("active btn-inverse").parent().addClass("active");
-				$(this).parent().parent().parent().addClass("liked");
-				$('#modal-shelves').modal('show');
-				$('<a href="#" class="btn like-edit">S</a>').click(function(e) {
-					e.preventDefault();
-					$('#modal-shelves').modal('show');
-				}).insertAfter( $(this) );
-			}, 
-			function(){
-				$(this).text("Like");
-				$(this).removeClass("active btn-inverse").parent().removeClass("active");
-				$(this).parent().parent().parent().removeClass("liked");
-				$(this).next('.like-edit').remove();
-			}
-		);
 
-		$('[rel=tip]').tooltip();
 
 		$("#popular-list .follow-user-link").toggle(
 			function(){

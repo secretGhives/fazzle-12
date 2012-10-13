@@ -548,11 +548,6 @@
 
 		});
 
-		$(".popdown").toggle(
-			function(){ $(this).next('.popdown-menu').show(); }, 
-			function(){	$(this).next('.popdown-menu').hide();	}
-		);
-
 		$(".like").toggle(
 			function(){
 				$(this).parent().addClass("active").attr("data-original-title", "Dislike it");

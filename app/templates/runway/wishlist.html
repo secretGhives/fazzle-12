@@ -135,12 +135,12 @@
 		});
 
 
-    $(".new-wishlist button").live("click", function(){
-    	var inputData = $(this).parent().parent().find("input[type=text]").val();
-    	var newString = '<a href="/#'+inputData+'"><i class="icon-chevron-right"></i> '+inputData+' <em>0 items</em></a>';
-      $(this).parent().parent().html(newString);
-      $(".new-wishlist").removeClass("new-wishlist");
-    });
+	    $(".new-wishlist button").live("click", function(){
+	    	var inputData = $(this).parent().parent().find("input[type=text]").val();
+	    	var newString = '<a href="/#'+inputData+'"><i class="icon-chevron-right"></i> '+inputData+' <em>0 items</em></a>';
+	      $(this).parent().parent().html(newString);
+	      $(".new-wishlist").removeClass("new-wishlist");
+	    });
 
 
 
