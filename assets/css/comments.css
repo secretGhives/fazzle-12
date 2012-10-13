@@ -42,7 +42,9 @@ cursor: pointer;
 .comment-entree.active .photo { visibility: hidden; }
 
 
-
+.item-view-comments {padding: 0 9px 9px 9px;}
+.item-view-comments .you { background: #FCFFED; }
+.item-view-comments .you .delete-comment {position: absolute;right: 0;top: 0;font-size: 9px;line-height: 9px;}
 
 
 /* SORT OUT */

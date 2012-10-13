@@ -72,3 +72,17 @@ box-shadow: 0 0 0;
 border: 0;
 background-color: transparent;
 }
+
+.wished .rw-thumbnail-detail::after {
+content: "B";
+position: absolute;
+bottom: 32px;
+right: 2px;
+font-style: normal;
+font-size: 16px;
+line-height: 16px;
+display: inline-block;
+font-family: 'SignifyLite';
+color: rgba(255, 0, 0, 0.32);
+z-index: 3;
+}
