@@ -63,7 +63,8 @@ margin: -13px 0 0 -50px;
 #create-look-dropzone img { max-width: 56px; margin: 1px; }
 #closet-shelves .wishlist { border-right: 1px solid pink; }
 .wish-heart { display: inline-block; margin: 0; font-family: 'SignifyLite'; color: pink; line-height: 1; margin-left: -0.6em; }
-#closet-shelf-list .accordion-heading .label { margin: 0 1em; }
+#closet-shelf-list .accordion-heading { position: relative; padding-right: 132px;}
+#closet-shelf-list .accordion-heading .label {margin: 0 1em; position: absolute; top: 22px; right: 0; } 
 #closet-shelf-list .accordion-toggle {
 font-size: 32px;
 display: inline-block;
@@ -88,3 +89,7 @@ border-top: 0;
 border-top-style: dashed;
 border-top-color: #f3f3f3;
 }
+
+.accordion-sub a {display: inline-block;margin: 2px 0;vertical-align: top;}
+.accordion-sub-header a {vertical-align: middle; visibility: hidden;}
+.accordion-sub-header:hover .shelf-share-btn {visibility: visible;}

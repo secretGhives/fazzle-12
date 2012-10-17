@@ -20,6 +20,7 @@ border-bottom: 1px solid #aaa;
 }
 
 /* closet page subnav */
+#shared-view .subnav-fixed,
 #buzz-view .subnav-fixed, 
 #wishlist-view .subnav-fixed, 
 #closet-view .subnav-fixed, 

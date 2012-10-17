@@ -68,3 +68,14 @@ right: 0;
 .share-btn-like:before {background-position: -18px 0;}
 .share-btn-plus {background-color: #626262;}
 .share-btn-plus:before {background-position: -33px 0;}
+
+
+
+
+
+
+
+/* Shared page */
+.shared-date {clear: both; text-align: center;}
+.shared-date:not(:first-child) {padding-top: 63px;}
+.shared-date em {display: block;font-size: 33px;line-height: 26px;color: #FA6A5D;}
